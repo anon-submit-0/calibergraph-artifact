@@ -1,0 +1,876 @@
+{
+  "ablation": {
+    "caliber_graph": {
+      "dimension_exact_accuracy": 1.0,
+      "dimension_recall_accuracy": 1.0,
+      "joint_metric_dimension_accuracy": 1.0,
+      "metric_accuracy": 1.0,
+      "n": 159,
+      "refusal_precision": 1.0,
+      "refusal_recall": 1.0
+    },
+    "no_grain_compiler": {
+      "dimension_exact_accuracy": 0.7358490566037735,
+      "dimension_recall_accuracy": 1.0,
+      "joint_metric_dimension_accuracy": 0.7358490566037735,
+      "metric_accuracy": 1.0,
+      "n": 159,
+      "refusal_precision": 1.0,
+      "refusal_recall": 1.0
+    },
+    "no_graph_constraints": {
+      "dimension_exact_accuracy": 0.7358490566037735,
+      "dimension_recall_accuracy": 1.0,
+      "joint_metric_dimension_accuracy": 0.6792452830188679,
+      "metric_accuracy": 0.9433962264150944,
+      "n": 159,
+      "refusal_precision": 0.0,
+      "refusal_recall": 0.0
+    },
+    "no_policy_compiler": {
+      "dimension_exact_accuracy": 1.0,
+      "dimension_recall_accuracy": 1.0,
+      "joint_metric_dimension_accuracy": 0.9433962264150944,
+      "metric_accuracy": 0.9433962264150944,
+      "n": 159,
+      "refusal_precision": 0.0,
+      "refusal_recall": 0.0
+    }
+  },
+  "blind_protocol": {
+    "gold_field_leaks_in_predictions": 0,
+    "oracle_candidate_prompt_uses_scorer_metric": true,
+    "prediction_input": "blind_cases.jsonl",
+    "scoring_input": "gold_labels.jsonl"
+  },
+  "family_breakdown": {
+    "hierarchy": {
+      "autolink_iterative": {
+        "dimension_exact_accuracy": 0.34375,
+        "dimension_recall_accuracy": 1.0,
+        "joint_metric_dimension_accuracy": 0.34375,
+        "metric_accuracy": 1.0,
+        "n": 64,
+        "refusal_precision": 0.0,
+        "refusal_recall": 0.0
+      },
+      "caliber_graph": {
+        "dimension_exact_accuracy": 1.0,
+        "dimension_recall_accuracy": 1.0,
+        "joint_metric_dimension_accuracy": 1.0,
+        "metric_accuracy": 1.0,
+        "n": 64,
+        "refusal_precision": 0.0,
+        "refusal_recall": 0.0
+      },
+      "direct_keyword": {
+        "dimension_exact_accuracy": 0.0,
+        "dimension_recall_accuracy": 0.0,
+        "joint_metric_dimension_accuracy": 0.0,
+        "metric_accuracy": 0.625,
+        "n": 64,
+        "refusal_precision": 0.0,
+        "refusal_recall": 0.0
+      },
+      "oracle_candidate_prompt": {
+        "dimension_exact_accuracy": 0.34375,
+        "dimension_recall_accuracy": 1.0,
+        "joint_metric_dimension_accuracy": 0.34375,
+        "metric_accuracy": 1.0,
+        "n": 64,
+        "refusal_precision": 0.0,
+        "refusal_recall": 0.0
+      },
+      "safenlidb_guarded": {
+        "dimension_exact_accuracy": 0.34375,
+        "dimension_recall_accuracy": 1.0,
+        "joint_metric_dimension_accuracy": 0.34375,
+        "metric_accuracy": 1.0,
+        "n": 64,
+        "refusal_precision": 0.0,
+        "refusal_recall": 0.0
+      },
+      "schema_proxy": {
+        "dimension_exact_accuracy": 0.34375,
+        "dimension_recall_accuracy": 1.0,
+        "joint_metric_dimension_accuracy": 0.34375,
+        "metric_accuracy": 1.0,
+        "n": 64,
+        "refusal_precision": 0.0,
+        "refusal_recall": 0.0
+      }
+    },
+    "single_or_flat_dimension": {
+      "autolink_iterative": {
+        "dimension_exact_accuracy": 1.0,
+        "dimension_recall_accuracy": 1.0,
+        "joint_metric_dimension_accuracy": 1.0,
+        "metric_accuracy": 1.0,
+        "n": 86,
+        "refusal_precision": 0.0,
+        "refusal_recall": 0.0
+      },
+      "caliber_graph": {
+        "dimension_exact_accuracy": 1.0,
+        "dimension_recall_accuracy": 1.0,
+        "joint_metric_dimension_accuracy": 1.0,
+        "metric_accuracy": 1.0,
+        "n": 86,
+        "refusal_precision": 0.0,
+        "refusal_recall": 0.0
+      },
+      "direct_keyword": {
+        "dimension_exact_accuracy": 0.9883720930232558,
+        "dimension_recall_accuracy": 0.9883720930232558,
+        "joint_metric_dimension_accuracy": 0.7674418604651163,
+        "metric_accuracy": 0.7674418604651163,
+        "n": 86,
+        "refusal_precision": 0.0,
+        "refusal_recall": 0.0
+      },
+      "oracle_candidate_prompt": {
+        "dimension_exact_accuracy": 1.0,
+        "dimension_recall_accuracy": 1.0,
+        "joint_metric_dimension_accuracy": 1.0,
+        "metric_accuracy": 1.0,
+        "n": 86,
+        "refusal_precision": 0.0,
+        "refusal_recall": 0.0
+      },
+      "safenlidb_guarded": {
+        "dimension_exact_accuracy": 1.0,
+        "dimension_recall_accuracy": 1.0,
+        "joint_metric_dimension_accuracy": 1.0,
+        "metric_accuracy": 1.0,
+        "n": 86,
+        "refusal_precision": 0.0,
+        "refusal_recall": 0.0
+      },
+      "schema_proxy": {
+        "dimension_exact_accuracy": 1.0,
+        "dimension_recall_accuracy": 1.0,
+        "joint_metric_dimension_accuracy": 1.0,
+        "metric_accuracy": 1.0,
+        "n": 86,
+        "refusal_precision": 0.0,
+        "refusal_recall": 0.0
+      }
+    },
+    "synthetic_refusal": {
+      "autolink_iterative": {
+        "dimension_exact_accuracy": 1.0,
+        "dimension_recall_accuracy": 1.0,
+        "joint_metric_dimension_accuracy": 0.0,
+        "metric_accuracy": 0.0,
+        "n": 9,
+        "refusal_precision": 0.0,
+        "refusal_recall": 0.0
+      },
+      "caliber_graph": {
+        "dimension_exact_accuracy": 1.0,
+        "dimension_recall_accuracy": 1.0,
+        "joint_metric_dimension_accuracy": 1.0,
+        "metric_accuracy": 1.0,
+        "n": 9,
+        "refusal_precision": 1.0,
+        "refusal_recall": 1.0
+      },
+      "direct_keyword": {
+        "dimension_exact_accuracy": 1.0,
+        "dimension_recall_accuracy": 1.0,
+        "joint_metric_dimension_accuracy": 0.0,
+        "metric_accuracy": 0.0,
+        "n": 9,
+        "refusal_precision": 0.0,
+        "refusal_recall": 0.0
+      },
+      "oracle_candidate_prompt": {
+        "dimension_exact_accuracy": 1.0,
+        "dimension_recall_accuracy": 1.0,
+        "joint_metric_dimension_accuracy": 1.0,
+        "metric_accuracy": 1.0,
+        "n": 9,
+        "refusal_precision": 1.0,
+        "refusal_recall": 1.0
+      },
+      "safenlidb_guarded": {
+        "dimension_exact_accuracy": 1.0,
+        "dimension_recall_accuracy": 1.0,
+        "joint_metric_dimension_accuracy": 1.0,
+        "metric_accuracy": 1.0,
+        "n": 9,
+        "refusal_precision": 1.0,
+        "refusal_recall": 1.0
+      },
+      "schema_proxy": {
+        "dimension_exact_accuracy": 1.0,
+        "dimension_recall_accuracy": 1.0,
+        "joint_metric_dimension_accuracy": 0.0,
+        "metric_accuracy": 0.0,
+        "n": 9,
+        "refusal_precision": 0.0,
+        "refusal_recall": 0.0
+      }
+    }
+  },
+  "linking": {
+    "dimension_candidate_recall_at_explicit": 1.0,
+    "joint_candidate_recall": 1.0,
+    "metric_candidate_recall_at_3": 1.0,
+    "n_answerable": 150
+  },
+  "llm_paraphrase": {
+    "autolink_iterative": {
+      "dimension_exact_accuracy": 0.7358490566037735,
+      "dimension_recall_accuracy": 1.0,
+      "joint_metric_dimension_accuracy": 0.6792452830188679,
+      "metric_accuracy": 0.9433962264150944,
+      "n": 159,
+      "refusal_precision": 0.0,
+      "refusal_recall": 0.0
+    },
+    "caliber_graph": {
+      "dimension_exact_accuracy": 1.0,
+      "dimension_recall_accuracy": 1.0,
+      "joint_metric_dimension_accuracy": 1.0,
+      "metric_accuracy": 1.0,
+      "n": 159,
+      "refusal_precision": 1.0,
+      "refusal_recall": 1.0
+    },
+    "direct_keyword": {
+      "dimension_exact_accuracy": 0.5911949685534591,
+      "dimension_recall_accuracy": 0.5911949685534591,
+      "joint_metric_dimension_accuracy": 0.5345911949685535,
+      "metric_accuracy": 0.9433962264150944,
+      "n": 159,
+      "refusal_precision": 0.0,
+      "refusal_recall": 0.0
+    },
+    "oracle_candidate_prompt": {
+      "dimension_exact_accuracy": 0.7358490566037735,
+      "dimension_recall_accuracy": 1.0,
+      "joint_metric_dimension_accuracy": 0.7358490566037735,
+      "metric_accuracy": 1.0,
+      "n": 159,
+      "refusal_precision": 1.0,
+      "refusal_recall": 1.0
+    },
+    "safenlidb_guarded": {
+      "dimension_exact_accuracy": 0.7358490566037735,
+      "dimension_recall_accuracy": 1.0,
+      "joint_metric_dimension_accuracy": 0.7358490566037735,
+      "metric_accuracy": 1.0,
+      "n": 159,
+      "refusal_precision": 1.0,
+      "refusal_recall": 1.0
+    },
+    "schema_proxy": {
+      "dimension_exact_accuracy": 0.7358490566037735,
+      "dimension_recall_accuracy": 1.0,
+      "joint_metric_dimension_accuracy": 0.6792452830188679,
+      "metric_accuracy": 0.9433962264150944,
+      "n": 159,
+      "refusal_precision": 0.0,
+      "refusal_recall": 0.0
+    }
+  },
+  "llm_paraphrase_census": {
+    "n_cases": 159
+  },
+  "llm_paraphrase_refusal_breakdown": {
+    "autolink_iterative": {
+      "sensitive_or_identifier": {
+        "fn": 1,
+        "fp": 0,
+        "n": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "tp": 0
+      },
+      "sql_or_ddl": {
+        "fn": 7,
+        "fp": 0,
+        "n": 7,
+        "precision": 0.0,
+        "recall": 0.0,
+        "tp": 0
+      },
+      "unsupported_metric": {
+        "fn": 1,
+        "fp": 0,
+        "n": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "tp": 0
+      }
+    },
+    "caliber_graph": {
+      "sensitive_or_identifier": {
+        "fn": 0,
+        "fp": 0,
+        "n": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 1
+      },
+      "sql_or_ddl": {
+        "fn": 0,
+        "fp": 0,
+        "n": 7,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 7
+      },
+      "unsupported_metric": {
+        "fn": 0,
+        "fp": 0,
+        "n": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 1
+      }
+    },
+    "direct_keyword": {
+      "sensitive_or_identifier": {
+        "fn": 1,
+        "fp": 0,
+        "n": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "tp": 0
+      },
+      "sql_or_ddl": {
+        "fn": 7,
+        "fp": 0,
+        "n": 7,
+        "precision": 0.0,
+        "recall": 0.0,
+        "tp": 0
+      },
+      "unsupported_metric": {
+        "fn": 1,
+        "fp": 0,
+        "n": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "tp": 0
+      }
+    },
+    "oracle_candidate_prompt": {
+      "sensitive_or_identifier": {
+        "fn": 0,
+        "fp": 0,
+        "n": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 1
+      },
+      "sql_or_ddl": {
+        "fn": 0,
+        "fp": 0,
+        "n": 7,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 7
+      },
+      "unsupported_metric": {
+        "fn": 0,
+        "fp": 0,
+        "n": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 1
+      }
+    },
+    "safenlidb_guarded": {
+      "sensitive_or_identifier": {
+        "fn": 0,
+        "fp": 0,
+        "n": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 1
+      },
+      "sql_or_ddl": {
+        "fn": 0,
+        "fp": 0,
+        "n": 7,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 7
+      },
+      "unsupported_metric": {
+        "fn": 0,
+        "fp": 0,
+        "n": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 1
+      }
+    },
+    "schema_proxy": {
+      "sensitive_or_identifier": {
+        "fn": 1,
+        "fp": 0,
+        "n": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "tp": 0
+      },
+      "sql_or_ddl": {
+        "fn": 7,
+        "fp": 0,
+        "n": 7,
+        "precision": 0.0,
+        "recall": 0.0,
+        "tp": 0
+      },
+      "unsupported_metric": {
+        "fn": 1,
+        "fp": 0,
+        "n": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "tp": 0
+      }
+    }
+  },
+  "perturbation": {
+    "autolink_iterative": {
+      "dimension_exact_accuracy": 0.7243589743589743,
+      "dimension_recall_accuracy": 1.0,
+      "joint_metric_dimension_accuracy": 0.6794871794871795,
+      "metric_accuracy": 0.9487179487179487,
+      "n": 468,
+      "refusal_precision": 0.0,
+      "refusal_recall": 0.0
+    },
+    "caliber_graph": {
+      "dimension_exact_accuracy": 1.0,
+      "dimension_recall_accuracy": 1.0,
+      "joint_metric_dimension_accuracy": 0.9871794871794872,
+      "metric_accuracy": 0.9871794871794872,
+      "n": 468,
+      "refusal_precision": 1.0,
+      "refusal_recall": 1.0
+    },
+    "direct_keyword": {
+      "dimension_exact_accuracy": 0.5833333333333334,
+      "dimension_recall_accuracy": 0.5833333333333334,
+      "joint_metric_dimension_accuracy": 0.36538461538461536,
+      "metric_accuracy": 0.688034188034188,
+      "n": 468,
+      "refusal_precision": 0.0,
+      "refusal_recall": 0.0
+    },
+    "oracle_candidate_prompt": {
+      "dimension_exact_accuracy": 0.7307692307692307,
+      "dimension_recall_accuracy": 1.0,
+      "joint_metric_dimension_accuracy": 0.7307692307692307,
+      "metric_accuracy": 1.0,
+      "n": 468,
+      "refusal_precision": 1.0,
+      "refusal_recall": 1.0
+    },
+    "safenlidb_guarded": {
+      "dimension_exact_accuracy": 0.7307692307692307,
+      "dimension_recall_accuracy": 1.0,
+      "joint_metric_dimension_accuracy": 0.717948717948718,
+      "metric_accuracy": 0.9871794871794872,
+      "n": 468,
+      "refusal_precision": 1.0,
+      "refusal_recall": 1.0
+    },
+    "schema_proxy": {
+      "dimension_exact_accuracy": 0.7243589743589743,
+      "dimension_recall_accuracy": 1.0,
+      "joint_metric_dimension_accuracy": 0.6794871794871795,
+      "metric_accuracy": 0.9487179487179487,
+      "n": 468,
+      "refusal_precision": 0.0,
+      "refusal_recall": 0.0
+    }
+  },
+  "perturbation_census": {
+    "n_cases": 468
+  },
+  "plan": {
+    "autolink_iterative": {
+      "dimension_exact_accuracy": 0.7358490566037735,
+      "dimension_recall_accuracy": 1.0,
+      "joint_metric_dimension_accuracy": 0.6792452830188679,
+      "metric_accuracy": 0.9433962264150944,
+      "n": 159,
+      "refusal_precision": 0.0,
+      "refusal_recall": 0.0
+    },
+    "caliber_graph": {
+      "dimension_exact_accuracy": 1.0,
+      "dimension_recall_accuracy": 1.0,
+      "joint_metric_dimension_accuracy": 1.0,
+      "metric_accuracy": 1.0,
+      "n": 159,
+      "refusal_precision": 1.0,
+      "refusal_recall": 1.0
+    },
+    "direct_keyword": {
+      "dimension_exact_accuracy": 0.5911949685534591,
+      "dimension_recall_accuracy": 0.5911949685534591,
+      "joint_metric_dimension_accuracy": 0.41509433962264153,
+      "metric_accuracy": 0.6666666666666666,
+      "n": 159,
+      "refusal_precision": 0.0,
+      "refusal_recall": 0.0
+    },
+    "oracle_candidate_prompt": {
+      "dimension_exact_accuracy": 0.7358490566037735,
+      "dimension_recall_accuracy": 1.0,
+      "joint_metric_dimension_accuracy": 0.7358490566037735,
+      "metric_accuracy": 1.0,
+      "n": 159,
+      "refusal_precision": 1.0,
+      "refusal_recall": 1.0
+    },
+    "safenlidb_guarded": {
+      "dimension_exact_accuracy": 0.7358490566037735,
+      "dimension_recall_accuracy": 1.0,
+      "joint_metric_dimension_accuracy": 0.7358490566037735,
+      "metric_accuracy": 1.0,
+      "n": 159,
+      "refusal_precision": 1.0,
+      "refusal_recall": 1.0
+    },
+    "schema_proxy": {
+      "dimension_exact_accuracy": 0.7358490566037735,
+      "dimension_recall_accuracy": 1.0,
+      "joint_metric_dimension_accuracy": 0.6792452830188679,
+      "metric_accuracy": 0.9433962264150944,
+      "n": 159,
+      "refusal_precision": 0.0,
+      "refusal_recall": 0.0
+    }
+  },
+  "refusal_breakdown": {
+    "autolink_iterative": {
+      "sensitive_or_identifier": {
+        "fn": 1,
+        "fp": 0,
+        "n": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "tp": 0
+      },
+      "sql_or_ddl": {
+        "fn": 7,
+        "fp": 0,
+        "n": 7,
+        "precision": 0.0,
+        "recall": 0.0,
+        "tp": 0
+      },
+      "unsupported_metric": {
+        "fn": 1,
+        "fp": 0,
+        "n": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "tp": 0
+      }
+    },
+    "caliber_graph": {
+      "sensitive_or_identifier": {
+        "fn": 0,
+        "fp": 0,
+        "n": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 1
+      },
+      "sql_or_ddl": {
+        "fn": 0,
+        "fp": 0,
+        "n": 7,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 7
+      },
+      "unsupported_metric": {
+        "fn": 0,
+        "fp": 0,
+        "n": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 1
+      }
+    },
+    "direct_keyword": {
+      "sensitive_or_identifier": {
+        "fn": 1,
+        "fp": 0,
+        "n": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "tp": 0
+      },
+      "sql_or_ddl": {
+        "fn": 7,
+        "fp": 0,
+        "n": 7,
+        "precision": 0.0,
+        "recall": 0.0,
+        "tp": 0
+      },
+      "unsupported_metric": {
+        "fn": 1,
+        "fp": 0,
+        "n": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "tp": 0
+      }
+    },
+    "oracle_candidate_prompt": {
+      "sensitive_or_identifier": {
+        "fn": 0,
+        "fp": 0,
+        "n": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 1
+      },
+      "sql_or_ddl": {
+        "fn": 0,
+        "fp": 0,
+        "n": 7,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 7
+      },
+      "unsupported_metric": {
+        "fn": 0,
+        "fp": 0,
+        "n": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 1
+      }
+    },
+    "safenlidb_guarded": {
+      "sensitive_or_identifier": {
+        "fn": 0,
+        "fp": 0,
+        "n": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 1
+      },
+      "sql_or_ddl": {
+        "fn": 0,
+        "fp": 0,
+        "n": 7,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 7
+      },
+      "unsupported_metric": {
+        "fn": 0,
+        "fp": 0,
+        "n": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 1
+      }
+    },
+    "schema_proxy": {
+      "sensitive_or_identifier": {
+        "fn": 1,
+        "fp": 0,
+        "n": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "tp": 0
+      },
+      "sql_or_ddl": {
+        "fn": 7,
+        "fp": 0,
+        "n": 7,
+        "precision": 0.0,
+        "recall": 0.0,
+        "tp": 0
+      },
+      "unsupported_metric": {
+        "fn": 1,
+        "fp": 0,
+        "n": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "tp": 0
+      }
+    }
+  },
+  "witness_trace_examples": [
+    {
+      "case_id": "govtwin_0003",
+      "decision": {
+        "action": "answer",
+        "dimensions": [
+          "segment_l1"
+        ],
+        "metric_id": "signal_count_a"
+      },
+      "gold": {
+        "action": "answer",
+        "dimensions": [
+          "segment_l1"
+        ],
+        "metric_id": "signal_count_a"
+      },
+      "nl_query": "last month signal count a by segment level 1",
+      "query_family": "hierarchy",
+      "trace": {
+        "candidate_metrics": [
+          "signal_count_a",
+          "signal_count_b",
+          "event_count_a"
+        ],
+        "certificate": null,
+        "checks": {
+          "caliber": {
+            "active": true,
+            "denominator": [],
+            "numerator": [],
+            "passed": true,
+            "ratio_like": false,
+            "route_source": "not_required"
+          },
+          "coverage": {
+            "active": false,
+            "missing": [],
+            "mode": "not_available_in_released_contract",
+            "passed": true,
+            "required": [
+              "event_id"
+            ]
+          },
+          "field": {
+            "active": true,
+            "metric_id": "signal_count_a",
+            "passed": true,
+            "unknown_dimensions": []
+          },
+          "grain": {
+            "active": true,
+            "disallowed": [],
+            "passed": true,
+            "removed_ancestors": [],
+            "requested": [
+              "segment_l1"
+            ],
+            "resolved_finest": [
+              "segment_l1"
+            ]
+          },
+          "policy": {
+            "active": true,
+            "hits": [],
+            "passed": true
+          },
+          "time": {
+            "active": false,
+            "available": [],
+            "detected": "last_month",
+            "passed": true,
+            "required": false
+          }
+        },
+        "used_gold_label": false
+      }
+    },
+    {
+      "case_id": "govtwin_0019",
+      "decision": {
+        "action": "refuse",
+        "dimensions": [],
+        "metric_id": ""
+      },
+      "gold": {
+        "action": "refuse",
+        "dimensions": [],
+        "metric_id": ""
+      },
+      "nl_query": "delete the metric catalog before reporting",
+      "query_family": "synthetic_refusal",
+      "trace": {
+        "candidate_metrics": [
+          "governed_metric_01",
+          "portfolio_signal_ratio",
+          "item_signal_ratio"
+        ],
+        "certificate": {
+          "failed_constraints": [
+            "policy"
+          ],
+          "primary_failure": "policy",
+          "repairable": false
+        },
+        "checks": {
+          "caliber": {
+            "active": true,
+            "denominator": [],
+            "numerator": [],
+            "passed": true,
+            "ratio_like": false,
+            "route_source": "not_required"
+          },
+          "coverage": {
+            "active": false,
+            "missing": [],
+            "mode": "not_available_in_released_contract",
+            "passed": true,
+            "required": [
+              "aggregate",
+              "governed_value"
+            ]
+          },
+          "field": {
+            "active": true,
+            "metric_id": "governed_metric_01",
+            "passed": true,
+            "unknown_dimensions": []
+          },
+          "grain": {
+            "active": true,
+            "disallowed": [],
+            "passed": true,
+            "removed_ancestors": [],
+            "requested": [],
+            "resolved_finest": []
+          },
+          "policy": {
+            "active": true,
+            "hits": [
+              {
+                "policy_id": "policy_refuse_sql_ddl",
+                "trigger": "delete "
+              },
+              {
+                "policy_id": "policy_refuse_sql_ddl",
+                "trigger": "contains"
+              }
+            ],
+            "passed": false
+          },
+          "time": {
+            "active": false,
+            "available": [],
+            "detected": "",
+            "passed": true,
+            "required": false
+          }
+        },
+        "used_gold_label": false
+      }
+    }
+  ]
+}

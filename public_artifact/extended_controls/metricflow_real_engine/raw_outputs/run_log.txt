@@ -1,0 +1,84 @@
+metricflow_lexical iowa_001: exit=0 rows=1 
+metricflow_lexical iowa_002: exit=0 rows=20 
+metricflow_lexical iowa_003: exit=0 rows=20 
+metricflow_lexical iowa_004: exit=0 rows=20 
+metricflow_lexical iowa_005: exit=0 rows=8 
+metricflow_lexical iowa_006: exit=0 rows=20 
+metricflow_lexical iowa_007: exit=0 rows=1 
+metricflow_lexical iowa_008: exit=0 rows=20 
+metricflow_lexical iowa_009: exit=0 rows=20 
+metricflow_lexical iowa_010: exit=0 rows=20 
+metricflow_lexical iowa_011: exit=0 rows=20 
+metricflow_lexical iowa_012: exit=0 rows=1 
+metricflow_lexical iowa_013: exit=0 rows=8 
+metricflow_lexical iowa_014: exit=0 rows=20 
+metricflow_lexical iowa_015: exit=0 rows=1 
+metricflow_lexical iowa_016: exit=0 rows=20 
+metricflow_lexical iowa_017: exit=0 rows=20 
+metricflow_lexical iowa_018: exit=0 rows=1 
+metricflow_lexical iowa_019: exit=0 rows=20 
+metricflow_lexical iowa_020: exit=0 rows=20 
+metricflow_lexical iowa_021: exit=0 rows=20 
+metricflow_lexical iowa_022: exit=0 rows=20 
+metricflow_lexical iowa_023: exit=0 rows=20 
+metricflow_lexical iowa_024: exit=0 rows=20 
+metricflow_lexical iowa_025: exit=0 rows=20 
+metricflow_lexical iowa_026: exit=0 rows=1 
+metricflow_lexical iowa_027: exit=0 rows=1 
+metricflow_lexical iowa_028: exit=0 rows=1 
+metricflow_lexical iowa_029: exit=0 rows=1 
+metricflow_lexical iowa_030: exit=1 rows=0 unknown_metric_name
+metricflow_lexical iowa_031: exit=1 rows=0 unknown_metric_name
+metricflow_lexical iowa_032: exit=0 rows=1 
+metricflow_oracle_metric iowa_001: exit=0 rows=1 
+metricflow_oracle_metric iowa_002: exit=0 rows=20 
+metricflow_oracle_metric iowa_003: exit=0 rows=20 
+metricflow_oracle_metric iowa_004: exit=0 rows=20 
+metricflow_oracle_metric iowa_005: exit=0 rows=8 
+metricflow_oracle_metric iowa_006: exit=0 rows=20 
+metricflow_oracle_metric iowa_007: exit=0 rows=1 
+metricflow_oracle_metric iowa_008: exit=0 rows=20 
+metricflow_oracle_metric iowa_009: exit=0 rows=20 
+metricflow_oracle_metric iowa_010: exit=0 rows=20 
+metricflow_oracle_metric iowa_011: exit=0 rows=20 
+metricflow_oracle_metric iowa_012: exit=0 rows=1 
+metricflow_oracle_metric iowa_013: exit=0 rows=8 
+metricflow_oracle_metric iowa_014: exit=0 rows=20 
+metricflow_oracle_metric iowa_015: exit=0 rows=1 
+metricflow_oracle_metric iowa_016: exit=0 rows=20 
+metricflow_oracle_metric iowa_017: exit=0 rows=20 
+metricflow_oracle_metric iowa_018: exit=0 rows=1 
+metricflow_oracle_metric iowa_019: exit=0 rows=20 
+metricflow_oracle_metric iowa_020: exit=0 rows=20 
+metricflow_oracle_metric iowa_021: exit=0 rows=20 
+metricflow_oracle_metric iowa_022: exit=0 rows=20 
+metricflow_oracle_metric iowa_023: exit=0 rows=20 
+metricflow_oracle_metric iowa_024: exit=0 rows=20 
+metricflow_oracle_metric iowa_025: exit=0 rows=20 
+metricflow_oracle_metric iowa_026: exit=1 rows=0 unknown_group_by_item
+metricflow_oracle_metric iowa_027: exit=1 rows=0 unknown_group_by_item
+metricflow_oracle_metric iowa_028: exit=1 rows=0 unknown_metric_name
+metricflow_oracle_metric iowa_029: exit=1 rows=0 unknown_metric_name
+metricflow_oracle_metric iowa_030: exit=1 rows=0 unknown_metric_name
+metricflow_oracle_metric iowa_031: exit=1 rows=0 unknown_metric_name
+metricflow_oracle_metric iowa_032: exit=1 rows=0 unknown_metric_name
+{
+  "metricflow_lexical": {
+    "dimension_exact_accuracy": 0.78125,
+    "joint_metric_dimension_accuracy": 0.625,
+    "metric_accuracy": 0.84375,
+    "n": 32,
+    "refusal_precision": 1.0,
+    "refusal_recall": 0.2857142857142857,
+    "sql_execution_success_rate_on_answer_predictions": 1.0
+  },
+  "metricflow_oracle_metric": {
+    "dimension_exact_accuracy": 0.78125,
+    "joint_metric_dimension_accuracy": 0.78125,
+    "metric_accuracy": 1.0,
+    "n": 32,
+    "refusal_precision": 1.0,
+    "refusal_recall": 1.0,
+    "sql_execution_success_rate_on_answer_predictions": 1.0
+  }
+}

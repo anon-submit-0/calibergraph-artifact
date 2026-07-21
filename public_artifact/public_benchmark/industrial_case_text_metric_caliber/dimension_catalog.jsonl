@@ -1,0 +1,4 @@
+{"aliases": ["一级品类", "level 1 segment", "segment level 1"], "dimension_id": "segment_l1", "domain_id": "ict_domain_01", "grain_rank": 1, "name": "Segment Level 1", "parent": ""}
+{"aliases": ["二级品类", "level 2 segment", "segment level 2"], "dimension_id": "segment_l2", "domain_id": "ict_domain_01", "grain_rank": 2, "name": "Segment Level 2", "parent": "segment_l1"}
+{"aliases": ["三级品类", "level 3 segment", "segment level 3"], "dimension_id": "segment_l3", "domain_id": "ict_domain_01", "grain_rank": 3, "name": "Segment Level 3", "parent": "segment_l2"}
+{"aliases": ["区域", "region", "market region"], "dimension_id": "market_region", "domain_id": "ict_domain_01", "grain_rank": 1, "name": "Market Region", "parent": ""}

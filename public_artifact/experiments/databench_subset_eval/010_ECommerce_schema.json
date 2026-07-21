@@ -1,0 +1,57 @@
+{
+  "columns": [
+    {
+      "name": "Clothing ID",
+      "type": "USMALLINT"
+    },
+    {
+      "name": "Age",
+      "type": "UTINYINT"
+    },
+    {
+      "name": "Title",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "Review Text",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "Rating",
+      "type": "UTINYINT"
+    },
+    {
+      "name": "Recommended IND",
+      "type": "UTINYINT"
+    },
+    {
+      "name": "Positive Feedback Count",
+      "type": "UTINYINT"
+    },
+    {
+      "name": "Division Name",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "Department Name",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "Class Name",
+      "type": "VARCHAR"
+    }
+  ],
+  "dataset": "010_ECommerce",
+  "qa_count": 20,
+  "qa_types": {
+    "boolean": 4,
+    "category": 4,
+    "list[category]": 4,
+    "list[number]": 4,
+    "number": 4
+  },
+  "rows": 23486,
+  "sample_rows": 20,
+  "sha256_all": "67b2b80ecd8e7a4f922805f0847305f2b639aeab138b954b7613b52b333169ed",
+  "sha256_qa": "44d4431128d6eb1a44a6ae7044a627d6b8593439faf3ca89bf50cf99a5eb9179"
+}

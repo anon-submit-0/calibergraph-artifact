@@ -1,0 +1,89 @@
+{
+  "engine": "metricflow 0.211.0 (Apache-2.0) + dbt-metricflow 0.13.0 + dbt-core 1.11.12 + dbt-duckdb 1.10.1 / duckdb 1.5.4",
+  "metricflow_modes": {
+    "metricflow_lexical": {
+      "dimension_exact_accuracy": 0.78125,
+      "joint_metric_dimension_accuracy": 0.625,
+      "metric_accuracy": 0.84375,
+      "n": 32,
+      "refusal_precision": 1.0,
+      "refusal_recall": 0.2857142857142857,
+      "sql_execution_success_rate_on_answer_predictions": 1.0
+    },
+    "metricflow_oracle_metric": {
+      "dimension_exact_accuracy": 0.78125,
+      "joint_metric_dimension_accuracy": 0.78125,
+      "metric_accuracy": 1.0,
+      "n": 32,
+      "refusal_precision": 1.0,
+      "refusal_recall": 1.0,
+      "sql_execution_success_rate_on_answer_predictions": 1.0
+    }
+  },
+  "released_baselines_for_comparison": {
+    "autolink_iterative": {
+      "dimension_exact_accuracy": 0.71875,
+      "joint_metric_dimension_accuracy": 0.5625,
+      "metric_accuracy": 0.78125,
+      "n": 32,
+      "refusal_precision": 0.0,
+      "refusal_recall": 0.0,
+      "sql_execution_success_rate_on_answer_predictions": 1.0
+    },
+    "caliber_graph": {
+      "dimension_exact_accuracy": 1.0,
+      "joint_metric_dimension_accuracy": 1.0,
+      "metric_accuracy": 1.0,
+      "n": 32,
+      "refusal_precision": 1.0,
+      "refusal_recall": 1.0,
+      "sql_execution_success_rate_on_answer_predictions": 1.0
+    },
+    "direct_keyword": {
+      "dimension_exact_accuracy": 0.375,
+      "joint_metric_dimension_accuracy": 0.15625,
+      "metric_accuracy": 0.75,
+      "n": 32,
+      "refusal_precision": 0.0,
+      "refusal_recall": 0.0,
+      "sql_execution_success_rate_on_answer_predictions": 1.0
+    },
+    "open_sql_end_to_end": {
+      "dimension_exact_accuracy": 0.71875,
+      "joint_metric_dimension_accuracy": 0.5625,
+      "metric_accuracy": 0.78125,
+      "n": 32,
+      "refusal_precision": 0.0,
+      "refusal_recall": 0.0,
+      "sql_execution_success_rate_on_answer_predictions": 1.0
+    },
+    "oracle_candidate_prompt": {
+      "dimension_exact_accuracy": 0.78125,
+      "joint_metric_dimension_accuracy": 0.78125,
+      "metric_accuracy": 1.0,
+      "n": 32,
+      "refusal_precision": 1.0,
+      "refusal_recall": 1.0,
+      "sql_execution_success_rate_on_answer_predictions": 1.0
+    },
+    "safenlidb_guarded": {
+      "dimension_exact_accuracy": 0.78125,
+      "joint_metric_dimension_accuracy": 0.78125,
+      "metric_accuracy": 1.0,
+      "n": 32,
+      "refusal_precision": 1.0,
+      "refusal_recall": 1.0,
+      "sql_execution_success_rate_on_answer_predictions": 1.0
+    },
+    "schema_proxy": {
+      "dimension_exact_accuracy": 0.71875,
+      "joint_metric_dimension_accuracy": 0.5625,
+      "metric_accuracy": 0.78125,
+      "n": 32,
+      "refusal_precision": 0.0,
+      "refusal_recall": 0.0,
+      "sql_execution_success_rate_on_answer_predictions": 1.0
+    }
+  },
+  "warehouse_note": "benchmark SQLite snapshot copied to DuckDB (no SQLite adapter in MetricFlow); parity checks in translation/data_parity.json"
+}

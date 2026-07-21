@@ -1,0 +1,6 @@
+{
+  "channel": "moonshot",
+  "model": "kimi-k2.6",
+  "mode": "llm_graph_rag",
+  "stdout": "[\n  {\"case_id\":\"ict_case_0003\",\"action\":\"answer\",\"metric_id\":\"ict_metric_012\",\"dimensions\":[\"segment_l1\"],\"reason\":\"售后单数 matches ict_metric_012; 一级品类 matches segment_l1.\"},\n  {\"case_id\":\"ict_case_0004\",\"action\":\"answer\",\"metric_id\":\"ict_metric_001\",\"dimensions\":[],\"reason\":\"客诉率 exactly matches alias of ict_metric_001; flat metric needs no dimensions.\"}\n]"
+}

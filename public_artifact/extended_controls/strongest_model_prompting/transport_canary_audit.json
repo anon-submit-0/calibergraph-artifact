@@ -1,0 +1,25 @@
+{
+  "models": {
+    "claude-opus-4-6": {
+      "anchor_coverage_id": "mg_domain_01_coverage_001",
+      "anchor_file": "physical_coverage.jsonl",
+      "benchmark_calls": 200,
+      "pass": true,
+      "v1_conflicted_quote_diagnostics_excluded": 0,
+      "v2_calls": 2,
+      "v2_gate_precedes_benchmark": true,
+      "v2_passes": 2
+    },
+    "gpt-5.5": {
+      "anchor_coverage_id": "mg_domain_01_coverage_001",
+      "anchor_file": "physical_coverage.jsonl",
+      "benchmark_calls": 200,
+      "pass": true,
+      "v1_conflicted_quote_diagnostics_excluded": 2,
+      "v2_calls": 2,
+      "v2_gate_precedes_benchmark": true,
+      "v2_passes": 2
+    }
+  },
+  "overall_pass": true
+}

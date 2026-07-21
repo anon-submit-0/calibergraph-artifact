@@ -1,0 +1,192 @@
+{
+  "chinook": {
+    "conformance": {
+      "dimension_not_allowed": 0,
+      "dimension_not_allowed_rate": 0.0,
+      "dimension_not_in_catalog": 0,
+      "dimension_not_in_catalog_rate": 0.0,
+      "finest_grain_violation": 0,
+      "finest_grain_violation_rate": 0.0,
+      "metric_not_in_catalog": 0,
+      "metric_not_in_catalog_rate": 0.0,
+      "n_answer_predictions": 32
+    },
+    "counts": {
+      "dim_ok": 38,
+      "joint_ok": 37,
+      "metric_ok": 38,
+      "refusal_fn": 0,
+      "refusal_fp": 2,
+      "refusal_tp": 6
+    },
+    "dimension_exact_accuracy": 0.95,
+    "errors_vs_calibergraph_exact_binomial_n_discordant": 3,
+    "joint_metric_dimension_accuracy": 0.925,
+    "joint_wilson95": [
+      0.8013576647568946,
+      0.9741639742254119
+    ],
+    "latency_ms_mean": 13006.85,
+    "metric_accuracy": 0.95,
+    "n": 40,
+    "parse_status_counts": {
+      "ok": 40
+    },
+    "refusal_precision": 0.75,
+    "refusal_recall": 1.0,
+    "total_completion_tokens": 18332,
+    "total_prompt_tokens": 252928
+  },
+  "govtwin": {
+    "conformance": {
+      "dimension_not_allowed": 0,
+      "dimension_not_allowed_rate": 0.0,
+      "dimension_not_in_catalog": 0,
+      "dimension_not_in_catalog_rate": 0.0,
+      "finest_grain_violation": 41,
+      "finest_grain_violation_rate": 0.2751677852348993,
+      "metric_not_in_catalog": 0,
+      "metric_not_in_catalog_rate": 0.0,
+      "n_answer_predictions": 149
+    },
+    "counts": {
+      "dim_ok": 117,
+      "joint_ok": 117,
+      "metric_ok": 158,
+      "refusal_fn": 0,
+      "refusal_fp": 1,
+      "refusal_tp": 9
+    },
+    "dimension_exact_accuracy": 0.7358490566037735,
+    "errors_vs_calibergraph_exact_binomial_n_discordant": 42,
+    "joint_metric_dimension_accuracy": 0.7358490566037735,
+    "joint_wilson95": [
+      0.6623419704318209,
+      0.798228700840432
+    ],
+    "latency_ms_mean": 14302.647798742139,
+    "metric_accuracy": 0.9937106918238994,
+    "n": 159,
+    "parse_status_counts": {
+      "ok": 159
+    },
+    "refusal_precision": 0.9,
+    "refusal_recall": 1.0,
+    "total_completion_tokens": 79826,
+    "total_prompt_tokens": 1695231
+  },
+  "ict": {
+    "conformance": {
+      "dimension_not_allowed": null,
+      "dimension_not_allowed_rate": null,
+      "dimension_not_in_catalog": 0,
+      "dimension_not_in_catalog_rate": 0.0,
+      "finest_grain_violation": 0,
+      "finest_grain_violation_rate": 0.0,
+      "metric_not_in_catalog": 0,
+      "metric_not_in_catalog_rate": 0.0,
+      "n_answer_predictions": 143
+    },
+    "counts": {
+      "dim_ok": 136,
+      "joint_ok": 129,
+      "metric_ok": 148,
+      "refusal_fn": 1,
+      "refusal_fp": 7,
+      "refusal_tp": 7
+    },
+    "dimension_exact_accuracy": 0.8662420382165605,
+    "errors_vs_calibergraph_exact_binomial_n_discordant": 28,
+    "joint_metric_dimension_accuracy": 0.821656050955414,
+    "joint_wilson95": [
+      0.7543177218856917,
+      0.8736298280839633
+    ],
+    "latency_ms_mean": 8533.872611464969,
+    "metric_accuracy": 0.9426751592356688,
+    "n": 157,
+    "parse_status_counts": {
+      "ok": 157
+    },
+    "refusal_precision": 0.5,
+    "refusal_recall": 0.875,
+    "total_completion_tokens": 47341,
+    "total_prompt_tokens": 1048426
+  },
+  "iowa": {
+    "conformance": {
+      "dimension_not_allowed": 0,
+      "dimension_not_allowed_rate": 0.0,
+      "dimension_not_in_catalog": 0,
+      "dimension_not_in_catalog_rate": 0.0,
+      "finest_grain_violation": 3,
+      "finest_grain_violation_rate": 0.125,
+      "metric_not_in_catalog": 0,
+      "metric_not_in_catalog_rate": 0.0,
+      "n_answer_predictions": 24
+    },
+    "counts": {
+      "dim_ok": 28,
+      "joint_ok": 28,
+      "metric_ok": 31,
+      "refusal_fn": 0,
+      "refusal_fp": 1,
+      "refusal_tp": 7
+    },
+    "dimension_exact_accuracy": 0.875,
+    "errors_vs_calibergraph_exact_binomial_n_discordant": 4,
+    "joint_metric_dimension_accuracy": 0.875,
+    "joint_wilson95": [
+      0.7193169451834978,
+      0.9502986561251991
+    ],
+    "latency_ms_mean": 14522.46875,
+    "metric_accuracy": 0.96875,
+    "n": 32,
+    "parse_status_counts": {
+      "ok": 32
+    },
+    "refusal_precision": 0.875,
+    "refusal_recall": 1.0,
+    "total_completion_tokens": 15495,
+    "total_prompt_tokens": 272532
+  },
+  "multigov": {
+    "conformance": {
+      "dimension_not_allowed": 3,
+      "dimension_not_allowed_rate": 0.011583011583011582,
+      "dimension_not_in_catalog": 0,
+      "dimension_not_in_catalog_rate": 0.0,
+      "finest_grain_violation": 3,
+      "finest_grain_violation_rate": 0.011583011583011582,
+      "metric_not_in_catalog": 0,
+      "metric_not_in_catalog_rate": 0.0,
+      "n_answer_predictions": 259
+    },
+    "counts": {
+      "dim_ok": 436,
+      "joint_ok": 436,
+      "metric_ok": 443,
+      "refusal_fn": 0,
+      "refusal_fp": 67,
+      "refusal_tp": 184
+    },
+    "dimension_exact_accuracy": 0.8549019607843137,
+    "errors_vs_calibergraph_exact_binomial_n_discordant": 74,
+    "joint_metric_dimension_accuracy": 0.8549019607843137,
+    "joint_wilson95": [
+      0.8216808971234761,
+      0.8828165578518734
+    ],
+    "latency_ms_mean": 38271.32352941176,
+    "metric_accuracy": 0.8686274509803922,
+    "n": 510,
+    "parse_status_counts": {
+      "ok": 510
+    },
+    "refusal_precision": 0.7330677290836654,
+    "refusal_recall": 1.0,
+    "total_completion_tokens": 271942,
+    "total_prompt_tokens": 67490458
+  }
+}

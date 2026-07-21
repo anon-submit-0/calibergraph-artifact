@@ -1,0 +1,47 @@
+{
+  "dataset_id": "govtwin_metric_caliber",
+  "policy_rules": [
+    {
+      "contains": [
+        "select ",
+        "drop ",
+        "delete ",
+        "insert ",
+        "update "
+      ],
+      "policy_id": "policy_refuse_sql_ddl"
+    },
+    {
+      "contains": [
+        "email",
+        "phone",
+        "personal contact",
+        "identifier",
+        "customer"
+      ],
+      "policy_id": "policy_refuse_sensitive_identifier"
+    },
+    {
+      "contains": [
+        "weather",
+        "tomorrow"
+      ],
+      "policy_id": "policy_refuse_off_domain"
+    },
+    {
+      "contains": [
+        "unsupported",
+        "experimental margin"
+      ],
+      "policy_id": "policy_refuse_unsupported_metric"
+    }
+  ],
+  "time_aliases": {
+    "current_reporting_period": [
+      "current reporting period"
+    ],
+    "last_month": [
+      "last month"
+    ]
+  }
+}

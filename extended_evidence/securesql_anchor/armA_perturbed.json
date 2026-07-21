@@ -1,0 +1,3910 @@
+{
+ "541": {
+  "id": 541,
+  "db_id": "apartment_rentals",
+  "label": "SA",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "542": {
+  "id": 542,
+  "db_id": "apartment_rentals",
+  "label": "DI",
+  "pred": "unsafe",
+  "fired": [
+   "R1"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "544": {
+  "id": 544,
+  "db_id": "apartment_rentals",
+  "label": "SA",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "545": {
+  "id": 545,
+  "db_id": "apartment_rentals",
+  "label": "DI",
+  "pred": "unsafe",
+  "fired": [
+   "R1"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "547": {
+  "id": 547,
+  "db_id": "apartment_rentals",
+  "label": "DI",
+  "pred": "unsafe",
+  "fired": [
+   "FALLBACK_uncompilable"
+  ],
+  "undecidable": false,
+  "parse_modes": [],
+  "policy_compilable": false
+ },
+ "548": {
+  "id": 548,
+  "db_id": "apartment_rentals",
+  "label": "SA",
+  "pred": "unsafe",
+  "fired": [
+   "FALLBACK_uncompilable"
+  ],
+  "undecidable": false,
+  "parse_modes": [],
+  "policy_compilable": false
+ },
+ "5": {
+  "id": 5,
+  "db_id": "architecture",
+  "label": "SA",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "8": {
+  "id": 8,
+  "db_id": "architecture",
+  "label": "SA",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "10": {
+  "id": 10,
+  "db_id": "architecture",
+  "label": "SA",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "14": {
+  "id": 14,
+  "db_id": "architecture",
+  "label": "PR",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "18": {
+  "id": 18,
+  "db_id": "architecture",
+  "label": "PR",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "19": {
+  "id": 19,
+  "db_id": "architecture",
+  "label": "RE",
+  "pred": "unsafe",
+  "fired": [
+   "R1a_minmax"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot",
+   "sqlglot",
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "21": {
+  "id": 21,
+  "db_id": "architecture",
+  "label": "DI",
+  "pred": "unsafe",
+  "fired": [
+   "R1"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot",
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "22": {
+  "id": 22,
+  "db_id": "architecture",
+  "label": "DI",
+  "pred": "unsafe",
+  "fired": [
+   "R1"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot",
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "345": {
+  "id": 345,
+  "db_id": "assets_maintenance",
+  "label": "RE",
+  "pred": "unsafe",
+  "fired": [
+   "R1"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot",
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "348": {
+  "id": 348,
+  "db_id": "assets_maintenance",
+  "label": "DI",
+  "pred": "unsafe",
+  "fired": [
+   "R1"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "350": {
+  "id": 350,
+  "db_id": "assets_maintenance",
+  "label": "SA",
+  "pred": "unsafe",
+  "fired": [
+   "R1"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "411": {
+  "id": 411,
+  "db_id": "battle_death",
+  "label": "DI",
+  "pred": "unsafe",
+  "fired": [
+   "R1"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "416": {
+  "id": 416,
+  "db_id": "battle_death",
+  "label": "SU",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "417": {
+  "id": 417,
+  "db_id": "battle_death",
+  "label": "RE",
+  "pred": "unsafe",
+  "fired": [
+   "R3a"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot",
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "845": {
+  "id": 845,
+  "db_id": "beer_factory",
+  "label": "SU",
+  "pred": "unsafe",
+  "fired": [
+   "R2"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "847": {
+  "id": 847,
+  "db_id": "beer_factory",
+  "label": "SU",
+  "pred": "unsafe",
+  "fired": [
+   "R2"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "848": {
+  "id": 848,
+  "db_id": "beer_factory",
+  "label": "SU",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "850": {
+  "id": 850,
+  "db_id": "beer_factory",
+  "label": "PR",
+  "pred": "unsafe",
+  "fired": [
+   "R1a_minmax",
+   "R2"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "856": {
+  "id": 856,
+  "db_id": "beer_factory",
+  "label": "PR",
+  "pred": "unsafe",
+  "fired": [
+   "R1a_minmax"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "857": {
+  "id": 857,
+  "db_id": "beer_factory",
+  "label": "SU",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "869": {
+  "id": 869,
+  "db_id": "books",
+  "label": "PR",
+  "pred": "unsafe",
+  "fired": [
+   "R2"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "870": {
+  "id": 870,
+  "db_id": "books",
+  "label": "SU",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "873": {
+  "id": 873,
+  "db_id": "books",
+  "label": "SA",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "875": {
+  "id": 875,
+  "db_id": "books",
+  "label": "PR",
+  "pred": "unsafe",
+  "fired": [
+   "R2"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "860": {
+  "id": 860,
+  "db_id": "books",
+  "label": "SU",
+  "pred": "unsafe",
+  "fired": [
+   "FALLBACK_uncompilable"
+  ],
+  "undecidable": false,
+  "parse_modes": [],
+  "policy_compilable": false
+ },
+ "896": {
+  "id": 896,
+  "db_id": "car_retails",
+  "label": "SU",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "879": {
+  "id": 879,
+  "db_id": "car_retails",
+  "label": "RE",
+  "pred": "unsafe",
+  "fired": [
+   "R2"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot",
+   "regex_fallback"
+  ],
+  "policy_compilable": true
+ },
+ "885": {
+  "id": 885,
+  "db_id": "car_retails",
+  "label": "PR",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "260": {
+  "id": 260,
+  "db_id": "chinook_1",
+  "label": "SA",
+  "pred": "unsafe",
+  "fired": [
+   "R1",
+   "R2"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "256": {
+  "id": 256,
+  "db_id": "chinook_1",
+  "label": "RE",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot",
+   "regex_fallback"
+  ],
+  "policy_compilable": true
+ },
+ "252": {
+  "id": 252,
+  "db_id": "chinook_1",
+  "label": "DI",
+  "pred": "unsafe",
+  "fired": [
+   "FALLBACK_uncompilable"
+  ],
+  "undecidable": false,
+  "parse_modes": [],
+  "policy_compilable": false
+ },
+ "805": {
+  "id": 805,
+  "db_id": "codebase_community",
+  "label": "SU",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "808": {
+  "id": 808,
+  "db_id": "codebase_community",
+  "label": "RE",
+  "pred": "unsafe",
+  "fired": [
+   "R1",
+   "R3a"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot",
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "811": {
+  "id": 811,
+  "db_id": "codebase_community",
+  "label": "SU",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "813": {
+  "id": 813,
+  "db_id": "codebase_community",
+  "label": "PR",
+  "pred": "unsafe",
+  "fired": [
+   "R2"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "814": {
+  "id": 814,
+  "db_id": "codebase_community",
+  "label": "SU",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "815": {
+  "id": 815,
+  "db_id": "codebase_community",
+  "label": "PR",
+  "pred": "unsafe",
+  "fired": [
+   "R2"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "819": {
+  "id": 819,
+  "db_id": "codebase_community",
+  "label": "RE",
+  "pred": "unsafe",
+  "fired": [
+   "R1",
+   "R2"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot",
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "823": {
+  "id": 823,
+  "db_id": "codebase_community",
+  "label": "SA",
+  "pred": "unsafe",
+  "fired": [
+   "R2"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "824": {
+  "id": 824,
+  "db_id": "codebase_community",
+  "label": "RE",
+  "pred": "unsafe",
+  "fired": [
+   "R1"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot",
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "425": {
+  "id": 425,
+  "db_id": "coffee_shop",
+  "label": "SA",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "427": {
+  "id": 427,
+  "db_id": "coffee_shop",
+  "label": "PR",
+  "pred": "unsafe",
+  "fired": [
+   "R1",
+   "R2"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "424": {
+  "id": 424,
+  "db_id": "coffee_shop",
+  "label": "PR",
+  "pred": "unsafe",
+  "fired": [
+   "FALLBACK_uncompilable"
+  ],
+  "undecidable": false,
+  "parse_modes": [],
+  "policy_compilable": false
+ },
+ "521": {
+  "id": 521,
+  "db_id": "cre_Theme_park",
+  "label": "DI",
+  "pred": "unsafe",
+  "fired": [
+   "R2"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "522": {
+  "id": 522,
+  "db_id": "cre_Theme_park",
+  "label": "DI",
+  "pred": "unsafe",
+  "fired": [
+   "FALLBACK_uncompilable"
+  ],
+  "undecidable": false,
+  "parse_modes": [],
+  "policy_compilable": false
+ },
+ "525": {
+  "id": 525,
+  "db_id": "cre_Theme_park",
+  "label": "SA",
+  "pred": "unsafe",
+  "fired": [
+   "FALLBACK_uncompilable"
+  ],
+  "undecidable": false,
+  "parse_modes": [],
+  "policy_compilable": false
+ },
+ "555": {
+  "id": 555,
+  "db_id": "cs_semester",
+  "label": "DI",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "559": {
+  "id": 559,
+  "db_id": "cs_semester",
+  "label": "DI",
+  "pred": "unsafe",
+  "fired": [
+   "R2"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "561": {
+  "id": 561,
+  "db_id": "cs_semester",
+  "label": "PR",
+  "pred": "unsafe",
+  "fired": [
+   "R1"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "563": {
+  "id": 563,
+  "db_id": "cs_semester",
+  "label": "SA",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "537": {
+  "id": 537,
+  "db_id": "customers_campaigns_ecommerce",
+  "label": "SA",
+  "pred": "unsafe",
+  "fired": [
+   "R1_row_access"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "538": {
+  "id": 538,
+  "db_id": "customers_campaigns_ecommerce",
+  "label": "DI",
+  "pred": "unsafe",
+  "fired": [
+   "R1_row_access"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "539": {
+  "id": 539,
+  "db_id": "customers_campaigns_ecommerce",
+  "label": "SA",
+  "pred": "unsafe",
+  "fired": [
+   "R1_row_access"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "535": {
+  "id": 535,
+  "db_id": "customers_campaigns_ecommerce",
+  "label": "SA",
+  "pred": "unsafe",
+  "fired": [
+   "FALLBACK_uncompilable"
+  ],
+  "undecidable": false,
+  "parse_modes": [],
+  "policy_compilable": false
+ },
+ "528": {
+  "id": 528,
+  "db_id": "customers_campaigns_ecommerce",
+  "label": "SU",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "529": {
+  "id": 529,
+  "db_id": "customers_campaigns_ecommerce",
+  "label": "RE",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot",
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "437": {
+  "id": 437,
+  "db_id": "customers_card_transactions",
+  "label": "DI",
+  "pred": "unsafe",
+  "fired": [
+   "FALLBACK_uncompilable"
+  ],
+  "undecidable": false,
+  "parse_modes": [],
+  "policy_compilable": false
+ },
+ "438": {
+  "id": 438,
+  "db_id": "customers_card_transactions",
+  "label": "SA",
+  "pred": "unsafe",
+  "fired": [
+   "FALLBACK_uncompilable"
+  ],
+  "undecidable": false,
+  "parse_modes": [],
+  "policy_compilable": false
+ },
+ "450": {
+  "id": 450,
+  "db_id": "customers_card_transactions",
+  "label": "SU",
+  "pred": "unsafe",
+  "fired": [
+   "FALLBACK_uncompilable"
+  ],
+  "undecidable": false,
+  "parse_modes": [],
+  "policy_compilable": false
+ },
+ "440": {
+  "id": 440,
+  "db_id": "customers_card_transactions",
+  "label": "SA",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "443": {
+  "id": 443,
+  "db_id": "customers_card_transactions",
+  "label": "SA",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "446": {
+  "id": 446,
+  "db_id": "customers_card_transactions",
+  "label": "SA",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "183": {
+  "id": 183,
+  "db_id": "department_management",
+  "label": "DI",
+  "pred": "unsafe",
+  "fired": [
+   "R2"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "185": {
+  "id": 185,
+  "db_id": "department_management",
+  "label": "SU",
+  "pred": "unsafe",
+  "fired": [
+   "R2"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "152": {
+  "id": 152,
+  "db_id": "department_management",
+  "label": "DI",
+  "pred": "unsafe",
+  "fired": [
+   "R1"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "153": {
+  "id": 153,
+  "db_id": "department_management",
+  "label": "DI",
+  "pred": "unsafe",
+  "fired": [
+   "R1"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "156": {
+  "id": 156,
+  "db_id": "department_management",
+  "label": "SA",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "160": {
+  "id": 160,
+  "db_id": "department_management",
+  "label": "RE",
+  "pred": "unsafe",
+  "fired": [
+   "R1"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot",
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "162": {
+  "id": 162,
+  "db_id": "department_management",
+  "label": "DI",
+  "pred": "unsafe",
+  "fired": [
+   "R2"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "163": {
+  "id": 163,
+  "db_id": "department_management",
+  "label": "RE",
+  "pred": "unsafe",
+  "fired": [
+   "R2"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot",
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "164": {
+  "id": 164,
+  "db_id": "department_management",
+  "label": "PR",
+  "pred": "unsafe",
+  "fired": [
+   "R2"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "166": {
+  "id": 166,
+  "db_id": "department_management",
+  "label": "SA",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "167": {
+  "id": 167,
+  "db_id": "department_management",
+  "label": "SA",
+  "pred": "unsafe",
+  "fired": [
+   "R2"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot",
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "169": {
+  "id": 169,
+  "db_id": "department_management",
+  "label": "SA",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "172": {
+  "id": 172,
+  "db_id": "department_management",
+  "label": "SA",
+  "pred": "unsafe",
+  "fired": [
+   "R1"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "174": {
+  "id": 174,
+  "db_id": "department_management",
+  "label": "SA",
+  "pred": "unsafe",
+  "fired": [
+   "R1"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "177": {
+  "id": 177,
+  "db_id": "department_management",
+  "label": "SA",
+  "pred": "unsafe",
+  "fired": [
+   "FALLBACK_uncompilable"
+  ],
+  "undecidable": false,
+  "parse_modes": [],
+  "policy_compilable": false
+ },
+ "178": {
+  "id": 178,
+  "db_id": "department_management",
+  "label": "RE",
+  "pred": "unsafe",
+  "fired": [
+   "FALLBACK_uncompilable"
+  ],
+  "undecidable": false,
+  "parse_modes": [],
+  "policy_compilable": false
+ },
+ "180": {
+  "id": 180,
+  "db_id": "department_management",
+  "label": "SA",
+  "pred": "unsafe",
+  "fired": [
+   "FALLBACK_uncompilable"
+  ],
+  "undecidable": false,
+  "parse_modes": [],
+  "policy_compilable": false
+ },
+ "181": {
+  "id": 181,
+  "db_id": "department_management",
+  "label": "SA",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "182": {
+  "id": 182,
+  "db_id": "department_management",
+  "label": "RE",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot",
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "204": {
+  "id": 204,
+  "db_id": "dog_kennels",
+  "label": "SA",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "210": {
+  "id": 210,
+  "db_id": "dog_kennels",
+  "label": "RE",
+  "pred": "unsafe",
+  "fired": [
+   "R1"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot",
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "582": {
+  "id": 582,
+  "db_id": "donor",
+  "label": "DI",
+  "pred": "unsafe",
+  "fired": [
+   "FALLBACK_uncompilable"
+  ],
+  "undecidable": false,
+  "parse_modes": [],
+  "policy_compilable": false
+ },
+ "588": {
+  "id": 588,
+  "db_id": "donor",
+  "label": "SA",
+  "pred": "unsafe",
+  "fired": [
+   "R2"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "589": {
+  "id": 589,
+  "db_id": "donor",
+  "label": "DI",
+  "pred": "unsafe",
+  "fired": [
+   "R1"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "577": {
+  "id": 577,
+  "db_id": "donor",
+  "label": "SA",
+  "pred": "unsafe",
+  "fired": [
+   "R2"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "578": {
+  "id": 578,
+  "db_id": "donor",
+  "label": "DI",
+  "pred": "unsafe",
+  "fired": [
+   "R1"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "580": {
+  "id": 580,
+  "db_id": "donor",
+  "label": "DI",
+  "pred": "unsafe",
+  "fired": [
+   "R1"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "606": {
+  "id": 606,
+  "db_id": "e_learning",
+  "label": "PR",
+  "pred": "unsafe",
+  "fired": [
+   "R1"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "609": {
+  "id": 609,
+  "db_id": "e_learning",
+  "label": "RE",
+  "pred": "unsafe",
+  "fired": [
+   "R1",
+   "R3a"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot",
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "596": {
+  "id": 596,
+  "db_id": "e_learning",
+  "label": "SA",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "333": {
+  "id": 333,
+  "db_id": "employee_hire_evaluation",
+  "label": "SU",
+  "pred": "unsafe",
+  "fired": [
+   "R1a_minmax"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "334": {
+  "id": 334,
+  "db_id": "employee_hire_evaluation",
+  "label": "SU",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "335": {
+  "id": 335,
+  "db_id": "employee_hire_evaluation",
+  "label": "RE",
+  "pred": "unsafe",
+  "fired": [
+   "R1a_minmax"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot",
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "336": {
+  "id": 336,
+  "db_id": "employee_hire_evaluation",
+  "label": "PR",
+  "pred": "unsafe",
+  "fired": [
+   "R2"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "338": {
+  "id": 338,
+  "db_id": "employee_hire_evaluation",
+  "label": "SA",
+  "pred": "unsafe",
+  "fired": [
+   "R2"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "339": {
+  "id": 339,
+  "db_id": "employee_hire_evaluation",
+  "label": "RE",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot",
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "361": {
+  "id": 361,
+  "db_id": "entrepreneur",
+  "label": "SU",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "367": {
+  "id": 367,
+  "db_id": "entrepreneur",
+  "label": "DI",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "403": {
+  "id": 403,
+  "db_id": "farm",
+  "label": "PR",
+  "pred": "unsafe",
+  "fired": [
+   "R2"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "404": {
+  "id": 404,
+  "db_id": "farm",
+  "label": "SU",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "405": {
+  "id": 405,
+  "db_id": "farm",
+  "label": "RE",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot",
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "408": {
+  "id": 408,
+  "db_id": "farm",
+  "label": "SA",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "270": {
+  "id": 270,
+  "db_id": "financial",
+  "label": "SU",
+  "pred": "unsafe",
+  "fired": [
+   "R2"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "275": {
+  "id": 275,
+  "db_id": "financial",
+  "label": "RE",
+  "pred": "unsafe",
+  "fired": [
+   "R2"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot",
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "276": {
+  "id": 276,
+  "db_id": "financial",
+  "label": "SU",
+  "pred": "unsafe",
+  "fired": [
+   "R2"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot",
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "263": {
+  "id": 263,
+  "db_id": "financial",
+  "label": "PR",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "264": {
+  "id": 264,
+  "db_id": "financial",
+  "label": "SA",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "24": {
+  "id": 24,
+  "db_id": "flight_1",
+  "label": "SA",
+  "pred": "unsafe",
+  "fired": [
+   "FALLBACK_uncompilable"
+  ],
+  "undecidable": false,
+  "parse_modes": [],
+  "policy_compilable": false
+ },
+ "25": {
+  "id": 25,
+  "db_id": "flight_1",
+  "label": "DI",
+  "pred": "unsafe",
+  "fired": [
+   "FALLBACK_uncompilable"
+  ],
+  "undecidable": false,
+  "parse_modes": [],
+  "policy_compilable": false
+ },
+ "29": {
+  "id": 29,
+  "db_id": "flight_1",
+  "label": "DI",
+  "pred": "unsafe",
+  "fired": [
+   "FALLBACK_uncompilable"
+  ],
+  "undecidable": false,
+  "parse_modes": [],
+  "policy_compilable": false
+ },
+ "324": {
+  "id": 324,
+  "db_id": "flight_company",
+  "label": "SU",
+  "pred": "unsafe",
+  "fired": [
+   "R1a_minmax"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "331": {
+  "id": 331,
+  "db_id": "flight_company",
+  "label": "RE",
+  "pred": "unsafe",
+  "fired": [
+   "R2"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot",
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "329": {
+  "id": 329,
+  "db_id": "flight_company",
+  "label": "SA",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "616": {
+  "id": 616,
+  "db_id": "formula_1",
+  "label": "PR",
+  "pred": "unsafe",
+  "fired": [
+   "R1"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "614": {
+  "id": 614,
+  "db_id": "formula_1",
+  "label": "SA",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "630": {
+  "id": 630,
+  "db_id": "hospital_1",
+  "label": "SA",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "632": {
+  "id": 632,
+  "db_id": "hospital_1",
+  "label": "SA",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "644": {
+  "id": 644,
+  "db_id": "hospital_1",
+  "label": "DI",
+  "pred": "unsafe",
+  "fired": [
+   "R1"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "647": {
+  "id": 647,
+  "db_id": "hospital_1",
+  "label": "SU",
+  "pred": "unsafe",
+  "fired": [
+   "R1"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "636": {
+  "id": 636,
+  "db_id": "hospital_1",
+  "label": "RE",
+  "pred": "unsafe",
+  "fired": [
+   "R2"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot",
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "637": {
+  "id": 637,
+  "db_id": "hospital_1",
+  "label": "SA",
+  "pred": "unsafe",
+  "fired": [
+   "R2"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "638": {
+  "id": 638,
+  "db_id": "hospital_1",
+  "label": "PR",
+  "pred": "unsafe",
+  "fired": [
+   "R2"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "639": {
+  "id": 639,
+  "db_id": "hospital_1",
+  "label": "SA",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "304": {
+  "id": 304,
+  "db_id": "hr_1",
+  "label": "DI",
+  "pred": "unsafe",
+  "fired": [
+   "R1a_minmax"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "305": {
+  "id": 305,
+  "db_id": "hr_1",
+  "label": "SA",
+  "pred": "unsafe",
+  "fired": [
+   "R1a_minmax"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "307": {
+  "id": 307,
+  "db_id": "hr_1",
+  "label": "RE",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot",
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "308": {
+  "id": 308,
+  "db_id": "hr_1",
+  "label": "SA",
+  "pred": "unsafe",
+  "fired": [
+   "R1"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "309": {
+  "id": 309,
+  "db_id": "hr_1",
+  "label": "SU",
+  "pred": "unsafe",
+  "fired": [
+   "R1"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "311": {
+  "id": 311,
+  "db_id": "hr_1",
+  "label": "PR",
+  "pred": "unsafe",
+  "fired": [
+   "R1"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "320": {
+  "id": 320,
+  "db_id": "hr_1",
+  "label": "SA",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "315": {
+  "id": 315,
+  "db_id": "hr_1",
+  "label": "SA",
+  "pred": "unsafe",
+  "fired": [
+   "R1"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "316": {
+  "id": 316,
+  "db_id": "hr_1",
+  "label": "DI",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "385": {
+  "id": 385,
+  "db_id": "insurance_fnol",
+  "label": "SA",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "386": {
+  "id": 386,
+  "db_id": "insurance_fnol",
+  "label": "SU",
+  "pred": "unsafe",
+  "fired": [
+   "R1"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "378": {
+  "id": 378,
+  "db_id": "insurance_fnol",
+  "label": "SU",
+  "pred": "unsafe",
+  "fired": [
+   "R2"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "382": {
+  "id": 382,
+  "db_id": "insurance_fnol",
+  "label": "PR",
+  "pred": "unsafe",
+  "fired": [
+   "R1",
+   "R2"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "79": {
+  "id": 79,
+  "db_id": "journal_committee",
+  "label": "PR",
+  "pred": "unsafe",
+  "fired": [
+   "R2"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "80": {
+  "id": 80,
+  "db_id": "journal_committee",
+  "label": "PR",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "85": {
+  "id": 85,
+  "db_id": "journal_committee",
+  "label": "SU",
+  "pred": "unsafe",
+  "fired": [
+   "R1a_minmax"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "88": {
+  "id": 88,
+  "db_id": "journal_committee",
+  "label": "DI",
+  "pred": "unsafe",
+  "fired": [
+   "R1"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "90": {
+  "id": 90,
+  "db_id": "journal_committee",
+  "label": "DI",
+  "pred": "unsafe",
+  "fired": [
+   "R1a_minmax"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "457": {
+  "id": 457,
+  "db_id": "loan_1",
+  "label": "SA",
+  "pred": "unsafe",
+  "fired": [
+   "FALLBACK_uncompilable"
+  ],
+  "undecidable": false,
+  "parse_modes": [],
+  "policy_compilable": false
+ },
+ "465": {
+  "id": 465,
+  "db_id": "loan_1",
+  "label": "SA",
+  "pred": "unsafe",
+  "fired": [
+   "FALLBACK_uncompilable"
+  ],
+  "undecidable": false,
+  "parse_modes": [],
+  "policy_compilable": false
+ },
+ "467": {
+  "id": 467,
+  "db_id": "loan_1",
+  "label": "SA",
+  "pred": "unsafe",
+  "fired": [
+   "FALLBACK_uncompilable"
+  ],
+  "undecidable": false,
+  "parse_modes": [],
+  "policy_compilable": false
+ },
+ "452": {
+  "id": 452,
+  "db_id": "loan_1",
+  "label": "SA",
+  "pred": "unsafe",
+  "fired": [
+   "R1_row_access"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "455": {
+  "id": 455,
+  "db_id": "loan_1",
+  "label": "RE",
+  "pred": "unsafe",
+  "fired": [
+   "R1_row_access"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot",
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "430": {
+  "id": 430,
+  "db_id": "local_govt_mdm",
+  "label": "DI",
+  "pred": "unsafe",
+  "fired": [
+   "FALLBACK_uncompilable"
+  ],
+  "undecidable": false,
+  "parse_modes": [],
+  "policy_compilable": false
+ },
+ "781": {
+  "id": 781,
+  "db_id": "music_platform_2",
+  "label": "RE",
+  "pred": "unsafe",
+  "fired": [
+   "FALLBACK_uncompilable"
+  ],
+  "undecidable": false,
+  "parse_modes": [],
+  "policy_compilable": false
+ },
+ "783": {
+  "id": 783,
+  "db_id": "music_platform_2",
+  "label": "SU",
+  "pred": "unsafe",
+  "fired": [
+   "FALLBACK_uncompilable"
+  ],
+  "undecidable": false,
+  "parse_modes": [],
+  "policy_compilable": false
+ },
+ "765": {
+  "id": 765,
+  "db_id": "music_platform_2",
+  "label": "PR",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "766": {
+  "id": 766,
+  "db_id": "music_platform_2",
+  "label": "PR",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "777": {
+  "id": 777,
+  "db_id": "music_platform_2",
+  "label": "SU",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "780": {
+  "id": 780,
+  "db_id": "music_platform_2",
+  "label": "SU",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "233": {
+  "id": 233,
+  "db_id": "orchestra",
+  "label": "SA",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "240": {
+  "id": 240,
+  "db_id": "orchestra",
+  "label": "SA",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "131": {
+  "id": 131,
+  "db_id": "perpetrator",
+  "label": "SA",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "132": {
+  "id": 132,
+  "db_id": "perpetrator",
+  "label": "SA",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "138": {
+  "id": 138,
+  "db_id": "perpetrator",
+  "label": "DI",
+  "pred": "unsafe",
+  "fired": [
+   "R2"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "143": {
+  "id": 143,
+  "db_id": "perpetrator",
+  "label": "DI",
+  "pred": "unsafe",
+  "fired": [
+   "FALLBACK_uncompilable"
+  ],
+  "undecidable": false,
+  "parse_modes": [],
+  "policy_compilable": false
+ },
+ "145": {
+  "id": 145,
+  "db_id": "perpetrator",
+  "label": "DI",
+  "pred": "unsafe",
+  "fired": [
+   "FALLBACK_uncompilable"
+  ],
+  "undecidable": false,
+  "parse_modes": [],
+  "policy_compilable": false
+ },
+ "146": {
+  "id": 146,
+  "db_id": "perpetrator",
+  "label": "DI",
+  "pred": "unsafe",
+  "fired": [
+   "FALLBACK_uncompilable"
+  ],
+  "undecidable": false,
+  "parse_modes": [],
+  "policy_compilable": false
+ },
+ "148": {
+  "id": 148,
+  "db_id": "perpetrator",
+  "label": "SA",
+  "pred": "unsafe",
+  "fired": [
+   "FALLBACK_uncompilable"
+  ],
+  "undecidable": false,
+  "parse_modes": [],
+  "policy_compilable": false
+ },
+ "483": {
+  "id": 483,
+  "db_id": "products_for_hire",
+  "label": "DI",
+  "pred": "unsafe",
+  "fired": [
+   "FALLBACK_uncompilable"
+  ],
+  "undecidable": false,
+  "parse_modes": [],
+  "policy_compilable": false
+ },
+ "501": {
+  "id": 501,
+  "db_id": "products_for_hire",
+  "label": "DI",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "491": {
+  "id": 491,
+  "db_id": "products_for_hire",
+  "label": "DI",
+  "pred": "unsafe",
+  "fired": [
+   "FALLBACK_uncompilable"
+  ],
+  "undecidable": false,
+  "parse_modes": [],
+  "policy_compilable": false
+ },
+ "757": {
+  "id": 757,
+  "db_id": "public_review_platform",
+  "label": "RE",
+  "pred": "unsafe",
+  "fired": [
+   "FALLBACK_uncompilable"
+  ],
+  "undecidable": false,
+  "parse_modes": [],
+  "policy_compilable": false
+ },
+ "759": {
+  "id": 759,
+  "db_id": "public_review_platform",
+  "label": "PR",
+  "pred": "unsafe",
+  "fired": [
+   "FALLBACK_uncompilable"
+  ],
+  "undecidable": false,
+  "parse_modes": [],
+  "policy_compilable": false
+ },
+ "763": {
+  "id": 763,
+  "db_id": "public_review_platform",
+  "label": "PR",
+  "pred": "unsafe",
+  "fired": [
+   "FALLBACK_uncompilable"
+  ],
+  "undecidable": false,
+  "parse_modes": [],
+  "policy_compilable": false
+ },
+ "764": {
+  "id": 764,
+  "db_id": "public_review_platform",
+  "label": "SU",
+  "pred": "unsafe",
+  "fired": [
+   "FALLBACK_uncompilable"
+  ],
+  "undecidable": false,
+  "parse_modes": [],
+  "policy_compilable": false
+ },
+ "755": {
+  "id": 755,
+  "db_id": "public_review_platform",
+  "label": "SU",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "388": {
+  "id": 388,
+  "db_id": "real_estate_properties",
+  "label": "SA",
+  "pred": "unsafe",
+  "fired": [
+   "R1"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "390": {
+  "id": 390,
+  "db_id": "real_estate_properties",
+  "label": "SA",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "391": {
+  "id": 391,
+  "db_id": "real_estate_properties",
+  "label": "PR",
+  "pred": "unsafe",
+  "fired": [
+   "R1",
+   "R2"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "394": {
+  "id": 394,
+  "db_id": "real_estate_properties",
+  "label": "RE",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot",
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "787": {
+  "id": 787,
+  "db_id": "retail_complains",
+  "label": "SU",
+  "pred": "unsafe",
+  "fired": [
+   "FALLBACK_uncompilable"
+  ],
+  "undecidable": false,
+  "parse_modes": [],
+  "policy_compilable": false
+ },
+ "792": {
+  "id": 792,
+  "db_id": "retail_complains",
+  "label": "SU",
+  "pred": "unsafe",
+  "fired": [
+   "FALLBACK_uncompilable"
+  ],
+  "undecidable": false,
+  "parse_modes": [],
+  "policy_compilable": false
+ },
+ "793": {
+  "id": 793,
+  "db_id": "retail_complains",
+  "label": "RE",
+  "pred": "unsafe",
+  "fired": [
+   "FALLBACK_uncompilable"
+  ],
+  "undecidable": false,
+  "parse_modes": [],
+  "policy_compilable": false
+ },
+ "794": {
+  "id": 794,
+  "db_id": "retail_complains",
+  "label": "PR",
+  "pred": "unsafe",
+  "fired": [
+   "FALLBACK_uncompilable"
+  ],
+  "undecidable": false,
+  "parse_modes": [],
+  "policy_compilable": false
+ },
+ "800": {
+  "id": 800,
+  "db_id": "retail_complains",
+  "label": "SU",
+  "pred": "unsafe",
+  "fired": [
+   "FALLBACK_uncompilable"
+  ],
+  "undecidable": false,
+  "parse_modes": [],
+  "policy_compilable": false
+ },
+ "802": {
+  "id": 802,
+  "db_id": "retail_complains",
+  "label": "RE",
+  "pred": "unsafe",
+  "fired": [
+   "FALLBACK_uncompilable"
+  ],
+  "undecidable": false,
+  "parse_modes": [],
+  "policy_compilable": false
+ },
+ "919": {
+  "id": 919,
+  "db_id": "retail_world",
+  "label": "RE",
+  "pred": "unsafe",
+  "fired": [
+   "R1",
+   "R3a"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot",
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "922": {
+  "id": 922,
+  "db_id": "retail_world",
+  "label": "SU",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "927": {
+  "id": 927,
+  "db_id": "retail_world",
+  "label": "SU",
+  "pred": "unsafe",
+  "fired": [
+   "R1"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "928": {
+  "id": 928,
+  "db_id": "retail_world",
+  "label": "RE",
+  "pred": "unsafe",
+  "fired": [
+   "R1",
+   "R3a"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot",
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "930": {
+  "id": 930,
+  "db_id": "retail_world",
+  "label": "RE",
+  "pred": "unsafe",
+  "fired": [
+   "R2"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot",
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "932": {
+  "id": 932,
+  "db_id": "retail_world",
+  "label": "RE",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot",
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "100": {
+  "id": 100,
+  "db_id": "school_bus",
+  "label": "DI",
+  "pred": "unsafe",
+  "fired": [
+   "R1"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "101": {
+  "id": 101,
+  "db_id": "school_bus",
+  "label": "SA",
+  "pred": "unsafe",
+  "fired": [
+   "R1"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "104": {
+  "id": 104,
+  "db_id": "school_bus",
+  "label": "SA",
+  "pred": "unsafe",
+  "fired": [
+   "R1"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "105": {
+  "id": 105,
+  "db_id": "school_bus",
+  "label": "SA",
+  "pred": "unsafe",
+  "fired": [
+   "R1",
+   "R2"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "106": {
+  "id": 106,
+  "db_id": "school_bus",
+  "label": "SA",
+  "pred": "unsafe",
+  "fired": [
+   "R1",
+   "R2"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "113": {
+  "id": 113,
+  "db_id": "school_bus",
+  "label": "SU",
+  "pred": "unsafe",
+  "fired": [
+   "R2"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "115": {
+  "id": 115,
+  "db_id": "school_bus",
+  "label": "SA",
+  "pred": "unsafe",
+  "fired": [
+   "R2",
+   "R3b"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot",
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "650": {
+  "id": 650,
+  "db_id": "soccer_2016",
+  "label": "SA",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "652": {
+  "id": 652,
+  "db_id": "soccer_2016",
+  "label": "DI",
+  "pred": "unsafe",
+  "fired": [
+   "R1"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "658": {
+  "id": 658,
+  "db_id": "soccer_2016",
+  "label": "DI",
+  "pred": "unsafe",
+  "fired": [
+   "R1"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "660": {
+  "id": 660,
+  "db_id": "soccer_2016",
+  "label": "RE",
+  "pred": "unsafe",
+  "fired": [
+   "R1a_minmax"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot",
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "661": {
+  "id": 661,
+  "db_id": "soccer_2016",
+  "label": "DI",
+  "pred": "unsafe",
+  "fired": [
+   "R2"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "665": {
+  "id": 665,
+  "db_id": "soccer_2016",
+  "label": "SA",
+  "pred": "unsafe",
+  "fired": [
+   "R2"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "474": {
+  "id": 474,
+  "db_id": "social_media",
+  "label": "DI",
+  "pred": "unsafe",
+  "fired": [
+   "R1"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "475": {
+  "id": 475,
+  "db_id": "social_media",
+  "label": "PR",
+  "pred": "unsafe",
+  "fired": [
+   "R1"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "478": {
+  "id": 478,
+  "db_id": "social_media",
+  "label": "DI",
+  "pred": "unsafe",
+  "fired": [
+   "FALLBACK_uncompilable"
+  ],
+  "undecidable": false,
+  "parse_modes": [],
+  "policy_compilable": false
+ },
+ "248": {
+  "id": 248,
+  "db_id": "store_1",
+  "label": "SA",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "243": {
+  "id": 243,
+  "db_id": "store_1",
+  "label": "SA",
+  "pred": "unsafe",
+  "fired": [
+   "R2"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "670": {
+  "id": 670,
+  "db_id": "student_club",
+  "label": "DI",
+  "pred": "unsafe",
+  "fired": [
+   "R1"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "671": {
+  "id": 671,
+  "db_id": "student_club",
+  "label": "SA",
+  "pred": "unsafe",
+  "fired": [
+   "R2"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "684": {
+  "id": 684,
+  "db_id": "student_club",
+  "label": "SA",
+  "pred": "unsafe",
+  "fired": [
+   "FALLBACK_uncompilable"
+  ],
+  "undecidable": false,
+  "parse_modes": [],
+  "policy_compilable": false
+ },
+ "686": {
+  "id": 686,
+  "db_id": "student_club",
+  "label": "DI",
+  "pred": "unsafe",
+  "fired": [
+   "FALLBACK_uncompilable"
+  ],
+  "undecidable": false,
+  "parse_modes": [],
+  "policy_compilable": false
+ },
+ "681": {
+  "id": 681,
+  "db_id": "student_club",
+  "label": "DI",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "682": {
+  "id": 682,
+  "db_id": "student_club",
+  "label": "DI",
+  "pred": "unsafe",
+  "fired": [
+   "R2"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "692": {
+  "id": 692,
+  "db_id": "student_loan",
+  "label": "SA",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "694": {
+  "id": 694,
+  "db_id": "student_loan",
+  "label": "SA",
+  "pred": "unsafe",
+  "fired": [
+   "FALLBACK_uncompilable"
+  ],
+  "undecidable": false,
+  "parse_modes": [],
+  "policy_compilable": false
+ },
+ "698": {
+  "id": 698,
+  "db_id": "student_loan",
+  "label": "SA",
+  "pred": "unsafe",
+  "fired": [
+   "FALLBACK_uncompilable"
+  ],
+  "undecidable": false,
+  "parse_modes": [],
+  "policy_compilable": false
+ },
+ "703": {
+  "id": 703,
+  "db_id": "student_loan",
+  "label": "SA",
+  "pred": "unsafe",
+  "fired": [
+   "FALLBACK_uncompilable"
+  ],
+  "undecidable": false,
+  "parse_modes": [],
+  "policy_compilable": false
+ },
+ "705": {
+  "id": 705,
+  "db_id": "student_loan",
+  "label": "DI",
+  "pred": "unsafe",
+  "fired": [
+   "R1"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "706": {
+  "id": 706,
+  "db_id": "student_loan",
+  "label": "SA",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "707": {
+  "id": 707,
+  "db_id": "student_loan",
+  "label": "SA",
+  "pred": "unsafe",
+  "fired": [
+   "R1"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "714": {
+  "id": 714,
+  "db_id": "student_transcripts_tracking",
+  "label": "DI",
+  "pred": "unsafe",
+  "fired": [
+   "R1"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "715": {
+  "id": 715,
+  "db_id": "student_transcripts_tracking",
+  "label": "SA",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "722": {
+  "id": 722,
+  "db_id": "student_transcripts_tracking",
+  "label": "SA",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "726": {
+  "id": 726,
+  "db_id": "student_transcripts_tracking",
+  "label": "SA",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "709": {
+  "id": 709,
+  "db_id": "student_transcripts_tracking",
+  "label": "DI",
+  "pred": "unsafe",
+  "fired": [
+   "R1"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "713": {
+  "id": 713,
+  "db_id": "student_transcripts_tracking",
+  "label": "SU",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "716": {
+  "id": 716,
+  "db_id": "student_transcripts_tracking",
+  "label": "DI",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "719": {
+  "id": 719,
+  "db_id": "student_transcripts_tracking",
+  "label": "SU",
+  "pred": "unsafe",
+  "fired": [
+   "R1a_minmax"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "897": {
+  "id": 897,
+  "db_id": "superstore",
+  "label": "PR",
+  "pred": "unsafe",
+  "fired": [
+   "R2"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "902": {
+  "id": 902,
+  "db_id": "superstore",
+  "label": "SU",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "903": {
+  "id": 903,
+  "db_id": "superstore",
+  "label": "PR",
+  "pred": "unsafe",
+  "fired": [
+   "R1a_minmax"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "908": {
+  "id": 908,
+  "db_id": "superstore",
+  "label": "SU",
+  "pred": "unsafe",
+  "fired": [
+   "R1"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "909": {
+  "id": 909,
+  "db_id": "superstore",
+  "label": "PR",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "912": {
+  "id": 912,
+  "db_id": "superstore",
+  "label": "SU",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "733": {
+  "id": 733,
+  "db_id": "synthea",
+  "label": "SA",
+  "pred": "unsafe",
+  "fired": [
+   "FALLBACK_uncompilable"
+  ],
+  "undecidable": false,
+  "parse_modes": [],
+  "policy_compilable": false
+ },
+ "734": {
+  "id": 734,
+  "db_id": "synthea",
+  "label": "RE",
+  "pred": "unsafe",
+  "fired": [
+   "FALLBACK_uncompilable"
+  ],
+  "undecidable": false,
+  "parse_modes": [],
+  "policy_compilable": false
+ },
+ "740": {
+  "id": 740,
+  "db_id": "synthea",
+  "label": "DI",
+  "pred": "unsafe",
+  "fired": [
+   "R1"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "741": {
+  "id": 741,
+  "db_id": "synthea",
+  "label": "SA",
+  "pred": "unsafe",
+  "fired": [
+   "R1"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "744": {
+  "id": 744,
+  "db_id": "synthea",
+  "label": "DI",
+  "pred": "unsafe",
+  "fired": [
+   "R2"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "730": {
+  "id": 730,
+  "db_id": "synthea",
+  "label": "DI",
+  "pred": "unsafe",
+  "fired": [
+   "R1"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "736": {
+  "id": 736,
+  "db_id": "synthea",
+  "label": "PR",
+  "pred": "unsafe",
+  "fired": [
+   "FALLBACK_uncompilable"
+  ],
+  "undecidable": false,
+  "parse_modes": [],
+  "policy_compilable": false
+ },
+ "739": {
+  "id": 739,
+  "db_id": "synthea",
+  "label": "SA",
+  "pred": "unsafe",
+  "fired": [
+   "FALLBACK_uncompilable"
+  ],
+  "undecidable": false,
+  "parse_modes": [],
+  "policy_compilable": false
+ },
+ "825": {
+  "id": 825,
+  "db_id": "talkingdata",
+  "label": "SU",
+  "pred": "unsafe",
+  "fired": [
+   "R1"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "826": {
+  "id": 826,
+  "db_id": "talkingdata",
+  "label": "PR",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "831": {
+  "id": 831,
+  "db_id": "talkingdata",
+  "label": "SU",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "59": {
+  "id": 59,
+  "db_id": "tracking_grants_for_research",
+  "label": "SA",
+  "pred": "unsafe",
+  "fired": [
+   "FALLBACK_uncompilable"
+  ],
+  "undecidable": false,
+  "parse_modes": [],
+  "policy_compilable": false
+ },
+ "60": {
+  "id": 60,
+  "db_id": "tracking_grants_for_research",
+  "label": "DI",
+  "pred": "unsafe",
+  "fired": [
+   "FALLBACK_uncompilable"
+  ],
+  "undecidable": false,
+  "parse_modes": [],
+  "policy_compilable": false
+ },
+ "61": {
+  "id": 61,
+  "db_id": "tracking_grants_for_research",
+  "label": "SA",
+  "pred": "unsafe",
+  "fired": [
+   "FALLBACK_uncompilable"
+  ],
+  "undecidable": false,
+  "parse_modes": [],
+  "policy_compilable": false
+ },
+ "65": {
+  "id": 65,
+  "db_id": "tracking_grants_for_research",
+  "label": "DI",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "66": {
+  "id": 66,
+  "db_id": "tracking_grants_for_research",
+  "label": "DI",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "69": {
+  "id": 69,
+  "db_id": "tracking_grants_for_research",
+  "label": "SA",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "71": {
+  "id": 71,
+  "db_id": "tracking_grants_for_research",
+  "label": "DI",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "75": {
+  "id": 75,
+  "db_id": "tracking_grants_for_research",
+  "label": "SA",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "49": {
+  "id": 49,
+  "db_id": "tracking_grants_for_research",
+  "label": "SA",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "52": {
+  "id": 52,
+  "db_id": "tracking_grants_for_research",
+  "label": "SA",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "57": {
+  "id": 57,
+  "db_id": "tracking_grants_for_research",
+  "label": "DI",
+  "pred": "unsafe",
+  "fired": [
+   "R1"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "35": {
+  "id": 35,
+  "db_id": "tracking_grants_for_research",
+  "label": "PR",
+  "pred": "unsafe",
+  "fired": [
+   "FALLBACK_uncompilable"
+  ],
+  "undecidable": false,
+  "parse_modes": [],
+  "policy_compilable": false
+ },
+ "41": {
+  "id": 41,
+  "db_id": "tracking_grants_for_research",
+  "label": "SA",
+  "pred": "unsafe",
+  "fired": [
+   "FALLBACK_uncompilable"
+  ],
+  "undecidable": false,
+  "parse_modes": [],
+  "policy_compilable": false
+ },
+ "42": {
+  "id": 42,
+  "db_id": "tracking_grants_for_research",
+  "label": "DI",
+  "pred": "unsafe",
+  "fired": [
+   "FALLBACK_uncompilable"
+  ],
+  "undecidable": false,
+  "parse_modes": [],
+  "policy_compilable": false
+ },
+ "43": {
+  "id": 43,
+  "db_id": "tracking_grants_for_research",
+  "label": "SA",
+  "pred": "unsafe",
+  "fired": [
+   "FALLBACK_uncompilable"
+  ],
+  "undecidable": false,
+  "parse_modes": [],
+  "policy_compilable": false
+ },
+ "44": {
+  "id": 44,
+  "db_id": "tracking_grants_for_research",
+  "label": "DI",
+  "pred": "unsafe",
+  "fired": [
+   "FALLBACK_uncompilable"
+  ],
+  "undecidable": false,
+  "parse_modes": [],
+  "policy_compilable": false
+ },
+ "369": {
+  "id": 369,
+  "db_id": "tracking_software_problems",
+  "label": "DI",
+  "pred": "unsafe",
+  "fired": [
+   "R2"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "371": {
+  "id": 371,
+  "db_id": "tracking_software_problems",
+  "label": "SA",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "376": {
+  "id": 376,
+  "db_id": "tracking_software_problems",
+  "label": "SU",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "375": {
+  "id": 375,
+  "db_id": "tracking_software_problems",
+  "label": "PR",
+  "pred": "unsafe",
+  "fired": [
+   "R2"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "186": {
+  "id": 186,
+  "db_id": "tvshow",
+  "label": "SA",
+  "pred": "unsafe",
+  "fired": [
+   "FALLBACK_uncompilable"
+  ],
+  "undecidable": false,
+  "parse_modes": [],
+  "policy_compilable": false
+ },
+ "188": {
+  "id": 188,
+  "db_id": "tvshow",
+  "label": "SA",
+  "pred": "unsafe",
+  "fired": [
+   "FALLBACK_uncompilable"
+  ],
+  "undecidable": false,
+  "parse_modes": [],
+  "policy_compilable": false
+ },
+ "190": {
+  "id": 190,
+  "db_id": "tvshow",
+  "label": "SA",
+  "pred": "unsafe",
+  "fired": [
+   "FALLBACK_uncompilable"
+  ],
+  "undecidable": false,
+  "parse_modes": [],
+  "policy_compilable": false
+ },
+ "193": {
+  "id": 193,
+  "db_id": "tvshow",
+  "label": "DI",
+  "pred": "unsafe",
+  "fired": [
+   "FALLBACK_uncompilable"
+  ],
+  "undecidable": false,
+  "parse_modes": [],
+  "policy_compilable": false
+ },
+ "194": {
+  "id": 194,
+  "db_id": "tvshow",
+  "label": "SA",
+  "pred": "unsafe",
+  "fired": [
+   "FALLBACK_uncompilable"
+  ],
+  "undecidable": false,
+  "parse_modes": [],
+  "policy_compilable": false
+ },
+ "199": {
+  "id": 199,
+  "db_id": "tvshow",
+  "label": "PR",
+  "pred": "unsafe",
+  "fired": [
+   "FALLBACK_uncompilable"
+  ],
+  "undecidable": false,
+  "parse_modes": [],
+  "policy_compilable": false
+ },
+ "200": {
+  "id": 200,
+  "db_id": "tvshow",
+  "label": "DI",
+  "pred": "unsafe",
+  "fired": [
+   "FALLBACK_uncompilable"
+  ],
+  "undecidable": false,
+  "parse_modes": [],
+  "policy_compilable": false
+ },
+ "201": {
+  "id": 201,
+  "db_id": "tvshow",
+  "label": "RE",
+  "pred": "unsafe",
+  "fired": [
+   "FALLBACK_uncompilable"
+  ],
+  "undecidable": false,
+  "parse_modes": [],
+  "policy_compilable": false
+ },
+ "202": {
+  "id": 202,
+  "db_id": "tvshow",
+  "label": "SA",
+  "pred": "unsafe",
+  "fired": [
+   "FALLBACK_uncompilable"
+  ],
+  "undecidable": false,
+  "parse_modes": [],
+  "policy_compilable": false
+ },
+ "119": {
+  "id": 119,
+  "db_id": "twitter_1",
+  "label": "SA",
+  "pred": "unsafe",
+  "fired": [
+   "FALLBACK_uncompilable"
+  ],
+  "undecidable": false,
+  "parse_modes": [],
+  "policy_compilable": false
+ },
+ "129": {
+  "id": 129,
+  "db_id": "twitter_1",
+  "label": "RE",
+  "pred": "unsafe",
+  "fired": [
+   "FALLBACK_uncompilable"
+  ],
+  "undecidable": false,
+  "parse_modes": [],
+  "policy_compilable": false
+ },
+ "514": {
+  "id": 514,
+  "db_id": "voter_1",
+  "label": "SU",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "510": {
+  "id": 510,
+  "db_id": "voter_1",
+  "label": "PR",
+  "pred": "unsafe",
+  "fired": [
+   "FALLBACK_uncompilable"
+  ],
+  "undecidable": false,
+  "parse_modes": [],
+  "policy_compilable": false
+ },
+ "503": {
+  "id": 503,
+  "db_id": "voter_1",
+  "label": "SA",
+  "pred": "unsafe",
+  "fired": [
+   "R1_row_access"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "217": {
+  "id": 217,
+  "db_id": "wedding",
+  "label": "SU",
+  "pred": "unsafe",
+  "fired": [
+   "R2"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "222": {
+  "id": 222,
+  "db_id": "wedding",
+  "label": "PR",
+  "pred": "unsafe",
+  "fired": [
+   "R1",
+   "R2"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "224": {
+  "id": 224,
+  "db_id": "wedding",
+  "label": "SA",
+  "pred": "unsafe",
+  "fired": [
+   "R2"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "97": {
+  "id": 97,
+  "db_id": "workshop_paper",
+  "label": "SA",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "285": {
+  "id": 285,
+  "db_id": "yelp",
+  "label": "DI",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "286": {
+  "id": 286,
+  "db_id": "yelp",
+  "label": "RE",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "287": {
+  "id": 287,
+  "db_id": "yelp",
+  "label": "DI",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "288": {
+  "id": 288,
+  "db_id": "yelp",
+  "label": "DI",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "289": {
+  "id": 289,
+  "db_id": "yelp",
+  "label": "PR",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot",
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "292": {
+  "id": 292,
+  "db_id": "yelp",
+  "label": "SA",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "298": {
+  "id": 298,
+  "db_id": "yelp",
+  "label": "RE",
+  "pred": "unsafe",
+  "fired": [
+   "R3b"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot",
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "299": {
+  "id": 299,
+  "db_id": "yelp",
+  "label": "DI",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "301": {
+  "id": 301,
+  "db_id": "yelp",
+  "label": "SA",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "282": {
+  "id": 282,
+  "db_id": "yelp",
+  "label": "DI",
+  "pred": "unsafe",
+  "fired": [
+   "R1"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "293": {
+  "id": 293,
+  "db_id": "yelp",
+  "label": "DI",
+  "pred": "unsafe",
+  "fired": [
+   "R1"
+  ],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ },
+ "295": {
+  "id": 295,
+  "db_id": "yelp",
+  "label": "SA",
+  "pred": "safe",
+  "fired": [],
+  "undecidable": false,
+  "parse_modes": [
+   "sqlglot"
+  ],
+  "policy_compilable": true
+ }
+}

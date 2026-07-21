@@ -1,0 +1,6 @@
+{
+  "channel": "moonshot",
+  "model": "kimi-k2.6",
+  "mode": "llm_graph_rag",
+  "stdout": "[\n  {\n    \"case_id\": \"ict_case_0139\",\n    \"action\": \"refuse\",\n    \"metric_id\": \"\",\n    \"dimensions\": [],\n    \"reason\": \"No governed metric matched\"\n  },\n  {\n    \"case_id\": \"ict_case_0158\",\n    \"action\": \"refuse\",\n    \"metric_id\": \"\",\n    \"dimensions\": [],\n    \"reason\": \"Off-domain request\"\n  }\n]"
+}

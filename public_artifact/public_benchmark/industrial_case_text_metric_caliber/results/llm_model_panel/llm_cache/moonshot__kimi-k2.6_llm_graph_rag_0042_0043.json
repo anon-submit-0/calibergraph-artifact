@@ -1,0 +1,6 @@
+{
+  "channel": "moonshot",
+  "model": "kimi-k2.6",
+  "mode": "llm_graph_rag",
+  "stdout": "[\n  {\"case_id\":\"ict_case_0036\", \"action\":\"answer\", \"metric_id\":\"ict_metric_007\", \"dimensions\":[\"segment_l3\"], \"reason\":\"Metric 退款率 maps to ict_metric_007; finest requested grain is segment_l3.\"},\n  {\"case_id\":\"ict_case_0037\", \"action\":\"answer\", \"metric_id\":\"ict_metric_011\", \"dimensions\":[\"segment_l2\"], \"reason\":\"Metric 退货率 maps to ict_metric_011; requested grain is segment_l2.\"}\n]"
+}

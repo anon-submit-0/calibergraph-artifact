@@ -1,0 +1,238 @@
+{
+  "baselines": [
+    {
+      "gate_status": "resource_gated_external_requirements_missing",
+      "missing_gate_requirements": [
+        "spider2_lite_resource_dir",
+        "bigquery_credentials_dir",
+        "snowflake_credential_dir",
+        "api_key_configured_in_main_sh",
+        "api_base_url_configured_in_main_sh"
+      ],
+      "name": "AutoLink",
+      "official_case_count": 547,
+      "official_commands": [
+        "cd external_baselines/AutoLink",
+        "python3 -m venv .venv-autolink",
+        "source .venv-autolink/bin/activate",
+        "pip install -r requirements.txt",
+        "cp -R /path/to/Spider2/spider2-lite/resource run/resource",
+        "install BigQuery credentials under run/bigquery_credentials",
+        "install Snowflake credentials under run/snowflake_credential",
+        "set OPENAI_API_KEY and OPENAI_BASE_URL in run/main.sh and run/sql_gen.sh",
+        "cd run && bash main.sh && bash sql_gen.sh"
+      ],
+      "paper_release_policy": "Use complete official upstream execution only after the resource gate opens; before that, main result tables use released runnable protocols and the official chain is reported as a resource-gated run contract.",
+      "required_resources": {
+        "api_base_url_configured_in_main_sh": false,
+        "api_key_configured_in_main_sh": false,
+        "bigquery_credentials_dir": false,
+        "main_sh": true,
+        "repo_exists": true,
+        "requirements_txt": true,
+        "snowflake_credential_dir": false,
+        "spider2_data_json": true,
+        "spider2_lite_resource_dir": false,
+        "sql_gen_sh": true
+      },
+      "resource_gate_open": false,
+      "syntax_checks": [
+        {
+          "cmd": [
+            "bash",
+            "-n",
+            "external_baselines/AutoLink/run/main.sh"
+          ],
+          "returncode": 0,
+          "stderr": "",
+          "stdout": ""
+        },
+        {
+          "cmd": [
+            "bash",
+            "-n",
+            "external_baselines/AutoLink/run/sql_gen.sh"
+          ],
+          "returncode": 0,
+          "stderr": "",
+          "stdout": ""
+        }
+      ],
+      "upstream": {
+        "commit": "26c723158445d5c831290315c9a93ba76eb5bd0e",
+        "remote": "https://github.com/wzy416/AutoLink.git",
+        "status_porcelain": "not_a_git_checkout; commit recorded in UPSTREAM_COMMIT.txt"
+      }
+    },
+    {
+      "gate_status": "resource_gated_external_requirements_missing",
+      "included_shieldsql_case_count": 540,
+      "missing_gate_requirements": [
+        "omnisql_database_present",
+        "securesql_dataset_present",
+        "spider_database_present",
+        "bird_database_present",
+        "cuda_gpu_visible",
+        "llamafactory_cli_visible",
+        "python_package_torch",
+        "python_package_transformers",
+        "python_package_vllm"
+      ],
+      "name": "SAFENLIDB",
+      "official_commands": [
+        "cd external_baselines/SAFENLIDB",
+        "python3.9 -m venv .venv-safenlidb",
+        "source .venv-safenlidb/bin/activate",
+        "pip install -r requirements.txt",
+        "mount/download OmniSQL, SecureSQL, Spider, and BIRD under the paths expected by DB_prepare scripts",
+        "python DB_prepare/extract_db_ids_json.py",
+        "python DB_prepare/omni.py",
+        "bash data_synthesis/A_safe_condition/A_safe_condition.sh",
+        "bash data_synthesis/B_sql_construction/B_sql.sh",
+        "bash data_synthesis/C_NL_question_syn/C_question.sh",
+        "bash data_synthesis/D_Gen_COT/D_sql_cot.sh",
+        "bash data_synthesis/E_secure_COT/E_secure_cot.sh",
+        "bash train/SFT/sft.sh",
+        "bash train/Inference/beam_infer.sh",
+        "bash train/APO/APO.sh",
+        "bash evaluate/scrpit/infer.sh",
+        "python evaluate/SecureSQL/ex/exa.py",
+        "python evaluate/ShieldSQL/ex/exa.py",
+        "bash evaluate/scrpit/prepare.sh",
+        "python evaluate/SecureSQL/RS/RS_.py",
+        "python evaluate/ShieldSQL/RS++/RS_++.py"
+      ],
+      "paper_release_policy": "Report included ShieldSQL diagnostics as self-contained official-subtask evidence; report full SFT/APO retraining only after the resource gate opens and the official training/evaluation chain completes.",
+      "required_resources": {
+        "bird_database_present": false,
+        "cuda_gpu_visible": false,
+        "llamafactory_cli_visible": false,
+        "omnisql_database_present": false,
+        "python_package_torch": false,
+        "python_package_transformers": false,
+        "python_package_vllm": false,
+        "repo_exists": true,
+        "requirements_txt": true,
+        "securesql_dataset_present": false,
+        "shieldsql_test_present": true,
+        "spider_database_present": false
+      },
+      "resource_gate_open": false,
+      "syntax_checks": [
+        {
+          "cmd": [
+            "bash",
+            "-n",
+            "external_baselines/SAFENLIDB/data_synthesis/A_safe_condition/A_safe_condition.sh"
+          ],
+          "returncode": 0,
+          "stderr": "",
+          "stdout": ""
+        },
+        {
+          "cmd": [
+            "bash",
+            "-n",
+            "external_baselines/SAFENLIDB/data_synthesis/B_sql_construction/B_sql.sh"
+          ],
+          "returncode": 0,
+          "stderr": "",
+          "stdout": ""
+        },
+        {
+          "cmd": [
+            "bash",
+            "-n",
+            "external_baselines/SAFENLIDB/data_synthesis/C_NL_question_syn/C_question.sh"
+          ],
+          "returncode": 0,
+          "stderr": "",
+          "stdout": ""
+        },
+        {
+          "cmd": [
+            "bash",
+            "-n",
+            "external_baselines/SAFENLIDB/data_synthesis/D_Gen_COT/D_sql_cot.sh"
+          ],
+          "returncode": 0,
+          "stderr": "",
+          "stdout": ""
+        },
+        {
+          "cmd": [
+            "bash",
+            "-n",
+            "external_baselines/SAFENLIDB/data_synthesis/E_secure_COT/E_secure_cot.sh"
+          ],
+          "returncode": 0,
+          "stderr": "",
+          "stdout": ""
+        },
+        {
+          "cmd": [
+            "bash",
+            "-n",
+            "external_baselines/SAFENLIDB/train/SFT/sft.sh"
+          ],
+          "returncode": 0,
+          "stderr": "",
+          "stdout": ""
+        },
+        {
+          "cmd": [
+            "bash",
+            "-n",
+            "external_baselines/SAFENLIDB/train/Inference/beam_infer.sh"
+          ],
+          "returncode": 0,
+          "stderr": "",
+          "stdout": ""
+        },
+        {
+          "cmd": [
+            "bash",
+            "-n",
+            "external_baselines/SAFENLIDB/train/APO/APO.sh"
+          ],
+          "returncode": 0,
+          "stderr": "",
+          "stdout": ""
+        },
+        {
+          "cmd": [
+            "bash",
+            "-n",
+            "external_baselines/SAFENLIDB/evaluate/scrpit/infer.sh"
+          ],
+          "returncode": 0,
+          "stderr": "",
+          "stdout": ""
+        },
+        {
+          "cmd": [
+            "bash",
+            "-n",
+            "external_baselines/SAFENLIDB/evaluate/scrpit/prepare.sh"
+          ],
+          "returncode": 0,
+          "stderr": "",
+          "stdout": ""
+        }
+      ],
+      "upstream": {
+        "commit": "0ad16d8b1e6cb3e533fc6c5433a3dcd575967b08",
+        "remote": "https://github.com/tom68-ll/SAFENLIDB.git",
+        "status_porcelain": "not_a_git_checkout; commit recorded in UPSTREAM_COMMIT.txt"
+      }
+    }
+  ],
+  "environment": {
+    "conda_visible": false,
+    "cwd": "public_artifact",
+    "nvidia_smi_visible": false,
+    "platform": "macOS-15.0-arm64-arm-64bit",
+    "python_version": "3.9.6"
+  },
+  "generated_at": "2026-07-08T00:00:00+00:00"
+}

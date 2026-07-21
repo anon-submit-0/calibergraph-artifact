@@ -1,0 +1,6 @@
+{
+  "channel": "moonshot",
+  "model": "kimi-k2.6",
+  "mode": "llm_graph_rag",
+  "stdout": "[\n  {\"case_id\":\"ict_case_0045\", \"action\":\"answer\", \"metric_id\":\"ict_metric_001\", \"dimensions\":[\"segment_l1\"], \"reason\":\"Metric alias 品类问题率 matches ict_metric_001 and dimension alias 一级品类 matches segment_l1.\"},\n  {\"case_id\":\"ict_case_0046\", \"action\":\"answer\", \"metric_id\":\"ict_metric_008\", \"dimensions\":[\"segment_l1\"], \"reason\":\"Metric alias 补发率 matches ict_metric_008 and dimension alias 一级品类 matches segment_l1.\"}\n]"
+}

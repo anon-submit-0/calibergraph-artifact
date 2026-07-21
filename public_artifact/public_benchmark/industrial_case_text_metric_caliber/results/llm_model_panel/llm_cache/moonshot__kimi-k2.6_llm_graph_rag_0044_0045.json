@@ -1,0 +1,6 @@
+{
+  "channel": "moonshot",
+  "model": "kimi-k2.6",
+  "mode": "llm_graph_rag",
+  "stdout": "```json\n[\n  {\"case_id\":\"ict_case_0038\", \"action\":\"answer\", \"metric_id\":\"ict_metric_013\", \"dimensions\":[\"segment_l3\"], \"reason\":\"Matches Sales Amount by Segment Level 3\"},\n  {\"case_id\":\"ict_case_0039\", \"action\":\"answer\", \"metric_id\":\"ict_metric_003\", \"dimensions\":[], \"reason\":\"Matches Defective Item Quantity; no breakdown requested\"}\n]\n```"
+}

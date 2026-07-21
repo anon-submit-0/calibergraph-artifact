@@ -1,0 +1,61 @@
+{
+  "bootstrap_replicates": 10000,
+  "paired_metric": "action-aware full-case correctness",
+  "results": [
+    {
+      "baseline": "safenlidb_guarded",
+      "baseline_full_case_accuracy": 0.78125,
+      "bootstrap_replicates": 10000,
+      "cluster_count": 32,
+      "dataset": "IowaLiquor",
+      "difference_ci95": [
+        0.09375,
+        0.375
+      ],
+      "mcnemar_discordant_baseline_only": 0,
+      "mcnemar_discordant_method_only": 7,
+      "mcnemar_exact_two_sided_p": 0.015625,
+      "method": "caliber_graph",
+      "method_full_case_accuracy": 1.0,
+      "n": 32,
+      "paired_difference": 0.21875
+    },
+    {
+      "baseline": "safenlidb_guarded",
+      "baseline_full_case_accuracy": 0.6803921568627451,
+      "bootstrap_replicates": 10000,
+      "cluster_count": 170,
+      "dataset": "MultiGov",
+      "difference_ci95": [
+        0.30980392156862746,
+        0.32941176470588235
+      ],
+      "mcnemar_discordant_baseline_only": 0,
+      "mcnemar_discordant_method_only": 163,
+      "mcnemar_exact_two_sided_p": 1.7105694144590052e-49,
+      "method": "caliber_graph",
+      "method_full_case_accuracy": 1.0,
+      "n": 510,
+      "paired_difference": 0.3196078431372549
+    },
+    {
+      "baseline": "safenlidb_guarded",
+      "baseline_full_case_accuracy": 0.9044585987261147,
+      "bootstrap_replicates": 10000,
+      "cluster_count": 114,
+      "dataset": "IndustrialCaseText",
+      "difference_ci95": [
+        0.05063291139240506,
+        0.14666666666666667
+      ],
+      "mcnemar_discordant_baseline_only": 0,
+      "mcnemar_discordant_method_only": 15,
+      "mcnemar_exact_two_sided_p": 6.103515625e-05,
+      "method": "caliber_graph",
+      "method_full_case_accuracy": 1.0,
+      "n": 157,
+      "paired_difference": 0.09554140127388536
+    }
+  ],
+  "seed": 20260711
+}

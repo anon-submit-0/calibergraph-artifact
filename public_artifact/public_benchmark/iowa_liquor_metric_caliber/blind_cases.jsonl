@@ -1,0 +1,32 @@
+{"case_id": "iowa_001", "nl_query": "What were total liquor sales dollars?", "source": "author_labeled_over_public_iowa_liquor_schema"}
+{"case_id": "iowa_002", "nl_query": "Sales dollars by county", "source": "author_labeled_over_public_iowa_liquor_schema"}
+{"case_id": "iowa_003", "nl_query": "Sales by county and city", "source": "author_labeled_over_public_iowa_liquor_schema"}
+{"case_id": "iowa_004", "nl_query": "Sales by category and item", "source": "author_labeled_over_public_iowa_liquor_schema"}
+{"case_id": "iowa_005", "nl_query": "Monthly liquor sales", "source": "author_labeled_over_public_iowa_liquor_schema"}
+{"case_id": "iowa_006", "nl_query": "Quarterly sales dollars by county", "source": "author_labeled_over_public_iowa_liquor_schema"}
+{"case_id": "iowa_007", "nl_query": "How many bottles were sold?", "source": "author_labeled_over_public_iowa_liquor_schema"}
+{"case_id": "iowa_008", "nl_query": "Bottles sold by vendor", "source": "author_labeled_over_public_iowa_liquor_schema"}
+{"case_id": "iowa_009", "nl_query": "Bottles by category and item", "source": "author_labeled_over_public_iowa_liquor_schema"}
+{"case_id": "iowa_010", "nl_query": "Liters sold by county", "source": "author_labeled_over_public_iowa_liquor_schema"}
+{"case_id": "iowa_011", "nl_query": "Volume in liters by county and city", "source": "author_labeled_over_public_iowa_liquor_schema"}
+{"case_id": "iowa_012", "nl_query": "How many invoices are in the public liquor data?", "source": "author_labeled_over_public_iowa_liquor_schema"}
+{"case_id": "iowa_013", "nl_query": "Invoice count by month", "source": "author_labeled_over_public_iowa_liquor_schema"}
+{"case_id": "iowa_014", "nl_query": "Order count by county and city", "source": "author_labeled_over_public_iowa_liquor_schema"}
+{"case_id": "iowa_015", "nl_query": "How many stores sold liquor?", "source": "author_labeled_over_public_iowa_liquor_schema"}
+{"case_id": "iowa_016", "nl_query": "Store count by county", "source": "author_labeled_over_public_iowa_liquor_schema"}
+{"case_id": "iowa_017", "nl_query": "Retailer count by city", "source": "author_labeled_over_public_iowa_liquor_schema"}
+{"case_id": "iowa_018", "nl_query": "How many products appear in the sales data?", "source": "author_labeled_over_public_iowa_liquor_schema"}
+{"case_id": "iowa_019", "nl_query": "Item count by category", "source": "author_labeled_over_public_iowa_liquor_schema"}
+{"case_id": "iowa_020", "nl_query": "Product count by vendor", "source": "author_labeled_over_public_iowa_liquor_schema"}
+{"case_id": "iowa_021", "nl_query": "Average bottle price by category", "source": "author_labeled_over_public_iowa_liquor_schema"}
+{"case_id": "iowa_022", "nl_query": "Price per bottle by category and item", "source": "author_labeled_over_public_iowa_liquor_schema"}
+{"case_id": "iowa_023", "nl_query": "Average order value by county", "source": "author_labeled_over_public_iowa_liquor_schema"}
+{"case_id": "iowa_024", "nl_query": "AOV by county and city", "source": "author_labeled_over_public_iowa_liquor_schema"}
+{"case_id": "iowa_025", "nl_query": "Average invoice value by vendor", "source": "author_labeled_over_public_iowa_liquor_schema"}
+{"case_id": "iowa_026", "nl_query": "Show raw invoice ids", "source": "author_labeled_over_public_iowa_liquor_schema"}
+{"case_id": "iowa_027", "nl_query": "List store addresses", "source": "author_labeled_over_public_iowa_liquor_schema"}
+{"case_id": "iowa_028", "nl_query": "DROP TABLE iowa_liquor_sales", "source": "author_labeled_over_public_iowa_liquor_schema"}
+{"case_id": "iowa_029", "nl_query": "What is the weather in Iowa tomorrow?", "source": "author_labeled_over_public_iowa_liquor_schema"}
+{"case_id": "iowa_030", "nl_query": "Profit margin by category", "source": "author_labeled_over_public_iowa_liquor_schema"}
+{"case_id": "iowa_031", "nl_query": "Gross margin by vendor", "source": "author_labeled_over_public_iowa_liquor_schema"}
+{"case_id": "iowa_032", "nl_query": "Customer phone numbers for liquor buyers", "source": "author_labeled_over_public_iowa_liquor_schema"}

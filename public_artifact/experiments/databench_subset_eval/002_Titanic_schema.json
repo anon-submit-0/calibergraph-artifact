@@ -1,0 +1,49 @@
+{
+  "columns": [
+    {
+      "name": "Survived",
+      "type": "BOOLEAN"
+    },
+    {
+      "name": "Pclass",
+      "type": "UTINYINT"
+    },
+    {
+      "name": "Name",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "Sex",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "Age",
+      "type": "UTINYINT"
+    },
+    {
+      "name": "Siblings_Spouses Aboard",
+      "type": "UTINYINT"
+    },
+    {
+      "name": "Parents_Children Aboard",
+      "type": "UTINYINT"
+    },
+    {
+      "name": "Fare",
+      "type": "DOUBLE"
+    }
+  ],
+  "dataset": "002_Titanic",
+  "qa_count": 20,
+  "qa_types": {
+    "boolean": 4,
+    "category": 4,
+    "list[category]": 4,
+    "list[number]": 4,
+    "number": 4
+  },
+  "rows": 887,
+  "sample_rows": 20,
+  "sha256_all": "d6d76c0478b59d1d0e6508ec8ab826f56e4dbedf2f47e9e67a65e58d48de463e",
+  "sha256_qa": "58b12a60067acddc7e32c3becb7015b264789d6b7345232c6247e20e26959565"
+}

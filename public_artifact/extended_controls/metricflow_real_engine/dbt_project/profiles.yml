@@ -1,0 +1,7 @@
+mf_iowa:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: data/iowa.duckdb
+      threads: 1

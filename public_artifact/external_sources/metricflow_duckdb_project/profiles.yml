@@ -1,0 +1,6 @@
+metricflow_duckdb_caliber_probe:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: "./metricflow_duckdb_caliber_probe.duckdb"

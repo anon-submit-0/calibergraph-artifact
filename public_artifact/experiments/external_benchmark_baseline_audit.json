@@ -1,0 +1,93 @@
+{
+  "baseline_candidates": [
+    {
+      "directness": "adjacent closest published family, not direct metric-caliber compiler",
+      "name": "AutoLink",
+      "role": "candidate-availability and schema-linking control",
+      "release_action": "report evidence-labeled E3 candidate-linking diagnostics and resource-gated upstream audit"
+    },
+    {
+      "directness": "adjacent safety system, not denominator/grain witness compiler",
+      "name": "SafeNLIDB",
+      "role": "security/refusal guard control",
+      "release_action": "report ShieldSQL guard transfer and resource-gated upstream audit"
+    },
+    {
+      "directness": "direct for refusal policy, partial for metric-caliber",
+      "name": "TrustSQL-style abstention",
+      "role": "public answerability/reliability control",
+      "release_action": "map as refusal baseline family; release includes TrustSQL raw official scorer outputs"
+    },
+    {
+      "directness": "strong SQL baselines, indirect for governed metric contracts",
+      "name": "CHESS / MAC-SQL / DIN-SQL",
+      "role": "strong NL2SQL agent baselines",
+      "release_action": "rank as next SQL-planner controls with oracle-candidate finalizer interface"
+    },
+    {
+      "directness": "direct mechanism controls under released contracts",
+      "name": "Semantic-layer validator / SQL post-hoc validator",
+      "role": "fully runnable non-witness controls",
+      "release_action": "keep as primary reproducible non-witness comparisons"
+    }
+  ],
+  "benchmark_candidates": [
+    {
+      "name": "BIS",
+      "paper_action": "discuss as closest external BI benchmark; use release DataBench/Spider2-DBT evidence as executed adjacent anchors",
+      "role": "external BI NL2SQL benchmark alignment",
+      "source": "arXiv:2410.22925",
+      "why_not_primary_yet": "does not directly release CaliberGraph-style metric-contract witness labels",
+      "why_relevant": "production BI questions rather than generic academic SQL only"
+    },
+    {
+      "name": "BI-Bench",
+      "paper_action": "use to position the BI system boundary and motivate broader evaluation",
+      "role": "end-to-end BI-system benchmark alignment",
+      "source": "ACL Industry Track 2025, doi:10.18653/v1/2025.acl-industry.90",
+      "why_not_primary_yet": "benchmarks BI system insight quality rather than typed metric-caliber witness conformance",
+      "why_relevant": "descriptive, diagnostic, predictive, and prescriptive BI query coverage"
+    },
+    {
+      "name": "TrustSQL",
+      "paper_action": "add as refusal/reliability comparison axis; release includes raw official scorer outputs",
+      "role": "answerability/refusal reliability baseline family",
+      "source": "arXiv:2403.15879",
+      "why_not_primary_yet": "refusal is one contract facet; it lacks denominator, grain, coverage, and metric-caliber witnesses",
+      "why_relevant": "scores feasible SQL generation and infeasible-question abstention"
+    },
+    {
+      "name": "Spider 2.0 / Spider2-Lite",
+      "paper_action": "retain as Text-to-SQL diagnostic, not the main metric-caliber benchmark",
+      "role": "enterprise-scale schema/workflow diagnostic",
+      "source": "arXiv:2411.07763",
+      "why_not_primary_yet": "schema/workflow success does not define governed metric contracts or disclosure policy",
+      "why_relevant": "real-world enterprise workflows over large schemas and warehouses"
+    },
+    {
+      "name": "BIRD",
+      "paper_action": "keep BIRD-MetricCaliber as plan-level diagnostic",
+      "role": "existing SQL diagnostic already included",
+      "source": "bird-bench.github.io",
+      "why_not_primary_yet": "does not provide complete governance graph, refusal policy, or coverage contract",
+      "why_relevant": "public SQL benchmark with aggregate queries and external knowledge"
+    }
+  ],
+  "claim_boundary": "This historical release audit maps adjacent BI, reliability, and Text-to-SQL benchmarks to the MetricCaliberBench evidence boundary. release supplements it with executed Spider2-DBT, TrustSQL raw, DataBench, and MetricFlow evidence in EXTERNAL_EVIDENCE_SUMMARY.md.",
+  "date": "2026-07-08",
+  "sources": [
+    "https://arxiv.org/abs/2410.22925",
+    "https://aclanthology.org/2025.acl-industry.90/",
+    "https://arxiv.org/abs/2403.15879",
+    "https://arxiv.org/abs/2411.07763",
+    "https://bird-bench.github.io/",
+    "https://ojs.aaai.org/index.php/AAAI/article/view/40672",
+    "https://ojs.aaai.org/index.php/AAAI/article/view/40484"
+  ],
+  "release_decision": [
+    "Numerical result tables remain limited to released/rebuildable MetricCaliberBench splits and evidence-labeled controls.",
+    "External benchmarks are cited and mapped to specific evaluation roles, avoiding false SOTA claims.",
+    "release executes adjacent checks for Spider2-DBT, TrustSQL raw, DataBench, and dbt MetricFlow; those checks remain boundary evidence, not full NL2Metric-Caliber witness benchmarks."
+  ],
+  "version": "release"
+}

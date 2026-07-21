@@ -1,0 +1,6 @@
+{
+  "channel": "moonshot",
+  "model": "kimi-k2.6",
+  "mode": "llm_graph_rag",
+  "stdout": "```json\n[\n  {\"case_id\":\"ict_case_0024\", \"action\":\"answer\", \"metric_id\":\"ict_metric_002\", \"dimensions\":[\"segment_l1\"], \"reason\":\"问题次数 maps to ict_metric_002 and 一级品类 maps to segment_l1.\"},\n  {\"case_id\":\"ict_case_0025\", \"action\":\"answer\", \"metric_id\":\"ict_metric_005\", \"dimensions\":[], \"reason\":\"质量不良率 maps to ict_metric_005 with no dimensions requested.\"}\n]\n```"
+}

@@ -1,0 +1,41 @@
+{
+  "columns": [
+    {
+      "name": "DATE",
+      "type": "TIMESTAMP WITH TIME ZONE"
+    },
+    {
+      "name": "PRCP",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "SNOW",
+      "type": "UTINYINT"
+    },
+    {
+      "name": "SNWD",
+      "type": "UTINYINT"
+    },
+    {
+      "name": "TMIN",
+      "type": "TINYINT"
+    },
+    {
+      "name": "TMAX",
+      "type": "UTINYINT"
+    }
+  ],
+  "dataset": "009_Central",
+  "qa_count": 20,
+  "qa_types": {
+    "boolean": 4,
+    "category": 4,
+    "list[category]": 4,
+    "list[number]": 4,
+    "number": 4
+  },
+  "rows": 56245,
+  "sample_rows": 20,
+  "sha256_all": "aff052acef8ff5e5a2920bb6d2a85f75b4df14fe2b5a3d22cc9a3bd8f5b079e2",
+  "sha256_qa": "a3d2e6888ada20e31788e58dc61cf86e2fbacc8d725e97c4ecd04f9b3fe069ea"
+}

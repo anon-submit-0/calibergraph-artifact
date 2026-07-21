@@ -1,0 +1,14 @@
+{
+  "dataset_id": "industrial_case_text_metric_caliber",
+  "time_aliases": {
+    "last_month": [
+      "last month",
+      "上个月"
+    ],
+    "this_year": [
+      "this year",
+      "今年"
+    ],
+    "unspecified": []
+  }
+}

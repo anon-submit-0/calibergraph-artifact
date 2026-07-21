@@ -1,0 +1,25 @@
+{
+  "claim_boundary": "This is a real dbt/MetricFlow validator control over a minimal public DuckDB semantic-layer project. It validates MetricFlow semantics and demonstrates what metrics-as-code catches; it does not model natural-language caliber selection, refusal/disclosure, or coverage witnesses.",
+  "date": "2026-07-08",
+  "dbt_version": "Core:\n  - installed: 1.10.22\n  - latest:    1.11.12 - Update available!\n\n  Your version of dbt-core is out of date!\n  You can find instructions for upgrading here:\n  https://docs.getdbt.com/docs/installation\n\nPlugins:\n  - duckdb: 1.10.0 - Update available!\n\n  At least one plugin is out of date with dbt-core.\n  You can find instructions for upgrading here:\n  https://docs.getdbt.com/docs/installation\n\n\n",
+  "mf_version": "mf, version 0.11.0",
+  "project_files": [
+    ".user.yml",
+    "dbt_project.yml",
+    "logs/dbt.log",
+    "logs/metricflow.log",
+    "metricflow_duckdb_caliber_probe.duckdb",
+    "models/all_days.sql",
+    "models/orders.sql",
+    "models/semantic_models.yml",
+    "profiles.yml",
+    "target/manifest.json",
+    "target/partial_parse.msgpack",
+    "target/perf_info.json",
+    "target/semantic_manifest.json"
+  ],
+  "returncode": 0,
+  "stdout": "<python-site-packages>/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020\n  warnings.warn(\n‼️ Warning: A new version of the MetricFlow CLI is available.\n💡 Please update to version 0.13.0, released 2026-05-12 20:34:12 by running:\n\t$ pip install --upgrade dbt-metricflow\n\n(To see warnings and future-errors, run again with flag `--show-all`)\n\n\n⠋ Building manifest from dbt project root\n\n⠙ Building manifest from dbt project root\n✔ 🎉 Successfully parsed manifest from dbt project\n\n\n⠋ Validating semantics of built manifest\n\n⠙ Validating semantics of built manifest\n✔ 🎉 Successfully validated the semantics of built manifest (ERRORS: 0, FUTURE_ERRORS: 0, WARNINGS: 0)\n\n\n",
+  "tool": "dbt MetricFlow",
+  "version": "release"
+}

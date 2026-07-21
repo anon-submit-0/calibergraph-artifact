@@ -1,0 +1,85 @@
+{
+  "columns": [
+    {
+      "name": "rank",
+      "type": "USMALLINT"
+    },
+    {
+      "name": "personName",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "age",
+      "type": "UTINYINT"
+    },
+    {
+      "name": "finalWorth",
+      "type": "UINTEGER"
+    },
+    {
+      "name": "category",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "source",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "country",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "state",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "city",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "organization",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "selfMade",
+      "type": "BOOLEAN"
+    },
+    {
+      "name": "gender",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "birthDate",
+      "type": "TIMESTAMP WITH TIME ZONE"
+    },
+    {
+      "name": "title",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "philanthropyScore",
+      "type": "UTINYINT"
+    },
+    {
+      "name": "bio",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "about",
+      "type": "VARCHAR"
+    }
+  ],
+  "dataset": "001_Forbes",
+  "qa_count": 25,
+  "qa_types": {
+    "boolean": 5,
+    "category": 5,
+    "list[category]": 5,
+    "list[number]": 5,
+    "number": 5
+  },
+  "rows": 2668,
+  "sample_rows": 20,
+  "sha256_all": "1c825f7fc6c69ee342518bcfc4937ca6828028c377ae1ea81b608e709db4443d",
+  "sha256_qa": "8863e70f63bcf4d5aa10e6dd35a89bafa2a6dedd23af7ae9d51b22615c0e5093"
+}

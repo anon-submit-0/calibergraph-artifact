@@ -1,0 +1,6 @@
+{
+  "channel": "moonshot",
+  "model": "kimi-k2.6",
+  "mode": "llm_graph_rag",
+  "stdout": "[\n  {\"case_id\":\"ict_case_0053\", \"action\":\"answer\", \"metric_id\":\"ict_metric_006\", \"dimensions\":[], \"reason\":\"Query maps directly to Refund Amount; no dimensions requested.\"},\n  {\"case_id\":\"ict_case_0054\", \"action\":\"answer\", \"metric_id\":\"ict_metric_013\", \"dimensions\":[], \"reason\":\"Query maps directly to Sales Amount; no dimensions requested.\"}\n]"
+}

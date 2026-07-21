@@ -1,0 +1,187 @@
+{
+  "layers": {
+    "Chinook": {
+      "methods": {
+        "direct_keyword": {
+          "changed_case_outcomes": [],
+          "delta": 0.0,
+          "human_majority_sensitivity_accuracy": 0.125,
+          "released_gold_accuracy": 0.125
+        },
+        "llm_direct": {
+          "changed_case_outcomes": [
+            {
+              "case_id": "pub_040",
+              "human_majority_ok": true,
+              "original_ok": false
+            }
+          ],
+          "delta": 0.025,
+          "human_majority_sensitivity_accuracy": 0.775,
+          "released_gold_accuracy": 0.75
+        },
+        "llm_graph_rag": {
+          "changed_case_outcomes": [
+            {
+              "case_id": "pub_040",
+              "human_majority_ok": true,
+              "original_ok": false
+            }
+          ],
+          "delta": 0.025,
+          "human_majority_sensitivity_accuracy": 0.95,
+          "released_gold_accuracy": 0.925
+        },
+        "llm_schema_rag": {
+          "changed_case_outcomes": [
+            {
+              "case_id": "pub_040",
+              "human_majority_ok": true,
+              "original_ok": false
+            }
+          ],
+          "delta": 0.025,
+          "human_majority_sensitivity_accuracy": 0.625,
+          "released_gold_accuracy": 0.6
+        },
+        "public_caliber_graph": {
+          "changed_case_outcomes": [
+            {
+              "case_id": "pub_040",
+              "human_majority_ok": false,
+              "original_ok": true
+            }
+          ],
+          "delta": -0.025,
+          "human_majority_sensitivity_accuracy": 0.975,
+          "released_gold_accuracy": 1.0
+        },
+        "schema_rag": {
+          "changed_case_outcomes": [
+            {
+              "case_id": "pub_040",
+              "human_majority_ok": false,
+              "original_ok": true
+            }
+          ],
+          "delta": -0.025,
+          "human_majority_sensitivity_accuracy": 0.825,
+          "released_gold_accuracy": 0.85
+        }
+      },
+      "n": 40,
+      "n_disputed": 1,
+      "released_rank": [
+        "public_caliber_graph",
+        "llm_graph_rag",
+        "schema_rag",
+        "llm_direct",
+        "llm_schema_rag",
+        "direct_keyword"
+      ],
+      "sensitivity_rank": [
+        "public_caliber_graph",
+        "llm_graph_rag",
+        "schema_rag",
+        "llm_direct",
+        "llm_schema_rag",
+        "direct_keyword"
+      ],
+      "top_method_set_unchanged": true
+    },
+    "IndustrialCaseText": {
+      "methods": {
+        "caliber_graph": {
+          "changed_case_outcomes": [
+            {
+              "case_id": "ict_case_0058",
+              "human_majority_ok": false,
+              "original_ok": true
+            },
+            {
+              "case_id": "ict_case_0091",
+              "human_majority_ok": false,
+              "original_ok": true
+            },
+            {
+              "case_id": "ict_case_0118",
+              "human_majority_ok": false,
+              "original_ok": true
+            }
+          ],
+          "delta": -0.01910828025477707,
+          "human_majority_sensitivity_accuracy": 0.9808917197452229,
+          "released_gold_accuracy": 1.0
+        },
+        "direct_keyword": {
+          "changed_case_outcomes": [
+            {
+              "case_id": "ict_case_0058",
+              "human_majority_ok": false,
+              "original_ok": true
+            },
+            {
+              "case_id": "ict_case_0091",
+              "human_majority_ok": false,
+              "original_ok": true
+            }
+          ],
+          "delta": -0.012738853503184714,
+          "human_majority_sensitivity_accuracy": 0.4968152866242038,
+          "released_gold_accuracy": 0.5095541401273885
+        },
+        "safenlidb_guarded": {
+          "changed_case_outcomes": [
+            {
+              "case_id": "ict_case_0058",
+              "human_majority_ok": false,
+              "original_ok": true
+            },
+            {
+              "case_id": "ict_case_0091",
+              "human_majority_ok": false,
+              "original_ok": true
+            }
+          ],
+          "delta": -0.012738853503184714,
+          "human_majority_sensitivity_accuracy": 0.8853503184713376,
+          "released_gold_accuracy": 0.8980891719745223
+        },
+        "schema_proxy": {
+          "changed_case_outcomes": [
+            {
+              "case_id": "ict_case_0058",
+              "human_majority_ok": false,
+              "original_ok": true
+            },
+            {
+              "case_id": "ict_case_0091",
+              "human_majority_ok": false,
+              "original_ok": true
+            }
+          ],
+          "delta": -0.012738853503184714,
+          "human_majority_sensitivity_accuracy": 0.8407643312101911,
+          "released_gold_accuracy": 0.8535031847133758
+        }
+      },
+      "n": 157,
+      "n_disputed": 3,
+      "released_rank": [
+        "caliber_graph",
+        "safenlidb_guarded",
+        "schema_proxy",
+        "direct_keyword"
+      ],
+      "sensitivity_rank": [
+        "caliber_graph",
+        "safenlidb_guarded",
+        "schema_proxy",
+        "direct_keyword"
+      ],
+      "top_method_set_unchanged": true
+    }
+  },
+  "n_disagreements": 4,
+  "policy": "replace all four majority-vs-released-gold disagreements; no cherry-picking"
+}

@@ -1,0 +1,6 @@
+{
+  "channel": "moonshot",
+  "model": "kimi-k2.6",
+  "mode": "llm_graph_rag",
+  "stdout": "[\n  {\"case_id\":\"ict_case_0007\",\"action\":\"answer\",\"metric_id\":\"ict_metric_010\",\"dimensions\":[],\"reason\":\"Metric mapped to Return Quantity; flat metric query requires no dimensions.\"},\n  {\"case_id\":\"ict_case_0008\",\"action\":\"answer\",\"metric_id\":\"ict_metric_014\",\"dimensions\":[\"segment_l2\"],\"reason\":\"Metric mapped to Sales Quantity; finest requested hierarchy grain is segment_l2.\"}\n]"
+}

@@ -1,0 +1,3251 @@
+{
+ "apartment_rentals": {
+  "source": "spider",
+  "tables": {
+   "Apartment_Buildings": [
+    "building_id",
+    "building_short_name",
+    "building_full_name",
+    "building_description",
+    "building_address",
+    "building_manager",
+    "building_phone"
+   ],
+   "Apartments": [
+    "apt_id",
+    "building_id",
+    "apt_type_code",
+    "apt_number",
+    "bathroom_count",
+    "bedroom_count",
+    "room_count"
+   ],
+   "Apartment_Facilities": [
+    "apt_id",
+    "facility_code"
+   ],
+   "Guests": [
+    "guest_id",
+    "gender_code",
+    "guest_first_name",
+    "guest_last_name",
+    "date_of_birth"
+   ],
+   "Apartment_Bookings": [
+    "apt_booking_id",
+    "apt_id",
+    "guest_id",
+    "booking_status_code",
+    "booking_start_date",
+    "booking_end_date"
+   ],
+   "View_Unit_Status": [
+    "apt_id",
+    "apt_booking_id",
+    "status_date",
+    "available_yn"
+   ]
+  }
+ },
+ "architecture": {
+  "source": "spider",
+  "tables": {
+   "architect": [
+    "id",
+    "name",
+    "nationality",
+    "gender"
+   ],
+   "bridge": [
+    "architect_id",
+    "id",
+    "name",
+    "location",
+    "length_meters",
+    "length_feet"
+   ],
+   "mill": [
+    "architect_id",
+    "id",
+    "location",
+    "name",
+    "type",
+    "built_year",
+    "notes"
+   ]
+  }
+ },
+ "assets_maintenance": {
+  "source": "spider",
+  "tables": {
+   "Third_Party_Companies": [
+    "company_id",
+    "company_type",
+    "company_name",
+    "company_address",
+    "other_company_details"
+   ],
+   "Maintenance_Contracts": [
+    "maintenance_contract_id",
+    "maintenance_contract_company_id",
+    "contract_start_date",
+    "contract_end_date",
+    "other_contract_details"
+   ],
+   "Parts": [
+    "part_id",
+    "part_name",
+    "chargeable_yn",
+    "chargeable_amount",
+    "other_part_details"
+   ],
+   "Skills": [
+    "skill_id",
+    "skill_code",
+    "skill_description"
+   ],
+   "Staff": [
+    "staff_id",
+    "staff_name",
+    "gender",
+    "other_staff_details"
+   ],
+   "Assets": [
+    "asset_id",
+    "maintenance_contract_id",
+    "supplier_company_id",
+    "asset_details",
+    "asset_make",
+    "asset_model",
+    "asset_acquired_date",
+    "asset_disposed_date",
+    "other_asset_details"
+   ],
+   "Asset_Parts": [
+    "asset_id",
+    "part_id"
+   ],
+   "Maintenance_Engineers": [
+    "engineer_id",
+    "company_id",
+    "first_name",
+    "last_name",
+    "other_details"
+   ],
+   "Engineer_Skills": [
+    "engineer_id",
+    "skill_id"
+   ],
+   "Fault_Log": [
+    "fault_log_entry_id",
+    "asset_id",
+    "recorded_by_staff_id",
+    "fault_log_entry_datetime",
+    "fault_description",
+    "other_fault_details"
+   ],
+   "Engineer_Visits": [
+    "engineer_visit_id",
+    "contact_staff_id",
+    "engineer_id",
+    "fault_log_entry_id",
+    "fault_status",
+    "visit_start_datetime",
+    "visit_end_datetime",
+    "other_visit_details"
+   ],
+   "Part_Faults": [
+    "part_fault_id",
+    "part_id",
+    "fault_short_name",
+    "fault_description",
+    "other_fault_details"
+   ],
+   "Fault_Log_Parts": [
+    "fault_log_entry_id",
+    "part_fault_id",
+    "fault_status"
+   ],
+   "Skills_Required_To_Fix": [
+    "part_fault_id",
+    "skill_id"
+   ]
+  }
+ },
+ "battle_death": {
+  "source": "spider",
+  "tables": {
+   "battle": [
+    "id",
+    "name",
+    "date",
+    "bulgarian_commander",
+    "latin_commander",
+    "result"
+   ],
+   "ship": [
+    "lost_in_battle",
+    "id",
+    "name",
+    "tonnage",
+    "ship_type",
+    "location",
+    "disposition_of_ship"
+   ],
+   "death": [
+    "caused_by_ship_id",
+    "id",
+    "note",
+    "killed",
+    "injured"
+   ]
+  }
+ },
+ "beer_factory": {
+  "source": "bird_train",
+  "tables": {
+   "customers": [
+    "CustomerID",
+    "First",
+    "Last",
+    "StreetAddress",
+    "City",
+    "State",
+    "ZipCode",
+    "Email",
+    "PhoneNumber",
+    "FirstPurchaseDate",
+    "SubscribedToEmailList",
+    "Gender"
+   ],
+   "geolocation": [
+    "LocationID",
+    "Latitude",
+    "Longitude"
+   ],
+   "location": [
+    "LocationID",
+    "LocationName",
+    "StreetAddress",
+    "City",
+    "State",
+    "ZipCode"
+   ],
+   "rootbeerbrand": [
+    "BrandID",
+    "BrandName",
+    "FirstBrewedYear",
+    "BreweryName",
+    "City",
+    "State",
+    "Country",
+    "Description",
+    "CaneSugar",
+    "CornSyrup",
+    "Honey",
+    "ArtificialSweetener",
+    "Caffeinated",
+    "Alcoholic",
+    "AvailableInCans",
+    "AvailableInBottles",
+    "AvailableInKegs",
+    "Website",
+    "FacebookPage",
+    "Twitter",
+    "WholesaleCost",
+    "CurrentRetailPrice"
+   ],
+   "rootbeer": [
+    "RootBeerID",
+    "BrandID",
+    "ContainerType",
+    "LocationID",
+    "PurchaseDate"
+   ],
+   "rootbeerreview": [
+    "CustomerID",
+    "BrandID",
+    "StarRating",
+    "ReviewDate",
+    "Review"
+   ],
+   "transaction": [
+    "TransactionID",
+    "CreditCardNumber",
+    "CustomerID",
+    "TransactionDate",
+    "CreditCardType",
+    "LocationID",
+    "RootBeerID",
+    "PurchasePrice"
+   ]
+  }
+ },
+ "books": {
+  "source": "bird_train",
+  "tables": {
+   "address_status": [
+    "status_id",
+    "address_status"
+   ],
+   "author": [
+    "author_id",
+    "author_name"
+   ],
+   "book_language": [
+    "language_id",
+    "language_code",
+    "language_name"
+   ],
+   "country": [
+    "country_id",
+    "country_name"
+   ],
+   "address": [
+    "address_id",
+    "street_number",
+    "street_name",
+    "city",
+    "country_id"
+   ],
+   "customer": [
+    "customer_id",
+    "first_name",
+    "last_name",
+    "email"
+   ],
+   "customer_address": [
+    "customer_id",
+    "address_id",
+    "status_id"
+   ],
+   "order_status": [
+    "status_id",
+    "status_value"
+   ],
+   "publisher": [
+    "publisher_id",
+    "publisher_name"
+   ],
+   "book": [
+    "book_id",
+    "title",
+    "isbn13",
+    "language_id",
+    "num_pages",
+    "publication_date",
+    "publisher_id"
+   ],
+   "book_author": [
+    "book_id",
+    "author_id"
+   ],
+   "shipping_method": [
+    "method_id",
+    "method_name",
+    "cost"
+   ],
+   "cust_order": [
+    "order_id",
+    "order_date",
+    "customer_id",
+    "shipping_method_id",
+    "dest_address_id"
+   ],
+   "order_history": [
+    "history_id",
+    "order_id",
+    "status_id",
+    "status_date"
+   ],
+   "order_line": [
+    "line_id",
+    "order_id",
+    "book_id",
+    "price"
+   ]
+  }
+ },
+ "car_retails": {
+  "source": "bird_train",
+  "tables": {
+   "offices": [
+    "officeCode",
+    "city",
+    "phone",
+    "addressLine1",
+    "addressLine2",
+    "state",
+    "country",
+    "postalCode",
+    "territory"
+   ],
+   "employees": [
+    "employeeNumber",
+    "lastName",
+    "firstName",
+    "extension",
+    "email",
+    "officeCode",
+    "reportsTo",
+    "jobTitle"
+   ],
+   "customers": [
+    "customerNumber",
+    "customerName",
+    "contactLastName",
+    "contactFirstName",
+    "phone",
+    "addressLine1",
+    "addressLine2",
+    "city",
+    "state",
+    "postalCode",
+    "country",
+    "salesRepEmployeeNumber",
+    "creditLimit"
+   ],
+   "orders": [
+    "orderNumber",
+    "orderDate",
+    "requiredDate",
+    "shippedDate",
+    "status",
+    "comments",
+    "customerNumber"
+   ],
+   "payments": [
+    "customerNumber",
+    "checkNumber",
+    "paymentDate",
+    "amount"
+   ],
+   "productlines": [
+    "productLine",
+    "textDescription",
+    "htmlDescription",
+    "image"
+   ],
+   "products": [
+    "productCode",
+    "productName",
+    "productLine",
+    "productScale",
+    "productVendor",
+    "productDescription",
+    "quantityInStock",
+    "buyPrice",
+    "MSRP"
+   ],
+   "orderdetails": [
+    "orderNumber",
+    "productCode",
+    "quantityOrdered",
+    "priceEach",
+    "orderLineNumber"
+   ]
+  }
+ },
+ "chinook_1": {
+  "source": "spider",
+  "tables": {
+   "Album": [
+    "AlbumId",
+    "Title",
+    "ArtistId"
+   ],
+   "Artist": [
+    "ArtistId",
+    "Name"
+   ],
+   "Customer": [
+    "CustomerId",
+    "FirstName",
+    "LastName",
+    "Company",
+    "Address",
+    "City",
+    "State",
+    "Country",
+    "PostalCode",
+    "Phone",
+    "Fax",
+    "Email",
+    "SupportRepId"
+   ],
+   "Employee": [
+    "EmployeeId",
+    "LastName",
+    "FirstName",
+    "Title",
+    "ReportsTo",
+    "BirthDate",
+    "HireDate",
+    "Address",
+    "City",
+    "State",
+    "Country",
+    "PostalCode",
+    "Phone",
+    "Fax",
+    "Email"
+   ],
+   "Genre": [
+    "GenreId",
+    "Name"
+   ],
+   "Invoice": [
+    "InvoiceId",
+    "CustomerId",
+    "InvoiceDate",
+    "BillingAddress",
+    "BillingCity",
+    "BillingState",
+    "BillingCountry",
+    "BillingPostalCode",
+    "Total"
+   ],
+   "InvoiceLine": [
+    "InvoiceLineId",
+    "InvoiceId",
+    "TrackId",
+    "UnitPrice",
+    "Quantity"
+   ],
+   "MediaType": [
+    "MediaTypeId",
+    "Name"
+   ],
+   "Playlist": [
+    "PlaylistId",
+    "Name"
+   ],
+   "PlaylistTrack": [
+    "PlaylistId",
+    "TrackId"
+   ],
+   "Track": [
+    "TrackId",
+    "Name",
+    "AlbumId",
+    "MediaTypeId",
+    "GenreId",
+    "Composer",
+    "Milliseconds",
+    "Bytes",
+    "UnitPrice"
+   ]
+  }
+ },
+ "codebase_community": {
+  "source": "bird_dev",
+  "tables": {
+   "badges": [
+    "Id",
+    "UserId",
+    "Name",
+    "Date"
+   ],
+   "comments": [
+    "Id",
+    "PostId",
+    "Score",
+    "Text",
+    "CreationDate",
+    "UserId",
+    "UserDisplayName"
+   ],
+   "postHistory": [
+    "Id",
+    "PostHistoryTypeId",
+    "PostId",
+    "RevisionGUID",
+    "CreationDate",
+    "UserId",
+    "Text",
+    "Comment",
+    "UserDisplayName"
+   ],
+   "postLinks": [
+    "Id",
+    "CreationDate",
+    "PostId",
+    "RelatedPostId",
+    "LinkTypeId"
+   ],
+   "posts": [
+    "Id",
+    "PostTypeId",
+    "AcceptedAnswerId",
+    "CreaionDate",
+    "Score",
+    "ViewCount",
+    "Body",
+    "OwnerUserId",
+    "LasActivityDate",
+    "Title",
+    "Tags",
+    "AnswerCount",
+    "CommentCount",
+    "FavoriteCount",
+    "LastEditorUserId",
+    "LastEditDate",
+    "CommunityOwnedDate",
+    "ParentId",
+    "ClosedDate",
+    "OwnerDisplayName",
+    "LastEditorDisplayName"
+   ],
+   "tags": [
+    "Id",
+    "TagName",
+    "Count",
+    "ExcerptPostId",
+    "WikiPostId"
+   ],
+   "users": [
+    "Id",
+    "Reputation",
+    "CreationDate",
+    "DisplayName",
+    "LastAccessDate",
+    "WebsiteUrl",
+    "Location",
+    "AboutMe",
+    "Views",
+    "UpVotes",
+    "DownVotes",
+    "AccountId",
+    "Age",
+    "ProfileImageUrl"
+   ],
+   "votes": [
+    "Id",
+    "PostId",
+    "VoteTypeId",
+    "CreationDate",
+    "UserId",
+    "BountyAmount"
+   ]
+  }
+ },
+ "coffee_shop": {
+  "source": "spider",
+  "tables": {
+   "shop": [
+    "Shop_ID",
+    "Address",
+    "Num_of_staff",
+    "Score",
+    "Open_Year"
+   ],
+   "member": [
+    "Member_ID",
+    "Name",
+    "Membership_card",
+    "Age",
+    "Time_of_purchase",
+    "Level_of_membership",
+    "Address"
+   ],
+   "happy_hour": [
+    "HH_ID",
+    "Shop_ID",
+    "Month",
+    "Num_of_shaff_in_charge"
+   ],
+   "happy_hour_member": [
+    "HH_ID",
+    "Member_ID",
+    "Total_amount"
+   ]
+  }
+ },
+ "cre_Theme_park": {
+  "source": "spider",
+  "tables": {
+   "Ref_Hotel_Star_Ratings": [
+    "star_rating_code",
+    "star_rating_description"
+   ],
+   "Locations": [
+    "Location_ID",
+    "Location_Name",
+    "Address",
+    "Other_Details"
+   ],
+   "Ref_Attraction_Types": [
+    "Attraction_Type_Code",
+    "Attraction_Type_Description"
+   ],
+   "Visitors": [
+    "Tourist_ID",
+    "Tourist_Details"
+   ],
+   "Features": [
+    "Feature_ID",
+    "Feature_Details"
+   ],
+   "Hotels": [
+    "hotel_id",
+    "star_rating_code",
+    "pets_allowed_yn",
+    "price_range",
+    "other_hotel_details"
+   ],
+   "Tourist_Attractions": [
+    "Tourist_Attraction_ID",
+    "Attraction_Type_Code",
+    "Location_ID",
+    "How_to_Get_There",
+    "Name",
+    "Description",
+    "Opening_Hours",
+    "Other_Details"
+   ],
+   "Street_Markets": [
+    "Market_ID",
+    "Market_Details"
+   ],
+   "Shops": [
+    "Shop_ID",
+    "Shop_Details"
+   ],
+   "Museums": [
+    "Museum_ID",
+    "Museum_Details"
+   ],
+   "Royal_Family": [
+    "Royal_Family_ID",
+    "Royal_Family_Details"
+   ],
+   "Theme_Parks": [
+    "Theme_Park_ID",
+    "Theme_Park_Details"
+   ],
+   "Visits": [
+    "Visit_ID",
+    "Tourist_Attraction_ID",
+    "Tourist_ID",
+    "Visit_Date",
+    "Visit_Details"
+   ],
+   "Photos": [
+    "Photo_ID",
+    "Tourist_Attraction_ID",
+    "Name",
+    "Description",
+    "Filename",
+    "Other_Details"
+   ],
+   "Staff": [
+    "Staff_ID",
+    "Tourist_Attraction_ID",
+    "Name",
+    "Other_Details"
+   ],
+   "Tourist_Attraction_Features": [
+    "Tourist_Attraction_ID",
+    "Feature_ID"
+   ]
+  }
+ },
+ "cs_semester": {
+  "source": "bird_train",
+  "tables": {
+   "course": [
+    "course_id",
+    "name",
+    "credit",
+    "diff"
+   ],
+   "prof": [
+    "prof_id",
+    "gender",
+    "first_name",
+    "last_name",
+    "email",
+    "popularity",
+    "teachingability",
+    "graduate_from"
+   ],
+   "RA": [
+    "student_id",
+    "capability",
+    "prof_id",
+    "salary"
+   ],
+   "registration": [
+    "course_id",
+    "student_id",
+    "grade",
+    "sat"
+   ],
+   "student": [
+    "student_id",
+    "f_name",
+    "l_name",
+    "phone_number",
+    "email",
+    "intelligence",
+    "gpa",
+    "type"
+   ]
+  }
+ },
+ "customers_campaigns_ecommerce": {
+  "source": "spider",
+  "tables": {
+   "Premises": [
+    "premise_id",
+    "premises_type",
+    "premise_details"
+   ],
+   "Products": [
+    "product_id",
+    "product_category",
+    "product_name"
+   ],
+   "Customers": [
+    "customer_id",
+    "payment_method",
+    "customer_name",
+    "customer_phone",
+    "customer_email",
+    "customer_address",
+    "customer_login",
+    "customer_password"
+   ],
+   "Mailshot_Campaigns": [
+    "mailshot_id",
+    "product_category",
+    "mailshot_name",
+    "mailshot_start_date",
+    "mailshot_end_date"
+   ],
+   "Customer_Addresses": [
+    "customer_id",
+    "premise_id",
+    "date_address_from",
+    "address_type_code",
+    "date_address_to"
+   ],
+   "Customer_Orders": [
+    "order_id",
+    "customer_id",
+    "order_status_code",
+    "shipping_method_code",
+    "order_placed_datetime",
+    "order_delivered_datetime",
+    "order_shipping_charges"
+   ],
+   "Mailshot_Customers": [
+    "mailshot_id",
+    "customer_id",
+    "outcome_code",
+    "mailshot_customer_date"
+   ],
+   "Order_Items": [
+    "item_id",
+    "order_item_status_code",
+    "order_id",
+    "product_id",
+    "item_status_code",
+    "item_delivered_datetime",
+    "item_order_quantity"
+   ]
+  }
+ },
+ "customers_card_transactions": {
+  "source": "spider",
+  "tables": {
+   "Accounts": [
+    "account_id",
+    "customer_id",
+    "account_name",
+    "other_account_details"
+   ],
+   "Customers": [
+    "customer_id",
+    "customer_first_name",
+    "customer_last_name",
+    "customer_address",
+    "customer_phone",
+    "customer_email",
+    "other_customer_details"
+   ],
+   "Customers_Cards": [
+    "card_id",
+    "customer_id",
+    "card_type_code",
+    "card_number",
+    "date_valid_from",
+    "date_valid_to",
+    "other_card_details"
+   ],
+   "Financial_Transactions": [
+    "transaction_id",
+    "previous_transaction_id",
+    "account_id",
+    "card_id",
+    "transaction_type",
+    "transaction_date",
+    "transaction_amount",
+    "transaction_comment",
+    "other_transaction_details"
+   ]
+  }
+ },
+ "department_management": {
+  "source": "spider",
+  "tables": {
+   "department": [
+    "Department_ID",
+    "Name",
+    "Creation",
+    "Ranking",
+    "Budget_in_Billions",
+    "Num_Employees"
+   ],
+   "head": [
+    "head_ID",
+    "name",
+    "born_state",
+    "age"
+   ],
+   "management": [
+    "department_ID",
+    "head_ID",
+    "temporary_acting"
+   ]
+  }
+ },
+ "dog_kennels": {
+  "source": "spider",
+  "tables": {
+   "Breeds": [
+    "breed_code",
+    "breed_name"
+   ],
+   "Charges": [
+    "charge_id",
+    "charge_type",
+    "charge_amount"
+   ],
+   "Sizes": [
+    "size_code",
+    "size_description"
+   ],
+   "Treatment_Types": [
+    "treatment_type_code",
+    "treatment_type_description"
+   ],
+   "Owners": [
+    "owner_id",
+    "first_name",
+    "last_name",
+    "street",
+    "city",
+    "state",
+    "zip_code",
+    "email_address",
+    "home_phone",
+    "cell_number"
+   ],
+   "Dogs": [
+    "dog_id",
+    "owner_id",
+    "abandoned_yn",
+    "breed_code",
+    "size_code",
+    "name",
+    "age",
+    "date_of_birth",
+    "gender",
+    "weight",
+    "date_arrived",
+    "date_adopted",
+    "date_departed"
+   ],
+   "Professionals": [
+    "professional_id",
+    "role_code",
+    "first_name",
+    "street",
+    "city",
+    "state",
+    "zip_code",
+    "last_name",
+    "email_address",
+    "home_phone",
+    "cell_number"
+   ],
+   "Treatments": [
+    "treatment_id",
+    "dog_id",
+    "professional_id",
+    "treatment_type_code",
+    "date_of_treatment",
+    "cost_of_treatment"
+   ]
+  }
+ },
+ "donor": {
+  "source": "bird_train",
+  "tables": {
+   "essays": [
+    "projectid",
+    "teacher_acctid",
+    "title",
+    "short_description",
+    "need_statement",
+    "essay"
+   ],
+   "projects": [
+    "projectid",
+    "teacher_acctid",
+    "schoolid",
+    "school_ncesid",
+    "school_latitude",
+    "school_longitude",
+    "school_city",
+    "school_state",
+    "school_zip",
+    "school_metro",
+    "school_district",
+    "school_county",
+    "school_charter",
+    "school_magnet",
+    "school_year_round",
+    "school_nlns",
+    "school_kipp",
+    "school_charter_ready_promise",
+    "teacher_prefix",
+    "teacher_teach_for_america",
+    "teacher_ny_teaching_fellow",
+    "primary_focus_subject",
+    "primary_focus_area",
+    "secondary_focus_subject",
+    "secondary_focus_area",
+    "resource_type",
+    "poverty_level",
+    "grade_level",
+    "fulfillment_labor_materials",
+    "total_price_excluding_optional_support",
+    "total_price_including_optional_support",
+    "students_reached",
+    "eligible_double_your_impact_match",
+    "eligible_almost_home_match",
+    "date_posted"
+   ],
+   "donations": [
+    "donationid",
+    "projectid",
+    "donor_acctid",
+    "donor_city",
+    "donor_state",
+    "donor_zip",
+    "is_teacher_acct",
+    "donation_timestamp",
+    "donation_to_project",
+    "donation_optional_support",
+    "donation_total",
+    "dollar_amount",
+    "donation_included_optional_support",
+    "payment_method",
+    "payment_included_acct_credit",
+    "payment_included_campaign_gift_card",
+    "payment_included_web_purchased_gift_card",
+    "payment_was_promo_matched",
+    "via_giving_page",
+    "for_honoree",
+    "donation_message"
+   ],
+   "resources": [
+    "resourceid",
+    "projectid",
+    "vendorid",
+    "vendor_name",
+    "project_resource_type",
+    "item_name",
+    "item_number",
+    "item_unit_price",
+    "item_quantity"
+   ]
+  }
+ },
+ "e_learning": {
+  "source": "spider",
+  "tables": {
+   "Course_Authors_and_Tutors": [
+    "author_id",
+    "author_tutor_ATB",
+    "login_name",
+    "password",
+    "personal_name",
+    "middle_name",
+    "family_name",
+    "gender_mf",
+    "address_line_1"
+   ],
+   "Students": [
+    "student_id",
+    "date_of_registration",
+    "date_of_latest_logon",
+    "login_name",
+    "password",
+    "personal_name",
+    "middle_name",
+    "family_name"
+   ],
+   "Subjects": [
+    "subject_id",
+    "subject_name"
+   ],
+   "Courses": [
+    "course_id",
+    "author_id",
+    "subject_id",
+    "course_name",
+    "course_description"
+   ],
+   "Student_Course_Enrolment": [
+    "registration_id",
+    "student_id",
+    "course_id",
+    "date_of_enrolment",
+    "date_of_completion"
+   ],
+   "Student_Tests_Taken": [
+    "registration_id",
+    "date_test_taken",
+    "test_result"
+   ]
+  }
+ },
+ "employee_hire_evaluation": {
+  "source": "spider",
+  "tables": {
+   "employee": [
+    "Employee_ID",
+    "Name",
+    "Age",
+    "City"
+   ],
+   "shop": [
+    "Shop_ID",
+    "Name",
+    "Location",
+    "District",
+    "Number_products",
+    "Manager_name"
+   ],
+   "hiring": [
+    "Shop_ID",
+    "Employee_ID",
+    "Start_from",
+    "Is_full_time"
+   ],
+   "evaluation": [
+    "Employee_ID",
+    "Year_awarded",
+    "Bonus"
+   ]
+  }
+ },
+ "entrepreneur": {
+  "source": "spider",
+  "tables": {
+   "entrepreneur": [
+    "Entrepreneur_ID",
+    "People_ID",
+    "Company",
+    "Money_Requested",
+    "Investor"
+   ],
+   "people": [
+    "People_ID",
+    "Name",
+    "Height",
+    "Weight",
+    "Date_of_Birth"
+   ]
+  }
+ },
+ "farm": {
+  "source": "spider",
+  "tables": {
+   "city": [
+    "City_ID",
+    "Official_Name",
+    "Status",
+    "Area_km_2",
+    "Population",
+    "Census_Ranking"
+   ],
+   "farm": [
+    "Farm_ID",
+    "Year",
+    "Total_Horses",
+    "Working_Horses",
+    "Total_Cattle",
+    "Oxen",
+    "Bulls",
+    "Cows",
+    "Pigs",
+    "Sheep_and_Goats"
+   ],
+   "farm_competition": [
+    "Competition_ID",
+    "Year",
+    "Theme",
+    "Host_city_ID",
+    "Hosts"
+   ],
+   "competition_record": [
+    "Competition_ID",
+    "Farm_ID",
+    "Rank"
+   ]
+  }
+ },
+ "financial": {
+  "source": "bird_dev",
+  "tables": {
+   "account": [
+    "account_id",
+    "district_id",
+    "frequency",
+    "date"
+   ],
+   "card": [
+    "card_id",
+    "disp_id",
+    "type",
+    "issued"
+   ],
+   "client": [
+    "client_id",
+    "gender",
+    "birth_date",
+    "district_id"
+   ],
+   "disp": [
+    "disp_id",
+    "client_id",
+    "account_id",
+    "type"
+   ],
+   "district": [
+    "district_id",
+    "A2",
+    "A3",
+    "A4",
+    "A5",
+    "A6",
+    "A7",
+    "A8",
+    "A9",
+    "A10",
+    "A11",
+    "A12",
+    "A13",
+    "A14",
+    "A15",
+    "A16"
+   ],
+   "loan": [
+    "loan_id",
+    "account_id",
+    "date",
+    "amount",
+    "duration",
+    "payments",
+    "status"
+   ],
+   "order": [
+    "order_id",
+    "account_id",
+    "bank_to",
+    "account_to",
+    "amount",
+    "k_symbol"
+   ],
+   "trans": [
+    "trans_id",
+    "account_id",
+    "date",
+    "type",
+    "operation",
+    "amount",
+    "balance",
+    "k_symbol",
+    "bank",
+    "account"
+   ]
+  }
+ },
+ "flight_1": {
+  "source": "spider",
+  "tables": {
+   "flight": [
+    "flno",
+    "origin",
+    "destination",
+    "distance",
+    "departure_date",
+    "arrival_date",
+    "price",
+    "aid"
+   ],
+   "aircraft": [
+    "aid",
+    "name",
+    "distance"
+   ],
+   "employee": [
+    "eid",
+    "name",
+    "salary"
+   ],
+   "certificate": [
+    "eid",
+    "aid"
+   ]
+  }
+ },
+ "flight_company": {
+  "source": "spider",
+  "tables": {
+   "airport": [
+    "id",
+    "City",
+    "Country",
+    "IATA",
+    "ICAO",
+    "name"
+   ],
+   "operate_company": [
+    "id",
+    "name",
+    "Type",
+    "Principal_activities",
+    "Incorporated_in",
+    "Group_Equity_Shareholding"
+   ],
+   "flight": [
+    "id",
+    "Vehicle_Flight_number",
+    "Date",
+    "Pilot",
+    "Velocity",
+    "Altitude",
+    "airport_id",
+    "company_id"
+   ]
+  }
+ },
+ "formula_1": {
+  "source": "spider",
+  "tables": {
+   "circuits": [
+    "circuitId",
+    "circuitRef",
+    "name",
+    "location",
+    "country",
+    "lat",
+    "lng",
+    "alt",
+    "url"
+   ],
+   "races": [
+    "raceId",
+    "year",
+    "round",
+    "circuitId",
+    "name",
+    "date",
+    "time",
+    "url"
+   ],
+   "drivers": [
+    "driverId",
+    "driverRef",
+    "number",
+    "code",
+    "forename",
+    "surname",
+    "dob",
+    "nationality",
+    "url"
+   ],
+   "status": [
+    "statusId",
+    "status"
+   ],
+   "seasons": [
+    "year",
+    "url"
+   ],
+   "constructors": [
+    "constructorId",
+    "constructorRef",
+    "name",
+    "nationality",
+    "url"
+   ],
+   "constructorStandings": [
+    "constructorStandingsId",
+    "raceId",
+    "constructorId",
+    "points",
+    "position",
+    "positionText",
+    "wins"
+   ],
+   "results": [
+    "resultId",
+    "raceId",
+    "driverId",
+    "constructorId",
+    "number",
+    "grid",
+    "position",
+    "positionText",
+    "positionOrder",
+    "points",
+    "laps",
+    "time",
+    "milliseconds",
+    "fastestLap",
+    "rank",
+    "fastestLapTime",
+    "fastestLapSpeed",
+    "statusId"
+   ],
+   "driverStandings": [
+    "driverStandingsId",
+    "raceId",
+    "driverId",
+    "points",
+    "position",
+    "positionText",
+    "wins"
+   ],
+   "constructorResults": [
+    "constructorResultsId",
+    "raceId",
+    "constructorId",
+    "points",
+    "status"
+   ],
+   "qualifying": [
+    "qualifyId",
+    "raceId",
+    "driverId",
+    "constructorId",
+    "number",
+    "position",
+    "q1",
+    "q2",
+    "q3"
+   ],
+   "pitStops": [
+    "raceId",
+    "driverId",
+    "stop",
+    "lap",
+    "time",
+    "duration",
+    "milliseconds"
+   ],
+   "lapTimes": [
+    "raceId",
+    "driverId",
+    "lap",
+    "position",
+    "time",
+    "milliseconds"
+   ]
+  }
+ },
+ "hospital_1": {
+  "source": "spider",
+  "tables": {
+   "Physician": [
+    "EmployeeID",
+    "Name",
+    "Position",
+    "SSN"
+   ],
+   "Department": [
+    "DepartmentID",
+    "Name",
+    "Head"
+   ],
+   "Affiliated_With": [
+    "Physician",
+    "Department",
+    "PrimaryAffiliation"
+   ],
+   "Procedures": [
+    "Code",
+    "Name",
+    "Cost"
+   ],
+   "Trained_In": [
+    "Physician",
+    "Treatment",
+    "CertificationDate",
+    "CertificationExpires"
+   ],
+   "Patient": [
+    "SSN",
+    "Name",
+    "Address",
+    "Phone",
+    "InsuranceID",
+    "PCP"
+   ],
+   "Nurse": [
+    "EmployeeID",
+    "Name",
+    "Position",
+    "Registered",
+    "SSN"
+   ],
+   "Appointment": [
+    "AppointmentID",
+    "Patient",
+    "PrepNurse",
+    "Physician",
+    "Start",
+    "End",
+    "ExaminationRoom"
+   ],
+   "Medication": [
+    "Code",
+    "Name",
+    "Brand",
+    "Description"
+   ],
+   "Prescribes": [
+    "Physician",
+    "Patient",
+    "Medication",
+    "Date",
+    "Appointment",
+    "Dose"
+   ],
+   "Block": [
+    "BlockFloor",
+    "BlockCode"
+   ],
+   "Room": [
+    "RoomNumber",
+    "RoomType",
+    "BlockFloor",
+    "BlockCode",
+    "Unavailable"
+   ],
+   "On_Call": [
+    "Nurse",
+    "BlockFloor",
+    "BlockCode",
+    "OnCallStart",
+    "OnCallEnd"
+   ],
+   "Stay": [
+    "StayID",
+    "Patient",
+    "Room",
+    "StayStart",
+    "StayEnd"
+   ],
+   "Undergoes": [
+    "Patient",
+    "Procedures",
+    "Stay",
+    "DateUndergoes",
+    "Physician",
+    "AssistingNurse"
+   ]
+  }
+ },
+ "hr_1": {
+  "source": "spider",
+  "tables": {
+   "regions": [
+    "REGION_ID",
+    "REGION_NAME"
+   ],
+   "countries": [
+    "COUNTRY_ID",
+    "COUNTRY_NAME",
+    "REGION_ID"
+   ],
+   "departments": [
+    "DEPARTMENT_ID",
+    "DEPARTMENT_NAME",
+    "MANAGER_ID",
+    "LOCATION_ID"
+   ],
+   "jobs": [
+    "JOB_ID",
+    "JOB_TITLE",
+    "MIN_SALARY",
+    "MAX_SALARY"
+   ],
+   "employees": [
+    "EMPLOYEE_ID",
+    "FIRST_NAME",
+    "LAST_NAME",
+    "EMAIL",
+    "PHONE_NUMBER",
+    "HIRE_DATE",
+    "JOB_ID",
+    "SALARY",
+    "COMMISSION_PCT",
+    "MANAGER_ID",
+    "DEPARTMENT_ID"
+   ],
+   "job_history": [
+    "EMPLOYEE_ID",
+    "START_DATE",
+    "END_DATE",
+    "JOB_ID",
+    "DEPARTMENT_ID"
+   ],
+   "locations": [
+    "LOCATION_ID",
+    "STREET_ADDRESS",
+    "POSTAL_CODE",
+    "CITY",
+    "STATE_PROVINCE",
+    "COUNTRY_ID"
+   ]
+  }
+ },
+ "insurance_fnol": {
+  "source": "spider",
+  "tables": {
+   "Customers": [
+    "Customer_ID",
+    "Customer_name"
+   ],
+   "Services": [
+    "Service_ID",
+    "Service_name"
+   ],
+   "Available_Policies": [
+    "Policy_ID",
+    "policy_type_code",
+    "Customer_Phone"
+   ],
+   "Customers_Policies": [
+    "Customer_ID",
+    "Policy_ID",
+    "Date_Opened",
+    "Date_Closed"
+   ],
+   "First_Notification_of_Loss": [
+    "FNOL_ID",
+    "Customer_ID",
+    "Policy_ID",
+    "Service_ID"
+   ],
+   "Claims": [
+    "Claim_ID",
+    "FNOL_ID",
+    "Effective_Date"
+   ],
+   "Settlements": [
+    "Settlement_ID",
+    "Claim_ID",
+    "Effective_Date",
+    "Settlement_Amount"
+   ]
+  }
+ },
+ "journal_committee": {
+  "source": "spider",
+  "tables": {
+   "journal": [
+    "Journal_ID",
+    "Date",
+    "Theme",
+    "Sales"
+   ],
+   "editor": [
+    "Editor_ID",
+    "Name",
+    "Age"
+   ],
+   "journal_committee": [
+    "Editor_ID",
+    "Journal_ID",
+    "Work_Type"
+   ]
+  }
+ },
+ "loan_1": {
+  "source": "spider",
+  "tables": {
+   "bank": [
+    "branch_ID",
+    "bname",
+    "no_of_customers",
+    "city",
+    "state"
+   ],
+   "customer": [
+    "cust_ID",
+    "cust_name",
+    "acc_type",
+    "acc_bal",
+    "no_of_loans",
+    "credit_score",
+    "branch_ID",
+    "state"
+   ],
+   "loan": [
+    "loan_ID",
+    "loan_type",
+    "cust_ID",
+    "branch_ID",
+    "amount"
+   ]
+  }
+ },
+ "local_govt_mdm": {
+  "source": "spider",
+  "tables": {
+   "Customer_Master_Index": [
+    "master_customer_id",
+    "cmi_details"
+   ],
+   "CMI_Cross_References": [
+    "cmi_cross_ref_id",
+    "master_customer_id",
+    "source_system_code"
+   ],
+   "Council_Tax": [
+    "council_tax_id",
+    "cmi_cross_ref_id"
+   ],
+   "Business_Rates": [
+    "business_rates_id",
+    "cmi_cross_ref_id"
+   ],
+   "Benefits_Overpayments": [
+    "council_tax_id",
+    "cmi_cross_ref_id"
+   ],
+   "Parking_Fines": [
+    "council_tax_id",
+    "cmi_cross_ref_id"
+   ],
+   "Rent_Arrears": [
+    "council_tax_id",
+    "cmi_cross_ref_id"
+   ],
+   "Electoral_Register": [
+    "electoral_register_id",
+    "cmi_cross_ref_id"
+   ]
+  }
+ },
+ "music_platform_2": {
+  "source": "bird_train",
+  "tables": {
+   "runs": [
+    "run_at",
+    "max_rowid",
+    "reviews_added"
+   ],
+   "podcasts": [
+    "podcast_id",
+    "itunes_id",
+    "slug",
+    "itunes_url",
+    "title"
+   ],
+   "reviews": [
+    "podcast_id",
+    "title",
+    "content",
+    "rating",
+    "author_id",
+    "created_at"
+   ],
+   "categories": [
+    "podcast_id",
+    "category"
+   ]
+  }
+ },
+ "orchestra": {
+  "source": "spider",
+  "tables": {
+   "conductor": [
+    "Conductor_ID",
+    "Name",
+    "Age",
+    "Nationality",
+    "Year_of_Work"
+   ],
+   "orchestra": [
+    "Orchestra_ID",
+    "Orchestra",
+    "Conductor_ID",
+    "Record_Company",
+    "Year_of_Founded",
+    "Major_Record_Format"
+   ],
+   "performance": [
+    "Performance_ID",
+    "Orchestra_ID",
+    "Type",
+    "Date",
+    "Official_ratings_(millions)",
+    "Weekly_rank",
+    "Share"
+   ],
+   "show": [
+    "Show_ID",
+    "Performance_ID",
+    "If_first_show",
+    "Result",
+    "Attendance"
+   ]
+  }
+ },
+ "perpetrator": {
+  "source": "spider",
+  "tables": {
+   "perpetrator": [
+    "Perpetrator_ID",
+    "People_ID",
+    "Date",
+    "Year",
+    "Location",
+    "Country",
+    "Killed",
+    "Injured"
+   ],
+   "people": [
+    "People_ID",
+    "Name",
+    "Height",
+    "Weight",
+    "Home Town"
+   ]
+  }
+ },
+ "products_for_hire": {
+  "source": "spider",
+  "tables": {
+   "Discount_Coupons": [
+    "coupon_id",
+    "date_issued",
+    "coupon_amount"
+   ],
+   "Customers": [
+    "customer_id",
+    "coupon_id",
+    "good_or_bad_customer",
+    "first_name",
+    "last_name",
+    "gender_mf",
+    "date_became_customer",
+    "date_last_hire"
+   ],
+   "Bookings": [
+    "booking_id",
+    "customer_id",
+    "booking_status_code",
+    "returned_damaged_yn",
+    "booking_start_date",
+    "booking_end_date",
+    "count_hired",
+    "amount_payable",
+    "amount_of_discount",
+    "amount_outstanding",
+    "amount_of_refund"
+   ],
+   "Products_for_Hire": [
+    "product_id",
+    "product_type_code",
+    "daily_hire_cost",
+    "product_name",
+    "product_description"
+   ],
+   "Payments": [
+    "payment_id",
+    "booking_id",
+    "customer_id",
+    "payment_type_code",
+    "amount_paid_in_full_yn",
+    "payment_date",
+    "amount_due",
+    "amount_paid"
+   ],
+   "Products_Booked": [
+    "booking_id",
+    "product_id",
+    "returned_yn",
+    "returned_late_yn",
+    "booked_count",
+    "booked_amount"
+   ],
+   "View_Product_Availability": [
+    "product_id",
+    "booking_id",
+    "status_date",
+    "available_yn"
+   ]
+  }
+ },
+ "public_review_platform": {
+  "source": "bird_train",
+  "tables": {
+   "Attributes": [
+    "attribute_id",
+    "attribute_name"
+   ],
+   "Categories": [
+    "category_id",
+    "category_name"
+   ],
+   "Compliments": [
+    "compliment_id",
+    "compliment_type"
+   ],
+   "Days": [
+    "day_id",
+    "day_of_week"
+   ],
+   "Years": [
+    "year_id",
+    "actual_year"
+   ],
+   "Business_Attributes": [
+    "attribute_id",
+    "business_id",
+    "attribute_value"
+   ],
+   "Business_Categories": [
+    "business_id",
+    "category_id"
+   ],
+   "Business_Hours": [
+    "business_id",
+    "day_id",
+    "opening_time",
+    "closing_time"
+   ],
+   "Checkins": [
+    "business_id",
+    "day_id",
+    "label_time_0",
+    "label_time_1",
+    "label_time_2",
+    "label_time_3",
+    "label_time_4",
+    "label_time_5",
+    "label_time_6",
+    "label_time_7",
+    "label_time_8",
+    "label_time_9",
+    "label_time_10",
+    "label_time_11",
+    "label_time_12",
+    "label_time_13",
+    "label_time_14",
+    "label_time_15",
+    "label_time_16",
+    "label_time_17",
+    "label_time_18",
+    "label_time_19",
+    "label_time_20",
+    "label_time_21",
+    "label_time_22",
+    "label_time_23"
+   ],
+   "Elite": [
+    "user_id",
+    "year_id"
+   ],
+   "Reviews": [
+    "business_id",
+    "user_id",
+    "review_stars",
+    "review_votes_funny",
+    "review_votes_useful",
+    "review_votes_cool",
+    "review_length"
+   ],
+   "Tips": [
+    "business_id",
+    "user_id",
+    "likes",
+    "tip_length"
+   ],
+   "Users_Compliments": [
+    "compliment_id",
+    "user_id",
+    "number_of_compliments"
+   ],
+   "Business": [
+    "business_id",
+    "active",
+    "city",
+    "state",
+    "stars",
+    "review_count"
+   ],
+   "Users": [
+    "user_id",
+    "user_yelping_since_year",
+    "user_average_stars",
+    "user_votes_funny",
+    "user_votes_useful",
+    "user_votes_cool",
+    "user_review_count",
+    "user_fans"
+   ]
+  }
+ },
+ "real_estate_properties": {
+  "source": "spider",
+  "tables": {
+   "Ref_Feature_Types": [
+    "feature_type_code",
+    "feature_type_name"
+   ],
+   "Ref_Property_Types": [
+    "property_type_code",
+    "property_type_description"
+   ],
+   "Other_Available_Features": [
+    "feature_id",
+    "feature_type_code",
+    "feature_name",
+    "feature_description"
+   ],
+   "Properties": [
+    "property_id",
+    "property_type_code",
+    "date_on_market",
+    "date_sold",
+    "property_name",
+    "property_address",
+    "room_count",
+    "vendor_requested_price",
+    "buyer_offered_price",
+    "agreed_selling_price",
+    "apt_feature_1",
+    "apt_feature_2",
+    "apt_feature_3",
+    "fld_feature_1",
+    "fld_feature_2",
+    "fld_feature_3",
+    "hse_feature_1",
+    "hse_feature_2",
+    "hse_feature_3",
+    "oth_feature_1",
+    "oth_feature_2",
+    "oth_feature_3",
+    "shp_feature_1",
+    "shp_feature_2",
+    "shp_feature_3",
+    "other_property_details"
+   ],
+   "Other_Property_Features": [
+    "property_id",
+    "feature_id",
+    "property_feature_description"
+   ]
+  }
+ },
+ "retail_complains": {
+  "source": "bird_train",
+  "tables": {
+   "state": [
+    "StateCode",
+    "State",
+    "Region"
+   ],
+   "callcenterlogs": [
+    "Date received",
+    "Complaint ID",
+    "rand client",
+    "phonefinal",
+    "vru+line",
+    "call_id",
+    "priority",
+    "type",
+    "outcome",
+    "server",
+    "ser_start",
+    "ser_exit",
+    "ser_time"
+   ],
+   "client": [
+    "client_id",
+    "sex",
+    "day",
+    "month",
+    "year",
+    "age",
+    "social",
+    "first",
+    "middle",
+    "last",
+    "phone",
+    "email",
+    "address_1",
+    "address_2",
+    "city",
+    "state",
+    "zipcode",
+    "district_id"
+   ],
+   "district": [
+    "district_id",
+    "city",
+    "state_abbrev",
+    "division"
+   ],
+   "events": [
+    "Date received",
+    "Product",
+    "Sub-product",
+    "Issue",
+    "Sub-issue",
+    "Consumer complaint narrative",
+    "Tags",
+    "Consumer consent provided?",
+    "Submitted via",
+    "Date sent to company",
+    "Company response to consumer",
+    "Timely response?",
+    "Consumer disputed?",
+    "Complaint ID",
+    "Client_ID"
+   ],
+   "reviews": [
+    "Date",
+    "Stars",
+    "Reviews",
+    "Product",
+    "district_id"
+   ]
+  }
+ },
+ "retail_world": {
+  "source": "bird_train",
+  "tables": {
+   "Categories": [
+    "CategoryID",
+    "CategoryName",
+    "Description"
+   ],
+   "Customers": [
+    "CustomerID",
+    "CustomerName",
+    "ContactName",
+    "Address",
+    "City",
+    "PostalCode",
+    "Country"
+   ],
+   "Employees": [
+    "EmployeeID",
+    "LastName",
+    "FirstName",
+    "BirthDate",
+    "Photo",
+    "Notes"
+   ],
+   "Shippers": [
+    "ShipperID",
+    "ShipperName",
+    "Phone"
+   ],
+   "Suppliers": [
+    "SupplierID",
+    "SupplierName",
+    "ContactName",
+    "Address",
+    "City",
+    "PostalCode",
+    "Country",
+    "Phone"
+   ],
+   "Products": [
+    "ProductID",
+    "ProductName",
+    "SupplierID",
+    "CategoryID",
+    "Unit",
+    "Price"
+   ],
+   "Orders": [
+    "OrderID",
+    "CustomerID",
+    "EmployeeID",
+    "OrderDate",
+    "ShipperID"
+   ],
+   "OrderDetails": [
+    "OrderDetailID",
+    "OrderID",
+    "ProductID",
+    "Quantity"
+   ]
+  }
+ },
+ "school_bus": {
+  "source": "spider",
+  "tables": {
+   "driver": [
+    "Driver_ID",
+    "Name",
+    "Party",
+    "Home_city",
+    "Age"
+   ],
+   "school": [
+    "School_ID",
+    "Grade",
+    "School",
+    "Location",
+    "Type"
+   ],
+   "school_bus": [
+    "School_ID",
+    "Driver_ID",
+    "Years_Working",
+    "If_full_time"
+   ]
+  }
+ },
+ "soccer_2016": {
+  "source": "bird_train",
+  "tables": {
+   "Batting_Style": [
+    "Batting_Id",
+    "Batting_hand"
+   ],
+   "Bowling_Style": [
+    "Bowling_Id",
+    "Bowling_skill"
+   ],
+   "City": [
+    "City_Id",
+    "City_Name",
+    "Country_id"
+   ],
+   "Country": [
+    "Country_Id",
+    "Country_Name"
+   ],
+   "Extra_Type": [
+    "Extra_Id",
+    "Extra_Name"
+   ],
+   "Extra_Runs": [
+    "Match_Id",
+    "Over_Id",
+    "Ball_Id",
+    "Extra_Type_Id",
+    "Extra_Runs",
+    "Innings_No"
+   ],
+   "Out_Type": [
+    "Out_Id",
+    "Out_Name"
+   ],
+   "Outcome": [
+    "Outcome_Id",
+    "Outcome_Type"
+   ],
+   "Player": [
+    "Player_Id",
+    "Player_Name",
+    "DOB",
+    "Batting_hand",
+    "Bowling_skill",
+    "Country_Name"
+   ],
+   "Rolee": [
+    "Role_Id",
+    "Role_Desc"
+   ],
+   "Season": [
+    "Season_Id",
+    "Man_of_the_Series",
+    "Orange_Cap",
+    "Purple_Cap",
+    "Season_Year"
+   ],
+   "Team": [
+    "Team_Id",
+    "Team_Name"
+   ],
+   "Toss_Decision": [
+    "Toss_Id",
+    "Toss_Name"
+   ],
+   "Umpire": [
+    "Umpire_Id",
+    "Umpire_Name",
+    "Umpire_Country"
+   ],
+   "Venue": [
+    "Venue_Id",
+    "Venue_Name",
+    "City_Id"
+   ],
+   "Win_By": [
+    "Win_Id",
+    "Win_Type"
+   ],
+   "Match": [
+    "Match_Id",
+    "Team_1",
+    "Team_2",
+    "Match_Date",
+    "Season_Id",
+    "Venue_Id",
+    "Toss_Winner",
+    "Toss_Decide",
+    "Win_Type",
+    "Win_Margin",
+    "Outcome_type",
+    "Match_Winner",
+    "Man_of_the_Match"
+   ],
+   "Ball_by_Ball": [
+    "Match_Id",
+    "Over_Id",
+    "Ball_Id",
+    "Innings_No",
+    "Team_Batting",
+    "Team_Bowling",
+    "Striker_Batting_Position",
+    "Striker",
+    "Non_Striker",
+    "Bowler"
+   ],
+   "Batsman_Scored": [
+    "Match_Id",
+    "Over_Id",
+    "Ball_Id",
+    "Runs_Scored",
+    "Innings_No"
+   ],
+   "Player_Match": [
+    "Match_Id",
+    "Player_Id",
+    "Role_Id",
+    "Team_Id"
+   ],
+   "Wicket_Taken": [
+    "Match_Id",
+    "Over_Id",
+    "Ball_Id",
+    "Player_Out",
+    "Kind_Out",
+    "Fielders",
+    "Innings_No"
+   ]
+  }
+ },
+ "social_media": {
+  "source": "bird_train",
+  "tables": {
+   "location": [
+    "LocationID",
+    "Country",
+    "State",
+    "StateCode",
+    "City"
+   ],
+   "user": [
+    "UserID",
+    "Gender"
+   ],
+   "twitter": [
+    "TweetID",
+    "Weekday",
+    "Hour",
+    "Day",
+    "Lang",
+    "IsReshare",
+    "Reach",
+    "RetweetCount",
+    "Likes",
+    "Klout",
+    "Sentiment",
+    "text",
+    "LocationID",
+    "UserID"
+   ]
+  }
+ },
+ "store_1": {
+  "source": "spider",
+  "tables": {
+   "artists": [
+    "id",
+    "name"
+   ],
+   "sqlite_sequence": [
+    "name",
+    "seq"
+   ],
+   "albums": [
+    "id",
+    "title",
+    "artist_id"
+   ],
+   "employees": [
+    "id",
+    "last_name",
+    "first_name",
+    "title",
+    "reports_to",
+    "birth_date",
+    "hire_date",
+    "address",
+    "city",
+    "state",
+    "country",
+    "postal_code",
+    "phone",
+    "fax",
+    "email"
+   ],
+   "customers": [
+    "id",
+    "first_name",
+    "last_name",
+    "company",
+    "address",
+    "city",
+    "state",
+    "country",
+    "postal_code",
+    "phone",
+    "fax",
+    "email",
+    "support_rep_id"
+   ],
+   "genres": [
+    "id",
+    "name"
+   ],
+   "invoices": [
+    "id",
+    "customer_id",
+    "invoice_date",
+    "billing_address",
+    "billing_city",
+    "billing_state",
+    "billing_country",
+    "billing_postal_code",
+    "total"
+   ],
+   "media_types": [
+    "id",
+    "name"
+   ],
+   "tracks": [
+    "id",
+    "name",
+    "album_id",
+    "media_type_id",
+    "genre_id",
+    "composer",
+    "milliseconds",
+    "bytes",
+    "unit_price"
+   ],
+   "invoice_lines": [
+    "id",
+    "invoice_id",
+    "track_id",
+    "unit_price",
+    "quantity"
+   ],
+   "playlists": [
+    "id",
+    "name"
+   ],
+   "playlist_tracks": [
+    "playlist_id",
+    "track_id"
+   ]
+  }
+ },
+ "student_club": {
+  "source": "bird_dev",
+  "tables": {
+   "event": [
+    "event_id",
+    "event_name",
+    "event_date",
+    "type",
+    "notes",
+    "location",
+    "status"
+   ],
+   "major": [
+    "major_id",
+    "major_name",
+    "department",
+    "college"
+   ],
+   "zip_code": [
+    "zip_code",
+    "type",
+    "city",
+    "county",
+    "state",
+    "short_state"
+   ],
+   "attendance": [
+    "link_to_event",
+    "link_to_member"
+   ],
+   "budget": [
+    "budget_id",
+    "category",
+    "spent",
+    "remaining",
+    "amount",
+    "event_status",
+    "link_to_event"
+   ],
+   "expense": [
+    "expense_id",
+    "expense_description",
+    "expense_date",
+    "cost",
+    "approved",
+    "link_to_member",
+    "link_to_budget"
+   ],
+   "income": [
+    "income_id",
+    "date_received",
+    "amount",
+    "source",
+    "notes",
+    "link_to_member"
+   ],
+   "member": [
+    "member_id",
+    "first_name",
+    "last_name",
+    "email",
+    "position",
+    "t_shirt_size",
+    "phone",
+    "zip",
+    "link_to_major"
+   ]
+  }
+ },
+ "student_loan": {
+  "source": "bird_train",
+  "tables": {
+   "bool": [
+    "name"
+   ],
+   "person": [
+    "name"
+   ],
+   "disabled": [
+    "name"
+   ],
+   "enlist": [
+    "name",
+    "organ"
+   ],
+   "filed_for_bankrupcy": [
+    "name"
+   ],
+   "longest_absense_from_school": [
+    "name",
+    "month"
+   ],
+   "male": [
+    "name"
+   ],
+   "no_payment_due": [
+    "name",
+    "bool"
+   ],
+   "unemployed": [
+    "name"
+   ],
+   "enrolled": [
+    "name",
+    "school",
+    "month"
+   ]
+  }
+ },
+ "student_transcripts_tracking": {
+  "source": "spider",
+  "tables": {
+   "Addresses": [
+    "address_id",
+    "line_1",
+    "line_2",
+    "line_3",
+    "city",
+    "zip_postcode",
+    "state_province_county",
+    "country",
+    "other_address_details"
+   ],
+   "Courses": [
+    "course_id",
+    "course_name",
+    "course_description",
+    "other_details"
+   ],
+   "Departments": [
+    "department_id",
+    "department_name",
+    "department_description",
+    "other_details"
+   ],
+   "Degree_Programs": [
+    "degree_program_id",
+    "department_id",
+    "degree_summary_name",
+    "degree_summary_description",
+    "other_details"
+   ],
+   "Sections": [
+    "section_id",
+    "course_id",
+    "section_name",
+    "section_description",
+    "other_details"
+   ],
+   "Semesters": [
+    "semester_id",
+    "semester_name",
+    "semester_description",
+    "other_details"
+   ],
+   "Students": [
+    "student_id",
+    "current_address_id",
+    "permanent_address_id",
+    "first_name",
+    "middle_name",
+    "last_name",
+    "cell_mobile_number",
+    "email_address",
+    "ssn",
+    "date_first_registered",
+    "date_left",
+    "other_student_details"
+   ],
+   "Student_Enrolment": [
+    "student_enrolment_id",
+    "degree_program_id",
+    "semester_id",
+    "student_id",
+    "other_details"
+   ],
+   "Student_Enrolment_Courses": [
+    "student_course_id",
+    "course_id",
+    "student_enrolment_id"
+   ],
+   "Transcripts": [
+    "transcript_id",
+    "transcript_date",
+    "other_details"
+   ],
+   "Transcript_Contents": [
+    "student_course_id",
+    "transcript_id"
+   ]
+  }
+ },
+ "superstore": {
+  "source": "bird_train",
+  "tables": {
+   "people": [
+    "Customer ID",
+    "Customer Name",
+    "Segment",
+    "Country",
+    "City",
+    "State",
+    "Postal Code",
+    "Region"
+   ],
+   "product": [
+    "Product ID",
+    "Product Name",
+    "Category",
+    "Sub-Category",
+    "Region"
+   ],
+   "central_superstore": [
+    "Row ID",
+    "Order ID",
+    "Order Date",
+    "Ship Date",
+    "Ship Mode",
+    "Customer ID",
+    "Region",
+    "Product ID",
+    "Sales",
+    "Quantity",
+    "Discount",
+    "Profit"
+   ],
+   "east_superstore": [
+    "Row ID",
+    "Order ID",
+    "Order Date",
+    "Ship Date",
+    "Ship Mode",
+    "Customer ID",
+    "Region",
+    "Product ID",
+    "Sales",
+    "Quantity",
+    "Discount",
+    "Profit"
+   ],
+   "south_superstore": [
+    "Row ID",
+    "Order ID",
+    "Order Date",
+    "Ship Date",
+    "Ship Mode",
+    "Customer ID",
+    "Region",
+    "Product ID",
+    "Sales",
+    "Quantity",
+    "Discount",
+    "Profit"
+   ],
+   "west_superstore": [
+    "Row ID",
+    "Order ID",
+    "Order Date",
+    "Ship Date",
+    "Ship Mode",
+    "Customer ID",
+    "Region",
+    "Product ID",
+    "Sales",
+    "Quantity",
+    "Discount",
+    "Profit"
+   ]
+  }
+ },
+ "synthea": {
+  "source": "bird_train",
+  "tables": {
+   "all_prevalences": [
+    "ITEM",
+    "POPULATION TYPE",
+    "OCCURRENCES",
+    "POPULATION COUNT",
+    "PREVALENCE RATE",
+    "PREVALENCE PERCENTAGE"
+   ],
+   "patients": [
+    "patient",
+    "birthdate",
+    "deathdate",
+    "ssn",
+    "drivers",
+    "passport",
+    "prefix",
+    "first",
+    "last",
+    "suffix",
+    "maiden",
+    "marital",
+    "race",
+    "ethnicity",
+    "gender",
+    "birthplace",
+    "address"
+   ],
+   "encounters": [
+    "ID",
+    "DATE",
+    "PATIENT",
+    "CODE",
+    "DESCRIPTION",
+    "REASONCODE",
+    "REASONDESCRIPTION"
+   ],
+   "allergies": [
+    "START",
+    "STOP",
+    "PATIENT",
+    "ENCOUNTER",
+    "CODE",
+    "DESCRIPTION"
+   ],
+   "careplans": [
+    "ID",
+    "START",
+    "STOP",
+    "PATIENT",
+    "ENCOUNTER",
+    "CODE",
+    "DESCRIPTION",
+    "REASONCODE",
+    "REASONDESCRIPTION"
+   ],
+   "conditions": [
+    "START",
+    "STOP",
+    "PATIENT",
+    "ENCOUNTER",
+    "CODE",
+    "DESCRIPTION"
+   ],
+   "immunizations": [
+    "DATE",
+    "PATIENT",
+    "ENCOUNTER",
+    "CODE",
+    "DESCRIPTION"
+   ],
+   "medications": [
+    "START",
+    "STOP",
+    "PATIENT",
+    "ENCOUNTER",
+    "CODE",
+    "DESCRIPTION",
+    "REASONCODE",
+    "REASONDESCRIPTION"
+   ],
+   "observations": [
+    "DATE",
+    "PATIENT",
+    "ENCOUNTER",
+    "CODE",
+    "DESCRIPTION",
+    "VALUE",
+    "UNITS"
+   ],
+   "procedures": [
+    "DATE",
+    "PATIENT",
+    "ENCOUNTER",
+    "CODE",
+    "DESCRIPTION",
+    "REASONCODE",
+    "REASONDESCRIPTION"
+   ],
+   "claims": [
+    "ID",
+    "PATIENT",
+    "BILLABLEPERIOD",
+    "ORGANIZATION",
+    "ENCOUNTER",
+    "DIAGNOSIS",
+    "TOTAL"
+   ]
+  }
+ },
+ "talkingdata": {
+  "source": "bird_train",
+  "tables": {
+   "app_all": [
+    "app_id"
+   ],
+   "app_events": [
+    "event_id",
+    "app_id",
+    "is_installed",
+    "is_active"
+   ],
+   "app_events_relevant": [
+    "event_id",
+    "app_id",
+    "is_installed",
+    "is_active"
+   ],
+   "app_labels": [
+    "app_id",
+    "label_id"
+   ],
+   "events": [
+    "event_id",
+    "device_id",
+    "timestamp",
+    "longitude",
+    "latitude"
+   ],
+   "events_relevant": [
+    "event_id",
+    "device_id",
+    "timestamp",
+    "longitude",
+    "latitude"
+   ],
+   "gender_age": [
+    "device_id",
+    "gender",
+    "age",
+    "group"
+   ],
+   "gender_age_test": [
+    "device_id"
+   ],
+   "gender_age_train": [
+    "device_id",
+    "gender",
+    "age",
+    "group"
+   ],
+   "label_categories": [
+    "label_id",
+    "category"
+   ],
+   "phone_brand_device_model2": [
+    "device_id",
+    "phone_brand",
+    "device_model"
+   ],
+   "sample_submission": [
+    "device_id",
+    "F23-",
+    "F24-26",
+    "F27-28",
+    "F29-32",
+    "F33-42",
+    "F43+",
+    "M22-",
+    "M23-26",
+    "M27-28",
+    "M29-31",
+    "M32-38",
+    "M39+"
+   ]
+  }
+ },
+ "tracking_grants_for_research": {
+  "source": "spider",
+  "tables": {
+   "Document_Types": [
+    "document_type_code",
+    "document_description"
+   ],
+   "Documents": [
+    "document_id",
+    "document_type_code",
+    "grant_id",
+    "sent_date",
+    "response_received_date",
+    "other_details"
+   ],
+   "Grants": [
+    "grant_id",
+    "organisation_id",
+    "grant_amount",
+    "grant_start_date",
+    "grant_end_date",
+    "other_details"
+   ],
+   "Organisation_Types": [
+    "organisation_type",
+    "organisation_type_description"
+   ],
+   "Organisations": [
+    "organisation_id",
+    "organisation_type",
+    "organisation_details"
+   ],
+   "Project_Outcomes": [
+    "project_id",
+    "outcome_code",
+    "outcome_details"
+   ],
+   "Project_Staff": [
+    "staff_id",
+    "project_id",
+    "role_code",
+    "date_from",
+    "date_to",
+    "other_details"
+   ],
+   "Projects": [
+    "project_id",
+    "organisation_id",
+    "project_details"
+   ],
+   "Research_Outcomes": [
+    "outcome_code",
+    "outcome_description"
+   ],
+   "Research_Staff": [
+    "staff_id",
+    "employer_organisation_id",
+    "staff_details"
+   ],
+   "Staff_Roles": [
+    "role_code",
+    "role_description"
+   ],
+   "Tasks": [
+    "task_id",
+    "project_id",
+    "task_details",
+    "eg Agree Objectives"
+   ]
+  }
+ },
+ "tracking_software_problems": {
+  "source": "spider",
+  "tables": {
+   "Problem_Category_Codes": [
+    "problem_category_code",
+    "problem_category_description"
+   ],
+   "Problem_Log": [
+    "problem_log_id",
+    "assigned_to_staff_id",
+    "problem_id",
+    "problem_category_code",
+    "problem_status_code",
+    "log_entry_date",
+    "log_entry_description",
+    "log_entry_fix",
+    "other_log_details"
+   ],
+   "Problem_Status_Codes": [
+    "problem_status_code",
+    "problem_status_description"
+   ],
+   "Product": [
+    "product_id",
+    "product_name",
+    "product_details"
+   ],
+   "Staff": [
+    "staff_id",
+    "staff_first_name",
+    "staff_last_name",
+    "other_staff_details"
+   ],
+   "Problems": [
+    "problem_id",
+    "product_id",
+    "closure_authorised_by_staff_id",
+    "reported_by_staff_id",
+    "date_problem_reported",
+    "date_problem_closed",
+    "problem_description",
+    "other_problem_details"
+   ]
+  }
+ },
+ "tvshow": {
+  "source": "spider",
+  "tables": {
+   "TV_Channel": [
+    "id",
+    "series_name",
+    "Country",
+    "Language",
+    "Content",
+    "Pixel_aspect_ratio_PAR",
+    "Hight_definition_TV",
+    "Pay_per_view_PPV",
+    "Package_Option"
+   ],
+   "TV_series": [
+    "id",
+    "Episode",
+    "Air_Date",
+    "Rating",
+    "Share",
+    "18_49_Rating_Share",
+    "Viewers_m",
+    "Weekly_Rank",
+    "Channel"
+   ],
+   "Cartoon": [
+    "id",
+    "Title",
+    "Directed_by",
+    "Written_by",
+    "Original_air_date",
+    "Production_code",
+    "Channel"
+   ]
+  }
+ },
+ "twitter_1": {
+  "source": "spider",
+  "tables": {
+   "follows": [
+    "f1",
+    "f2"
+   ],
+   "tweets": [
+    "id",
+    "uid",
+    "text",
+    "createdate"
+   ],
+   "user_profiles": [
+    "uid",
+    "name",
+    "email",
+    "partitionid",
+    "followers"
+   ]
+  }
+ },
+ "voter_1": {
+  "source": "spider",
+  "tables": {
+   "AREA_CODE_STATE": [
+    "area_code",
+    "state"
+   ],
+   "CONTESTANTS": [
+    "contestant_number",
+    "contestant_name"
+   ],
+   "VOTES": [
+    "vote_id",
+    "phone_number",
+    "state",
+    "contestant_number",
+    "created"
+   ]
+  }
+ },
+ "wedding": {
+  "source": "spider",
+  "tables": {
+   "people": [
+    "People_ID",
+    "Name",
+    "Country",
+    "Is_Male",
+    "Age"
+   ],
+   "church": [
+    "Church_ID",
+    "Name",
+    "Organized_by",
+    "Open_Date",
+    "Continuation_of"
+   ],
+   "wedding": [
+    "Church_ID",
+    "Male_ID",
+    "Female_ID",
+    "Year"
+   ]
+  }
+ },
+ "workshop_paper": {
+  "source": "spider",
+  "tables": {
+   "workshop": [
+    "Workshop_ID",
+    "Date",
+    "Venue",
+    "Name"
+   ],
+   "submission": [
+    "Submission_ID",
+    "Scores",
+    "Author",
+    "College"
+   ],
+   "Acceptance": [
+    "Submission_ID",
+    "Workshop_ID",
+    "Result"
+   ]
+  }
+ },
+ "yelp": {
+  "source": "spider",
+  "tables": {
+   "business": [
+    "bid",
+    "business_id",
+    "name",
+    "full_address",
+    "city",
+    "latitude",
+    "longitude",
+    "review_count",
+    "is_open",
+    "rating",
+    "state"
+   ],
+   "category": [
+    "id",
+    "business_id",
+    "category_name"
+   ],
+   "user": [
+    "uid",
+    "user_id",
+    "name"
+   ],
+   "checkin": [
+    "cid",
+    "business_id",
+    "count",
+    "day"
+   ],
+   "neighbourhood": [
+    "id",
+    "business_id",
+    "neighbourhood_name"
+   ],
+   "review": [
+    "rid",
+    "business_id",
+    "user_id",
+    "rating",
+    "text",
+    "year",
+    "month"
+   ],
+   "tip": [
+    "tip_id",
+    "business_id",
+    "text",
+    "user_id",
+    "likes",
+    "year",
+    "month"
+   ]
+  }
+ }
+}

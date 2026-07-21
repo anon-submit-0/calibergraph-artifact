@@ -1,0 +1,17 @@
+COMMAND: mf query --metrics item_count --limit 20 --csv <TEMP_CSV>
+EXIT_CODE: 0
+WALL_SECONDS: 2.67
+DATA_ROWS: 1
+ERROR_CATEGORY: 
+----- STDOUT -----
+
+
+⠋ Initiating query…
+
+⠙ Initiating query…
+✔ Success 🦄 - query completed after 0.03 seconds
+🖨 Wrote query output to <TEMP_CSV>
+
+
+----- STDERR -----
+

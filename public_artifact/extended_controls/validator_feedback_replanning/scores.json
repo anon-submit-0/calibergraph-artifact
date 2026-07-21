@@ -1,0 +1,1064 @@
+{
+  "_meta": {
+    "experiment_id": "validator-feedback-replanning",
+    "llmhub_channel": "gateway",
+    "max_repair_rounds": 3,
+    "model": "deepseek-3.2",
+    "subsample_seed": 20260711,
+    "temperature": 0,
+    "ts_utc": "2026-07-12T07:24:29Z"
+  },
+  "_pooled": {
+    "compiler_joint": 1.0,
+    "discordant_right_to_wrong": 0,
+    "discordant_wrong_to_right": 73,
+    "final_joint": 0.9434306569343066,
+    "final_joint_wilson95": [
+      0.9208236071787993,
+      0.9598641197611087
+    ],
+    "h1_same_scope_joint": 0.8156934306569343,
+    "layer_final_joint": {
+      "govtwin": 0.9811320754716981,
+      "ict": 0.8789808917197452,
+      "iowa": 1.0,
+      "multigov": 0.955
+    },
+    "micro_gain": 0.13321167883211682,
+    "n": 548,
+    "round0_joint": 0.8102189781021898,
+    "scope_status": "descriptive combination of the preregistered 391-case scope and the later full ICT extension",
+    "sign_test_p_two_sided": 2.117582368135751e-22
+  },
+  "_primary_preregistered": {
+    "branch_thresholds": {
+      "a": "pooled>=0.98 and all layers>=0.98",
+      "b": "sign test p<0.05 and micro gain>=0.02",
+      "c": "otherwise"
+    },
+    "compiler_joint": 1.0,
+    "discordant_right_to_wrong": 0,
+    "discordant_wrong_to_right": 56,
+    "final_joint": 0.969309462915601,
+    "final_joint_wilson95": [
+      0.9471288448575721,
+      0.9823581474561265
+    ],
+    "layer_final_joint": {
+      "govtwin": 0.9811320754716981,
+      "iowa": 1.0,
+      "multigov": 0.955
+    },
+    "micro_gain": 0.14322250639386191,
+    "n": 391,
+    "preregistered_branch": "b_significant_improvement_not_closed",
+    "round0_joint": 0.8260869565217391,
+    "scope_status": "preregistered primary scope: Iowa 32 + GovTwin 159 + MultiGov seeded 200",
+    "sign_test_p_two_sided": 2.7755575615628914e-17
+  },
+  "govtwin": {
+    "cases_still_violating_at_final": [],
+    "complete_contract_prompting_same_scope": {
+      "counts": {
+        "dim_ok": 117,
+        "joint_ok": 117,
+        "metric_ok": 158,
+        "refusal_fn": 0,
+        "refusal_fp": 1,
+        "refusal_tp": 9
+      },
+      "dimension_exact_accuracy": 0.7358490566037735,
+      "joint_metric_dimension_accuracy": 0.7358490566037735,
+      "metric_accuracy": 0.9937106918238994,
+      "n": 159,
+      "refusal_precision": 0.9,
+      "refusal_recall": 1.0
+    },
+    "cost": {
+      "cases_resolved_at_round0": 124,
+      "compiler_reference_llm_calls": 0,
+      "latency_ms_mean_per_call": 18692.03092783505,
+      "llm_calls_per_case_max": 2,
+      "llm_calls_per_case_mean": 1.220125786163522,
+      "llm_calls_total": 194,
+      "total_completion_tokens": 139725,
+      "total_prompt_tokens": 958245
+    },
+    "fix_rates": {
+      "finest_grain_violation": {
+        "fix_rate": 1.0,
+        "fixed_by_final": 35,
+        "present_round0": 35
+      }
+    },
+    "missing_cases": [],
+    "n": 159,
+    "per_round": {
+      "round_0": {
+        "counts": {
+          "dim_ok": 124,
+          "joint_ok": 124,
+          "metric_ok": 159,
+          "refusal_fn": 0,
+          "refusal_fp": 0,
+          "refusal_tp": 9
+        },
+        "dimension_exact_accuracy": 0.779874213836478,
+        "joint_metric_dimension_accuracy": 0.779874213836478,
+        "joint_wilson95": [
+          0.7092928271285971,
+          0.8372510361144764
+        ],
+        "metric_accuracy": 1.0,
+        "n": 159,
+        "refusal_precision": 1.0,
+        "refusal_recall": 1.0
+      },
+      "round_1": {
+        "counts": {
+          "dim_ok": 156,
+          "joint_ok": 156,
+          "metric_ok": 159,
+          "refusal_fn": 0,
+          "refusal_fp": 0,
+          "refusal_tp": 9
+        },
+        "dimension_exact_accuracy": 0.9811320754716981,
+        "joint_metric_dimension_accuracy": 0.9811320754716981,
+        "joint_wilson95": [
+          0.9460013803642149,
+          0.9935627890311809
+        ],
+        "metric_accuracy": 1.0,
+        "n": 159,
+        "refusal_precision": 1.0,
+        "refusal_recall": 1.0
+      },
+      "round_2": {
+        "counts": {
+          "dim_ok": 156,
+          "joint_ok": 156,
+          "metric_ok": 159,
+          "refusal_fn": 0,
+          "refusal_fp": 0,
+          "refusal_tp": 9
+        },
+        "dimension_exact_accuracy": 0.9811320754716981,
+        "joint_metric_dimension_accuracy": 0.9811320754716981,
+        "joint_wilson95": [
+          0.9460013803642149,
+          0.9935627890311809
+        ],
+        "metric_accuracy": 1.0,
+        "n": 159,
+        "refusal_precision": 1.0,
+        "refusal_recall": 1.0
+      },
+      "round_3": {
+        "counts": {
+          "dim_ok": 156,
+          "joint_ok": 156,
+          "metric_ok": 159,
+          "refusal_fn": 0,
+          "refusal_fp": 0,
+          "refusal_tp": 9
+        },
+        "dimension_exact_accuracy": 0.9811320754716981,
+        "joint_metric_dimension_accuracy": 0.9811320754716981,
+        "joint_wilson95": [
+          0.9460013803642149,
+          0.9935627890311809
+        ],
+        "metric_accuracy": 1.0,
+        "n": 159,
+        "refusal_precision": 1.0,
+        "refusal_recall": 1.0
+      }
+    },
+    "validator_invisible_errors_final": {
+      "by_kind": {
+        "wrong_dimension_set_only": 3
+      },
+      "cases": [
+        {
+          "case_id": "govtwin_0011",
+          "expected_dimensions": [],
+          "expected_metric_id": "signal_count_b",
+          "kind": "wrong_dimension_set_only",
+          "pred_dimensions": [
+            "issue_type",
+            "market_region",
+            "segment_l3"
+          ],
+          "pred_metric_id": "signal_count_b"
+        },
+        {
+          "case_id": "govtwin_0131",
+          "expected_dimensions": [],
+          "expected_metric_id": "item_signal_ratio",
+          "kind": "wrong_dimension_set_only",
+          "pred_dimensions": [
+            "issue_type",
+            "market_region",
+            "segment_l3"
+          ],
+          "pred_metric_id": "item_signal_ratio"
+        },
+        {
+          "case_id": "govtwin_0152",
+          "expected_dimensions": [],
+          "expected_metric_id": "signal_count_a",
+          "kind": "wrong_dimension_set_only",
+          "pred_dimensions": [
+            "issue_type",
+            "market_region",
+            "segment_l3"
+          ],
+          "pred_metric_id": "signal_count_a"
+        }
+      ],
+      "n": 3
+    },
+    "violations_final": {},
+    "violations_round0": {
+      "finest_grain_violation": 35
+    }
+  },
+  "ict": {
+    "cases_still_violating_at_final": [],
+    "complete_contract_prompting_same_scope": {
+      "counts": {
+        "dim_ok": 136,
+        "joint_ok": 129,
+        "metric_ok": 148,
+        "refusal_fn": 1,
+        "refusal_fp": 7,
+        "refusal_tp": 7
+      },
+      "dimension_exact_accuracy": 0.8662420382165605,
+      "joint_metric_dimension_accuracy": 0.821656050955414,
+      "metric_accuracy": 0.9426751592356688,
+      "n": 157,
+      "refusal_precision": 0.5,
+      "refusal_recall": 0.875
+    },
+    "cost": {
+      "cases_resolved_at_round0": 135,
+      "compiler_reference_llm_calls": 0,
+      "latency_ms_mean_per_call": 16699.92349726776,
+      "llm_calls_per_case_max": 4,
+      "llm_calls_per_case_mean": 1.1656050955414012,
+      "llm_calls_total": 183,
+      "total_completion_tokens": 132747,
+      "total_prompt_tokens": 815984
+    },
+    "fix_rates": {
+      "finest_grain_violation": {
+        "fix_rate": 1.0,
+        "fixed_by_final": 9,
+        "present_round0": 9
+      },
+      "metric_not_in_catalog": {
+        "fix_rate": 1.0,
+        "fixed_by_final": 3,
+        "present_round0": 3
+      },
+      "missed_refusal": {
+        "fix_rate": 1.0,
+        "fixed_by_final": 1,
+        "present_round0": 1
+      },
+      "unjustified_refusal": {
+        "fix_rate": 1.0,
+        "fixed_by_final": 9,
+        "present_round0": 9
+      }
+    },
+    "missing_cases": [],
+    "n": 157,
+    "per_round": {
+      "round_0": {
+        "counts": {
+          "dim_ok": 138,
+          "joint_ok": 121,
+          "metric_ok": 140,
+          "refusal_fn": 1,
+          "refusal_fp": 9,
+          "refusal_tp": 7
+        },
+        "dimension_exact_accuracy": 0.8789808917197452,
+        "joint_metric_dimension_accuracy": 0.7707006369426752,
+        "joint_wilson95": [
+          0.6989473636647464,
+          0.8295233467057553
+        ],
+        "metric_accuracy": 0.89171974522293,
+        "n": 157,
+        "refusal_precision": 0.4375,
+        "refusal_recall": 0.875
+      },
+      "round_1": {
+        "counts": {
+          "dim_ok": 145,
+          "joint_ok": 137,
+          "metric_ok": 149,
+          "refusal_fn": 0,
+          "refusal_fp": 2,
+          "refusal_tp": 8
+        },
+        "dimension_exact_accuracy": 0.9235668789808917,
+        "joint_metric_dimension_accuracy": 0.8726114649681529,
+        "joint_wilson95": [
+          0.8114235271037631,
+          0.9160008624650451
+        ],
+        "metric_accuracy": 0.9490445859872612,
+        "n": 157,
+        "refusal_precision": 0.8,
+        "refusal_recall": 1.0
+      },
+      "round_2": {
+        "counts": {
+          "dim_ok": 145,
+          "joint_ok": 138,
+          "metric_ok": 150,
+          "refusal_fn": 0,
+          "refusal_fp": 1,
+          "refusal_tp": 8
+        },
+        "dimension_exact_accuracy": 0.9235668789808917,
+        "joint_metric_dimension_accuracy": 0.8789808917197452,
+        "joint_wilson95": [
+          0.8187191461953568,
+          0.9211398483233454
+        ],
+        "metric_accuracy": 0.9554140127388535,
+        "n": 157,
+        "refusal_precision": 0.8888888888888888,
+        "refusal_recall": 1.0
+      },
+      "round_3": {
+        "counts": {
+          "dim_ok": 145,
+          "joint_ok": 138,
+          "metric_ok": 150,
+          "refusal_fn": 0,
+          "refusal_fp": 0,
+          "refusal_tp": 8
+        },
+        "dimension_exact_accuracy": 0.9235668789808917,
+        "joint_metric_dimension_accuracy": 0.8789808917197452,
+        "joint_wilson95": [
+          0.8187191461953568,
+          0.9211398483233454
+        ],
+        "metric_accuracy": 0.9554140127388535,
+        "n": 157,
+        "refusal_precision": 1.0,
+        "refusal_recall": 1.0
+      }
+    },
+    "validator_invisible_errors_final": {
+      "by_kind": {
+        "wrong_dimension_set_only": 12,
+        "wrong_metric_only": 7
+      },
+      "cases": [
+        {
+          "case_id": "ict_case_0007",
+          "expected_dimensions": [],
+          "expected_metric_id": "ict_metric_010",
+          "kind": "wrong_dimension_set_only",
+          "pred_dimensions": [
+            "segment_l3"
+          ],
+          "pred_metric_id": "ict_metric_010"
+        },
+        {
+          "case_id": "ict_case_0041",
+          "expected_dimensions": [
+            "market_region"
+          ],
+          "expected_metric_id": "ict_metric_001",
+          "kind": "wrong_metric_only",
+          "pred_dimensions": [
+            "market_region"
+          ],
+          "pred_metric_id": "ict_metric_015"
+        },
+        {
+          "case_id": "ict_case_0047",
+          "expected_dimensions": [],
+          "expected_metric_id": "ict_metric_007",
+          "kind": "wrong_dimension_set_only",
+          "pred_dimensions": [
+            "segment_l1"
+          ],
+          "pred_metric_id": "ict_metric_007"
+        },
+        {
+          "case_id": "ict_case_0048",
+          "expected_dimensions": [],
+          "expected_metric_id": "ict_metric_014",
+          "kind": "wrong_dimension_set_only",
+          "pred_dimensions": [
+            "segment_l1"
+          ],
+          "pred_metric_id": "ict_metric_014"
+        },
+        {
+          "case_id": "ict_case_0067",
+          "expected_dimensions": [],
+          "expected_metric_id": "ict_metric_005",
+          "kind": "wrong_dimension_set_only",
+          "pred_dimensions": [
+            "segment_l1"
+          ],
+          "pred_metric_id": "ict_metric_005"
+        },
+        {
+          "case_id": "ict_case_0068",
+          "expected_dimensions": [],
+          "expected_metric_id": "ict_metric_013",
+          "kind": "wrong_dimension_set_only",
+          "pred_dimensions": [
+            "segment_l3"
+          ],
+          "pred_metric_id": "ict_metric_013"
+        },
+        {
+          "case_id": "ict_case_0077",
+          "expected_dimensions": [
+            "segment_l2"
+          ],
+          "expected_metric_id": "ict_metric_015",
+          "kind": "wrong_metric_only",
+          "pred_dimensions": [
+            "segment_l2"
+          ],
+          "pred_metric_id": "ict_metric_001"
+        },
+        {
+          "case_id": "ict_case_0078",
+          "expected_dimensions": [],
+          "expected_metric_id": "ict_metric_013",
+          "kind": "wrong_metric_only",
+          "pred_dimensions": [],
+          "pred_metric_id": "ict_metric_007"
+        },
+        {
+          "case_id": "ict_case_0088",
+          "expected_dimensions": [],
+          "expected_metric_id": "ict_metric_009",
+          "kind": "wrong_dimension_set_only",
+          "pred_dimensions": [
+            "segment_l1"
+          ],
+          "pred_metric_id": "ict_metric_009"
+        },
+        {
+          "case_id": "ict_case_0109",
+          "expected_dimensions": [],
+          "expected_metric_id": "ict_metric_011",
+          "kind": "wrong_dimension_set_only",
+          "pred_dimensions": [
+            "segment_l1"
+          ],
+          "pred_metric_id": "ict_metric_011"
+        },
+        {
+          "case_id": "ict_case_0110",
+          "expected_dimensions": [],
+          "expected_metric_id": "ict_metric_012",
+          "kind": "wrong_dimension_set_only",
+          "pred_dimensions": [
+            "segment_l3"
+          ],
+          "pred_metric_id": "ict_metric_012"
+        },
+        {
+          "case_id": "ict_case_0119",
+          "expected_dimensions": [],
+          "expected_metric_id": "ict_metric_013",
+          "kind": "wrong_metric_only",
+          "pred_dimensions": [],
+          "pred_metric_id": "ict_metric_012"
+        },
+        {
+          "case_id": "ict_case_0123",
+          "expected_dimensions": [
+            "segment_l1"
+          ],
+          "expected_metric_id": "ict_metric_003",
+          "kind": "wrong_metric_only",
+          "pred_dimensions": [
+            "segment_l1"
+          ],
+          "pred_metric_id": "ict_metric_002"
+        },
+        {
+          "case_id": "ict_case_0126",
+          "expected_dimensions": [],
+          "expected_metric_id": "ict_metric_005",
+          "kind": "wrong_dimension_set_only",
+          "pred_dimensions": [
+            "segment_l3"
+          ],
+          "pred_metric_id": "ict_metric_005"
+        },
+        {
+          "case_id": "ict_case_0127",
+          "expected_dimensions": [],
+          "expected_metric_id": "ict_metric_006",
+          "kind": "wrong_dimension_set_only",
+          "pred_dimensions": [
+            "segment_l2"
+          ],
+          "pred_metric_id": "ict_metric_006"
+        },
+        {
+          "case_id": "ict_case_0135",
+          "expected_dimensions": [
+            "segment_l2"
+          ],
+          "expected_metric_id": "ict_metric_015",
+          "kind": "wrong_metric_only",
+          "pred_dimensions": [
+            "segment_l2"
+          ],
+          "pred_metric_id": "ict_metric_001"
+        },
+        {
+          "case_id": "ict_case_0148",
+          "expected_dimensions": [],
+          "expected_metric_id": "ict_metric_012",
+          "kind": "wrong_dimension_set_only",
+          "pred_dimensions": [
+            "segment_l3"
+          ],
+          "pred_metric_id": "ict_metric_012"
+        },
+        {
+          "case_id": "ict_case_0157",
+          "expected_dimensions": [],
+          "expected_metric_id": "ict_metric_010",
+          "kind": "wrong_metric_only",
+          "pred_dimensions": [],
+          "pred_metric_id": "ict_metric_011"
+        },
+        {
+          "case_id": "ict_case_0159",
+          "expected_dimensions": [],
+          "expected_metric_id": "ict_metric_006",
+          "kind": "wrong_dimension_set_only",
+          "pred_dimensions": [
+            "market_region"
+          ],
+          "pred_metric_id": "ict_metric_006"
+        }
+      ],
+      "n": 19
+    },
+    "violations_final": {},
+    "violations_round0": {
+      "finest_grain_violation": 9,
+      "metric_not_in_catalog": 3,
+      "missed_refusal": 1,
+      "unjustified_refusal": 9
+    }
+  },
+  "iowa": {
+    "cases_still_violating_at_final": [],
+    "complete_contract_prompting_same_scope": {
+      "counts": {
+        "dim_ok": 28,
+        "joint_ok": 28,
+        "metric_ok": 31,
+        "refusal_fn": 0,
+        "refusal_fp": 1,
+        "refusal_tp": 7
+      },
+      "dimension_exact_accuracy": 0.875,
+      "joint_metric_dimension_accuracy": 0.875,
+      "metric_accuracy": 0.96875,
+      "n": 32,
+      "refusal_precision": 0.875,
+      "refusal_recall": 1.0
+    },
+    "cost": {
+      "cases_resolved_at_round0": 24,
+      "compiler_reference_llm_calls": 0,
+      "latency_ms_mean_per_call": 15691.125,
+      "llm_calls_per_case_max": 2,
+      "llm_calls_per_case_mean": 1.25,
+      "llm_calls_total": 40,
+      "total_completion_tokens": 23945,
+      "total_prompt_tokens": 198123
+    },
+    "fix_rates": {
+      "finest_grain_violation": {
+        "fix_rate": 1.0,
+        "fixed_by_final": 6,
+        "present_round0": 6
+      },
+      "temporal_anchor_failure": {
+        "fix_rate": 1.0,
+        "fixed_by_final": 2,
+        "present_round0": 2
+      }
+    },
+    "missing_cases": [],
+    "n": 32,
+    "per_round": {
+      "round_0": {
+        "counts": {
+          "dim_ok": 26,
+          "joint_ok": 26,
+          "metric_ok": 32,
+          "refusal_fn": 0,
+          "refusal_fp": 0,
+          "refusal_tp": 7
+        },
+        "dimension_exact_accuracy": 0.8125,
+        "joint_metric_dimension_accuracy": 0.8125,
+        "joint_wilson95": [
+          0.6469084479862404,
+          0.9111045531043405
+        ],
+        "metric_accuracy": 1.0,
+        "n": 32,
+        "refusal_precision": 1.0,
+        "refusal_recall": 1.0
+      },
+      "round_1": {
+        "counts": {
+          "dim_ok": 32,
+          "joint_ok": 32,
+          "metric_ok": 32,
+          "refusal_fn": 0,
+          "refusal_fp": 0,
+          "refusal_tp": 7
+        },
+        "dimension_exact_accuracy": 1.0,
+        "joint_metric_dimension_accuracy": 1.0,
+        "joint_wilson95": [
+          0.8928208017449293,
+          1.0
+        ],
+        "metric_accuracy": 1.0,
+        "n": 32,
+        "refusal_precision": 1.0,
+        "refusal_recall": 1.0
+      },
+      "round_2": {
+        "counts": {
+          "dim_ok": 32,
+          "joint_ok": 32,
+          "metric_ok": 32,
+          "refusal_fn": 0,
+          "refusal_fp": 0,
+          "refusal_tp": 7
+        },
+        "dimension_exact_accuracy": 1.0,
+        "joint_metric_dimension_accuracy": 1.0,
+        "joint_wilson95": [
+          0.8928208017449293,
+          1.0
+        ],
+        "metric_accuracy": 1.0,
+        "n": 32,
+        "refusal_precision": 1.0,
+        "refusal_recall": 1.0
+      },
+      "round_3": {
+        "counts": {
+          "dim_ok": 32,
+          "joint_ok": 32,
+          "metric_ok": 32,
+          "refusal_fn": 0,
+          "refusal_fp": 0,
+          "refusal_tp": 7
+        },
+        "dimension_exact_accuracy": 1.0,
+        "joint_metric_dimension_accuracy": 1.0,
+        "joint_wilson95": [
+          0.8928208017449293,
+          1.0
+        ],
+        "metric_accuracy": 1.0,
+        "n": 32,
+        "refusal_precision": 1.0,
+        "refusal_recall": 1.0
+      }
+    },
+    "validator_invisible_errors_final": {
+      "by_kind": {},
+      "cases": [],
+      "n": 0
+    },
+    "violations_final": {},
+    "violations_round0": {
+      "finest_grain_violation": 6,
+      "temporal_anchor_failure": 2
+    }
+  },
+  "multigov": {
+    "cases_still_violating_at_final": [],
+    "complete_contract_prompting_same_scope": {
+      "counts": {
+        "dim_ok": 173,
+        "joint_ok": 173,
+        "metric_ok": 177,
+        "refusal_fn": 0,
+        "refusal_fp": 23,
+        "refusal_tp": 72
+      },
+      "dimension_exact_accuracy": 0.865,
+      "joint_metric_dimension_accuracy": 0.865,
+      "metric_accuracy": 0.885,
+      "n": 200,
+      "refusal_precision": 0.7578947368421053,
+      "refusal_recall": 1.0
+    },
+    "cost": {
+      "cases_resolved_at_round0": 182,
+      "compiler_reference_llm_calls": 0,
+      "latency_ms_mean_per_call": 29873.70909090909,
+      "llm_calls_per_case_max": 3,
+      "llm_calls_per_case_mean": 1.1,
+      "llm_calls_total": 220,
+      "total_completion_tokens": 259910,
+      "total_prompt_tokens": 1497640
+    },
+    "family_joint_by_round": {
+      "answerable_direct": {
+        "round_0": {
+          "joint": 1.0,
+          "n": 45
+        },
+        "round_1": {
+          "joint": 1.0,
+          "n": 45
+        },
+        "round_2": {
+          "joint": 1.0,
+          "n": 45
+        },
+        "round_3": {
+          "joint": 1.0,
+          "n": 45
+        }
+      },
+      "denominator_caliber": {
+        "round_0": {
+          "joint": 1.0,
+          "n": 11
+        },
+        "round_1": {
+          "joint": 1.0,
+          "n": 11
+        },
+        "round_2": {
+          "joint": 1.0,
+          "n": 11
+        },
+        "round_3": {
+          "joint": 1.0,
+          "n": 11
+        }
+      },
+      "finest_grain_trap": {
+        "round_0": {
+          "joint": 0.59375,
+          "n": 64
+        },
+        "round_1": {
+          "joint": 0.828125,
+          "n": 64
+        },
+        "round_2": {
+          "joint": 0.859375,
+          "n": 64
+        },
+        "round_3": {
+          "joint": 0.859375,
+          "n": 64
+        }
+      },
+      "policy_refusal": {
+        "round_0": {
+          "joint": 0.9861111111111112,
+          "n": 72
+        },
+        "round_1": {
+          "joint": 1.0,
+          "n": 72
+        },
+        "round_2": {
+          "joint": 1.0,
+          "n": 72
+        },
+        "round_3": {
+          "joint": 1.0,
+          "n": 72
+        }
+      },
+      "temporal_anchor": {
+        "round_0": {
+          "joint": 1.0,
+          "n": 8
+        },
+        "round_1": {
+          "joint": 1.0,
+          "n": 8
+        },
+        "round_2": {
+          "joint": 1.0,
+          "n": 8
+        },
+        "round_3": {
+          "joint": 1.0,
+          "n": 8
+        }
+      }
+    },
+    "fix_rates": {
+      "dimension_not_allowed": {
+        "fix_rate": 1.0,
+        "fixed_by_final": 6,
+        "present_round0": 6
+      },
+      "finest_grain_violation": {
+        "fix_rate": 1.0,
+        "fixed_by_final": 6,
+        "present_round0": 6
+      },
+      "missed_refusal": {
+        "fix_rate": 1.0,
+        "fixed_by_final": 1,
+        "present_round0": 1
+      },
+      "unjustified_refusal": {
+        "fix_rate": 1.0,
+        "fixed_by_final": 11,
+        "present_round0": 11
+      }
+    },
+    "missing_cases": [],
+    "n": 200,
+    "per_round": {
+      "round_0": {
+        "counts": {
+          "dim_ok": 173,
+          "joint_ok": 173,
+          "metric_ok": 188,
+          "refusal_fn": 1,
+          "refusal_fp": 11,
+          "refusal_tp": 71
+        },
+        "dimension_exact_accuracy": 0.865,
+        "joint_metric_dimension_accuracy": 0.865,
+        "joint_wilson95": [
+          0.8107086162924745,
+          0.9055342954521209
+        ],
+        "metric_accuracy": 0.94,
+        "n": 200,
+        "refusal_precision": 0.8658536585365854,
+        "refusal_recall": 0.9861111111111112
+      },
+      "round_1": {
+        "counts": {
+          "dim_ok": 189,
+          "joint_ok": 189,
+          "metric_ok": 200,
+          "refusal_fn": 0,
+          "refusal_fp": 0,
+          "refusal_tp": 72
+        },
+        "dimension_exact_accuracy": 0.945,
+        "joint_metric_dimension_accuracy": 0.945,
+        "joint_wilson95": [
+          0.9042130012276914,
+          0.9690146582965411
+        ],
+        "metric_accuracy": 1.0,
+        "n": 200,
+        "refusal_precision": 1.0,
+        "refusal_recall": 1.0
+      },
+      "round_2": {
+        "counts": {
+          "dim_ok": 191,
+          "joint_ok": 191,
+          "metric_ok": 200,
+          "refusal_fn": 0,
+          "refusal_fp": 0,
+          "refusal_tp": 72
+        },
+        "dimension_exact_accuracy": 0.955,
+        "joint_metric_dimension_accuracy": 0.955,
+        "joint_wilson95": [
+          0.9167032959981803,
+          0.976147456998507
+        ],
+        "metric_accuracy": 1.0,
+        "n": 200,
+        "refusal_precision": 1.0,
+        "refusal_recall": 1.0
+      },
+      "round_3": {
+        "counts": {
+          "dim_ok": 191,
+          "joint_ok": 191,
+          "metric_ok": 200,
+          "refusal_fn": 0,
+          "refusal_fp": 0,
+          "refusal_tp": 72
+        },
+        "dimension_exact_accuracy": 0.955,
+        "joint_metric_dimension_accuracy": 0.955,
+        "joint_wilson95": [
+          0.9167032959981803,
+          0.976147456998507
+        ],
+        "metric_accuracy": 1.0,
+        "n": 200,
+        "refusal_precision": 1.0,
+        "refusal_recall": 1.0
+      }
+    },
+    "validator_invisible_errors_final": {
+      "by_kind": {
+        "wrong_dimension_set_only": 9
+      },
+      "cases": [
+        {
+          "case_id": "mg_case_0095",
+          "expected_dimensions": [
+            "mg_domain_02_fine_scope"
+          ],
+          "expected_metric_id": "mg_metric_0032",
+          "kind": "wrong_dimension_set_only",
+          "pred_dimensions": [
+            "mg_domain_02_fine_scope",
+            "mg_domain_02_time_anchor"
+          ],
+          "pred_metric_id": "mg_metric_0032"
+        },
+        {
+          "case_id": "mg_case_0206",
+          "expected_dimensions": [
+            "mg_domain_04_fine_scope"
+          ],
+          "expected_metric_id": "mg_metric_0069",
+          "kind": "wrong_dimension_set_only",
+          "pred_dimensions": [
+            "mg_domain_04_fine_scope",
+            "mg_domain_04_time_anchor"
+          ],
+          "pred_metric_id": "mg_metric_0069"
+        },
+        {
+          "case_id": "mg_case_0254",
+          "expected_dimensions": [
+            "mg_domain_05_fine_scope"
+          ],
+          "expected_metric_id": "mg_metric_0085",
+          "kind": "wrong_dimension_set_only",
+          "pred_dimensions": [
+            "mg_domain_05_fine_scope",
+            "mg_domain_05_time_anchor"
+          ],
+          "pred_metric_id": "mg_metric_0085"
+        },
+        {
+          "case_id": "mg_case_0281",
+          "expected_dimensions": [
+            "mg_domain_06_fine_scope"
+          ],
+          "expected_metric_id": "mg_metric_0094",
+          "kind": "wrong_dimension_set_only",
+          "pred_dimensions": [
+            "mg_domain_06_fine_scope",
+            "mg_domain_06_time_anchor"
+          ],
+          "pred_metric_id": "mg_metric_0094"
+        },
+        {
+          "case_id": "mg_case_0326",
+          "expected_dimensions": [
+            "mg_domain_07_fine_scope"
+          ],
+          "expected_metric_id": "mg_metric_0109",
+          "kind": "wrong_dimension_set_only",
+          "pred_dimensions": [
+            "mg_domain_07_fine_scope",
+            "mg_domain_07_time_anchor"
+          ],
+          "pred_metric_id": "mg_metric_0109"
+        },
+        {
+          "case_id": "mg_case_0362",
+          "expected_dimensions": [
+            "mg_domain_08_fine_scope"
+          ],
+          "expected_metric_id": "mg_metric_0121",
+          "kind": "wrong_dimension_set_only",
+          "pred_dimensions": [
+            "mg_domain_08_fine_scope",
+            "mg_domain_08_time_anchor"
+          ],
+          "pred_metric_id": "mg_metric_0121"
+        },
+        {
+          "case_id": "mg_case_0374",
+          "expected_dimensions": [
+            "mg_domain_08_fine_scope"
+          ],
+          "expected_metric_id": "mg_metric_0125",
+          "kind": "wrong_dimension_set_only",
+          "pred_dimensions": [
+            "mg_domain_08_fine_scope",
+            "mg_domain_08_time_anchor"
+          ],
+          "pred_metric_id": "mg_metric_0125"
+        },
+        {
+          "case_id": "mg_case_0419",
+          "expected_dimensions": [
+            "mg_domain_10_fine_scope"
+          ],
+          "expected_metric_id": "mg_metric_0140",
+          "kind": "wrong_dimension_set_only",
+          "pred_dimensions": [
+            "mg_domain_10_fine_scope",
+            "mg_domain_10_time_anchor"
+          ],
+          "pred_metric_id": "mg_metric_0140"
+        },
+        {
+          "case_id": "mg_case_0449",
+          "expected_dimensions": [
+            "mg_domain_11_fine_scope"
+          ],
+          "expected_metric_id": "mg_metric_0150",
+          "kind": "wrong_dimension_set_only",
+          "pred_dimensions": [
+            "mg_domain_11_fine_scope",
+            "mg_domain_11_time_anchor"
+          ],
+          "pred_metric_id": "mg_metric_0150"
+        }
+      ],
+      "n": 9
+    },
+    "violations_final": {},
+    "violations_round0": {
+      "dimension_not_allowed": 6,
+      "finest_grain_violation": 6,
+      "missed_refusal": 1,
+      "unjustified_refusal": 11
+    }
+  }
+}

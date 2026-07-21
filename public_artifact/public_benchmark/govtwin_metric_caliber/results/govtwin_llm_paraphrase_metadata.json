@@ -1,0 +1,10 @@
+{
+  "cases": 159,
+  "created_at": "2026-07-05T00:58:57+0800",
+  "fallback_counts": {
+    "llm": 159
+  },
+  "llmhub_headers": [],
+  "parse_failures": [],
+  "threat_model_note": "Only public synthetic GovTwin queries were sent to the LLM; no private data or private mapping is included."
+}

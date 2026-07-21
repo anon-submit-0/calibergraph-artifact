@@ -1,0 +1,33 @@
+You are evaluating an NL2Metric baseline on the IndustrialCaseText-MetricCaliber (real desensitized enterprise case text) benchmark.
+
+Mode: llm_schema_rag
+
+Return ONLY a JSON object. It must use this schema:
+{"case_id":"...", "action":"answer|refuse", "metric_id":"...", "dimensions":["..."], "time_window":"...", "reason":"brief"}
+
+Rules:
+- Use only provided metric ids and dimension ids.
+- If action is refuse, metric_id="" and dimensions=[].
+- Do not output SQL.
+- Do not invent unsupported metrics.
+- PII/sensitive-identifier requests, SQL/DDL requests, and off-domain requests should be refused.
+- For hierarchy, output only the finest requested grain.
+
+Case:
+```json
+{
+  "case_id": "ict_case_0001",
+  "nl_query": "上个月销售额",
+  "context": {
+    "retrieved_metrics": [
+      "id=ict_metric_013; name=Sales Amount; aliases=销售额, sales amount, revenue; allowed_dimensions="
+    ],
+    "retrieved_dimensions": [
+      "id=segment_l1; name=Segment Level 1; aliases=一级品类, level 1 segment, segment level 1; parent=; grain_rank=1",
+      "id=segment_l2; name=Segment Level 2; aliases=二级品类, level 2 segment, segment level 2; parent=segment_l1; grain_rank=2",
+      "id=segment_l3; name=Segment Level 3; aliases=三级品类, level 3 segment, segment level 3; parent=segment_l2; grain_rank=3",
+      "id=market_region; name=Market Region; aliases=区域, region, market region; parent=; grain_rank=1"
+    ]
+  }
+}
+```

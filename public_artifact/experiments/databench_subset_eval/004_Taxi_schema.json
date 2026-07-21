@@ -1,0 +1,97 @@
+{
+  "columns": [
+    {
+      "name": "VendorID",
+      "type": "UTINYINT"
+    },
+    {
+      "name": "tpep_pickup_datetime",
+      "type": "TIMESTAMP WITH TIME ZONE"
+    },
+    {
+      "name": "tpep_dropoff_datetime",
+      "type": "TIMESTAMP WITH TIME ZONE"
+    },
+    {
+      "name": "passenger_count",
+      "type": "UTINYINT"
+    },
+    {
+      "name": "trip_distance",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "RatecodeID",
+      "type": "UTINYINT"
+    },
+    {
+      "name": "store_and_fwd_flag",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "PULocationID",
+      "type": "USMALLINT"
+    },
+    {
+      "name": "DOLocationID",
+      "type": "USMALLINT"
+    },
+    {
+      "name": "payment_type",
+      "type": "UTINYINT"
+    },
+    {
+      "name": "fare_amount",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "extra",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "mta_tax",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "tip_amount",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "tolls_amount",
+      "type": "UTINYINT"
+    },
+    {
+      "name": "improvement_surcharge",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "total_amount",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "congestion_surcharge",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "Airport_fee",
+      "type": "UTINYINT"
+    },
+    {
+      "name": "airport_fee_1",
+      "type": "VARCHAR"
+    }
+  ],
+  "dataset": "004_Taxi",
+  "qa_count": 20,
+  "qa_types": {
+    "boolean": 4,
+    "category": 4,
+    "list[category]": 4,
+    "list[number]": 4,
+    "number": 4
+  },
+  "rows": 100000,
+  "sample_rows": 20,
+  "sha256_all": "01923c6c9db46fc710b5aaab53b54b019438651fc8dcdff35cc8210255845e7a",
+  "sha256_qa": "1e3a1090c4084352fbb38d169d8e414a0ada1caeacc3b857107bc8fec146f065"
+}

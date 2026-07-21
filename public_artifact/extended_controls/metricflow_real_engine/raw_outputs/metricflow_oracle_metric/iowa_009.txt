@@ -1,0 +1,17 @@
+COMMAND: mf query --metrics bottles_sold --limit 20 --csv <TEMP_CSV> --group-by sale_line__category_name,sale_line__item_desc
+EXIT_CODE: 0
+WALL_SECONDS: 2.76
+DATA_ROWS: 20
+ERROR_CATEGORY: 
+----- STDOUT -----
+
+
+⠋ Initiating query…
+
+⠙ Initiating query…
+✔ Success 🦄 - query completed after 0.03 seconds
+🖨 Wrote query output to <TEMP_CSV>
+
+
+----- STDERR -----
+

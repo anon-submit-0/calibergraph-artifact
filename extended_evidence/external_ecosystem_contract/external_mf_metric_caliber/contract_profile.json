@@ -1,0 +1,22 @@
+{
+  "available_time_anchors": [],
+  "dataset_id": "external_mf_metric_caliber",
+  "default_time_anchor": "",
+  "policy_rules": [
+    {
+      "contains": [
+        "select ",
+        "insert ",
+        "update ",
+        "delete ",
+        "drop ",
+        "truncate ",
+        "alter "
+      ],
+      "policy_id": "sql_or_ddl"
+    }
+  ],
+  "refusal_policy_provenance": "protocol-added, not in source manifest (frozen protocol.md 2026-07-12): (r1) undefined-metric via protocol_added_refusal_stub catalog entries; (r2) SQL/DDL via sql_or_ddl policy rule; (r3) unauthorized dimension combinations via allowed_dimensions scope from manifest join topology.",
+  "source_manifest": "dbt-labs/metricflow metricflow_semantics/test_helpers/semantic_manifest_yamls/simple_manifest (frozen local copy under v21_external_baseline_runs_20260708/public_artifact/external_runs/metricflow)",
+  "time_aliases": {}
+}

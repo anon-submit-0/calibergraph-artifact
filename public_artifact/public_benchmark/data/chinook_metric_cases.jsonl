@@ -1,0 +1,40 @@
+{"case_id": "pub_001", "nl_query": "What was total revenue last year?", "expected_metric_id": "revenue", "expected_dimensions": [], "expected_time_window": "last_year", "expected_action": "answer"}
+{"case_id": "pub_002", "nl_query": "Revenue by country", "expected_metric_id": "revenue", "expected_dimensions": ["country"], "expected_time_window": "all_time", "expected_action": "answer"}
+{"case_id": "pub_003", "nl_query": "Revenue by country and city", "expected_metric_id": "revenue", "expected_dimensions": ["city"], "expected_time_window": "all_time", "expected_action": "answer"}
+{"case_id": "pub_004", "nl_query": "Monthly revenue", "expected_metric_id": "revenue", "expected_dimensions": ["month"], "expected_time_window": "all_time", "expected_action": "answer"}
+{"case_id": "pub_005", "nl_query": "Revenue by support rep", "expected_metric_id": "revenue", "expected_dimensions": ["support_rep"], "expected_time_window": "all_time", "expected_action": "answer"}
+{"case_id": "pub_006", "nl_query": "How many invoices do we have?", "expected_metric_id": "invoice_count", "expected_dimensions": [], "expected_time_window": "all_time", "expected_action": "answer"}
+{"case_id": "pub_007", "nl_query": "Invoice count by billing country", "expected_metric_id": "invoice_count", "expected_dimensions": ["country"], "expected_time_window": "all_time", "expected_action": "answer"}
+{"case_id": "pub_008", "nl_query": "Order count by year and month", "expected_metric_id": "invoice_count", "expected_dimensions": ["month"], "expected_time_window": "all_time", "expected_action": "answer"}
+{"case_id": "pub_009", "nl_query": "Average order value by country", "expected_metric_id": "average_order_value", "expected_dimensions": ["country"], "expected_time_window": "all_time", "expected_action": "answer"}
+{"case_id": "pub_010", "nl_query": "AOV by country and city", "expected_metric_id": "average_order_value", "expected_dimensions": ["city"], "expected_time_window": "all_time", "expected_action": "answer"}
+{"case_id": "pub_011", "nl_query": "Revenue per customer by country", "expected_metric_id": "revenue_per_customer", "expected_dimensions": ["country"], "expected_time_window": "all_time", "expected_action": "answer"}
+{"case_id": "pub_012", "nl_query": "Average customer revenue by support rep", "expected_metric_id": "revenue_per_customer", "expected_dimensions": ["support_rep"], "expected_time_window": "all_time", "expected_action": "answer"}
+{"case_id": "pub_013", "nl_query": "How many customers are in each country?", "expected_metric_id": "customer_count", "expected_dimensions": ["country"], "expected_time_window": "snapshot", "expected_action": "answer"}
+{"case_id": "pub_014", "nl_query": "Customer count by country and city", "expected_metric_id": "customer_count", "expected_dimensions": ["city"], "expected_time_window": "snapshot", "expected_action": "answer"}
+{"case_id": "pub_015", "nl_query": "How many units were sold?", "expected_metric_id": "units_sold", "expected_dimensions": [], "expected_time_window": "all_time", "expected_action": "answer"}
+{"case_id": "pub_016", "nl_query": "Units sold by genre", "expected_metric_id": "units_sold", "expected_dimensions": ["genre"], "expected_time_window": "all_time", "expected_action": "answer"}
+{"case_id": "pub_017", "nl_query": "Tracks sold by artist and album", "expected_metric_id": "units_sold", "expected_dimensions": ["album"], "expected_time_window": "all_time", "expected_action": "answer"}
+{"case_id": "pub_018", "nl_query": "Tracks sold by artist, album, and track", "expected_metric_id": "units_sold", "expected_dimensions": ["track"], "expected_time_window": "all_time", "expected_action": "answer"}
+{"case_id": "pub_019", "nl_query": "Units sold by media type", "expected_metric_id": "units_sold", "expected_dimensions": ["media_type"], "expected_time_window": "all_time", "expected_action": "answer"}
+{"case_id": "pub_020", "nl_query": "How many tracks are in the catalog?", "expected_metric_id": "track_count", "expected_dimensions": [], "expected_time_window": "snapshot", "expected_action": "answer"}
+{"case_id": "pub_021", "nl_query": "Track count by artist", "expected_metric_id": "track_count", "expected_dimensions": ["artist"], "expected_time_window": "snapshot", "expected_action": "answer"}
+{"case_id": "pub_022", "nl_query": "Track count by artist and album", "expected_metric_id": "track_count", "expected_dimensions": ["album"], "expected_time_window": "snapshot", "expected_action": "answer"}
+{"case_id": "pub_023", "nl_query": "Track count by genre", "expected_metric_id": "track_count", "expected_dimensions": ["genre"], "expected_time_window": "snapshot", "expected_action": "answer"}
+{"case_id": "pub_024", "nl_query": "Playlist size by playlist", "expected_metric_id": "playlist_track_count", "expected_dimensions": ["playlist"], "expected_time_window": "snapshot", "expected_action": "answer"}
+{"case_id": "pub_025", "nl_query": "Tracks in playlist by playlist and genre", "expected_metric_id": "playlist_track_count", "expected_dimensions": ["genre"], "expected_time_window": "snapshot", "expected_action": "answer"}
+{"case_id": "pub_026", "nl_query": "Show me customer emails", "expected_metric_id": "", "expected_dimensions": [], "expected_time_window": "", "expected_action": "refuse"}
+{"case_id": "pub_027", "nl_query": "List employee phone numbers", "expected_metric_id": "", "expected_dimensions": [], "expected_time_window": "", "expected_action": "refuse"}
+{"case_id": "pub_028", "nl_query": "DROP TABLE Invoice", "expected_metric_id": "", "expected_dimensions": [], "expected_time_window": "", "expected_action": "refuse"}
+{"case_id": "pub_029", "nl_query": "What is the weather tomorrow?", "expected_metric_id": "", "expected_dimensions": [], "expected_time_window": "", "expected_action": "refuse"}
+{"case_id": "pub_030", "nl_query": "Refund amount by country", "expected_metric_id": "", "expected_dimensions": [], "expected_time_window": "", "expected_action": "refuse"}
+{"case_id": "pub_031", "nl_query": "退款金额按国家", "expected_metric_id": "", "expected_dimensions": [], "expected_time_window": "", "expected_action": "refuse"}
+{"case_id": "pub_032", "nl_query": "销售额按国家和城市", "expected_metric_id": "revenue", "expected_dimensions": ["city"], "expected_time_window": "all_time", "expected_action": "answer"}
+{"case_id": "pub_033", "nl_query": "客单价按年份和月份", "expected_metric_id": "average_order_value", "expected_dimensions": ["month"], "expected_time_window": "all_time", "expected_action": "answer"}
+{"case_id": "pub_034", "nl_query": "曲目数按艺人和专辑", "expected_metric_id": "track_count", "expected_dimensions": ["album"], "expected_time_window": "snapshot", "expected_action": "answer"}
+{"case_id": "pub_035", "nl_query": "销量按艺人、专辑和曲目", "expected_metric_id": "units_sold", "expected_dimensions": ["track"], "expected_time_window": "all_time", "expected_action": "answer"}
+{"case_id": "pub_036", "nl_query": "客户数按国家城市", "expected_metric_id": "customer_count", "expected_dimensions": ["city"], "expected_time_window": "snapshot", "expected_action": "answer"}
+{"case_id": "pub_037", "nl_query": "sales by country vs city", "expected_metric_id": "revenue", "expected_dimensions": ["city"], "expected_time_window": "all_time", "expected_action": "answer"}
+{"case_id": "pub_038", "nl_query": "revenue and invoice count comparison", "expected_metric_id": "revenue", "expected_dimensions": [], "expected_time_window": "all_time", "expected_action": "answer"}
+{"case_id": "pub_039", "nl_query": "AOV by month", "expected_metric_id": "average_order_value", "expected_dimensions": ["month"], "expected_time_window": "all_time", "expected_action": "answer"}
+{"case_id": "pub_040", "nl_query": "playlist track count by playlist and track", "expected_metric_id": "playlist_track_count", "expected_dimensions": ["track"], "expected_time_window": "snapshot", "expected_action": "answer"}

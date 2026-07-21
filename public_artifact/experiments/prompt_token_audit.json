@@ -1,0 +1,64 @@
+{
+  "batch_size": 10,
+  "case_count": 157,
+  "prediction_input": "industrial_case_text_metric_caliber/blind_cases.jsonl",
+  "results": {
+    "llm_direct": {
+      "batch10_amortized_prompt_tokens": {
+        "max": 797.4285714285714,
+        "mean": 791.1656050955414,
+        "min": 789.7,
+        "n": 157,
+        "p50": 790.8,
+        "p95": 792.8
+      },
+      "single_case_serialization": {
+        "max": 918,
+        "mean": 907.9171974522293,
+        "min": 902,
+        "n": 157,
+        "p50": 908,
+        "p95": 914
+      }
+    },
+    "llm_graph_rag": {
+      "batch10_amortized_prompt_tokens": {
+        "max": 477.9,
+        "mean": 437.72611464968134,
+        "min": 402.7,
+        "n": 157,
+        "p50": 430.6,
+        "p95": 477.9
+      },
+      "single_case_serialization": {
+        "max": 670,
+        "mean": 556.2738853503184,
+        "min": 415,
+        "n": 157,
+        "p50": 547,
+        "p95": 662
+      }
+    },
+    "llm_schema_rag": {
+      "batch10_amortized_prompt_tokens": {
+        "max": 412.9,
+        "mean": 372.72611464968145,
+        "min": 337.7,
+        "n": 157,
+        "p50": 365.6,
+        "p95": 412.9
+      },
+      "single_case_serialization": {
+        "max": 605,
+        "mean": 491.2738853503185,
+        "min": 350,
+        "n": 157,
+        "p50": 482,
+        "p95": 597
+      }
+    }
+  },
+  "scope": "input prompt only; no completion or hidden reasoning tokens",
+  "tokenizer": "cl100k_base",
+  "tokenizer_version": "0.12.0"
+}

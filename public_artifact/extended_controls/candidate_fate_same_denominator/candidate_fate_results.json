@@ -1,0 +1,135 @@
+{
+  "arms": {
+    "1": {
+      "candidate_presence_x_joint_correct": {
+        "candidate_missing__joint_wrong": 4,
+        "candidate_present__joint_correct": 123,
+        "candidate_present__joint_wrong": 22
+      },
+      "counts": {
+        "candidate_missing": 4,
+        "candidate_present_final_wrong": 22,
+        "candidate_present_joint_correct": 123
+      },
+      "md_plus_final_validator_partition": {
+        "counts": {
+          "candidate_missing": 4,
+          "candidate_present_final_error": 22,
+          "candidate_present_md_correct_validator_pass": 123
+        },
+        "rates": {
+          "candidate_missing": 0.026845637583892617,
+          "candidate_present_final_error": 0.1476510067114094,
+          "candidate_present_md_correct_validator_pass": 0.825503355704698
+        }
+      },
+      "n_answerable": 149,
+      "rates": {
+        "candidate_missing": 0.026845637583892617,
+        "candidate_present_final_wrong": 0.1476510067114094,
+        "candidate_present_joint_correct": 0.825503355704698
+      }
+    },
+    "10": {
+      "candidate_presence_x_joint_correct": {
+        "candidate_present__joint_correct": 119,
+        "candidate_present__joint_wrong": 30
+      },
+      "counts": {
+        "candidate_present_final_wrong": 30,
+        "candidate_present_joint_correct": 119
+      },
+      "md_plus_final_validator_partition": {
+        "counts": {
+          "candidate_present_final_error": 31,
+          "candidate_present_md_correct_validator_pass": 118
+        },
+        "rates": {
+          "candidate_present_final_error": 0.2080536912751678,
+          "candidate_present_md_correct_validator_pass": 0.7919463087248322
+        }
+      },
+      "n_answerable": 149,
+      "rates": {
+        "candidate_present_final_wrong": 0.20134228187919462,
+        "candidate_present_joint_correct": 0.7986577181208053
+      }
+    },
+    "3": {
+      "candidate_presence_x_joint_correct": {
+        "candidate_present__joint_correct": 119,
+        "candidate_present__joint_wrong": 30
+      },
+      "counts": {
+        "candidate_present_final_wrong": 30,
+        "candidate_present_joint_correct": 119
+      },
+      "md_plus_final_validator_partition": {
+        "counts": {
+          "candidate_present_final_error": 30,
+          "candidate_present_md_correct_validator_pass": 119
+        },
+        "rates": {
+          "candidate_present_final_error": 0.20134228187919462,
+          "candidate_present_md_correct_validator_pass": 0.7986577181208053
+        }
+      },
+      "n_answerable": 149,
+      "rates": {
+        "candidate_present_final_wrong": 0.20134228187919462,
+        "candidate_present_joint_correct": 0.7986577181208053
+      }
+    },
+    "5": {
+      "candidate_presence_x_joint_correct": {
+        "candidate_present__joint_correct": 122,
+        "candidate_present__joint_wrong": 27
+      },
+      "counts": {
+        "candidate_present_final_wrong": 27,
+        "candidate_present_joint_correct": 122
+      },
+      "md_plus_final_validator_partition": {
+        "counts": {
+          "candidate_present_final_error": 28,
+          "candidate_present_md_correct_validator_pass": 121
+        },
+        "rates": {
+          "candidate_present_final_error": 0.18791946308724833,
+          "candidate_present_md_correct_validator_pass": 0.8120805369127517
+        }
+      },
+      "n_answerable": 149,
+      "rates": {
+        "candidate_present_final_wrong": 0.18120805369127516,
+        "candidate_present_joint_correct": 0.8187919463087249
+      }
+    }
+  },
+  "denominator": {
+    "definition": "released IndustrialCaseText cases with expected_action=answer",
+    "n": 149
+  },
+  "experiment_id": "ict-candidate-fate-same-denominator",
+  "fate_precedence": "candidate_missing is assigned first; candidate-present cases then split by the released primary joint outcome",
+  "figure_outcome": "candidate present, exact action/metric/dimension, and pass by the stored final released validator; this remains a governed proxy because the LLM record does not predict every gold caliber/policy slot",
+  "input_sha256": {
+    "extended_controls/candidate_budget_sensitivity/raw_responses/k_1.jsonl": "8adfa3353b323b9e566da6df949f40847d946ed9548f01b4bfd766776ce50e6e",
+    "extended_controls/candidate_budget_sensitivity/raw_responses/k_10.jsonl": "4bd5164ebe2bf98343020b94fd1cf87527ba348e0cac33ae85637176aa804399",
+    "extended_controls/candidate_budget_sensitivity/raw_responses/k_3.jsonl": "bb497619ddafa059b2957edf3e0a8d70d54394b2b9c2aaebea6e1b1adb283fdc",
+    "extended_controls/candidate_budget_sensitivity/raw_responses/k_5.jsonl": "2477cc41ae78a6345f3cba410930f5b93e7ffc2c1ade9360dcc2020fcce6a91d",
+    "public_benchmark/industrial_case_text_metric_caliber/blind_cases.jsonl": "2f45443bee35235932c9481a212ed56c0e25c03356e0130b55cc4223cddcd7e2",
+    "public_benchmark/industrial_case_text_metric_caliber/gold_labels.jsonl": "5cb67e417c50543d958b929975b6b4d01d4571da2044652e00a521f8395543d2",
+    "public_benchmark/industrial_case_text_metric_caliber/metric_catalog.jsonl": "c5a4de9cc94bdf81eb9b67774e2c41dac2585145d7d331af5ed01f4a932f827a"
+  },
+  "invariants": {
+    "answerable_cases": 149,
+    "expected_per_case_rows": 596,
+    "per_case_rows": 596,
+    "records_per_arm": 157
+  },
+  "new_model_calls": 0,
+  "per_case_file": "per_case_candidate_fate.jsonl",
+  "primary_outcome": "action=answer and exact expected metric id and exact expected dimension set; this mirrors the released primary joint scorer and does not add time/caliber fields to the headline outcome",
+  "status": "deterministic post-hoc diagnostic over released raw responses"
+}

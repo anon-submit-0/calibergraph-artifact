@@ -1,0 +1,572 @@
+{
+  "_overall_match": true,
+  "_ts_utc": "2026-07-12T07:24:25Z",
+  "chinook": {
+    "direct_keyword": {
+      "max_abs_diff": 0.0,
+      "mine": {
+        "dimension_exact_accuracy": 0.275,
+        "joint_metric_dimension_accuracy": 0.15,
+        "metric_accuracy": 0.6,
+        "refusal_precision": 0.16666666666666666,
+        "refusal_recall": 0.16666666666666666
+      },
+      "released": {
+        "dimension_exact_accuracy": 0.275,
+        "joint_metric_dimension_accuracy": 0.15,
+        "metric_accuracy": 0.6,
+        "refusal_precision": 0.16666666666666666,
+        "refusal_recall": 0.16666666666666666
+      },
+      "status": "match"
+    },
+    "llm_direct": {
+      "max_abs_diff": 0.0,
+      "mine": {
+        "dimension_exact_accuracy": 0.775,
+        "joint_metric_dimension_accuracy": 0.75,
+        "metric_accuracy": 0.975,
+        "refusal_precision": 0.8571428571428571,
+        "refusal_recall": 1.0
+      },
+      "released": {
+        "dimension_exact_accuracy": 0.775,
+        "joint_metric_dimension_accuracy": 0.75,
+        "metric_accuracy": 0.975,
+        "refusal_precision": 0.8571428571428571,
+        "refusal_recall": 1.0
+      },
+      "status": "match"
+    },
+    "llm_graph_rag": {
+      "max_abs_diff": 0.0,
+      "mine": {
+        "dimension_exact_accuracy": 0.95,
+        "joint_metric_dimension_accuracy": 0.925,
+        "metric_accuracy": 0.975,
+        "refusal_precision": 0.8571428571428571,
+        "refusal_recall": 1.0
+      },
+      "released": {
+        "dimension_exact_accuracy": 0.95,
+        "joint_metric_dimension_accuracy": 0.925,
+        "metric_accuracy": 0.975,
+        "refusal_precision": 0.8571428571428571,
+        "refusal_recall": 1.0
+      },
+      "status": "match"
+    },
+    "llm_schema_rag": {
+      "max_abs_diff": 0.0,
+      "mine": {
+        "dimension_exact_accuracy": 0.625,
+        "joint_metric_dimension_accuracy": 0.6,
+        "metric_accuracy": 0.975,
+        "refusal_precision": 0.8571428571428571,
+        "refusal_recall": 1.0
+      },
+      "released": {
+        "dimension_exact_accuracy": 0.625,
+        "joint_metric_dimension_accuracy": 0.6,
+        "metric_accuracy": 0.975,
+        "refusal_precision": 0.8571428571428571,
+        "refusal_recall": 1.0
+      },
+      "status": "match"
+    },
+    "public_caliber_graph": {
+      "max_abs_diff": 0.0,
+      "mine": {
+        "dimension_exact_accuracy": 1.0,
+        "joint_metric_dimension_accuracy": 1.0,
+        "metric_accuracy": 1.0,
+        "refusal_precision": 1.0,
+        "refusal_recall": 1.0
+      },
+      "released": {
+        "dimension_exact_accuracy": 1.0,
+        "joint_metric_dimension_accuracy": 1.0,
+        "metric_accuracy": 1.0,
+        "refusal_precision": 1.0,
+        "refusal_recall": 1.0
+      },
+      "status": "match"
+    },
+    "schema_rag": {
+      "max_abs_diff": 0.0,
+      "mine": {
+        "dimension_exact_accuracy": 0.95,
+        "joint_metric_dimension_accuracy": 0.85,
+        "metric_accuracy": 0.85,
+        "refusal_precision": 0.0,
+        "refusal_recall": 0.0
+      },
+      "released": {
+        "dimension_exact_accuracy": 0.95,
+        "joint_metric_dimension_accuracy": 0.85,
+        "metric_accuracy": 0.85,
+        "refusal_precision": 0.0,
+        "refusal_recall": 0.0
+      },
+      "status": "match"
+    }
+  },
+  "govtwin": {
+    "autolink_iterative": {
+      "max_abs_diff": 0.0,
+      "mine": {
+        "dimension_exact_accuracy": 0.7358490566037735,
+        "joint_metric_dimension_accuracy": 0.6792452830188679,
+        "metric_accuracy": 0.9433962264150944,
+        "refusal_precision": 0.0,
+        "refusal_recall": 0.0
+      },
+      "released": {
+        "dimension_exact_accuracy": 0.7358490566037735,
+        "joint_metric_dimension_accuracy": 0.6792452830188679,
+        "metric_accuracy": 0.9433962264150944,
+        "refusal_precision": 0.0,
+        "refusal_recall": 0.0
+      },
+      "status": "match"
+    },
+    "caliber_graph": {
+      "max_abs_diff": 0.0,
+      "mine": {
+        "dimension_exact_accuracy": 1.0,
+        "joint_metric_dimension_accuracy": 1.0,
+        "metric_accuracy": 1.0,
+        "refusal_precision": 1.0,
+        "refusal_recall": 1.0
+      },
+      "released": {
+        "dimension_exact_accuracy": 1.0,
+        "joint_metric_dimension_accuracy": 1.0,
+        "metric_accuracy": 1.0,
+        "refusal_precision": 1.0,
+        "refusal_recall": 1.0
+      },
+      "status": "match"
+    },
+    "direct_keyword": {
+      "max_abs_diff": 0.0,
+      "mine": {
+        "dimension_exact_accuracy": 0.5911949685534591,
+        "joint_metric_dimension_accuracy": 0.41509433962264153,
+        "metric_accuracy": 0.6666666666666666,
+        "refusal_precision": 0.0,
+        "refusal_recall": 0.0
+      },
+      "released": {
+        "dimension_exact_accuracy": 0.5911949685534591,
+        "joint_metric_dimension_accuracy": 0.41509433962264153,
+        "metric_accuracy": 0.6666666666666666,
+        "refusal_precision": 0.0,
+        "refusal_recall": 0.0
+      },
+      "status": "match"
+    },
+    "oracle_candidate_prompt": {
+      "max_abs_diff": 0.0,
+      "mine": {
+        "dimension_exact_accuracy": 0.7358490566037735,
+        "joint_metric_dimension_accuracy": 0.7358490566037735,
+        "metric_accuracy": 1.0,
+        "refusal_precision": 1.0,
+        "refusal_recall": 1.0
+      },
+      "released": {
+        "dimension_exact_accuracy": 0.7358490566037735,
+        "joint_metric_dimension_accuracy": 0.7358490566037735,
+        "metric_accuracy": 1.0,
+        "refusal_precision": 1.0,
+        "refusal_recall": 1.0
+      },
+      "status": "match"
+    },
+    "safenlidb_guarded": {
+      "max_abs_diff": 0.0,
+      "mine": {
+        "dimension_exact_accuracy": 0.7358490566037735,
+        "joint_metric_dimension_accuracy": 0.7358490566037735,
+        "metric_accuracy": 1.0,
+        "refusal_precision": 1.0,
+        "refusal_recall": 1.0
+      },
+      "released": {
+        "dimension_exact_accuracy": 0.7358490566037735,
+        "joint_metric_dimension_accuracy": 0.7358490566037735,
+        "metric_accuracy": 1.0,
+        "refusal_precision": 1.0,
+        "refusal_recall": 1.0
+      },
+      "status": "match"
+    },
+    "schema_proxy": {
+      "max_abs_diff": 0.0,
+      "mine": {
+        "dimension_exact_accuracy": 0.7358490566037735,
+        "joint_metric_dimension_accuracy": 0.6792452830188679,
+        "metric_accuracy": 0.9433962264150944,
+        "refusal_precision": 0.0,
+        "refusal_recall": 0.0
+      },
+      "released": {
+        "dimension_exact_accuracy": 0.7358490566037735,
+        "joint_metric_dimension_accuracy": 0.6792452830188679,
+        "metric_accuracy": 0.9433962264150944,
+        "refusal_precision": 0.0,
+        "refusal_recall": 0.0
+      },
+      "status": "match"
+    }
+  },
+  "ict": {
+    "caliber_graph": {
+      "max_abs_diff": 0.0,
+      "mine": {
+        "dimension_exact_accuracy": 1.0,
+        "joint_metric_dimension_accuracy": 1.0,
+        "metric_accuracy": 1.0,
+        "refusal_precision": 1.0,
+        "refusal_recall": 1.0
+      },
+      "released": {
+        "dimension_exact_accuracy": 1.0,
+        "joint_metric_dimension_accuracy": 1.0,
+        "metric_accuracy": 1.0,
+        "refusal_precision": 1.0,
+        "refusal_recall": 1.0
+      },
+      "status": "match"
+    },
+    "direct_keyword": {
+      "max_abs_diff": 0.0,
+      "mine": {
+        "dimension_exact_accuracy": 0.5859872611464968,
+        "joint_metric_dimension_accuracy": 0.5222929936305732,
+        "metric_accuracy": 0.9363057324840764,
+        "refusal_precision": 1.0,
+        "refusal_recall": 0.25
+      },
+      "released": {
+        "dimension_exact_accuracy": 0.5859872611464968,
+        "joint_metric_dimension_accuracy": 0.5222929936305732,
+        "metric_accuracy": 0.9363057324840764,
+        "refusal_precision": 1.0,
+        "refusal_recall": 0.25
+      },
+      "status": "match"
+    },
+    "safenlidb_guarded": {
+      "max_abs_diff": 0.0,
+      "mine": {
+        "dimension_exact_accuracy": 0.9299363057324841,
+        "joint_metric_dimension_accuracy": 0.9044585987261147,
+        "metric_accuracy": 0.9745222929936306,
+        "refusal_precision": 1.0,
+        "refusal_recall": 1.0
+      },
+      "released": {
+        "dimension_exact_accuracy": 0.9299363057324841,
+        "joint_metric_dimension_accuracy": 0.9044585987261147,
+        "metric_accuracy": 0.9745222929936306,
+        "refusal_precision": 1.0,
+        "refusal_recall": 1.0
+      },
+      "status": "match"
+    },
+    "schema_proxy": {
+      "max_abs_diff": 0.0,
+      "mine": {
+        "dimension_exact_accuracy": 0.9299363057324841,
+        "joint_metric_dimension_accuracy": 0.8662420382165605,
+        "metric_accuracy": 0.9363057324840764,
+        "refusal_precision": 1.0,
+        "refusal_recall": 0.25
+      },
+      "released": {
+        "dimension_exact_accuracy": 0.9299363057324841,
+        "joint_metric_dimension_accuracy": 0.8662420382165605,
+        "metric_accuracy": 0.9363057324840764,
+        "refusal_precision": 1.0,
+        "refusal_recall": 0.25
+      },
+      "status": "match"
+    }
+  },
+  "iowa": {
+    "autolink_iterative": {
+      "max_abs_diff": 0.0,
+      "mine": {
+        "dimension_exact_accuracy": 0.71875,
+        "joint_metric_dimension_accuracy": 0.5625,
+        "metric_accuracy": 0.78125,
+        "refusal_precision": 0.0,
+        "refusal_recall": 0.0
+      },
+      "released": {
+        "dimension_exact_accuracy": 0.71875,
+        "joint_metric_dimension_accuracy": 0.5625,
+        "metric_accuracy": 0.78125,
+        "refusal_precision": 0.0,
+        "refusal_recall": 0.0
+      },
+      "status": "match"
+    },
+    "caliber_graph": {
+      "max_abs_diff": 0.0,
+      "mine": {
+        "dimension_exact_accuracy": 1.0,
+        "joint_metric_dimension_accuracy": 1.0,
+        "metric_accuracy": 1.0,
+        "refusal_precision": 1.0,
+        "refusal_recall": 1.0
+      },
+      "released": {
+        "dimension_exact_accuracy": 1.0,
+        "joint_metric_dimension_accuracy": 1.0,
+        "metric_accuracy": 1.0,
+        "refusal_precision": 1.0,
+        "refusal_recall": 1.0
+      },
+      "status": "match"
+    },
+    "direct_keyword": {
+      "max_abs_diff": 0.0,
+      "mine": {
+        "dimension_exact_accuracy": 0.375,
+        "joint_metric_dimension_accuracy": 0.15625,
+        "metric_accuracy": 0.75,
+        "refusal_precision": 0.0,
+        "refusal_recall": 0.0
+      },
+      "released": {
+        "dimension_exact_accuracy": 0.375,
+        "joint_metric_dimension_accuracy": 0.15625,
+        "metric_accuracy": 0.75,
+        "refusal_precision": 0.0,
+        "refusal_recall": 0.0
+      },
+      "status": "match"
+    },
+    "open_sql_end_to_end": {
+      "max_abs_diff": 0.0,
+      "mine": {
+        "dimension_exact_accuracy": 0.71875,
+        "joint_metric_dimension_accuracy": 0.5625,
+        "metric_accuracy": 0.78125,
+        "refusal_precision": 0.0,
+        "refusal_recall": 0.0
+      },
+      "released": {
+        "dimension_exact_accuracy": 0.71875,
+        "joint_metric_dimension_accuracy": 0.5625,
+        "metric_accuracy": 0.78125,
+        "refusal_precision": 0.0,
+        "refusal_recall": 0.0
+      },
+      "status": "match"
+    },
+    "oracle_candidate_prompt": {
+      "max_abs_diff": 0.0,
+      "mine": {
+        "dimension_exact_accuracy": 0.78125,
+        "joint_metric_dimension_accuracy": 0.78125,
+        "metric_accuracy": 1.0,
+        "refusal_precision": 1.0,
+        "refusal_recall": 1.0
+      },
+      "released": {
+        "dimension_exact_accuracy": 0.78125,
+        "joint_metric_dimension_accuracy": 0.78125,
+        "metric_accuracy": 1.0,
+        "refusal_precision": 1.0,
+        "refusal_recall": 1.0
+      },
+      "status": "match"
+    },
+    "safenlidb_guarded": {
+      "max_abs_diff": 0.0,
+      "mine": {
+        "dimension_exact_accuracy": 0.78125,
+        "joint_metric_dimension_accuracy": 0.78125,
+        "metric_accuracy": 1.0,
+        "refusal_precision": 1.0,
+        "refusal_recall": 1.0
+      },
+      "released": {
+        "dimension_exact_accuracy": 0.78125,
+        "joint_metric_dimension_accuracy": 0.78125,
+        "metric_accuracy": 1.0,
+        "refusal_precision": 1.0,
+        "refusal_recall": 1.0
+      },
+      "status": "match"
+    },
+    "schema_proxy": {
+      "max_abs_diff": 0.0,
+      "mine": {
+        "dimension_exact_accuracy": 0.71875,
+        "joint_metric_dimension_accuracy": 0.5625,
+        "metric_accuracy": 0.78125,
+        "refusal_precision": 0.0,
+        "refusal_recall": 0.0
+      },
+      "released": {
+        "dimension_exact_accuracy": 0.71875,
+        "joint_metric_dimension_accuracy": 0.5625,
+        "metric_accuracy": 0.78125,
+        "refusal_precision": 0.0,
+        "refusal_recall": 0.0
+      },
+      "status": "match"
+    }
+  },
+  "multigov": {
+    "autolink_iterative": {
+      "max_abs_diff": 0.0,
+      "mine": {
+        "dimension_exact_accuracy": 0.6803921568627451,
+        "joint_metric_dimension_accuracy": 0.3196078431372549,
+        "metric_accuracy": 0.6392156862745098,
+        "refusal_precision": 0.0,
+        "refusal_recall": 0.0
+      },
+      "released": {
+        "dimension_exact_accuracy": 0.6803921568627451,
+        "joint_metric_dimension_accuracy": 0.3196078431372549,
+        "metric_accuracy": 0.6392156862745098,
+        "refusal_precision": 0.0,
+        "refusal_recall": 0.0
+      },
+      "status": "match"
+    },
+    "caliber_graph": {
+      "max_abs_diff": 0.0,
+      "mine": {
+        "dimension_exact_accuracy": 1.0,
+        "joint_metric_dimension_accuracy": 1.0,
+        "metric_accuracy": 1.0,
+        "refusal_precision": 1.0,
+        "refusal_recall": 1.0
+      },
+      "released": {
+        "dimension_exact_accuracy": 1.0,
+        "joint_metric_dimension_accuracy": 1.0,
+        "metric_accuracy": 1.0,
+        "refusal_precision": 1.0,
+        "refusal_recall": 1.0
+      },
+      "status": "match"
+    },
+    "direct_keyword": {
+      "max_abs_diff": 0.0,
+      "mine": {
+        "dimension_exact_accuracy": 0.3607843137254902,
+        "joint_metric_dimension_accuracy": 0.0,
+        "metric_accuracy": 0.6392156862745098,
+        "refusal_precision": 0.0,
+        "refusal_recall": 0.0
+      },
+      "released": {
+        "dimension_exact_accuracy": 0.3607843137254902,
+        "joint_metric_dimension_accuracy": 0.0,
+        "metric_accuracy": 0.6392156862745098,
+        "refusal_precision": 0.0,
+        "refusal_recall": 0.0
+      },
+      "status": "match"
+    },
+    "no_grain_compiler": {
+      "max_abs_diff": 0.0,
+      "mine": {
+        "dimension_exact_accuracy": 0.6803921568627451,
+        "joint_metric_dimension_accuracy": 0.6803921568627451,
+        "metric_accuracy": 1.0,
+        "refusal_precision": 1.0,
+        "refusal_recall": 1.0
+      },
+      "released": {
+        "dimension_exact_accuracy": 0.6803921568627451,
+        "joint_metric_dimension_accuracy": 0.6803921568627451,
+        "metric_accuracy": 1.0,
+        "refusal_precision": 1.0,
+        "refusal_recall": 1.0
+      },
+      "status": "match"
+    },
+    "no_policy_compiler": {
+      "max_abs_diff": 0.0,
+      "mine": {
+        "dimension_exact_accuracy": 1.0,
+        "joint_metric_dimension_accuracy": 0.6392156862745098,
+        "metric_accuracy": 0.6392156862745098,
+        "refusal_precision": 0.0,
+        "refusal_recall": 0.0
+      },
+      "released": {
+        "dimension_exact_accuracy": 1.0,
+        "joint_metric_dimension_accuracy": 0.6392156862745098,
+        "metric_accuracy": 0.6392156862745098,
+        "refusal_precision": 0.0,
+        "refusal_recall": 0.0
+      },
+      "status": "match"
+    },
+    "oracle_candidate_prompt": {
+      "max_abs_diff": 0.0,
+      "mine": {
+        "dimension_exact_accuracy": 0.6803921568627451,
+        "joint_metric_dimension_accuracy": 0.6803921568627451,
+        "metric_accuracy": 1.0,
+        "refusal_precision": 1.0,
+        "refusal_recall": 1.0
+      },
+      "released": {
+        "dimension_exact_accuracy": 0.6803921568627451,
+        "joint_metric_dimension_accuracy": 0.6803921568627451,
+        "metric_accuracy": 1.0,
+        "refusal_precision": 1.0,
+        "refusal_recall": 1.0
+      },
+      "status": "match"
+    },
+    "safenlidb_guarded": {
+      "max_abs_diff": 0.0,
+      "mine": {
+        "dimension_exact_accuracy": 0.6803921568627451,
+        "joint_metric_dimension_accuracy": 0.6803921568627451,
+        "metric_accuracy": 1.0,
+        "refusal_precision": 1.0,
+        "refusal_recall": 1.0
+      },
+      "released": {
+        "dimension_exact_accuracy": 0.6803921568627451,
+        "joint_metric_dimension_accuracy": 0.6803921568627451,
+        "metric_accuracy": 1.0,
+        "refusal_precision": 1.0,
+        "refusal_recall": 1.0
+      },
+      "status": "match"
+    },
+    "schema_proxy": {
+      "max_abs_diff": 0.0,
+      "mine": {
+        "dimension_exact_accuracy": 0.6803921568627451,
+        "joint_metric_dimension_accuracy": 0.3196078431372549,
+        "metric_accuracy": 0.6392156862745098,
+        "refusal_precision": 0.0,
+        "refusal_recall": 0.0
+      },
+      "released": {
+        "dimension_exact_accuracy": 0.6803921568627451,
+        "joint_metric_dimension_accuracy": 0.3196078431372549,
+        "metric_accuracy": 0.6392156862745098,
+        "refusal_precision": 0.0,
+        "refusal_recall": 0.0
+      },
+      "status": "match"
+    }
+  }
+}

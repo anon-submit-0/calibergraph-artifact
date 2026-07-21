@@ -1,0 +1,114 @@
+{
+  "fleiss_action": {
+    "expected_agreement": 0.6574228395061728,
+    "kappa": 0.9675661065813776,
+    "observed_agreement": 0.9888888888888889
+  },
+  "majority_gold_disagreements": [
+    {
+      "case_id": "ict_case_0118",
+      "gold": {
+        "action": "answer",
+        "dimensions": [],
+        "metric": "ict_metric_014"
+      },
+      "layer": "IndustrialCaseText",
+      "majority": {
+        "action": "refuse",
+        "dimensions": [],
+        "metric": ""
+      }
+    },
+    {
+      "case_id": "ict_case_0058",
+      "gold": {
+        "action": "answer",
+        "dimensions": [],
+        "metric": "ict_metric_012"
+      },
+      "layer": "IndustrialCaseText",
+      "majority": {
+        "action": "refuse",
+        "dimensions": [],
+        "metric": ""
+      }
+    },
+    {
+      "case_id": "ict_case_0091",
+      "gold": {
+        "action": "answer",
+        "dimensions": [],
+        "metric": "ict_metric_001"
+      },
+      "layer": "IndustrialCaseText",
+      "majority": {
+        "action": "refuse",
+        "dimensions": [],
+        "metric": ""
+      }
+    },
+    {
+      "case_id": "pub_040",
+      "gold": {
+        "action": "answer",
+        "dimensions": [
+          "track"
+        ],
+        "metric": "playlist_track_count"
+      },
+      "layer": "Chinook",
+      "majority": {
+        "action": "answer",
+        "dimensions": [
+          "playlist",
+          "track"
+        ],
+        "metric": "playlist_track_count"
+      }
+    }
+  ],
+  "majority_vs_gold": {
+    "action_agreement": 0.975,
+    "action_unanimous_rate": 0.9833333333333333,
+    "dimension_exact_given_majority_answer": 0.989247311827957,
+    "metric_agreement_given_majority_answer": 1.0,
+    "n_majority_answer": 93
+  },
+  "n": 120,
+  "pairwise_action": {
+    "A-B": {
+      "kappa": 0.9509202453987728,
+      "raw_agreement": 0.9833333333333333
+    },
+    "A-C": {
+      "kappa": 0.9509202453987728,
+      "raw_agreement": 0.9833333333333333
+    },
+    "B-C": {
+      "kappa": 1.0,
+      "raw_agreement": 1.0
+    }
+  },
+  "per_layer_action_agreement": {
+    "Chinook": 1.0,
+    "GovTwin": 1.0,
+    "IndustrialCaseText": 0.9,
+    "IowaLiquor": 1.0,
+    "MultiGov": 1.0
+  },
+  "provenance": {
+    "annotator_ids": [
+      "A",
+      "B",
+      "C"
+    ],
+    "gold_joined_after_annotation_load": true,
+    "recomputed_by": "deterministic release script",
+    "source": "three frozen anonymized practitioner sheets"
+  },
+  "uncertain_flags": {
+    "A": 7,
+    "B": 3,
+    "C": 4
+  }
+}

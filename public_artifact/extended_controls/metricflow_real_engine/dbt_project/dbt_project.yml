@@ -1,0 +1,7 @@
+name: mf_iowa
+version: "1.0.0"
+profile: mf_iowa
+model-paths: ["models"]
+models:
+  mf_iowa:
+    +materialized: table

@@ -1,0 +1,41 @@
+You are evaluating an NL2Metric baseline on the IowaLiquor-MetricCaliber (real public Iowa 2024 liquor sales data; governed metric layer) benchmark.
+
+Mode: llm_schema_rag
+
+Return ONLY a JSON object. It must use this schema:
+{"case_id":"...", "action":"answer|refuse", "metric_id":"...", "dimensions":["..."], "time_window":"...", "reason":"brief"}
+
+Rules:
+- Use only provided metric ids and dimension ids.
+- If action is refuse, metric_id="" and dimensions=[].
+- Do not output SQL.
+- Do not invent unsupported metrics.
+- PII/sensitive-identifier requests, SQL/DDL requests, and off-domain requests should be refused.
+- For hierarchy, output only the finest requested grain.
+
+Case:
+```json
+{
+  "case_id": "iowa_001",
+  "nl_query": "What were total liquor sales dollars?",
+  "context": {
+    "retrieved_metrics": [
+      "id=sales_dollars; name=Sales Dollars; aliases=sales, revenue, total sales, sales amount; formula=SUM(sales_dollars); allowed_dimensions=ordered_month,ordered_quarter,county_name,store_city,store_name,category_name,vendor_name,item_desc; desc=Total public liquor sales dollars.",
+      "id=liters_sold; name=Liters Sold; aliases=liters, volume liters, sales liters; formula=SUM(sales_liters); allowed_dimensions=ordered_month,ordered_quarter,county_name,store_city,store_name,category_name,vendor_name,item_desc; desc=Total liters sold.",
+      "id=store_count; name=Store Count; aliases=stores, retailers, store coverage; formula=COUNT(DISTINCT store_no); allowed_dimensions=ordered_month,ordered_quarter,county_name,store_city,category_name,vendor_name; desc=Number of distinct licensed stores in the selected slice.",
+      "id=bottles_sold; name=Bottles Sold; aliases=bottles, units sold, volume in bottles; formula=SUM(sales_bottles); allowed_dimensions=ordered_month,ordered_quarter,county_name,store_city,store_name,category_name,vendor_name,item_desc; desc=Total bottles sold.",
+      "id=average_invoice_value; name=Average Invoice Value; aliases=aov, average order value, sales per invoice; formula=SUM(sales_dollars) / NULLIF(COUNT(DISTINCT invoice_id), 0); allowed_dimensions=ordered_month,ordered_quarter,county_name,store_city,store_name,category_name,vendor_name; desc=Sales dollars divided by distinct invoice count."
+    ],
+    "retrieved_dimensions": [
+      "id=ordered_month; name=Order Month; aliases=month, monthly, ordered month; parent=ordered_quarter; grain_rank=2",
+      "id=ordered_quarter; name=Order Quarter; aliases=quarter, quarterly, ordered quarter; parent=; grain_rank=1",
+      "id=county_name; name=County; aliases=county; parent=; grain_rank=1",
+      "id=store_city; name=Store City; aliases=city, store city; parent=county_name; grain_rank=2",
+      "id=store_name; name=Store Name; aliases=store, retailer, store name; parent=store_city; grain_rank=3",
+      "id=category_name; name=Category; aliases=category, liquor category; parent=; grain_rank=1",
+      "id=vendor_name; name=Vendor; aliases=vendor, supplier; parent=; grain_rank=1",
+      "id=item_desc; name=Item Description; aliases=item, product, sku, item description; parent=category_name; grain_rank=2"
+    ]
+  }
+}
+```

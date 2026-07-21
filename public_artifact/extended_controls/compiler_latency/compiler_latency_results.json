@@ -1,0 +1,57 @@
+{
+  "environment": {
+    "platform": "macOS-15.0-arm64-arm-64bit",
+    "processor": "arm",
+    "python": "3.9.6"
+  },
+  "layers": {
+    "govtwin": {
+      "latency_us_max": 151.875,
+      "latency_us_median": 32.25,
+      "latency_us_p95": 40.292,
+      "latency_us_p99": 44.625,
+      "n_cases": 159,
+      "n_timed_calls": 3180,
+      "replay_mismatches": [],
+      "throughput_calls_per_second": 30316.307193119697
+    },
+    "ict": {
+      "latency_us_max": 42.125,
+      "latency_us_median": 22.042,
+      "latency_us_p95": 27.875,
+      "latency_us_p99": 30.458,
+      "n_cases": 157,
+      "n_timed_calls": 3140,
+      "replay_mismatches": [],
+      "throughput_calls_per_second": 43851.91599006349
+    },
+    "iowa": {
+      "latency_us_max": 43.792,
+      "latency_us_median": 23.25,
+      "latency_us_p95": 33.084,
+      "latency_us_p99": 36.583,
+      "n_cases": 32,
+      "n_timed_calls": 640,
+      "replay_mismatches": [],
+      "throughput_calls_per_second": 40445.42802669727
+    },
+    "multigov": {
+      "latency_us_max": 156.792,
+      "latency_us_median": 58.25,
+      "latency_us_p95": 69.167,
+      "latency_us_p99": 73.542,
+      "n_cases": 510,
+      "n_timed_calls": 10200,
+      "replay_mismatches": [],
+      "throughput_calls_per_second": 17778.91785960068
+    }
+  },
+  "pooled": {
+    "latency_us_median": 45.292,
+    "latency_us_p95": 68.292,
+    "latency_us_p99": 72.417,
+    "n_timed_calls": 17160
+  },
+  "repeats": 20,
+  "scope": "ContractCompiler finalization after candidate generation; no online LLM"
+}

@@ -1,0 +1,12 @@
+{"dimension_id": "country", "name": "Country", "aliases": ["billing country", "customer country", "国家"], "grain_rank": 1, "parent": ""}
+{"dimension_id": "city", "name": "City", "aliases": ["billing city", "城市"], "grain_rank": 2, "parent": "country"}
+{"dimension_id": "customer", "name": "Customer", "aliases": ["client", "客户"], "grain_rank": 3, "parent": "city", "sensitive": false}
+{"dimension_id": "support_rep", "name": "Support Rep", "aliases": ["employee", "sales rep", "销售"], "grain_rank": 2, "parent": ""}
+{"dimension_id": "year", "name": "Year", "aliases": ["annual", "by year", "年份"], "grain_rank": 1, "parent": ""}
+{"dimension_id": "month", "name": "Month", "aliases": ["monthly", "by month", "月份"], "grain_rank": 2, "parent": "year"}
+{"dimension_id": "artist", "name": "Artist", "aliases": ["singer", "band", "艺人"], "grain_rank": 1, "parent": ""}
+{"dimension_id": "album", "name": "Album", "aliases": ["专辑"], "grain_rank": 2, "parent": "artist"}
+{"dimension_id": "track", "name": "Track", "aliases": ["song", "曲目"], "grain_rank": 3, "parent": "album"}
+{"dimension_id": "genre", "name": "Genre", "aliases": ["music genre", "类别", "流派"], "grain_rank": 1, "parent": ""}
+{"dimension_id": "media_type", "name": "Media Type", "aliases": ["format", "媒体类型"], "grain_rank": 1, "parent": ""}
+{"dimension_id": "playlist", "name": "Playlist", "aliases": ["歌单"], "grain_rank": 1, "parent": ""}

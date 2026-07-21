@@ -1,0 +1,19 @@
+{
+ "version": "v3",
+ "seed": 20260712,
+ "n_items": 60,
+ "correct_position_balance": {
+  "A": 15,
+  "D": 15,
+  "C": 15,
+  "B": 15
+ },
+ "distractor_pool": "same-domain semantic_node_id from physical_coverage.jsonl (fixed v1 field-name bug)",
+ "catalogs_shipped": [
+  "metric_catalog.jsonl",
+  "physical_coverage.jsonl",
+  "governance_edges.jsonl"
+ ],
+ "gold_excluded": "metric_coverage_bindings.jsonl NOT in pack",
+ "sheet_sha256": "a6e21e09859df844c42bd6ea09a26d87f0930f086191f502cb13c2f585ae26cb"
+}

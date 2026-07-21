@@ -1,0 +1,157 @@
+{
+  "dbt_semantic_interfaces_version": "0.9.0",
+  "models": {
+    "PydanticConstantPropertyInput": {
+      "base_property": "<class 'str'>",
+      "conversion_property": "<class 'str'>"
+    },
+    "PydanticConversionTypeParams": {
+      "base_measure": "<class 'dbt_semantic_interfaces.implementations.metric.PydanticMetricInputMeasure'>",
+      "calculation": "<enum 'ConversionCalculationType'>",
+      "constant_properties": "typing.List[dbt_semantic_interfaces.implementations.metric.PydanticConstantPropertyInput]",
+      "conversion_measure": "<class 'dbt_semantic_interfaces.implementations.metric.PydanticMetricInputMeasure'>",
+      "entity": "<class 'str'>",
+      "window": "<class 'dbt_semantic_interfaces.implementations.metric.PydanticMetricTimeWindow'>"
+    },
+    "PydanticCumulativeTypeParams": {
+      "grain_to_date": "<class 'str'>",
+      "period_agg": "<enum 'PeriodAggregation'>",
+      "window": "<class 'dbt_semantic_interfaces.implementations.metric.PydanticMetricTimeWindow'>"
+    },
+    "PydanticDimension": {
+      "config": "<class 'dbt_semantic_interfaces.implementations.element_config.PydanticSemanticLayerElementConfig'>",
+      "description": "<class 'str'>",
+      "expr": "<class 'str'>",
+      "is_partition": "<class 'bool'>",
+      "label": "<class 'str'>",
+      "metadata": "<class 'dbt_semantic_interfaces.implementations.metadata.PydanticMetadata'>",
+      "name": "<class 'str'>",
+      "type": "<enum 'DimensionType'>",
+      "type_params": "<class 'dbt_semantic_interfaces.implementations.elements.dimension.PydanticDimensionTypeParams'>"
+    },
+    "PydanticDimensionTypeParams": {
+      "time_granularity": "<enum 'TimeGranularity'>",
+      "validity_params": "<class 'dbt_semantic_interfaces.implementations.elements.dimension.PydanticDimensionValidityParams'>"
+    },
+    "PydanticDimensionValidityParams": {
+      "is_end": "<class 'bool'>",
+      "is_start": "<class 'bool'>"
+    },
+    "PydanticEntity": {
+      "config": "<class 'dbt_semantic_interfaces.implementations.element_config.PydanticSemanticLayerElementConfig'>",
+      "description": "<class 'str'>",
+      "expr": "<class 'str'>",
+      "label": "<class 'str'>",
+      "metadata": "<class 'dbt_semantic_interfaces.implementations.metadata.PydanticMetadata'>",
+      "name": "<class 'str'>",
+      "role": "<class 'str'>",
+      "type": "<enum 'EntityType'>"
+    },
+    "PydanticFileSlice": {
+      "content": "<class 'str'>",
+      "end_line_number": "<class 'int'>",
+      "filename": "<class 'str'>",
+      "start_line_number": "<class 'int'>"
+    },
+    "PydanticMeasure": {
+      "agg": "<enum 'AggregationType'>",
+      "agg_params": "<class 'dbt_semantic_interfaces.implementations.elements.measure.PydanticMeasureAggregationParameters'>",
+      "agg_time_dimension": "<class 'str'>",
+      "config": "<class 'dbt_semantic_interfaces.implementations.element_config.PydanticSemanticLayerElementConfig'>",
+      "create_metric": "<class 'bool'>",
+      "description": "<class 'str'>",
+      "expr": "<class 'str'>",
+      "label": "<class 'str'>",
+      "metadata": "<class 'dbt_semantic_interfaces.implementations.metadata.PydanticMetadata'>",
+      "name": "<class 'str'>",
+      "non_additive_dimension": "<class 'dbt_semantic_interfaces.implementations.elements.measure.PydanticNonAdditiveDimensionParameters'>"
+    },
+    "PydanticMeasureAggregationParameters": {
+      "percentile": "<class 'float'>",
+      "use_approximate_percentile": "<class 'bool'>",
+      "use_discrete_percentile": "<class 'bool'>"
+    },
+    "PydanticMetadata": {
+      "file_slice": "<class 'dbt_semantic_interfaces.implementations.metadata.PydanticFileSlice'>",
+      "repo_file_path": "<class 'str'>"
+    },
+    "PydanticMetric": {
+      "config": "<class 'dbt_semantic_interfaces.implementations.element_config.PydanticSemanticLayerElementConfig'>",
+      "description": "<class 'str'>",
+      "filter": "<class 'dbt_semantic_interfaces.implementations.filters.where_filter.PydanticWhereFilterIntersection'>",
+      "label": "<class 'str'>",
+      "metadata": "<class 'dbt_semantic_interfaces.implementations.metadata.PydanticMetadata'>",
+      "name": "<class 'str'>",
+      "time_granularity": "<class 'str'>",
+      "type": "<enum 'MetricType'>",
+      "type_params": "<class 'dbt_semantic_interfaces.implementations.metric.PydanticMetricTypeParams'>"
+    },
+    "PydanticMetricInput": {
+      "alias": "<class 'str'>",
+      "filter": "<class 'dbt_semantic_interfaces.implementations.filters.where_filter.PydanticWhereFilterIntersection'>",
+      "name": "<class 'str'>",
+      "offset_to_grain": "<class 'str'>",
+      "offset_window": "<class 'dbt_semantic_interfaces.implementations.metric.PydanticMetricTimeWindow'>"
+    },
+    "PydanticMetricInputMeasure": {
+      "alias": "<class 'str'>",
+      "fill_nulls_with": "<class 'int'>",
+      "filter": "<class 'dbt_semantic_interfaces.implementations.filters.where_filter.PydanticWhereFilterIntersection'>",
+      "join_to_timespine": "<class 'bool'>",
+      "name": "<class 'str'>"
+    },
+    "PydanticMetricTimeWindow": {
+      "count": "<class 'int'>",
+      "granularity": "<class 'str'>"
+    },
+    "PydanticMetricTypeParams": {
+      "conversion_type_params": "<class 'dbt_semantic_interfaces.implementations.metric.PydanticConversionTypeParams'>",
+      "cumulative_type_params": "<class 'dbt_semantic_interfaces.implementations.metric.PydanticCumulativeTypeParams'>",
+      "denominator": "<class 'dbt_semantic_interfaces.implementations.metric.PydanticMetricInput'>",
+      "expr": "<class 'str'>",
+      "grain_to_date": "<enum 'TimeGranularity'>",
+      "input_measures": "typing.List[dbt_semantic_interfaces.implementations.metric.PydanticMetricInputMeasure]",
+      "measure": "<class 'dbt_semantic_interfaces.implementations.metric.PydanticMetricInputMeasure'>",
+      "metrics": "typing.List[dbt_semantic_interfaces.implementations.metric.PydanticMetricInput]",
+      "numerator": "<class 'dbt_semantic_interfaces.implementations.metric.PydanticMetricInput'>",
+      "window": "<class 'dbt_semantic_interfaces.implementations.metric.PydanticMetricTimeWindow'>"
+    },
+    "PydanticNodeRelation": {
+      "alias": "<class 'str'>",
+      "database": "<class 'str'>",
+      "relation_name": "<class 'str'>",
+      "schema_name": "<class 'str'>"
+    },
+    "PydanticNonAdditiveDimensionParameters": {
+      "name": "<class 'str'>",
+      "window_choice": "<enum 'AggregationType'>",
+      "window_groupings": "typing.List[str]"
+    },
+    "PydanticSemanticLayerElementConfig": {
+      "meta": "typing.Dict[str, typing.Any]"
+    },
+    "PydanticSemanticModel": {
+      "config": "<class 'dbt_semantic_interfaces.implementations.element_config.PydanticSemanticLayerElementConfig'>",
+      "defaults": "<class 'dbt_semantic_interfaces.implementations.semantic_model.PydanticSemanticModelDefaults'>",
+      "description": "<class 'str'>",
+      "dimensions": "typing.Sequence[dbt_semantic_interfaces.implementations.elements.dimension.PydanticDimension]",
+      "entities": "typing.Sequence[dbt_semantic_interfaces.implementations.elements.entity.PydanticEntity]",
+      "label": "<class 'str'>",
+      "measures": "typing.Sequence[dbt_semantic_interfaces.implementations.elements.measure.PydanticMeasure]",
+      "metadata": "<class 'dbt_semantic_interfaces.implementations.metadata.PydanticMetadata'>",
+      "name": "<class 'str'>",
+      "node_relation": "<class 'dbt_semantic_interfaces.implementations.node_relation.PydanticNodeRelation'>",
+      "primary_entity": "<class 'str'>"
+    },
+    "PydanticSemanticModelDefaults": {
+      "agg_time_dimension": "<class 'str'>"
+    },
+    "PydanticWhereFilter": {
+      "where_sql_template": "<class 'str'>"
+    },
+    "PydanticWhereFilterIntersection": {
+      "where_filters": "typing.List[dbt_semantic_interfaces.implementations.filters.where_filter.PydanticWhereFilter]"
+    }
+  },
+  "note": "Exhaustive recursive field inventory of the installed spec. Search it for any field capable of hosting: allowed/denied dimensions per metric, categorical dimension hierarchy, disclosure/aggregate-only policy, physical coverage window, as-of binding, refusal reason codes."
+}

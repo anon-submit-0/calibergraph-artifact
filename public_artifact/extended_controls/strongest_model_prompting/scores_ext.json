@@ -1,0 +1,217 @@
+{
+  "_meta": {
+    "max_tokens": 4000,
+    "protocol": "protocol_ext.md",
+    "subsample_sha256": "010e0b168b0bc10536b647638deeedee400b6655f82ea1d0c16abb1585842097",
+    "temperature": 0,
+    "ts_utc": "2026-07-12T07:24:26Z"
+  },
+  "multigov": {
+    "claude-opus-4-6": {
+      "by_query_family": {
+        "answerable_direct": {
+          "joint_accuracy": 0.9555555555555556,
+          "joint_ok": 43,
+          "n": 45
+        },
+        "denominator_caliber": {
+          "joint_accuracy": 1.0,
+          "joint_ok": 11,
+          "n": 11
+        },
+        "finest_grain_trap": {
+          "joint_accuracy": 0.984375,
+          "joint_ok": 63,
+          "n": 64
+        },
+        "policy_refusal": {
+          "joint_accuracy": 1.0,
+          "joint_ok": 72,
+          "n": 72
+        },
+        "temporal_anchor": {
+          "joint_accuracy": 1.0,
+          "joint_ok": 8,
+          "n": 8
+        }
+      },
+      "conformance": {
+        "dimension_not_allowed": 0,
+        "dimension_not_allowed_rate": 0.0,
+        "dimension_not_in_catalog": 0,
+        "dimension_not_in_catalog_rate": 0.0,
+        "finest_grain_violation": 0,
+        "finest_grain_violation_rate": 0.0,
+        "metric_not_in_catalog": 0,
+        "metric_not_in_catalog_rate": 0.0,
+        "n_answer_predictions": 125
+      },
+      "counts": {
+        "dim_ok": 197,
+        "joint_ok": 197,
+        "metric_ok": 197,
+        "refusal_fn": 0,
+        "refusal_fp": 3,
+        "refusal_tp": 72
+      },
+      "dimension_exact_accuracy": 0.985,
+      "false_refusal_share_of_errors": 1.0,
+      "false_refusals_by_family": {
+        "answerable_direct": 2,
+        "finest_grain_trap": 1
+      },
+      "joint_metric_dimension_accuracy": 0.985,
+      "joint_wilson95": [
+        0.9568342712073097,
+        0.9948857622067417
+      ],
+      "latency_ms_mean": 9099.22,
+      "metric_accuracy": 0.985,
+      "n": 200,
+      "n_errors_vs_calibergraph": 3,
+      "n_false_refusal_errors": 3,
+      "n_total_errors": 3,
+      "parse_status_counts": {
+        "ok": 200
+      },
+      "refusal_precision": 0.96,
+      "refusal_recall": 1.0,
+      "total_completion_tokens": 16911,
+      "total_prompt_tokens": 28203124
+    },
+    "deepseek-3.2_reference_same_cases": {
+      "by_query_family": {
+        "answerable_direct": {
+          "joint_accuracy": 0.9333333333333333,
+          "joint_ok": 42,
+          "n": 45
+        },
+        "denominator_caliber": {
+          "joint_accuracy": 1.0,
+          "joint_ok": 11,
+          "n": 11
+        },
+        "finest_grain_trap": {
+          "joint_accuracy": 0.625,
+          "joint_ok": 40,
+          "n": 64
+        },
+        "policy_refusal": {
+          "joint_accuracy": 1.0,
+          "joint_ok": 72,
+          "n": 72
+        },
+        "temporal_anchor": {
+          "joint_accuracy": 1.0,
+          "joint_ok": 8,
+          "n": 8
+        }
+      },
+      "conformance": {
+        "dimension_not_allowed": 3,
+        "dimension_not_allowed_rate": 0.02857142857142857,
+        "dimension_not_in_catalog": 0,
+        "dimension_not_in_catalog_rate": 0.0,
+        "finest_grain_violation": 3,
+        "finest_grain_violation_rate": 0.02857142857142857,
+        "metric_not_in_catalog": 0,
+        "metric_not_in_catalog_rate": 0.0,
+        "n_answer_predictions": 105
+      },
+      "counts": {
+        "dim_ok": 173,
+        "joint_ok": 173,
+        "metric_ok": 177,
+        "refusal_fn": 0,
+        "refusal_fp": 23,
+        "refusal_tp": 72
+      },
+      "dimension_exact_accuracy": 0.865,
+      "false_refusal_share_of_errors": 0.8518518518518519,
+      "false_refusals_by_family": {
+        "answerable_direct": 2,
+        "finest_grain_trap": 21
+      },
+      "joint_metric_dimension_accuracy": 0.865,
+      "joint_wilson95": [
+        0.8107086162924745,
+        0.9055342954521209
+      ],
+      "metric_accuracy": 0.885,
+      "n": 200,
+      "n_false_refusal_errors": 23,
+      "n_total_errors": 27,
+      "refusal_precision": 0.7578947368421053,
+      "refusal_recall": 1.0
+    },
+    "gpt-5.5": {
+      "by_query_family": {
+        "answerable_direct": {
+          "joint_accuracy": 1.0,
+          "joint_ok": 45,
+          "n": 45
+        },
+        "denominator_caliber": {
+          "joint_accuracy": 1.0,
+          "joint_ok": 11,
+          "n": 11
+        },
+        "finest_grain_trap": {
+          "joint_accuracy": 1.0,
+          "joint_ok": 64,
+          "n": 64
+        },
+        "policy_refusal": {
+          "joint_accuracy": 1.0,
+          "joint_ok": 72,
+          "n": 72
+        },
+        "temporal_anchor": {
+          "joint_accuracy": 1.0,
+          "joint_ok": 8,
+          "n": 8
+        }
+      },
+      "conformance": {
+        "dimension_not_allowed": 0,
+        "dimension_not_allowed_rate": 0.0,
+        "dimension_not_in_catalog": 0,
+        "dimension_not_in_catalog_rate": 0.0,
+        "finest_grain_violation": 0,
+        "finest_grain_violation_rate": 0.0,
+        "metric_not_in_catalog": 0,
+        "metric_not_in_catalog_rate": 0.0,
+        "n_answer_predictions": 128
+      },
+      "counts": {
+        "dim_ok": 200,
+        "joint_ok": 200,
+        "metric_ok": 200,
+        "refusal_fn": 0,
+        "refusal_fp": 0,
+        "refusal_tp": 72
+      },
+      "dimension_exact_accuracy": 1.0,
+      "false_refusal_share_of_errors": null,
+      "false_refusals_by_family": {},
+      "joint_metric_dimension_accuracy": 1.0,
+      "joint_wilson95": [
+        0.9811546736227335,
+        1.0
+      ],
+      "latency_ms_mean": 7238.805,
+      "metric_accuracy": 1.0,
+      "n": 200,
+      "n_errors_vs_calibergraph": 0,
+      "n_false_refusal_errors": 0,
+      "n_total_errors": 0,
+      "parse_status_counts": {
+        "ok": 200
+      },
+      "refusal_precision": 1.0,
+      "refusal_recall": 1.0,
+      "total_completion_tokens": 29599,
+      "total_prompt_tokens": 23072558
+    }
+  }
+}

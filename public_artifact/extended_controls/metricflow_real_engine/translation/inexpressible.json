@@ -1,0 +1,145 @@
+{
+  "n_items": 15,
+  "items": [
+    {
+      "family": "granularity_hierarchy",
+      "catalog_object": "dimension:store_city",
+      "dropped_semantics": {
+        "parent": "county_name",
+        "grain_rank": 2
+      },
+      "reason": "MetricFlow has no categorical dimension hierarchy / rolls-up-to / finest-grain-resolution construct; granularity exists for time dimensions only."
+    },
+    {
+      "family": "granularity_hierarchy",
+      "catalog_object": "dimension:store_name",
+      "dropped_semantics": {
+        "parent": "store_city",
+        "grain_rank": 3
+      },
+      "reason": "MetricFlow has no categorical dimension hierarchy / rolls-up-to / finest-grain-resolution construct; granularity exists for time dimensions only."
+    },
+    {
+      "family": "granularity_hierarchy",
+      "catalog_object": "dimension:item_desc",
+      "dropped_semantics": {
+        "parent": "category_name",
+        "grain_rank": 2
+      },
+      "reason": "MetricFlow has no categorical dimension hierarchy / rolls-up-to / finest-grain-resolution construct; granularity exists for time dimensions only."
+    },
+    {
+      "family": "metric_dimension_reachability",
+      "catalog_object": "metric:invoice_count",
+      "dropped_semantics": {
+        "denied_dimensions": [
+          "item_desc"
+        ]
+      },
+      "reason": "Within a semantic model every dimension is queryable with every measure; dbt-semantic-interfaces 0.9.0 has no per-metric allowed/denied dimension field (see spec_field_inventory.json)."
+    },
+    {
+      "family": "metric_dimension_reachability",
+      "catalog_object": "metric:store_count",
+      "dropped_semantics": {
+        "denied_dimensions": [
+          "item_desc",
+          "store_name"
+        ]
+      },
+      "reason": "Within a semantic model every dimension is queryable with every measure; dbt-semantic-interfaces 0.9.0 has no per-metric allowed/denied dimension field (see spec_field_inventory.json)."
+    },
+    {
+      "family": "metric_dimension_reachability",
+      "catalog_object": "metric:item_count",
+      "dropped_semantics": {
+        "denied_dimensions": [
+          "item_desc",
+          "store_name"
+        ]
+      },
+      "reason": "Within a semantic model every dimension is queryable with every measure; dbt-semantic-interfaces 0.9.0 has no per-metric allowed/denied dimension field (see spec_field_inventory.json)."
+    },
+    {
+      "family": "formula_guard",
+      "catalog_object": "metric:average_bottle_price",
+      "dropped_semantics": {
+        "formula": "SUM(sales_dollars) / NULLIF(SUM(sales_bottles), 0)"
+      },
+      "reason": "Catalog formula guards zero denominators with NULLIF; MetricFlow ratio metrics emit plain division (engine-dependent divide-by-zero behavior)."
+    },
+    {
+      "family": "formula_guard",
+      "catalog_object": "metric:average_invoice_value",
+      "dropped_semantics": {
+        "formula": "SUM(sales_dollars) / NULLIF(COUNT(DISTINCT invoice_id), 0)"
+      },
+      "reason": "Catalog formula guards zero denominators with NULLIF; MetricFlow ratio metrics emit plain division (engine-dependent divide-by-zero behavior)."
+    },
+    {
+      "family": "metric_dimension_reachability",
+      "catalog_object": "metric:average_invoice_value",
+      "dropped_semantics": {
+        "denied_dimensions": [
+          "item_desc"
+        ]
+      },
+      "reason": "Within a semantic model every dimension is queryable with every measure; dbt-semantic-interfaces 0.9.0 has no per-metric allowed/denied dimension field (see spec_field_inventory.json)."
+    },
+    {
+      "family": "unsupported_metric_policy",
+      "catalog_object": "metric:profit_margin",
+      "dropped_semantics": {
+        "answerable": false,
+        "description": "Unsupported because the public dataset has no cost or profit field.",
+        "aliases": [
+          "margin",
+          "gross margin",
+          "profit rate"
+        ],
+        "policy_edge": "governed_by -> unsupported_metric_policy"
+      },
+      "reason": "MetricFlow has no 'declared-but-unanswerable / refuse-with-reason' metric construct. Only encoding is omission from the YAML: the engine then returns a generic 'unknown metric' parse error indistinguishable from a typo, with no policy provenance."
+    },
+    {
+      "family": "disclosure_policy",
+      "catalog_object": "column:invoice_id",
+      "dropped_semantics": {
+        "policy": "aggregate_only_policy (raw row-level disclosure denied)"
+      },
+      "reason": "No disclosure/aggregate-only policy construct. Encodable only by OMITTING the column from the semantic model (enforcement-by-absence): no policy object, no audit trail, generic 'not found' error; and omission also removes legitimate aggregate uses of the column (e.g. invoice_id as a declarable entity for joins)."
+    },
+    {
+      "family": "disclosure_policy",
+      "catalog_object": "column:store_address",
+      "dropped_semantics": {
+        "policy": "aggregate_only_policy (raw row-level disclosure denied)"
+      },
+      "reason": "No disclosure/aggregate-only policy construct. Encodable only by OMITTING the column from the semantic model (enforcement-by-absence): no policy object, no audit trail, generic 'not found' error; and omission also removes legitimate aggregate uses of the column (e.g. invoice_id as a declarable entity for joins)."
+    },
+    {
+      "family": "physical_coverage",
+      "catalog_object": "dataset:iowa_liquor_2024_sample (2024-only, 5000-row public snapshot)",
+      "dropped_semantics": {
+        "coverage_window": "2024 calendar year, sampled rows"
+      },
+      "reason": "No coverage/completeness declaration in the spec; out-of-coverage time windows return an empty result with exit code 0 instead of a coverage-based refusal (probe P9)."
+    },
+    {
+      "family": "as_of_binding",
+      "catalog_object": "query-time as-of / valid-time binding",
+      "dropped_semantics": {
+        "as_of": "bitemporal as-of anchoring of metric definitions"
+      },
+      "reason": "mf query exposes only --start-time/--end-time filters on metric_time; no as-of flag, no bitemporal construct (probe P8)."
+    },
+    {
+      "family": "structured_refusal",
+      "catalog_object": "refusal contract (machine-readable reason codes)",
+      "dropped_semantics": {
+        "refusal_object": "action=refuse with policy reason + provenance"
+      },
+      "reason": "All rejections surface as CLI error text from query parsing; there is no structured refusal object and no reason-code taxonomy."
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "models": {
+    "gpt-provider/gpt-5.5": {
+      "accept": 30,
+      "accept_rate": 1.0,
+      "parsed_cases": 30,
+      "question": 0,
+      "reject": 0
+    }
+  },
+  "n_cases": 30
+}

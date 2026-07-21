@@ -1,0 +1,6 @@
+{
+  "channel": "moonshot",
+  "model": "kimi-k2.6",
+  "mode": "llm_graph_rag",
+  "stdout": "```json\n[\n  {\"case_id\":\"ict_case_0020\",\"action\":\"refuse\",\"metric_id\":\"\",\"dimensions\":[],\"reason\":\"Unrecognized filter dimension 'Product Family D' not in candidate dimensions.\"},\n  {\"case_id\":\"ict_case_0021\",\"action\":\"answer\",\"metric_id\":\"ict_metric_011\",\"dimensions\":[\"segment_l2\"],\"reason\":\"Mapped return rate by segment level 2.\"}\n]\n```"
+}

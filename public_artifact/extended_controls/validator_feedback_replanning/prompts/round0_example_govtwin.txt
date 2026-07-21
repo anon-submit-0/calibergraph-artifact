@@ -1,0 +1,38 @@
+You are evaluating an NL2Metric baseline on the GovTwin-MetricCaliber (public anonymized semantic twin of an enterprise governance graph; base split) benchmark.
+
+Mode: llm_schema_rag
+
+Return ONLY a JSON object. It must use this schema:
+{"case_id":"...", "action":"answer|refuse", "metric_id":"...", "dimensions":["..."], "time_window":"...", "reason":"brief"}
+
+Rules:
+- Use only provided metric ids and dimension ids.
+- If action is refuse, metric_id="" and dimensions=[].
+- Do not output SQL.
+- Do not invent unsupported metrics.
+- PII/sensitive-identifier requests, SQL/DDL requests, and off-domain requests should be refused.
+- For hierarchy, output only the finest requested grain.
+
+Case:
+```json
+{
+  "case_id": "govtwin_0001",
+  "nl_query": "last month adjustment-amount-a",
+  "context": {
+    "retrieved_metrics": [
+      "id=adjustment_amount_a; name=Adjustment Amount A; aliases=adjustment amount a, adjustment-amount-a, amount metric 15; formula=SUM(amount_value); metric_type=amount; allowed_dimensions=issue_type,market_region,segment_l1,segment_l2,segment_l3; desc=Synthetic public metric preserving formula role, comparison flag, and governed dimensionality.",
+      "id=financial_amount_a; name=Financial Amount A; aliases=financial amount a, financial-amount-a, amount metric 06; formula=SUM(amount_value); metric_type=amount; allowed_dimensions=issue_type,market_region,segment_l1,segment_l2,segment_l3; desc=Synthetic public metric preserving formula role, comparison flag, and governed dimensionality.",
+      "id=financial_amount_b; name=Financial Amount B; aliases=financial amount b, financial-amount-b, amount metric 08; formula=SUM(amount_value); metric_type=amount; allowed_dimensions=issue_type,market_region,segment_l1,segment_l2,segment_l3; desc=Synthetic public metric preserving formula role, comparison flag, and governed dimensionality.",
+      "id=event_count_a; name=Event Count A; aliases=event count a, event-count-a, count metric 02; formula=COUNT(event_id); metric_type=count; allowed_dimensions=issue_type,market_region,segment_l1,segment_l2,segment_l3; desc=Synthetic public metric preserving formula role, comparison flag, and governed dimensionality.",
+      "id=fulfillment_count_a; name=Fulfillment Count A; aliases=fulfillment count a, fulfillment-count-a, count metric 12; formula=COUNT(event_id); metric_type=count; allowed_dimensions=issue_type,market_region,segment_l1,segment_l2,segment_l3; desc=Synthetic public metric preserving formula role, comparison flag, and governed dimensionality."
+    ],
+    "retrieved_dimensions": [
+      "id=issue_type; name=Issue Type; aliases=issue type, signal type, 问题类型; parent=; grain_rank=1",
+      "id=market_region; name=Market Region; aliases=market region, operating region, 市场区域; parent=; grain_rank=1",
+      "id=segment_l1; name=Portfolio Level 1; aliases=segment level 1, level one portfolio, 一级组合; parent=; grain_rank=1",
+      "id=segment_l2; name=Portfolio Level 2; aliases=segment level 2, level two portfolio, 二级组合; parent=segment_l1; grain_rank=2",
+      "id=segment_l3; name=Portfolio Level 3; aliases=segment level 3, level three portfolio, 三级组合; parent=segment_l2; grain_rank=3"
+    ]
+  }
+}
+```

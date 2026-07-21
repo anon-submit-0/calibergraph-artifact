@@ -1,0 +1,56 @@
+COMMAND: mf query --metrics sales_dollars --limit 20 --csv <TEMP_CSV> --group-by sale_line__store_address
+EXIT_CODE: 1
+WALL_SECONDS: 2.7
+DATA_ROWS: 0
+GOVERNANCE_SAYS: store_address is aggregate_only (disclosure denied); encoded only by omission
+PRE_REGISTERED_PREDICTION: resolver error (blocking-by-absence, generic message)
+----- STDOUT -----
+
+
+⠋ Initiating query…
+
+⠙ Initiating query…
+ERROR: Got error(s) during query resolution.
+
+Error #1:
+  Message:
+
+    The given input does not match any of the available group-by-items for
+    SimpleMetric('sales_dollars'). Common issues are:
+
+      * Incorrect names.
+      * No valid join paths exist from the measure to the group-by-item.
+        (fan-out join support is pending).
+      * There are multiple matching join paths.
+        (disambiguation support is pending).
+
+    Suggestions:
+      [
+        'sale_line__store_name',
+        'sale_line__item_desc',
+        'sale_line__store_city',
+        'sale_line__category_name',
+        'sale_line__vendor_name',
+        'sale_line__county_name',
+      ]
+
+  Query Input:
+
+    sale_line__store_address
+
+  Issue Location:
+
+    [Resolve Query(['sales_dollars'])]
+      -> [Resolve SimpleMetric('sales_dollars')]
+
+Log File:: <LOCAL_PATH>
+Artifact Path: <LOCAL_PATH>
+Artifact Modified Time: 2026-07-11T19:11:35.008950
+
+If you think you found a bug, please report it here:
+    https://github.com/dbt-labs/metricflow/issues
+
+
+
+----- STDERR -----
+

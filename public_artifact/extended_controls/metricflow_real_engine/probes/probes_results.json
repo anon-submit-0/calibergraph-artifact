@@ -1,0 +1,92 @@
+[
+  {
+    "probe": "P1",
+    "name": "governance_denied_combo_invoice_count_x_item_desc",
+    "command": "mf query --metrics invoice_count --limit 20 --csv <TEMP_CSV> --group-by sale_line__item_desc",
+    "governance_says": "DENIED (no measures_of edge invoice_count->item_desc; invoice grain does not nest in item)",
+    "pre_registered_prediction": "engine compiles and runs (no per-metric dimension policy)",
+    "exit_code": 0,
+    "data_rows": 20,
+    "engine_accepted": true
+  },
+  {
+    "probe": "P2",
+    "name": "governance_denied_combo_store_count_x_store_name",
+    "command": "mf query --metrics store_count --limit 20 --csv <TEMP_CSV> --group-by sale_line__store_name",
+    "governance_says": "DENIED (no measures_of edge store_count->store_name)",
+    "pre_registered_prediction": "engine compiles and runs",
+    "exit_code": 0,
+    "data_rows": 20,
+    "engine_accepted": true
+  },
+  {
+    "probe": "P3",
+    "name": "hierarchy_no_finest_grain_collapse",
+    "command": "mf query --metrics sales_dollars --limit 20 --csv <TEMP_CSV> --group-by sale_line__county_name,sale_line__store_city",
+    "governance_says": "county rolls up to city's parent; finest-grain resolution should collapse to store_city",
+    "pre_registered_prediction": "engine returns both columns, no collapse",
+    "exit_code": 0,
+    "data_rows": 20,
+    "engine_accepted": true
+  },
+  {
+    "probe": "P4",
+    "name": "undeclared_column_store_address",
+    "command": "mf query --metrics sales_dollars --limit 20 --csv <TEMP_CSV> --group-by sale_line__store_address",
+    "governance_says": "store_address is aggregate_only (disclosure denied); encoded only by omission",
+    "pre_registered_prediction": "resolver error (blocking-by-absence, generic message)",
+    "exit_code": 1,
+    "data_rows": 0,
+    "engine_accepted": false
+  },
+  {
+    "probe": "P5",
+    "name": "unknown_metric_profit_margin",
+    "command": "mf query --metrics profit_margin --limit 20 --csv <TEMP_CSV>",
+    "governance_says": "declared metric with answerable=false + unsupported_metric_policy",
+    "pre_registered_prediction": "generic unknown-metric error, no policy provenance",
+    "exit_code": 1,
+    "data_rows": 0,
+    "engine_accepted": false
+  },
+  {
+    "probe": "P6",
+    "name": "injection_string_as_metric_name",
+    "command": "mf query --metrics sales_dollars; DROP TABLE iowa_liquor_sales --limit 20 --csv <TEMP_CSV>",
+    "governance_says": "must refuse",
+    "pre_registered_prediction": "parser error (credit: no raw-SQL passthrough)",
+    "exit_code": 1,
+    "data_rows": 0,
+    "engine_accepted": false
+  },
+  {
+    "probe": "P7a",
+    "name": "native_time_granularity_month",
+    "command": "mf query --metrics sales_dollars --limit 20 --csv <TEMP_CSV> --group-by metric_time__month",
+    "governance_says": "ordered_month is an allowed dimension",
+    "pre_registered_prediction": "works (credit)",
+    "exit_code": 0,
+    "data_rows": 8,
+    "engine_accepted": true
+  },
+  {
+    "probe": "P7b",
+    "name": "native_time_granularity_quarter",
+    "command": "mf query --metrics sales_dollars --limit 20 --csv <TEMP_CSV> --group-by metric_time__quarter",
+    "governance_says": "ordered_quarter is an allowed dimension",
+    "pre_registered_prediction": "works (credit)",
+    "exit_code": 0,
+    "data_rows": 4,
+    "engine_accepted": true
+  },
+  {
+    "probe": "P9",
+    "name": "coverage_window_out_of_range_2023",
+    "command": "mf query --metrics sales_dollars --limit 20 --csv <TEMP_CSV> --group-by metric_time__month --start-time 2023-01-01 --end-time 2023-12-31",
+    "governance_says": "physical coverage is 2024-only; out-of-coverage must be refused/caveated",
+    "pre_registered_prediction": "exit 0 with EMPTY result (silent empty answer, no coverage refusal)",
+    "exit_code": 0,
+    "data_rows": 0,
+    "engine_accepted": true
+  }
+]

@@ -1,0 +1,83 @@
+version: 2
+
+models:
+  - name: orders
+    description: Public toy order table used only to run the dbt/MetricFlow validator control.
+    columns:
+      - name: order_id
+        tests:
+          - unique
+          - not_null
+      - name: order_date
+        tests:
+          - not_null
+      - name: channel
+        tests:
+          - not_null
+      - name: revenue
+        tests:
+          - not_null
+  - name: all_days
+    description: A minimal daily time spine required by MetricFlow validation.
+    time_spine:
+      standard_granularity_column: date_day
+    columns:
+      - name: date_day
+        granularity: day
+
+semantic_models:
+  - name: orders_semantic_model
+    description: MetricFlow-compatible metric semantics for a governed order metric.
+    model: ref('orders')
+    defaults:
+      agg_time_dimension: order_date
+    entities:
+      - name: order_id
+        type: primary
+      - name: customer_id
+        type: foreign
+    dimensions:
+      - name: order_date
+        type: time
+        type_params:
+          time_granularity: day
+      - name: channel
+        type: categorical
+      - name: country
+        type: categorical
+    measures:
+      - name: revenue
+        description: Revenue summed over orders.
+        expr: revenue
+        agg: sum
+      - name: order_count
+        description: Number of orders.
+        expr: order_id
+        agg: count_distinct
+      - name: units
+        description: Units sold.
+        expr: units
+        agg: sum
+
+metrics:
+  - name: total_revenue
+    description: Revenue summed over orders.
+    type: simple
+    label: Total revenue
+    type_params:
+      measure: revenue
+  - name: average_order_value
+    description: Revenue divided by order count.
+    type: derived
+    label: Average order value
+    type_params:
+      expr: total_revenue / order_count_metric
+      metrics:
+        - name: total_revenue
+        - name: order_count_metric
+  - name: order_count_metric
+    description: Number of orders.
+    type: simple
+    label: Order count
+    type_params:
+      measure: order_count

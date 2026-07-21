@@ -1,0 +1,464 @@
+{
+  "absolute_path_leaks": [],
+  "all_semantic_lines_preserved": true,
+  "manifest": [
+    {
+      "data_rows_line_preserved": true,
+      "exit_code_line_preserved": true,
+      "path": "metricflow_lexical/iowa_001.txt",
+      "sanitized_sha256": "bf60740a5eb805c816127929784dbdddd7a8ded9f719f37dc1585f560587e51d",
+      "source_sha256_internal": "244d55ebe9c72ee196137b76bad60bf4007476c2533e80a86d0fa9e594bdc133"
+    },
+    {
+      "data_rows_line_preserved": true,
+      "exit_code_line_preserved": true,
+      "path": "metricflow_lexical/iowa_002.txt",
+      "sanitized_sha256": "b9359b5e60ac7a8e6640579611405e10bfb98860333bbbffd27a4795603c36ec",
+      "source_sha256_internal": "dea29c85ec12b0a184109eee72a9542748299589a3ea21f2fd0ba1a44b0a614a"
+    },
+    {
+      "data_rows_line_preserved": true,
+      "exit_code_line_preserved": true,
+      "path": "metricflow_lexical/iowa_003.txt",
+      "sanitized_sha256": "86cee2ce552fb680838da5af8253ce0cc1501ed3bfbf212cfc27c33fd0cf9e70",
+      "source_sha256_internal": "13e5128748178445f3eab798e88c5b611a9adb1904237828cc5b073772d84c45"
+    },
+    {
+      "data_rows_line_preserved": true,
+      "exit_code_line_preserved": true,
+      "path": "metricflow_lexical/iowa_004.txt",
+      "sanitized_sha256": "03286b46323626d13c3f9fe3ee939d93425d58cc6dd7ca37429267f5d59fab12",
+      "source_sha256_internal": "8d11ff940a5fa3ddaa1538ec19251fda540572e231652409f9d80b84719f2d3e"
+    },
+    {
+      "data_rows_line_preserved": true,
+      "exit_code_line_preserved": true,
+      "path": "metricflow_lexical/iowa_005.txt",
+      "sanitized_sha256": "ae7b27f925542b0dfd1cb847780da215529166f30293229538174b790722b49b",
+      "source_sha256_internal": "defb1aa2629e9e122af522ee7eed14d1229c97fb9d7c596df6655a766bd5756c"
+    },
+    {
+      "data_rows_line_preserved": true,
+      "exit_code_line_preserved": true,
+      "path": "metricflow_lexical/iowa_006.txt",
+      "sanitized_sha256": "4969718e19de7a5ea9d5b9cc092d3ef0ddea22edadc404203a7fb4b1dd610596",
+      "source_sha256_internal": "6954c89ac20867c5f5490ff819e8d29b7fcec109fdbb13b3f5e0b08b8ac1f64d"
+    },
+    {
+      "data_rows_line_preserved": true,
+      "exit_code_line_preserved": true,
+      "path": "metricflow_lexical/iowa_007.txt",
+      "sanitized_sha256": "1bb5fc1f0b8914836cd804623d1df515393f41e4ecd21d76da1ef727803aca88",
+      "source_sha256_internal": "33afffd355c089a214d68199611d51301dc1f6f9290c5303a6c421dbbb432e02"
+    },
+    {
+      "data_rows_line_preserved": true,
+      "exit_code_line_preserved": true,
+      "path": "metricflow_lexical/iowa_008.txt",
+      "sanitized_sha256": "a4aee394d7f1c6770ab276881b336c99305d60f3e50ca1a0b1cb6bc2ce6a0438",
+      "source_sha256_internal": "6be9dfcbc05a02966febb10acc8365d9c43eb1a7bfb257f5427542c66bae6efe"
+    },
+    {
+      "data_rows_line_preserved": true,
+      "exit_code_line_preserved": true,
+      "path": "metricflow_lexical/iowa_009.txt",
+      "sanitized_sha256": "edad1b5b0d9077fee425a1f48e347e0f21d8d9df6ebe9ff0e6d6ad7b1e666e56",
+      "source_sha256_internal": "1ef6cf03e74c1d3cfac7148c5f839dd819adf785ffb807d2cd886dae2a240f10"
+    },
+    {
+      "data_rows_line_preserved": true,
+      "exit_code_line_preserved": true,
+      "path": "metricflow_lexical/iowa_010.txt",
+      "sanitized_sha256": "62de122977c96e92546998f2705c9ab2ae571da22b35f13bdf7561f3434c0121",
+      "source_sha256_internal": "f2ef0f154dd1a11d3d8b986bad75052650586149efbfd9e90760ac4090be9b36"
+    },
+    {
+      "data_rows_line_preserved": true,
+      "exit_code_line_preserved": true,
+      "path": "metricflow_lexical/iowa_011.txt",
+      "sanitized_sha256": "427682cf6a4749484846b07cbab8084cd326d4b3c1336d94915c7adf480d2e11",
+      "source_sha256_internal": "438b4a9201d9637bd3c3e822cb55a318e36eb49956aaaf69a4069049dda53786"
+    },
+    {
+      "data_rows_line_preserved": true,
+      "exit_code_line_preserved": true,
+      "path": "metricflow_lexical/iowa_012.txt",
+      "sanitized_sha256": "3b5281364d64474472db760aaa250d5ac8f5bf321fdf2935c095b0395353f69d",
+      "source_sha256_internal": "c254bc2382cb8430084cb7ae6c39e7f87e9b680b86d471b4002bafc625fe5fe2"
+    },
+    {
+      "data_rows_line_preserved": true,
+      "exit_code_line_preserved": true,
+      "path": "metricflow_lexical/iowa_013.txt",
+      "sanitized_sha256": "548e73b38480737703e16a0c31e68484ab335763b21c238fca747f9ef782a13b",
+      "source_sha256_internal": "8059ecd7ceded6e918576c6109cbeac73c13ca3219fb4c5041a32e30d75be337"
+    },
+    {
+      "data_rows_line_preserved": true,
+      "exit_code_line_preserved": true,
+      "path": "metricflow_lexical/iowa_014.txt",
+      "sanitized_sha256": "dc55de88c91f8e29e904ea88e521616a8f4631168051481368a2aad2ad143e02",
+      "source_sha256_internal": "0aee43d96920d84dac68c7b4325fe6f7298fb5e6598c6c7e684a6ccbe953b763"
+    },
+    {
+      "data_rows_line_preserved": true,
+      "exit_code_line_preserved": true,
+      "path": "metricflow_lexical/iowa_015.txt",
+      "sanitized_sha256": "8f7d5c0075ad7b6b9b4009ad812601e8d242c9f0da46595350d982116183cbd8",
+      "source_sha256_internal": "c3456efacc00e068f7e2626815712be53cc2e2888ee3e17d34c1d3aa5ba0d23a"
+    },
+    {
+      "data_rows_line_preserved": true,
+      "exit_code_line_preserved": true,
+      "path": "metricflow_lexical/iowa_016.txt",
+      "sanitized_sha256": "ffbc42013f5a64448451f32c35091f1f00e14d408a04e06cf4792263d48ca8e8",
+      "source_sha256_internal": "63203883018ac4e692cfc0e0fb123c64461c525730edfc932b616bde1865a29b"
+    },
+    {
+      "data_rows_line_preserved": true,
+      "exit_code_line_preserved": true,
+      "path": "metricflow_lexical/iowa_017.txt",
+      "sanitized_sha256": "e1dc8e2f9ffecfcec1069bc211a05aff3f9019dc55ec0875014843f7d4877fef",
+      "source_sha256_internal": "d4d5f0e68c5e06de48bda6d2f2a4918212bdf075e4224a4de9e55a5849754dd5"
+    },
+    {
+      "data_rows_line_preserved": true,
+      "exit_code_line_preserved": true,
+      "path": "metricflow_lexical/iowa_018.txt",
+      "sanitized_sha256": "024023f597986706bd42a7c9a09cdd9168b03328bec49e0558de006365f3b235",
+      "source_sha256_internal": "6f64abec3fae76ef39374813576b2423f5aefbfeeb6e1e7c5328f852571d3eed"
+    },
+    {
+      "data_rows_line_preserved": true,
+      "exit_code_line_preserved": true,
+      "path": "metricflow_lexical/iowa_019.txt",
+      "sanitized_sha256": "b2a6c1e102329edab34391408849fc19c47ddc51e6d7971df377cf298025cb45",
+      "source_sha256_internal": "432a37e4501a132f7f349bdeafa8fb93d357b17bb37cc8d160323a337ed76b5e"
+    },
+    {
+      "data_rows_line_preserved": true,
+      "exit_code_line_preserved": true,
+      "path": "metricflow_lexical/iowa_020.txt",
+      "sanitized_sha256": "f2dd5dff4e1a373ad47ab7e5135da1fbc981f13bece128f76c92312f7ff923a8",
+      "source_sha256_internal": "3788f0b0cf9b29c3f42bccff72c3b299a6aac9e0334a52d93bdaa2a85e7fa07d"
+    },
+    {
+      "data_rows_line_preserved": true,
+      "exit_code_line_preserved": true,
+      "path": "metricflow_lexical/iowa_021.txt",
+      "sanitized_sha256": "f7a3d9a5a0370a5c0d19cb9bf4a5cf4ecd48cd9c40045c76fad1c3bb5428fd71",
+      "source_sha256_internal": "249279d29f1d8f482d9de1d5fb59f5e51567bb759c4b141fbcc758f031deff64"
+    },
+    {
+      "data_rows_line_preserved": true,
+      "exit_code_line_preserved": true,
+      "path": "metricflow_lexical/iowa_022.txt",
+      "sanitized_sha256": "12786461e1103c7d72cce2036002ecfc821ac4685264b68ed4de2ff235980c0a",
+      "source_sha256_internal": "93d6eea64d4b97bc8bf99d49673314e82993d749fba019b8228f181e040ce8cf"
+    },
+    {
+      "data_rows_line_preserved": true,
+      "exit_code_line_preserved": true,
+      "path": "metricflow_lexical/iowa_023.txt",
+      "sanitized_sha256": "bb2ae903322446baccd95326dd1abfec5f849cf959afe92c107145758ee4d3f0",
+      "source_sha256_internal": "06d855257db82ff53fdc0cea8da86befb67c0e20db2dd747c5cea7a1258823e5"
+    },
+    {
+      "data_rows_line_preserved": true,
+      "exit_code_line_preserved": true,
+      "path": "metricflow_lexical/iowa_024.txt",
+      "sanitized_sha256": "b986f37f6ee17b8422a2b3b5bf3f0a77df94af23a6d7a7ad20b1e12a4802a494",
+      "source_sha256_internal": "bff2db814289ab17a94e1169e9720029cb1af5c1b057299cf7cac8a42be1960b"
+    },
+    {
+      "data_rows_line_preserved": true,
+      "exit_code_line_preserved": true,
+      "path": "metricflow_lexical/iowa_025.txt",
+      "sanitized_sha256": "205ab57927746365c6e916c90dce8e8597a9eaa4062f4467680295ab60f7adb3",
+      "source_sha256_internal": "40051eab62850a045590635c6b70c9302937bb4ef1e3118540230efcaa351867"
+    },
+    {
+      "data_rows_line_preserved": true,
+      "exit_code_line_preserved": true,
+      "path": "metricflow_lexical/iowa_026.txt",
+      "sanitized_sha256": "62a0898dfdd5c293128c1db76670a569a2a5f75dd32781656041d4c40eb9c700",
+      "source_sha256_internal": "b95760f5823d10dafcd58f6b6f222b82b6035dcec2ae9c830ecc9579508adc29"
+    },
+    {
+      "data_rows_line_preserved": true,
+      "exit_code_line_preserved": true,
+      "path": "metricflow_lexical/iowa_027.txt",
+      "sanitized_sha256": "127e32283c275c211af9ca5ad0fac4948599f5f581dfed72bf7f7cefe7a77b05",
+      "source_sha256_internal": "669da469d42ac3f2f049fbedbe5f01b5b98d89d639d2f79be98f349ff9a24142"
+    },
+    {
+      "data_rows_line_preserved": true,
+      "exit_code_line_preserved": true,
+      "path": "metricflow_lexical/iowa_028.txt",
+      "sanitized_sha256": "0bcc7c254caa98068a8a87526158bcd71acf308e1ed8881432621321e7aa90c8",
+      "source_sha256_internal": "746529271b07ddea183ee425d9fa9936551e7429172e485956b1bf447a710867"
+    },
+    {
+      "data_rows_line_preserved": true,
+      "exit_code_line_preserved": true,
+      "path": "metricflow_lexical/iowa_029.txt",
+      "sanitized_sha256": "8f7d5c0075ad7b6b9b4009ad812601e8d242c9f0da46595350d982116183cbd8",
+      "source_sha256_internal": "aeada5dfd5d577bcafc05761a7a33b54e347f828e5c71d2c86668a83c9d6a59e"
+    },
+    {
+      "data_rows_line_preserved": true,
+      "exit_code_line_preserved": true,
+      "path": "metricflow_lexical/iowa_030.txt",
+      "sanitized_sha256": "28df94d89b003b92d9d148250ac86eb2a59f1e49de037af72b1c002365de7303",
+      "source_sha256_internal": "57c38865d628b9a5d3584bdb823f1ac92a028d7eca1ee8a917cb50456f539a64"
+    },
+    {
+      "data_rows_line_preserved": true,
+      "exit_code_line_preserved": true,
+      "path": "metricflow_lexical/iowa_031.txt",
+      "sanitized_sha256": "4b794c5946466f6c5ebec05ab6937e28625311b62f067a3442f7c362c048097e",
+      "source_sha256_internal": "b53ece072f521f6934e2fa25acf366e33155a39a17db4502d26d2a8e62c20331"
+    },
+    {
+      "data_rows_line_preserved": true,
+      "exit_code_line_preserved": true,
+      "path": "metricflow_lexical/iowa_032.txt",
+      "sanitized_sha256": "26251ff4ff8cc9e4403125177172b7a403d2104656aec656964eb8592d568718",
+      "source_sha256_internal": "76e4f8894a5e16ee1386f546c1d3679aef43ddaacfeb41aa4502e8987db576da"
+    },
+    {
+      "data_rows_line_preserved": true,
+      "exit_code_line_preserved": true,
+      "path": "metricflow_oracle_metric/iowa_001.txt",
+      "sanitized_sha256": "e8334fc2dde486343899faa90cbc9fbd9a04093d185be49759e1ab2f67c5a4d8",
+      "source_sha256_internal": "13f91812165fd62f24559ad5d04ec2f71959801a88bbdc9a20d6ad94680f2c48"
+    },
+    {
+      "data_rows_line_preserved": true,
+      "exit_code_line_preserved": true,
+      "path": "metricflow_oracle_metric/iowa_002.txt",
+      "sanitized_sha256": "963306f441fdc943a561bd66427da2b9a4e2c1ed63b2abc23da0ce4104f74bf5",
+      "source_sha256_internal": "668890629c303c9dc0f257a2e83827c9994f5133e2c3e6b02565e451e8f01c4a"
+    },
+    {
+      "data_rows_line_preserved": true,
+      "exit_code_line_preserved": true,
+      "path": "metricflow_oracle_metric/iowa_003.txt",
+      "sanitized_sha256": "7a0b3670e0c47396e6e5ff4416bb8c4076004941b89b2f345d3b28b74da39823",
+      "source_sha256_internal": "266efdf45d0fb65c4a7c02fa68ea773d4bc4d88c1cba9873745ff4a8ef8410f5"
+    },
+    {
+      "data_rows_line_preserved": true,
+      "exit_code_line_preserved": true,
+      "path": "metricflow_oracle_metric/iowa_004.txt",
+      "sanitized_sha256": "08731098b2ea2f40b87f13ed345307ef08874c1fae98f31c522fe794f91a8fc2",
+      "source_sha256_internal": "1de8ea2ba4f890cc495ba2820b02eaaa24d2002d7e5647198b2f80e43a8216d2"
+    },
+    {
+      "data_rows_line_preserved": true,
+      "exit_code_line_preserved": true,
+      "path": "metricflow_oracle_metric/iowa_005.txt",
+      "sanitized_sha256": "b1948f1c1a366dea68917d01f7049624848cb55cf969b6782ccd2ed6065fddd5",
+      "source_sha256_internal": "0619c90ed30001ab4f5b974887ef10f93ee3f36308deb97e8317f863ee3640eb"
+    },
+    {
+      "data_rows_line_preserved": true,
+      "exit_code_line_preserved": true,
+      "path": "metricflow_oracle_metric/iowa_006.txt",
+      "sanitized_sha256": "101213d2e27fbb0d3e3ee03776edc3da12384eac68699dbcad22d1af43d91278",
+      "source_sha256_internal": "9fb15bd2ec2a86b7ee9e6e2c4b8592573145fdbd5be3a80aa455511656885262"
+    },
+    {
+      "data_rows_line_preserved": true,
+      "exit_code_line_preserved": true,
+      "path": "metricflow_oracle_metric/iowa_007.txt",
+      "sanitized_sha256": "213b9cfe8dae3b62b07ce625c5c74bdfdcc4bf08787f4eb02f65986f1fac840f",
+      "source_sha256_internal": "5b0b9a54b95709476c56ffacd8bf14d3d10422da95eb51b43d7d92da08fa79c0"
+    },
+    {
+      "data_rows_line_preserved": true,
+      "exit_code_line_preserved": true,
+      "path": "metricflow_oracle_metric/iowa_008.txt",
+      "sanitized_sha256": "5d40bedc573234bec15dd25ef9605f30e9a66055f60fb54511e4ad53b7fa77d4",
+      "source_sha256_internal": "1bd278b76d60b147041e03aed2e427c7083b608674a8aafd8afab1de3a5a7b5f"
+    },
+    {
+      "data_rows_line_preserved": true,
+      "exit_code_line_preserved": true,
+      "path": "metricflow_oracle_metric/iowa_009.txt",
+      "sanitized_sha256": "032932a2c999d68f1c56d394e112cc37c51ac107617037c34cfbecffffbc612e",
+      "source_sha256_internal": "9f1b2c1364cc6374cfad479a6cd58fe031f4bf96f071e7fc49c865d594b4a95b"
+    },
+    {
+      "data_rows_line_preserved": true,
+      "exit_code_line_preserved": true,
+      "path": "metricflow_oracle_metric/iowa_010.txt",
+      "sanitized_sha256": "76028cc2d8922659b6cbdc33d7693c05a5e254d73007e2f042ce06c017afa0c3",
+      "source_sha256_internal": "7e0847fd364897f55d27408b667d45aa4916256d5cec9faca3304cf5789e7a81"
+    },
+    {
+      "data_rows_line_preserved": true,
+      "exit_code_line_preserved": true,
+      "path": "metricflow_oracle_metric/iowa_011.txt",
+      "sanitized_sha256": "427682cf6a4749484846b07cbab8084cd326d4b3c1336d94915c7adf480d2e11",
+      "source_sha256_internal": "20e4ae94c72ff4db031cd6a853ac3f28cb764fb0187ffcdad22c5e89892cd783"
+    },
+    {
+      "data_rows_line_preserved": true,
+      "exit_code_line_preserved": true,
+      "path": "metricflow_oracle_metric/iowa_012.txt",
+      "sanitized_sha256": "ba34e190aae204bc8bca262f36fe01f9bc37d1c7669cb81e149b2a297c756a57",
+      "source_sha256_internal": "1e84be098d803b59af1c03c418d5a72afefa7a9f786f9644014e6be113999d47"
+    },
+    {
+      "data_rows_line_preserved": true,
+      "exit_code_line_preserved": true,
+      "path": "metricflow_oracle_metric/iowa_013.txt",
+      "sanitized_sha256": "9b489eafad8d6861dae28badcac5a450e874397f2617c988a5ada22427f80c06",
+      "source_sha256_internal": "b5b1ab6c5079374841295d205ef1b0087c0b0c9eed34b665f1f4bb9429e00749"
+    },
+    {
+      "data_rows_line_preserved": true,
+      "exit_code_line_preserved": true,
+      "path": "metricflow_oracle_metric/iowa_014.txt",
+      "sanitized_sha256": "508464b5a9c7de5461162ed7980de5f6c31f6beefe199865a327aa780656747b",
+      "source_sha256_internal": "65ce73ae608f08a4171d1b8e2d45329ac22aa695c9b07a04ff53e424750c004c"
+    },
+    {
+      "data_rows_line_preserved": true,
+      "exit_code_line_preserved": true,
+      "path": "metricflow_oracle_metric/iowa_015.txt",
+      "sanitized_sha256": "0d622d56fc5791aeb73ef4f924971fe88318a85f01aa1cf9c6b760d8f6544c60",
+      "source_sha256_internal": "3a50196334a286e5b389ea1e93541a7d09abd2caa00534634d20d164fc0a5e36"
+    },
+    {
+      "data_rows_line_preserved": true,
+      "exit_code_line_preserved": true,
+      "path": "metricflow_oracle_metric/iowa_016.txt",
+      "sanitized_sha256": "21e2188b42972067b4543fa9537b6f18375ee62a0aac02cb312b404098bb4a44",
+      "source_sha256_internal": "167d55b5c6781c26bdfbc006be147a796d509e1c1756d11f782c1e1af1ea8936"
+    },
+    {
+      "data_rows_line_preserved": true,
+      "exit_code_line_preserved": true,
+      "path": "metricflow_oracle_metric/iowa_017.txt",
+      "sanitized_sha256": "2b2956f7718cb67f8bbaa4f4fc2f512a4825653ed8545c3d98050aee6918f041",
+      "source_sha256_internal": "bbc84f8e1ac56e24b256f6080eaf8472bc17dcb6c66841f330d8e06bbf6dbf72"
+    },
+    {
+      "data_rows_line_preserved": true,
+      "exit_code_line_preserved": true,
+      "path": "metricflow_oracle_metric/iowa_018.txt",
+      "sanitized_sha256": "8102ccd56d005e2ef91f9aad1beba300947edefc7e14f395bc5394c769d2915b",
+      "source_sha256_internal": "750aeb7583e9e9afe629b11c60f96bcd0d27546cae1cfa0b8a2352619aed88c2"
+    },
+    {
+      "data_rows_line_preserved": true,
+      "exit_code_line_preserved": true,
+      "path": "metricflow_oracle_metric/iowa_019.txt",
+      "sanitized_sha256": "9bd6bddf392c1f19bc9c433e8fb44c4cdc29773484fcea65481bab22f674ef6f",
+      "source_sha256_internal": "4dbf60b1bfb513128c1649efb8fee3b9a86020cc3496df6b99274e3d7cb71c86"
+    },
+    {
+      "data_rows_line_preserved": true,
+      "exit_code_line_preserved": true,
+      "path": "metricflow_oracle_metric/iowa_020.txt",
+      "sanitized_sha256": "269a8d484a14a72d7ff7554d523bdb9707a34a7e2276f15d5b39f608c3c169d2",
+      "source_sha256_internal": "ca0b91edeb3128fc96be179a6695371d036192f6b5090362ec23aacdb7449eef"
+    },
+    {
+      "data_rows_line_preserved": true,
+      "exit_code_line_preserved": true,
+      "path": "metricflow_oracle_metric/iowa_021.txt",
+      "sanitized_sha256": "9938a23d2ea2855f68a591e309c3405ac722b4789306155fefabccdbb03a8902",
+      "source_sha256_internal": "84cf89b3bbcd6bb5617af6e9a50211e80345808bdb4e3ea5321607fc1bb7d1dc"
+    },
+    {
+      "data_rows_line_preserved": true,
+      "exit_code_line_preserved": true,
+      "path": "metricflow_oracle_metric/iowa_022.txt",
+      "sanitized_sha256": "b5e50488d504a8541b02bd1d9b39cfe250596a4bfcd30090b186e5012b11a559",
+      "source_sha256_internal": "48ea5ae788e448511403786829eebb32948d536bfe820449ffb262e1828e77f2"
+    },
+    {
+      "data_rows_line_preserved": true,
+      "exit_code_line_preserved": true,
+      "path": "metricflow_oracle_metric/iowa_023.txt",
+      "sanitized_sha256": "df9f1090a50dc07d8779c2bdbecec7c8dab6db32c2d89ced3d425a8cc70fe74c",
+      "source_sha256_internal": "ec3dbb974f9f910bcc4be783689768724131f60da75f818c60eda5593b8003c8"
+    },
+    {
+      "data_rows_line_preserved": true,
+      "exit_code_line_preserved": true,
+      "path": "metricflow_oracle_metric/iowa_024.txt",
+      "sanitized_sha256": "2c391d258fd5055ae5ab19d1228d283a393402109670ba252d707dae5e8eebb3",
+      "source_sha256_internal": "44b53fe1df0346cfd1cc193c7c3f88776ac41314e86cd11bf4d048c88e4ecd0e"
+    },
+    {
+      "data_rows_line_preserved": true,
+      "exit_code_line_preserved": true,
+      "path": "metricflow_oracle_metric/iowa_025.txt",
+      "sanitized_sha256": "ee381f524ca9fb5e1437d90fe4710635a57f2afd41a27249709c0858ea726ced",
+      "source_sha256_internal": "04f3c862202f865b0271f64bd7cc72ff2071597c6c99a699214d3596e498a008"
+    },
+    {
+      "data_rows_line_preserved": true,
+      "exit_code_line_preserved": true,
+      "path": "metricflow_oracle_metric/iowa_026.txt",
+      "sanitized_sha256": "ffb279a8aa00b00bc2fb2663d6540fb0e3317f79146f8f19ee084876b18efec6",
+      "source_sha256_internal": "4eaab181f991703aaa66cbf00890cb1e398c404edf647dff521a2e6e9e2ddda6"
+    },
+    {
+      "data_rows_line_preserved": true,
+      "exit_code_line_preserved": true,
+      "path": "metricflow_oracle_metric/iowa_027.txt",
+      "sanitized_sha256": "8cc7184496e32df85704bde9dd9b18409645e9f00c24ff6c0dbe058d0c2fc3ce",
+      "source_sha256_internal": "e288a1caa6536af8f26a516a1d8b8c02ac6aadefd3639a1d3b1b9715f55dea4c"
+    },
+    {
+      "data_rows_line_preserved": true,
+      "exit_code_line_preserved": true,
+      "path": "metricflow_oracle_metric/iowa_028.txt",
+      "sanitized_sha256": "a9d31d1d8b6cb4c3590b7b565316157e18bc8dd8a3a08c47b9c36957d5ccfe65",
+      "source_sha256_internal": "eeb37b0685996e6b11252c230540ea6c6bb5710a644e5f805cc3a90fcea9922f"
+    },
+    {
+      "data_rows_line_preserved": true,
+      "exit_code_line_preserved": true,
+      "path": "metricflow_oracle_metric/iowa_029.txt",
+      "sanitized_sha256": "5c96778103c44376bbda0b37660e44e75da6f22637ab20ef26054ae2c137cc9f",
+      "source_sha256_internal": "cfc01b534bc40e8bfeb35aca6161136a4a9a0176c79f38f70a70595a838b6d64"
+    },
+    {
+      "data_rows_line_preserved": true,
+      "exit_code_line_preserved": true,
+      "path": "metricflow_oracle_metric/iowa_030.txt",
+      "sanitized_sha256": "c867194cbb163c33042fee050ac29e4912efe699216daa761df411fcdc290645",
+      "source_sha256_internal": "6d81bc8e65880ad853e92d68e072b8a734eb16a0f619a0bc4fbe4abc9e3504af"
+    },
+    {
+      "data_rows_line_preserved": true,
+      "exit_code_line_preserved": true,
+      "path": "metricflow_oracle_metric/iowa_031.txt",
+      "sanitized_sha256": "a3ef650314ebee978a135d27b18bbb06ae4f101f455c310066559cd194b959ee",
+      "source_sha256_internal": "b8c789e33b08ab28f8cf15fe9ad8888c9f4945c32e3f06377121d23f14113d77"
+    },
+    {
+      "data_rows_line_preserved": true,
+      "exit_code_line_preserved": true,
+      "path": "metricflow_oracle_metric/iowa_032.txt",
+      "sanitized_sha256": "a8ab0b78b243ea8d89cbb6d5b69add86e15eb79cfff731121496033947228214",
+      "source_sha256_internal": "5956aee1c6818494b8e25f5d5b2c287d3a234b31060e2cd4f428299eb4395630"
+    },
+    {
+      "data_rows_line_preserved": true,
+      "exit_code_line_preserved": true,
+      "path": "run_log.txt",
+      "sanitized_sha256": "625c917c4e30fa02bfba54d36491ea3cb0723d0fd9f4af0e576e04eeaff6e934",
+      "source_sha256_internal": "625c917c4e30fa02bfba54d36491ea3cb0723d0fd9f4af0e576e04eeaff6e934"
+    }
+  ],
+  "n_logs": 65,
+  "n_sanitized_probe_files": 13,
+  "transform": "absolute executable/temp paths only; stdout, stderr, exit code, row count, timing unchanged"
+}

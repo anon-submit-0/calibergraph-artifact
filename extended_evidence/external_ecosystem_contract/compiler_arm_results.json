@@ -1,0 +1,101 @@
+{
+  "arm": "A_compiler (protocol.md pre-registered)",
+  "blind_protocol": {
+    "gold_field_leaks_in_predictions": 0,
+    "prediction_input": "blind_cases.jsonl",
+    "scoring_input": "gold_labels.jsonl",
+    "used_gold_label_flags": 0
+  },
+  "compiler_sha256": "2404288f8a663d1de8454be65d993a911fdce6df004cbdfc64f4a7dc9b2385ee",
+  "dataset_id": "external_mf_metric_caliber",
+  "n_cases": 122,
+  "per_stratum": {
+    "caliber_graph_iowa_text_score": {
+      "answerable": {
+        "dimension_exact_accuracy": 1.0,
+        "joint_metric_dimension_accuracy": 0.9833333333333333,
+        "metric_accuracy": 0.9833333333333333,
+        "n": 60
+      },
+      "grain_hierarchy_trap": {
+        "dimension_exact_accuracy": 1.0,
+        "joint_metric_dimension_accuracy": 0.95,
+        "metric_accuracy": 0.95,
+        "n": 20
+      },
+      "ratio_denominator_trap": {
+        "dimension_exact_accuracy": 1.0,
+        "joint_metric_dimension_accuracy": 1.0,
+        "metric_accuracy": 1.0,
+        "n": 15
+      },
+      "sql_request_refusal": {
+        "dimension_exact_accuracy": 1.0,
+        "joint_metric_dimension_accuracy": 1.0,
+        "metric_accuracy": 1.0,
+        "n": 12
+      },
+      "undefined_metric_refusal": {
+        "dimension_exact_accuracy": 1.0,
+        "joint_metric_dimension_accuracy": 1.0,
+        "metric_accuracy": 1.0,
+        "n": 15
+      }
+    },
+    "caliber_graph_longest_alias": {
+      "answerable": {
+        "dimension_exact_accuracy": 1.0,
+        "joint_metric_dimension_accuracy": 1.0,
+        "metric_accuracy": 1.0,
+        "n": 60
+      },
+      "grain_hierarchy_trap": {
+        "dimension_exact_accuracy": 1.0,
+        "joint_metric_dimension_accuracy": 1.0,
+        "metric_accuracy": 1.0,
+        "n": 20
+      },
+      "ratio_denominator_trap": {
+        "dimension_exact_accuracy": 1.0,
+        "joint_metric_dimension_accuracy": 1.0,
+        "metric_accuracy": 1.0,
+        "n": 15
+      },
+      "sql_request_refusal": {
+        "dimension_exact_accuracy": 1.0,
+        "joint_metric_dimension_accuracy": 1.0,
+        "metric_accuracy": 1.0,
+        "n": 12
+      },
+      "undefined_metric_refusal": {
+        "dimension_exact_accuracy": 1.0,
+        "joint_metric_dimension_accuracy": 1.0,
+        "metric_accuracy": 1.0,
+        "n": 15
+      }
+    }
+  },
+  "plan": {
+    "caliber_graph_iowa_text_score": {
+      "dimension_exact_accuracy": 1.0,
+      "joint_metric_dimension_accuracy": 0.9836065573770492,
+      "metric_accuracy": 0.9836065573770492,
+      "n": 122,
+      "refusal_precision": 1.0,
+      "refusal_recall": 1.0
+    },
+    "caliber_graph_longest_alias": {
+      "dimension_exact_accuracy": 1.0,
+      "joint_metric_dimension_accuracy": 1.0,
+      "metric_accuracy": 1.0,
+      "n": 122,
+      "refusal_precision": 1.0,
+      "refusal_recall": 1.0
+    }
+  },
+  "repro": [
+    "python3 convert_mf_manifest.py",
+    "python3 generate_cases.py",
+    "python3 run_compiler_arm.py"
+  ]
+}

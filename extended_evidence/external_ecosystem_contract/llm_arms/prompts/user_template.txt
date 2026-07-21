@@ -1,0 +1,4 @@
+Case {case_id}. Natural-language request:
+{nl_query}
+
+Execute the governance contract on this request and return the single JSON object now.

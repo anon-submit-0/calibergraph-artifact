@@ -1,0 +1,35 @@
+{
+ "n": 159,
+ "compiler_joint": 147,
+ "passes": {
+  "pass1": {
+   "joint": 156,
+   "joint_rate": 0.9811,
+   "vs_compiler_b_llmright_compwrong": 9,
+   "vs_compiler_c_llmwrong_compright": 0,
+   "mcnemar_exact_p": 0.00390625
+  },
+  "pass2": {
+   "joint": 156,
+   "joint_rate": 0.9811,
+   "vs_compiler_b_llmright_compwrong": 9,
+   "vs_compiler_c_llmwrong_compright": 0,
+   "mcnemar_exact_p": 0.00390625
+  },
+  "pass3": {
+   "joint": 156,
+   "joint_rate": 0.9811,
+   "vs_compiler_b_llmright_compwrong": 9,
+   "vs_compiler_c_llmwrong_compright": 0,
+   "mcnemar_exact_p": 0.00390625
+  }
+ },
+ "cross_pass": {
+  "all3_agree": 157,
+  "agree_rate": 0.9874,
+  "majority_joint": 156,
+  "majority_joint_rate": 0.9811,
+  "majority_flips_vs_pass1": 2
+ },
+ "preregistered_branch": "R1_stable_inversion"
+}

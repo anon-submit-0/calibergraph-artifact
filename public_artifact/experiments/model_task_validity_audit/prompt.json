@@ -1,0 +1,830 @@
+{
+  "task": "Judge whether each released gold label is plausible under the released catalog and adjudication rules. Do not optimize the paper; act as an independent label adjudicator.",
+  "adjudication_rules": [
+    "If a query asks multiple levels on one hierarchy path, the governed finest requested level is the expected dimension.",
+    "Unsafe SQL/DDL, raw identifiers, private mappings, unsupported metrics, and off-domain requests should be refused.",
+    "Dataset policy catalogs may list ambiguous queries that should be refused even when a term is also a metric alias.",
+    "A metric label is plausible only if the query meaning matches the metric id/aliases/formula role.",
+    "Return ACCEPT if the label is defensible, QUESTION if ambiguous, or REJECT if clearly wrong."
+  ],
+  "catalogs": {
+    "iowa": {
+      "metrics": [
+        {
+          "id": "sales_dollars",
+          "name": "Sales Dollars",
+          "aliases": [
+            "sales",
+            "revenue",
+            "total sales",
+            "sales amount"
+          ],
+          "formula": "SUM(sales_dollars)",
+          "allowed_dimensions": [
+            "ordered_month",
+            "ordered_quarter",
+            "county_name",
+            "store_city",
+            "store_name",
+            "category_name",
+            "vendor_name",
+            "item_desc"
+          ]
+        },
+        {
+          "id": "bottles_sold",
+          "name": "Bottles Sold",
+          "aliases": [
+            "bottles",
+            "units sold",
+            "volume in bottles"
+          ],
+          "formula": "SUM(sales_bottles)",
+          "allowed_dimensions": [
+            "ordered_month",
+            "ordered_quarter",
+            "county_name",
+            "store_city",
+            "store_name",
+            "category_name",
+            "vendor_name",
+            "item_desc"
+          ]
+        },
+        {
+          "id": "liters_sold",
+          "name": "Liters Sold",
+          "aliases": [
+            "liters",
+            "volume liters",
+            "sales liters"
+          ],
+          "formula": "SUM(sales_liters)",
+          "allowed_dimensions": [
+            "ordered_month",
+            "ordered_quarter",
+            "county_name",
+            "store_city",
+            "store_name",
+            "category_name",
+            "vendor_name",
+            "item_desc"
+          ]
+        },
+        {
+          "id": "invoice_count",
+          "name": "Invoice Count",
+          "aliases": [
+            "invoices",
+            "orders",
+            "order count",
+            "transactions"
+          ],
+          "formula": "COUNT(DISTINCT invoice_id)",
+          "allowed_dimensions": [
+            "ordered_month",
+            "ordered_quarter",
+            "county_name",
+            "store_city",
+            "store_name",
+            "category_name",
+            "vendor_name"
+          ]
+        },
+        {
+          "id": "store_count",
+          "name": "Store Count",
+          "aliases": [
+            "stores",
+            "retailers",
+            "store coverage"
+          ],
+          "formula": "COUNT(DISTINCT store_no)",
+          "allowed_dimensions": [
+            "ordered_month",
+            "ordered_quarter",
+            "county_name",
+            "store_city",
+            "category_name",
+            "vendor_name"
+          ]
+        },
+        {
+          "id": "item_count",
+          "name": "Item Count",
+          "aliases": [
+            "items",
+            "products",
+            "sku count",
+            "item coverage"
+          ],
+          "formula": "COUNT(DISTINCT item_no)",
+          "allowed_dimensions": [
+            "ordered_month",
+            "ordered_quarter",
+            "county_name",
+            "store_city",
+            "category_name",
+            "vendor_name"
+          ]
+        },
+        {
+          "id": "average_bottle_price",
+          "name": "Average Bottle Price",
+          "aliases": [
+            "avg bottle price",
+            "price per bottle",
+            "average unit price"
+          ],
+          "formula": "SUM(sales_dollars) / NULLIF(SUM(sales_bottles), 0)",
+          "allowed_dimensions": [
+            "ordered_month",
+            "ordered_quarter",
+            "county_name",
+            "store_city",
+            "store_name",
+            "category_name",
+            "vendor_name",
+            "item_desc"
+          ]
+        },
+        {
+          "id": "average_invoice_value",
+          "name": "Average Invoice Value",
+          "aliases": [
+            "aov",
+            "average order value",
+            "sales per invoice"
+          ],
+          "formula": "SUM(sales_dollars) / NULLIF(COUNT(DISTINCT invoice_id), 0)",
+          "allowed_dimensions": [
+            "ordered_month",
+            "ordered_quarter",
+            "county_name",
+            "store_city",
+            "store_name",
+            "category_name",
+            "vendor_name"
+          ]
+        },
+        {
+          "id": "profit_margin",
+          "name": "Profit Margin",
+          "aliases": [
+            "margin",
+            "gross margin",
+            "profit rate"
+          ],
+          "formula": "",
+          "allowed_dimensions": []
+        }
+      ],
+      "dimensions": [
+        {
+          "id": "ordered_month",
+          "name": "Order Month",
+          "aliases": [
+            "month",
+            "monthly",
+            "ordered month"
+          ],
+          "parent": "ordered_quarter"
+        },
+        {
+          "id": "ordered_quarter",
+          "name": "Order Quarter",
+          "aliases": [
+            "quarter",
+            "quarterly",
+            "ordered quarter"
+          ],
+          "parent": ""
+        },
+        {
+          "id": "county_name",
+          "name": "County",
+          "aliases": [
+            "county"
+          ],
+          "parent": ""
+        },
+        {
+          "id": "store_city",
+          "name": "Store City",
+          "aliases": [
+            "city",
+            "store city"
+          ],
+          "parent": "county_name"
+        },
+        {
+          "id": "store_name",
+          "name": "Store Name",
+          "aliases": [
+            "store",
+            "retailer",
+            "store name"
+          ],
+          "parent": "store_city"
+        },
+        {
+          "id": "category_name",
+          "name": "Category",
+          "aliases": [
+            "category",
+            "liquor category"
+          ],
+          "parent": ""
+        },
+        {
+          "id": "vendor_name",
+          "name": "Vendor",
+          "aliases": [
+            "vendor",
+            "supplier"
+          ],
+          "parent": ""
+        },
+        {
+          "id": "item_desc",
+          "name": "Item Description",
+          "aliases": [
+            "item",
+            "product",
+            "sku",
+            "item description"
+          ],
+          "parent": "category_name"
+        }
+      ],
+      "policies": []
+    },
+    "ict": {
+      "metrics": [
+        {
+          "id": "ict_metric_001",
+          "name": "Category Complaint Rate",
+          "aliases": [
+            "客诉率",
+            "品类问题率",
+            "品类问题",
+            "complaint rate"
+          ],
+          "allowed_dimensions": []
+        },
+        {
+          "id": "ict_metric_002",
+          "name": "Issue Count",
+          "aliases": [
+            "问题次数",
+            "issue count",
+            "problem count"
+          ],
+          "allowed_dimensions": []
+        },
+        {
+          "id": "ict_metric_003",
+          "name": "Defective Item Quantity",
+          "aliases": [
+            "问题品",
+            "问题品数量",
+            "defective item quantity"
+          ],
+          "allowed_dimensions": []
+        },
+        {
+          "id": "ict_metric_004",
+          "name": "Reshipment Loss",
+          "aliases": [
+            "补发损失",
+            "reshipment loss"
+          ],
+          "allowed_dimensions": []
+        },
+        {
+          "id": "ict_metric_005",
+          "name": "Quality Defect Rate",
+          "aliases": [
+            "质量不良率",
+            "质量问题比例",
+            "Quality issue问题占比",
+            "defect rate",
+            "quality issue ratio"
+          ],
+          "allowed_dimensions": []
+        },
+        {
+          "id": "ict_metric_006",
+          "name": "Refund Amount",
+          "aliases": [
+            "退款金额",
+            "refund amount"
+          ],
+          "allowed_dimensions": []
+        },
+        {
+          "id": "ict_metric_007",
+          "name": "Refund Rate",
+          "aliases": [
+            "退款率",
+            "refund rate"
+          ],
+          "allowed_dimensions": []
+        },
+        {
+          "id": "ict_metric_008",
+          "name": "Reshipment Share",
+          "aliases": [
+            "补发占比",
+            "补发率",
+            "reshipment share",
+            "resend rate"
+          ],
+          "allowed_dimensions": []
+        },
+        {
+          "id": "ict_metric_009",
+          "name": "Reshipment Quantity",
+          "aliases": [
+            "补发量",
+            "reshipment quantity"
+          ],
+          "allowed_dimensions": []
+        },
+        {
+          "id": "ict_metric_010",
+          "name": "Return Quantity",
+          "aliases": [
+            "退货量",
+            "return quantity"
+          ],
+          "allowed_dimensions": []
+        },
+        {
+          "id": "ict_metric_011",
+          "name": "Return Rate",
+          "aliases": [
+            "退货率",
+            "return rate"
+          ],
+          "allowed_dimensions": []
+        },
+        {
+          "id": "ict_metric_012",
+          "name": "After-Sales Case Count",
+          "aliases": [
+            "售后单数",
+            "客诉数",
+            "after-sales case count"
+          ],
+          "allowed_dimensions": []
+        },
+        {
+          "id": "ict_metric_013",
+          "name": "Sales Amount",
+          "aliases": [
+            "销售额",
+            "sales amount",
+            "revenue"
+          ],
+          "allowed_dimensions": []
+        },
+        {
+          "id": "ict_metric_014",
+          "name": "Sales Quantity",
+          "aliases": [
+            "销量",
+            "sales quantity",
+            "units sold"
+          ],
+          "allowed_dimensions": []
+        },
+        {
+          "id": "ict_metric_015",
+          "name": "Item Complaint Rate",
+          "aliases": [
+            "SKU客诉率",
+            "商品客诉率",
+            "item complaint rate"
+          ],
+          "allowed_dimensions": []
+        }
+      ],
+      "dimensions": [
+        {
+          "id": "segment_l1",
+          "name": "Segment Level 1",
+          "aliases": [
+            "一级品类",
+            "level 1 segment",
+            "segment level 1"
+          ],
+          "parent": ""
+        },
+        {
+          "id": "segment_l2",
+          "name": "Segment Level 2",
+          "aliases": [
+            "二级品类",
+            "level 2 segment",
+            "segment level 2"
+          ],
+          "parent": "segment_l1"
+        },
+        {
+          "id": "segment_l3",
+          "name": "Segment Level 3",
+          "aliases": [
+            "三级品类",
+            "level 3 segment",
+            "segment level 3"
+          ],
+          "parent": "segment_l2"
+        },
+        {
+          "id": "market_region",
+          "name": "Market Region",
+          "aliases": [
+            "区域",
+            "region",
+            "market region"
+          ],
+          "parent": ""
+        }
+      ],
+      "policies": [
+        {
+          "ambiguous_queries": [
+            "客诉率"
+          ],
+          "policy_id": "ict_policy_refusal",
+          "policy_type": "disclosure_and_offdomain_refusal",
+          "public_rule": "Refuse raw SQL/catalog dumps, off-domain requests, and requests with no governed metric.",
+          "refusal_triggers": [
+            "select ",
+            "drop ",
+            "delete ",
+            "truncate ",
+            "governance catalog",
+            "raw_order_table",
+            "天气",
+            "weather",
+            "raw",
+            "dump",
+            "明细",
+            "邮箱",
+            "电话",
+            "no recognized vocabulary",
+            "xyzzy",
+            "plurghly"
+          ]
+        }
+      ]
+    }
+  },
+  "cases": [
+    {
+      "dataset": "iowa",
+      "case_id": "iowa_001",
+      "query": "What were total liquor sales dollars?",
+      "gold": {
+        "action": "answer",
+        "metric_id": "sales_dollars",
+        "dimensions": []
+      }
+    },
+    {
+      "dataset": "iowa",
+      "case_id": "iowa_002",
+      "query": "Sales dollars by county",
+      "gold": {
+        "action": "answer",
+        "metric_id": "sales_dollars",
+        "dimensions": [
+          "county_name"
+        ]
+      }
+    },
+    {
+      "dataset": "iowa",
+      "case_id": "iowa_003",
+      "query": "Sales by county and city",
+      "gold": {
+        "action": "answer",
+        "metric_id": "sales_dollars",
+        "dimensions": [
+          "store_city"
+        ]
+      }
+    },
+    {
+      "dataset": "iowa",
+      "case_id": "iowa_004",
+      "query": "Sales by category and item",
+      "gold": {
+        "action": "answer",
+        "metric_id": "sales_dollars",
+        "dimensions": [
+          "item_desc"
+        ]
+      }
+    },
+    {
+      "dataset": "iowa",
+      "case_id": "iowa_005",
+      "query": "Monthly liquor sales",
+      "gold": {
+        "action": "answer",
+        "metric_id": "sales_dollars",
+        "dimensions": [
+          "ordered_month"
+        ]
+      }
+    },
+    {
+      "dataset": "iowa",
+      "case_id": "iowa_006",
+      "query": "Quarterly sales dollars by county",
+      "gold": {
+        "action": "answer",
+        "metric_id": "sales_dollars",
+        "dimensions": [
+          "ordered_quarter",
+          "county_name"
+        ]
+      }
+    },
+    {
+      "dataset": "iowa",
+      "case_id": "iowa_007",
+      "query": "How many bottles were sold?",
+      "gold": {
+        "action": "answer",
+        "metric_id": "bottles_sold",
+        "dimensions": []
+      }
+    },
+    {
+      "dataset": "iowa",
+      "case_id": "iowa_008",
+      "query": "Bottles sold by vendor",
+      "gold": {
+        "action": "answer",
+        "metric_id": "bottles_sold",
+        "dimensions": [
+          "vendor_name"
+        ]
+      }
+    },
+    {
+      "dataset": "iowa",
+      "case_id": "iowa_009",
+      "query": "Bottles by category and item",
+      "gold": {
+        "action": "answer",
+        "metric_id": "bottles_sold",
+        "dimensions": [
+          "item_desc"
+        ]
+      }
+    },
+    {
+      "dataset": "iowa",
+      "case_id": "iowa_010",
+      "query": "Liters sold by county",
+      "gold": {
+        "action": "answer",
+        "metric_id": "liters_sold",
+        "dimensions": [
+          "county_name"
+        ]
+      }
+    },
+    {
+      "dataset": "iowa",
+      "case_id": "iowa_011",
+      "query": "Volume in liters by county and city",
+      "gold": {
+        "action": "answer",
+        "metric_id": "liters_sold",
+        "dimensions": [
+          "store_city"
+        ]
+      }
+    },
+    {
+      "dataset": "iowa",
+      "case_id": "iowa_012",
+      "query": "How many invoices are in the public liquor data?",
+      "gold": {
+        "action": "answer",
+        "metric_id": "invoice_count",
+        "dimensions": []
+      }
+    },
+    {
+      "dataset": "iowa",
+      "case_id": "iowa_013",
+      "query": "Invoice count by month",
+      "gold": {
+        "action": "answer",
+        "metric_id": "invoice_count",
+        "dimensions": [
+          "ordered_month"
+        ]
+      }
+    },
+    {
+      "dataset": "iowa",
+      "case_id": "iowa_014",
+      "query": "Order count by county and city",
+      "gold": {
+        "action": "answer",
+        "metric_id": "invoice_count",
+        "dimensions": [
+          "store_city"
+        ]
+      }
+    },
+    {
+      "dataset": "iowa",
+      "case_id": "iowa_015",
+      "query": "How many stores sold liquor?",
+      "gold": {
+        "action": "answer",
+        "metric_id": "store_count",
+        "dimensions": []
+      }
+    },
+    {
+      "dataset": "iowa",
+      "case_id": "iowa_016",
+      "query": "Store count by county",
+      "gold": {
+        "action": "answer",
+        "metric_id": "store_count",
+        "dimensions": [
+          "county_name"
+        ]
+      }
+    },
+    {
+      "dataset": "ict",
+      "case_id": "ict_case_0001",
+      "query": "上个月销售额",
+      "gold": {
+        "action": "answer",
+        "metric_id": "ict_metric_013",
+        "dimensions": []
+      }
+    },
+    {
+      "dataset": "ict",
+      "case_id": "ict_case_0002",
+      "query": "上个月问题次数",
+      "gold": {
+        "action": "answer",
+        "metric_id": "ict_metric_002",
+        "dimensions": []
+      }
+    },
+    {
+      "dataset": "ict",
+      "case_id": "ict_case_0008",
+      "query": "上个月按一级品类、二级品类的销量",
+      "gold": {
+        "action": "answer",
+        "metric_id": "ict_metric_014",
+        "dimensions": [
+          "segment_l2"
+        ]
+      }
+    },
+    {
+      "dataset": "ict",
+      "case_id": "ict_case_0012",
+      "query": "今天的商品客诉率",
+      "gold": {
+        "action": "answer",
+        "metric_id": "ict_metric_015",
+        "dimensions": []
+      }
+    },
+    {
+      "dataset": "ict",
+      "case_id": "ict_case_0020",
+      "query": "last month Product Family D refund rate",
+      "gold": {
+        "action": "answer",
+        "metric_id": "ict_metric_007",
+        "dimensions": []
+      }
+    },
+    {
+      "dataset": "ict",
+      "case_id": "ict_case_0030",
+      "query": "近30天的退货量",
+      "gold": {
+        "action": "answer",
+        "metric_id": "ict_metric_010",
+        "dimensions": []
+      }
+    },
+    {
+      "dataset": "ict",
+      "case_id": "ict_case_0040",
+      "query": "天气预报",
+      "gold": {
+        "action": "refuse",
+        "metric_id": "",
+        "dimensions": []
+      }
+    },
+    {
+      "dataset": "ict",
+      "case_id": "ict_case_0050",
+      "query": "上个月按一级品类、二级品类的退货量",
+      "gold": {
+        "action": "answer",
+        "metric_id": "ict_metric_010",
+        "dimensions": [
+          "segment_l2"
+        ]
+      }
+    },
+    {
+      "dataset": "ict",
+      "case_id": "ict_case_0060",
+      "query": "上季度问题品数量",
+      "gold": {
+        "action": "answer",
+        "metric_id": "ict_metric_003",
+        "dimensions": []
+      }
+    },
+    {
+      "dataset": "ict",
+      "case_id": "ict_case_0070",
+      "query": "上个月按一级品类、二级品类的补发量",
+      "gold": {
+        "action": "answer",
+        "metric_id": "ict_metric_009",
+        "dimensions": [
+          "segment_l2"
+        ]
+      }
+    },
+    {
+      "dataset": "ict",
+      "case_id": "ict_case_0080",
+      "query": "上个月Quality issue问题占比",
+      "gold": {
+        "action": "answer",
+        "metric_id": "ict_metric_005",
+        "dimensions": []
+      }
+    },
+    {
+      "dataset": "ict",
+      "case_id": "ict_case_0090",
+      "query": "上个月按一级品类、二级品类的问题次数",
+      "gold": {
+        "action": "answer",
+        "metric_id": "ict_metric_002",
+        "dimensions": [
+          "segment_l2"
+        ]
+      }
+    },
+    {
+      "dataset": "ict",
+      "case_id": "ict_case_0100",
+      "query": "客诉率",
+      "gold": {
+        "action": "refuse",
+        "metric_id": "",
+        "dimensions": []
+      }
+    },
+    {
+      "dataset": "ict",
+      "case_id": "ict_case_0110",
+      "query": "上个月 Product Family C 的客诉数",
+      "gold": {
+        "action": "answer",
+        "metric_id": "ict_metric_012",
+        "dimensions": []
+      }
+    }
+  ],
+  "required_output": {
+    "type": "json",
+    "schema": [
+      {
+        "case_id": "string",
+        "verdict": "ACCEPT|QUESTION|REJECT",
+        "reason": "short"
+      }
+    ]
+  }
+}

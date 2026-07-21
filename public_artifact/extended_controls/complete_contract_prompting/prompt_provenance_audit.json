@@ -1,0 +1,67 @@
+{
+  "experiment_id": "complete-contract-instructed-execution",
+  "layers": {
+    "chinook": {
+      "api_error_records_selected": [],
+      "complete": true,
+      "contract_sha_mismatches": [],
+      "n_cases": 40,
+      "n_response_records_selected": 40,
+      "origin": "frozen predecessor run; prompt unchanged and SHA replayed",
+      "prompt_sha_mismatches": [],
+      "saved_prompt_exact_match": true,
+      "system_prompt_bytes": 8340,
+      "system_prompt_sha256": "e0d1d344cd80e29955a76c9ee543592036a055423c47acabb4462239b3c1cc39"
+    },
+    "govtwin": {
+      "api_error_records_selected": [],
+      "complete": true,
+      "contract_sha_mismatches": [],
+      "n_cases": 159,
+      "n_response_records_selected": 159,
+      "origin": "new complete-contract run after adding contract_profile",
+      "prompt_sha_mismatches": [],
+      "saved_prompt_exact_match": true,
+      "system_prompt_bytes": 23389,
+      "system_prompt_sha256": "06cf91783013e6f2eafd1127d57dcaf76c46967d9540968c89cccc93c2b1c726"
+    },
+    "ict": {
+      "api_error_records_selected": [],
+      "complete": true,
+      "contract_sha_mismatches": [],
+      "n_cases": 157,
+      "n_response_records_selected": 157,
+      "origin": "frozen predecessor run; prompt unchanged and SHA replayed",
+      "prompt_sha_mismatches": [],
+      "saved_prompt_exact_match": true,
+      "system_prompt_bytes": 10449,
+      "system_prompt_sha256": "94f55fb26f44ca84c5173fb5c87c0861e9e4278d0d7ec1070c7b9974852cb900"
+    },
+    "iowa": {
+      "api_error_records_selected": [],
+      "complete": true,
+      "contract_sha_mismatches": [],
+      "n_cases": 32,
+      "n_response_records_selected": 32,
+      "origin": "new complete-contract run after adding contract_profile and schema_columns",
+      "prompt_sha_mismatches": [],
+      "saved_prompt_exact_match": true,
+      "system_prompt_bytes": 15097,
+      "system_prompt_sha256": "e3a8f54742287f85c853a92c4d086285075cf775d66b278262e5922e8cdf670a"
+    },
+    "multigov": {
+      "api_error_records_selected": [],
+      "complete": true,
+      "contract_sha_mismatches": [],
+      "n_cases": 510,
+      "n_response_records_selected": 510,
+      "origin": "new complete-contract run with metric-specific coverage bindings and physical coverage",
+      "prompt_sha_mismatches": [],
+      "saved_prompt_exact_match": true,
+      "system_prompt_bytes": 375318,
+      "system_prompt_sha256": "2ee068724803108443db6c4f754966358fac8548edcbcfbdd5e2b57626b89966"
+    }
+  },
+  "legacy_boundary": "Older incomplete-contract Iowa/GovTwin/MultiGov outputs remain author-side and are excluded from this public artifact and from current scoring.",
+  "overall_complete": true
+}

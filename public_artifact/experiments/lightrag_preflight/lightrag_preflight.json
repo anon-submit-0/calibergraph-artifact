@@ -1,0 +1,21 @@
+{
+  "claim_boundary": "This is a LightRAG environment/custom-KG preflight, not a comparable accuracy baseline. A fair LightRAG numeric baseline requires fixed LLM and embedding services plus prompt/query policy; release does not place such preflight numbers in the main comparison table.",
+  "commit": "fedd95ce7db0d69d12923177c7f0604b0b23655b",
+  "date": "2026-07-08",
+  "import_status": "pass",
+  "init_status": "pass",
+  "initialize_storages_status": "pass",
+  "insert_custom_kg_status": "pass",
+  "insert_return_type": "NoneType",
+  "python": "Python 3.12.13",
+  "runtime_status": "pass",
+  "source": "https://github.com/HKUDS/LightRAG",
+  "version": "release",
+  "working_dir_files": [
+    "graph_chunk_entity_relation.graphml",
+    "kv_store_text_chunks.json",
+    "vdb_chunks.json",
+    "vdb_entities.json",
+    "vdb_relationships.json"
+  ]
+}

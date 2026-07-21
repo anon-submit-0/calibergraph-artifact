@@ -1,0 +1,6 @@
+{
+  "channel": "moonshot",
+  "model": "kimi-k2.6",
+  "mode": "llm_graph_rag",
+  "stdout": "```json\n[\n  {\"case_id\":\"ict_case_0026\", \"action\":\"answer\", \"metric_id\":\"ict_metric_001\", \"dimensions\":[\"segment_l1\"], \"reason\":\"Metric alias '客诉率' matches ict_metric_001; grouping dimension '一级品类' matches segment_l1\"},\n  {\"case_id\":\"ict_case_0027\", \"action\":\"answer\", \"metric_id\":\"ict_metric_015\", \"dimensions\":[], \"reason\":\"Metric alias '商品客诉率' matches ict_metric_015; flat metric with no governed grouping dimension requested\"}\n]\n```"
+}

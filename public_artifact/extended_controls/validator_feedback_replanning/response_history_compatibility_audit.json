@@ -1,0 +1,50 @@
+{
+  "decision": "reuse response histories and recompute release reports",
+  "experiment_id": "validator-feedback-replanning",
+  "layers": {
+    "govtwin": {
+      "compatible": true,
+      "n_cases": 159,
+      "n_rounds_revalidated": 194,
+      "n_source_records": 159,
+      "prompt_mismatches": [],
+      "response_history_source": "frozen predecessor run; verdicts revalidated by release",
+      "round0_prompt_sha_matches": 159,
+      "verdict_mismatches": []
+    },
+    "ict": {
+      "compatible": true,
+      "n_cases": 157,
+      "n_rounds_revalidated": 183,
+      "n_source_records": 157,
+      "prompt_mismatches": [],
+      "response_history_source": "full public ICT extension run",
+      "round0_prompt_sha_matches": 157,
+      "verdict_mismatches": []
+    },
+    "iowa": {
+      "compatible": true,
+      "n_cases": 32,
+      "n_rounds_revalidated": 40,
+      "n_source_records": 32,
+      "prompt_mismatches": [],
+      "response_history_source": "frozen predecessor run except iowa_005/iowa_006 rerun by release",
+      "round0_prompt_sha_matches": 32,
+      "verdict_mismatches": []
+    },
+    "multigov": {
+      "compatible": true,
+      "n_cases": 200,
+      "n_rounds_revalidated": 220,
+      "n_source_records": 200,
+      "prompt_mismatches": [],
+      "response_history_source": "frozen predecessor run; verdicts revalidated by release",
+      "round0_prompt_sha_matches": 200,
+      "verdict_mismatches": []
+    }
+  },
+  "overall_compatible": true,
+  "source": "mixed frozen-and-rerun response histories; declared per layer",
+  "target": "released ContractCompiler",
+  "ts_utc": "2026-07-12T07:24:28Z"
+}

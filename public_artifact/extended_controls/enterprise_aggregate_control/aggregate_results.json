@@ -1,0 +1,83 @@
+{
+  "comparisons": {
+    "instructed_execution": {
+      "accuracy_control": 0.779874213836478,
+      "accuracy_reference": 0.9245283018867925,
+      "bootstrap_replicates": 10000,
+      "bootstrap_seed": 20260711,
+      "contingency": {
+        "both_correct": 119,
+        "both_wrong": 7,
+        "control_only": 5,
+        "reference_only": 28
+      },
+      "delta_reference_minus_control": 0.14465408805031446,
+      "mcnemar_exact_two_sided_p": 6.618769839406013e-05,
+      "paired_bootstrap_95ci": [
+        0.07547169811320754,
+        0.2138364779874214
+      ]
+    },
+    "replan_final": {
+      "accuracy_control": 0.89937106918239,
+      "accuracy_reference": 0.9245283018867925,
+      "bootstrap_replicates": 10000,
+      "bootstrap_seed": 20260711,
+      "contingency": {
+        "both_correct": 139,
+        "both_wrong": 8,
+        "control_only": 4,
+        "reference_only": 8
+      },
+      "delta_reference_minus_control": 0.025157232704402517,
+      "mcnemar_exact_two_sided_p": 0.3876953125,
+      "paired_bootstrap_95ci": [
+        -0.018867924528301886,
+        0.06918238993710692
+      ]
+    },
+    "replan_round0": {
+      "accuracy_control": 0.779874213836478,
+      "accuracy_reference": 0.9245283018867925,
+      "bootstrap_replicates": 10000,
+      "bootstrap_seed": 20260711,
+      "contingency": {
+        "both_correct": 121,
+        "both_wrong": 9,
+        "control_only": 3,
+        "reference_only": 26
+      },
+      "delta_reference_minus_control": 0.14465408805031446,
+      "mcnemar_exact_two_sided_p": 1.5236437320709229e-05,
+      "paired_bootstrap_95ci": [
+        0.0880503144654088,
+        0.20754716981132076
+      ]
+    },
+    "schema_rag_fresh": {
+      "accuracy_control": 0.7987421383647799,
+      "accuracy_reference": 0.9245283018867925,
+      "bootstrap_replicates": 10000,
+      "bootstrap_seed": 20260711,
+      "contingency": {
+        "both_correct": 121,
+        "both_wrong": 6,
+        "control_only": 6,
+        "reference_only": 26
+      },
+      "delta_reference_minus_control": 0.12578616352201258,
+      "mcnemar_exact_two_sided_p": 0.0005350527353584766,
+      "paired_bootstrap_95ci": [
+        0.06289308176100629,
+        0.1949685534591195
+      ]
+    }
+  },
+  "interpretation_guard": "The replan comparison is not statistically significant; do not claim predictive superiority.",
+  "n": 159,
+  "reference": {
+    "accuracy": 0.9245283018867925,
+    "name": "CaliberGraph"
+  },
+  "source": "anonymous correctness-only enterprise pairs; no query text, labels, or identifiers"
+}

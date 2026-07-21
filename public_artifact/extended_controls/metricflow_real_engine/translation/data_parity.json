@@ -1,0 +1,52 @@
+{
+  "sqlite_table": "iowa_liquor_sales",
+  "duckdb_table": "raw_iowa_liquor_sales",
+  "checks": {
+    "row_count": {
+      "sqlite": 5000,
+      "duckdb": 5000,
+      "match": true
+    },
+    "sum_sales_dollars": {
+      "sqlite": 3973893.77,
+      "duckdb": 3973893.77,
+      "match": true
+    },
+    "sum_sales_bottles": {
+      "sqlite": 247269.0,
+      "duckdb": 247269.0,
+      "match": true
+    },
+    "sum_sales_liters": {
+      "sqlite": 228559.03,
+      "duckdb": 228559.03,
+      "match": true
+    },
+    "distinct_invoice_id": {
+      "sqlite": 5000,
+      "duckdb": 5000,
+      "match": true
+    },
+    "distinct_store_no": {
+      "sqlite": 1293,
+      "duckdb": 1293,
+      "match": true
+    },
+    "distinct_item_no": {
+      "sqlite": 1042,
+      "duckdb": 1042,
+      "match": true
+    },
+    "min_ordered_on": {
+      "sqlite": "2024-01-02",
+      "duckdb": "2024-01-02",
+      "match": true
+    },
+    "max_ordered_on": {
+      "sqlite": "2024-12-04",
+      "duckdb": "2024-12-04",
+      "match": true
+    }
+  },
+  "all_match": true
+}

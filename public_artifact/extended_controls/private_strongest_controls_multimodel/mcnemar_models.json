@@ -1,0 +1,518 @@
+{
+  "protocol": "protocol_ext_models.md (frozen 2026-07-12T14:13+0800, before any LLM call of this study)",
+  "n_cases": 159,
+  "arm_a_reference": {
+    "name": "CaliberGraph (deterministic compiler; flags from ../private_paired_rerun/per_case_pairs.jsonl)",
+    "joint_accuracy": 0.9245283018867925,
+    "joint_correct": 147
+  },
+  "deepseek_reference": {
+    "arm_c_joint": 0.779874213836478,
+    "arm_d_round0_joint": 0.779874213836478,
+    "arm_d_final_joint": 0.89937106918239,
+    "source": "../private_strongest_controls/mcnemar_ext.json"
+  },
+  "arm_b_reference": {
+    "joint_accuracy_rerun": 0.7987421383647799,
+    "joint_accuracy_published": 0.8490566037735849
+  },
+  "models": {
+    "gpt-5.5": {
+      "arm_c": {
+        "name": "Arm C-gpt-5.5 — instructed-execution (full private contract verbatim, gpt-5.5, temperature=0)",
+        "joint_accuracy": 0.9811320754716981,
+        "joint_correct": 156,
+        "wilson95": [
+          0.9460013803642149,
+          0.9935627890311809
+        ],
+        "refusal": {
+          "refusal_precision": 0.875,
+          "refusal_recall": 0.7777777777777778,
+          "tp": 7,
+          "fp": 1,
+          "fn": 2
+        },
+        "vs_armA": {
+          "contingency": {
+            "both_correct": 147,
+            "A_only": 0,
+            "X_only": 9,
+            "both_wrong": 3
+          },
+          "discordant_n": 9,
+          "mcnemar_exact_two_sided_p": 0.00390625,
+          "delta_joint_A_minus_X": -0.05660377358490566,
+          "paired_bootstrap_95ci": [
+            -0.09433962264150944,
+            -0.025157232704402517
+          ],
+          "bootstrap_B": 10000,
+          "bootstrap_seed": 20260711
+        },
+        "reaches_0925": true,
+        "parse_status_counts": {
+          "ok": 159
+        },
+        "cost": {
+          "llm_calls_total": 159,
+          "total_prompt_tokens": 1251151,
+          "total_completion_tokens": 25193
+        }
+      },
+      "arm_d_round0": {
+        "name": "Arm D-gpt-5.5 round 0 — single-case Schema-RAG replicate",
+        "joint_accuracy": 0.8364779874213837,
+        "joint_correct": 133,
+        "wilson95": [
+          0.7711842443948407,
+          0.8858965799535734
+        ],
+        "refusal": {
+          "refusal_precision": 0.5384615384615384,
+          "refusal_recall": 0.7777777777777778,
+          "tp": 7,
+          "fp": 6,
+          "fn": 2
+        },
+        "vs_armA": {
+          "contingency": {
+            "both_correct": 129,
+            "A_only": 18,
+            "X_only": 4,
+            "both_wrong": 8
+          },
+          "discordant_n": 22,
+          "mcnemar_exact_two_sided_p": 0.004343509674072266,
+          "delta_joint_A_minus_X": 0.0880503144654088,
+          "paired_bootstrap_95ci": [
+            0.031446540880503145,
+            0.14465408805031446
+          ],
+          "bootstrap_B": 10000,
+          "bootstrap_seed": 20260711
+        },
+        "reaches_0925": false
+      },
+      "arm_d_final": {
+        "name": "Arm D-gpt-5.5 final — validator-feedback replanning loop (<=3 repairs)",
+        "joint_accuracy": 0.9245283018867925,
+        "joint_correct": 147,
+        "wilson95": [
+          0.8727246609860535,
+          0.9563025473040017
+        ],
+        "refusal": {
+          "refusal_precision": 1.0,
+          "refusal_recall": 0.7777777777777778,
+          "tp": 7,
+          "fp": 0,
+          "fn": 2
+        },
+        "vs_armA": {
+          "contingency": {
+            "both_correct": 142,
+            "A_only": 5,
+            "X_only": 5,
+            "both_wrong": 7
+          },
+          "discordant_n": 10,
+          "mcnemar_exact_two_sided_p": 1.0,
+          "delta_joint_A_minus_X": 0.0,
+          "paired_bootstrap_95ci": [
+            -0.03773584905660377,
+            0.03773584905660377
+          ],
+          "bootstrap_B": 10000,
+          "bootstrap_seed": 20260711
+        },
+        "reaches_0925": true,
+        "loop_diagnostics": {
+          "round0_joint": 0.8364779874213837,
+          "final_joint": 0.9245283018867925,
+          "discordant_wrong_to_right": 14,
+          "discordant_right_to_wrong": 0,
+          "sign_test_p_two_sided": 0.0001220703125,
+          "violations_round0": {
+            "hierarchy_conflict": 11,
+            "dimension_policy_violation": 12,
+            "unjustified_refusal": 6
+          },
+          "violations_final": {},
+          "validator_invisible_errors_final": {
+            "n": 12,
+            "by_kind": {
+              "wrong_metric_only": 11,
+              "wrong_metric_and_dimensions": 1
+            },
+            "cases": [
+              {
+                "case_id": "case_044",
+                "kind": "wrong_metric_only",
+                "pred_metric_id": "category_complaint_rate",
+                "expected_metric_id": "sku_complaint_rate",
+                "pred_dimensions": [],
+                "expected_dimensions": []
+              },
+              {
+                "case_id": "case_067",
+                "kind": "wrong_metric_only",
+                "pred_metric_id": "problem_cnt",
+                "expected_metric_id": "rma_order_count",
+                "pred_dimensions": [
+                  "category_l2"
+                ],
+                "expected_dimensions": [
+                  "category_l2"
+                ]
+              },
+              {
+                "case_id": "case_134",
+                "kind": "wrong_metric_only",
+                "pred_metric_id": "category_complaint_rate",
+                "expected_metric_id": "problem_product_qty",
+                "pred_dimensions": [],
+                "expected_dimensions": []
+              },
+              {
+                "case_id": "seed_007",
+                "kind": "wrong_metric_and_dimensions",
+                "pred_metric_id": "sku_complaint_rate",
+                "expected_metric_id": "category_complaint_rate",
+                "pred_dimensions": [],
+                "expected_dimensions": [
+                  "region"
+                ]
+              },
+              {
+                "case_id": "case_136",
+                "kind": "wrong_metric_only",
+                "pred_metric_id": "refund_rate",
+                "expected_metric_id": "sale_amount_usd",
+                "pred_dimensions": [],
+                "expected_dimensions": []
+              },
+              {
+                "case_id": "case_143",
+                "kind": "wrong_metric_only",
+                "pred_metric_id": "refund_amount_usd",
+                "expected_metric_id": "",
+                "pred_dimensions": [],
+                "expected_dimensions": []
+              },
+              {
+                "case_id": "case_017",
+                "kind": "wrong_metric_only",
+                "pred_metric_id": "problem_cnt",
+                "expected_metric_id": "rma_order_count",
+                "pred_dimensions": [
+                  "category_l1"
+                ],
+                "expected_dimensions": [
+                  "category_l1"
+                ]
+              },
+              {
+                "case_id": "case_034",
+                "kind": "wrong_metric_only",
+                "pred_metric_id": "category_complaint_rate",
+                "expected_metric_id": "sku_complaint_rate",
+                "pred_dimensions": [
+                  "category_l1"
+                ],
+                "expected_dimensions": [
+                  "category_l1"
+                ]
+              },
+              {
+                "case_id": "case_144",
+                "kind": "wrong_metric_only",
+                "pred_metric_id": "category_complaint_rate",
+                "expected_metric_id": "",
+                "pred_dimensions": [],
+                "expected_dimensions": []
+              },
+              {
+                "case_id": "case_007",
+                "kind": "wrong_metric_only",
+                "pred_metric_id": "problem_cnt",
+                "expected_metric_id": "rma_order_count",
+                "pred_dimensions": [],
+                "expected_dimensions": []
+              },
+              {
+                "case_id": "case_132",
+                "kind": "wrong_metric_only",
+                "pred_metric_id": "refund_amount_usd",
+                "expected_metric_id": "sale_amount_usd",
+                "pred_dimensions": [],
+                "expected_dimensions": []
+              },
+              {
+                "case_id": "case_139",
+                "kind": "wrong_metric_only",
+                "pred_metric_id": "return_rate",
+                "expected_metric_id": "return_qty",
+                "pred_dimensions": [],
+                "expected_dimensions": []
+              }
+            ]
+          },
+          "llm_calls_total": 177,
+          "llm_calls_per_case_mean": 1.1132075471698113,
+          "llm_calls_per_case_max": 2,
+          "cases_resolved_at_round0": 141,
+          "total_prompt_tokens": 120326,
+          "total_completion_tokens": 28125,
+          "missing_cases": [],
+          "compiler_reference_llm_calls": 0
+        }
+      }
+    },
+    "claude-opus-4-6": {
+      "arm_c": {
+        "name": "Arm C-claude-opus-4-6 — instructed-execution (full private contract verbatim, claude-opus-4-6, temperature=0)",
+        "joint_accuracy": 0.7232704402515723,
+        "joint_correct": 115,
+        "wilson95": [
+          0.6490881232590551,
+          0.7869187788786776
+        ],
+        "refusal": {
+          "refusal_precision": 0.4117647058823529,
+          "refusal_recall": 0.7777777777777778,
+          "tp": 7,
+          "fp": 10,
+          "fn": 2
+        },
+        "vs_armA": {
+          "contingency": {
+            "both_correct": 109,
+            "A_only": 38,
+            "X_only": 6,
+            "both_wrong": 6
+          },
+          "discordant_n": 44,
+          "mcnemar_exact_two_sided_p": 9.430375484953402e-07,
+          "delta_joint_A_minus_X": 0.20125786163522014,
+          "paired_bootstrap_95ci": [
+            0.12578616352201258,
+            0.27672955974842767
+          ],
+          "bootstrap_B": 10000,
+          "bootstrap_seed": 20260711
+        },
+        "reaches_0925": false,
+        "parse_status_counts": {
+          "ok": 158,
+          "parse_error": 1
+        },
+        "cost": {
+          "llm_calls_total": 159,
+          "total_prompt_tokens": 1477131,
+          "total_completion_tokens": 12085
+        }
+      },
+      "arm_d_round0": {
+        "name": "Arm D-claude-opus-4-6 round 0 — single-case Schema-RAG replicate",
+        "joint_accuracy": 0.7861635220125787,
+        "joint_correct": 125,
+        "wilson95": [
+          0.716077842230022,
+          0.8427479055803115
+        ],
+        "refusal": {
+          "refusal_precision": 0.5833333333333334,
+          "refusal_recall": 0.7777777777777778,
+          "tp": 7,
+          "fp": 5,
+          "fn": 2
+        },
+        "vs_armA": {
+          "contingency": {
+            "both_correct": 120,
+            "A_only": 27,
+            "X_only": 5,
+            "both_wrong": 7
+          },
+          "discordant_n": 32,
+          "mcnemar_exact_two_sided_p": 0.00011307420209050179,
+          "delta_joint_A_minus_X": 0.13836477987421383,
+          "paired_bootstrap_95ci": [
+            0.07547169811320754,
+            0.20754716981132076
+          ],
+          "bootstrap_B": 10000,
+          "bootstrap_seed": 20260711
+        },
+        "reaches_0925": false
+      },
+      "arm_d_final": {
+        "name": "Arm D-claude-opus-4-6 final — validator-feedback replanning loop (<=3 repairs)",
+        "joint_accuracy": 0.9371069182389937,
+        "joint_correct": 149,
+        "wilson95": [
+          0.888108635369929,
+          0.9654823420546463
+        ],
+        "refusal": {
+          "refusal_precision": 1.0,
+          "refusal_recall": 0.7777777777777778,
+          "tp": 7,
+          "fp": 0,
+          "fn": 2
+        },
+        "vs_armA": {
+          "contingency": {
+            "both_correct": 141,
+            "A_only": 6,
+            "X_only": 8,
+            "both_wrong": 4
+          },
+          "discordant_n": 14,
+          "mcnemar_exact_two_sided_p": 0.79052734375,
+          "delta_joint_A_minus_X": -0.012578616352201259,
+          "paired_bootstrap_95ci": [
+            -0.05660377358490566,
+            0.031446540880503145
+          ],
+          "bootstrap_B": 10000,
+          "bootstrap_seed": 20260711
+        },
+        "reaches_0925": true,
+        "loop_diagnostics": {
+          "round0_joint": 0.7861635220125787,
+          "final_joint": 0.9371069182389937,
+          "discordant_wrong_to_right": 24,
+          "discordant_right_to_wrong": 0,
+          "sign_test_p_two_sided": 1.1920928955078125e-07,
+          "violations_round0": {
+            "dimension_policy_violation": 20,
+            "hierarchy_conflict": 11,
+            "metric_not_in_catalog": 3,
+            "unjustified_refusal": 4,
+            "output_not_parseable": 1
+          },
+          "violations_final": {
+            "hierarchy_conflict": 2,
+            "dimension_policy_violation": 2
+          },
+          "validator_invisible_errors_final": {
+            "n": 8,
+            "by_kind": {
+              "wrong_metric_only": 7,
+              "wrong_metric_and_dimensions": 1
+            },
+            "cases": [
+              {
+                "case_id": "case_035",
+                "kind": "wrong_metric_only",
+                "pred_metric_id": "category_complaint_rate",
+                "expected_metric_id": "quality_problem_ratio",
+                "pred_dimensions": [
+                  "category_l1"
+                ],
+                "expected_dimensions": [
+                  "category_l1"
+                ]
+              },
+              {
+                "case_id": "case_134",
+                "kind": "wrong_metric_only",
+                "pred_metric_id": "category_complaint_rate",
+                "expected_metric_id": "problem_product_qty",
+                "pred_dimensions": [],
+                "expected_dimensions": []
+              },
+              {
+                "case_id": "seed_007",
+                "kind": "wrong_metric_and_dimensions",
+                "pred_metric_id": "sku_complaint_rate",
+                "expected_metric_id": "category_complaint_rate",
+                "pred_dimensions": [],
+                "expected_dimensions": [
+                  "region"
+                ]
+              },
+              {
+                "case_id": "case_143",
+                "kind": "wrong_metric_only",
+                "pred_metric_id": "refund_amount_usd",
+                "expected_metric_id": "",
+                "pred_dimensions": [],
+                "expected_dimensions": []
+              },
+              {
+                "case_id": "case_017",
+                "kind": "wrong_metric_only",
+                "pred_metric_id": "problem_cnt",
+                "expected_metric_id": "rma_order_count",
+                "pred_dimensions": [
+                  "category_l1"
+                ],
+                "expected_dimensions": [
+                  "category_l1"
+                ]
+              },
+              {
+                "case_id": "case_034",
+                "kind": "wrong_metric_only",
+                "pred_metric_id": "category_complaint_rate",
+                "expected_metric_id": "sku_complaint_rate",
+                "pred_dimensions": [
+                  "category_l1"
+                ],
+                "expected_dimensions": [
+                  "category_l1"
+                ]
+              },
+              {
+                "case_id": "case_144",
+                "kind": "wrong_metric_only",
+                "pred_metric_id": "category_complaint_rate",
+                "expected_metric_id": "",
+                "pred_dimensions": [],
+                "expected_dimensions": []
+              },
+              {
+                "case_id": "case_139",
+                "kind": "wrong_metric_only",
+                "pred_metric_id": "return_rate",
+                "expected_metric_id": "return_qty",
+                "pred_dimensions": [],
+                "expected_dimensions": []
+              }
+            ]
+          },
+          "llm_calls_total": 197,
+          "llm_calls_per_case_mean": 1.2389937106918238,
+          "llm_calls_per_case_max": 4,
+          "cases_resolved_at_round0": 131,
+          "total_prompt_tokens": 182444,
+          "total_completion_tokens": 19951,
+          "missing_cases": [],
+          "compiler_reference_llm_calls": 0
+        }
+      }
+    }
+  },
+  "primary_arms_mcnemar_p_raw": {
+    "C-gpt-5.5": 0.00390625,
+    "Dfinal-gpt-5.5": 1.0,
+    "C-claude-opus-4-6": 9.430375484953402e-07,
+    "Dfinal-claude-opus-4-6": 0.79052734375
+  },
+  "primary_arms_mcnemar_p_holm": {
+    "C-claude-opus-4-6": 3.7721501939813606e-06,
+    "C-gpt-5.5": 0.01171875,
+    "Dfinal-claude-opus-4-6": 1.0,
+    "Dfinal-gpt-5.5": 1.0
+  },
+  "overtaking_arms": [
+    "C-gpt-5.5",
+    "Dfinal-gpt-5.5",
+    "Dfinal-claude-opus-4-6"
+  ],
+  "preregistered_branch": "a_overtaken_gap_eroded",
+  "branch_rule": "(a) any primary arm joint >= 0.9245283 -> gap eroded, migrate claim to by-construction; (b) all < 0.925 but some primary arm p >= 0.05 -> parity posture, no paired-superiority claim vs that arm; (c) all < 0.925 and all primary p < 0.05 -> margin survives strongest models"
+}

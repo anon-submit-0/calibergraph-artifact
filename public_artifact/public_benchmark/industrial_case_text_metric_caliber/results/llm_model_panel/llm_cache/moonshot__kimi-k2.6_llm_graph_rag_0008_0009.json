@@ -1,0 +1,6 @@
+{
+  "channel": "moonshot",
+  "model": "kimi-k2.6",
+  "mode": "llm_graph_rag",
+  "stdout": "[\n  {\"case_id\":\"ict_case_0001\", \"action\":\"answer\", \"metric_id\":\"ict_metric_013\", \"dimensions\":[], \"reason\":\"Matched Sales Amount metric; no dimensions requested.\"},\n  {\"case_id\":\"ict_case_0002\", \"action\":\"answer\", \"metric_id\":\"ict_metric_002\", \"dimensions\":[], \"reason\":\"Matched Issue Count metric; no dimensions requested.\"}\n]"
+}

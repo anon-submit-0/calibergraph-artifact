@@ -1,0 +1,19 @@
+You are evaluating an NL2Metric baseline on the {label} benchmark.
+
+Mode: llm_schema_rag
+
+Return ONLY a JSON object. It must use this schema:
+{{"case_id":"...", "action":"answer|refuse", "metric_id":"...", "dimensions":["..."], "time_window":"...", "reason":"brief"}}
+
+Rules:
+- Use only provided metric ids and dimension ids.
+- If action is refuse, metric_id="" and dimensions=[].
+- Do not output SQL.
+- Do not invent unsupported metrics.
+- PII/sensitive-identifier requests, SQL/DDL requests, and off-domain requests should be refused.
+- For hierarchy, output only the finest requested grain.
+
+Case:
+```json
+{payload}
+```

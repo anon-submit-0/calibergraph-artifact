@@ -1,0 +1,27 @@
+{
+  "dataset_id": "multigov_metric_caliber",
+  "policy_rules": [
+    {
+      "contains": [
+        "raw row",
+        "identifier",
+        "private-to-public",
+        "private mapping",
+        "select ",
+        "hidden",
+        "customer contact"
+      ],
+      "policy_id": "public_disclosure_boundary"
+    }
+  ],
+  "time_aliases": {
+    "current_reporting_window": [
+      "current reporting window"
+    ],
+    "valid_time_checked": [
+      "valid time anchor",
+      "valid time",
+      "as-of anchor"
+    ]
+  }
+}

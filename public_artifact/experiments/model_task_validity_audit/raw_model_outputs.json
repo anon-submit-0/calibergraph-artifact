@@ -1,0 +1,161 @@
+[
+  {
+    "channel": "gpt-provider",
+    "model": "gpt-5.5",
+    "parsed": [
+      {
+        "case_id": "iowa_001",
+        "reason": "Query asks for total sales dollars; metric and no dimensions match.",
+        "verdict": "ACCEPT"
+      },
+      {
+        "case_id": "iowa_002",
+        "reason": "Sales dollars by county matches sales_dollars with county_name.",
+        "verdict": "ACCEPT"
+      },
+      {
+        "case_id": "iowa_003",
+        "reason": "County and city are on one hierarchy path; finest requested level is store_city.",
+        "verdict": "ACCEPT"
+      },
+      {
+        "case_id": "iowa_004",
+        "reason": "Category and item are on one hierarchy path; finest requested level is item_desc.",
+        "verdict": "ACCEPT"
+      },
+      {
+        "case_id": "iowa_005",
+        "reason": "Monthly liquor sales maps to sales_dollars by ordered_month.",
+        "verdict": "ACCEPT"
+      },
+      {
+        "case_id": "iowa_006",
+        "reason": "Quarterly sales dollars by county matches sales_dollars with ordered_quarter and county_name.",
+        "verdict": "ACCEPT"
+      },
+      {
+        "case_id": "iowa_007",
+        "reason": "Bottles sold directly matches bottles_sold.",
+        "verdict": "ACCEPT"
+      },
+      {
+        "case_id": "iowa_008",
+        "reason": "Bottles sold by vendor matches bottles_sold with vendor_name.",
+        "verdict": "ACCEPT"
+      },
+      {
+        "case_id": "iowa_009",
+        "reason": "Category and item are on one hierarchy path; finest requested level is item_desc.",
+        "verdict": "ACCEPT"
+      },
+      {
+        "case_id": "iowa_010",
+        "reason": "Liters sold by county matches liters_sold with county_name.",
+        "verdict": "ACCEPT"
+      },
+      {
+        "case_id": "iowa_011",
+        "reason": "Volume in liters maps to liters_sold; county and city resolve to finest level store_city.",
+        "verdict": "ACCEPT"
+      },
+      {
+        "case_id": "iowa_012",
+        "reason": "Invoices maps to invoice_count with no requested dimension.",
+        "verdict": "ACCEPT"
+      },
+      {
+        "case_id": "iowa_013",
+        "reason": "Invoice count by month matches invoice_count with ordered_month.",
+        "verdict": "ACCEPT"
+      },
+      {
+        "case_id": "iowa_014",
+        "reason": "Order count maps to invoice_count; county and city resolve to store_city.",
+        "verdict": "ACCEPT"
+      },
+      {
+        "case_id": "iowa_015",
+        "reason": "Stores sold liquor maps to store_count.",
+        "verdict": "ACCEPT"
+      },
+      {
+        "case_id": "iowa_016",
+        "reason": "Store count by county matches store_count with county_name.",
+        "verdict": "ACCEPT"
+      },
+      {
+        "case_id": "ict_case_0001",
+        "reason": "销售额 maps to Sales Amount.",
+        "verdict": "ACCEPT"
+      },
+      {
+        "case_id": "ict_case_0002",
+        "reason": "问题次数 maps to Issue Count.",
+        "verdict": "ACCEPT"
+      },
+      {
+        "case_id": "ict_case_0008",
+        "reason": "销量 maps to Sales Quantity; 一级品类 and 二级品类 resolve to finest level segment_l2.",
+        "verdict": "ACCEPT"
+      },
+      {
+        "case_id": "ict_case_0012",
+        "reason": "商品客诉率 maps to Item Complaint Rate.",
+        "verdict": "ACCEPT"
+      },
+      {
+        "case_id": "ict_case_0020",
+        "reason": "Refund rate directly maps to ict_metric_007.",
+        "verdict": "ACCEPT"
+      },
+      {
+        "case_id": "ict_case_0030",
+        "reason": "退货量 maps to Return Quantity.",
+        "verdict": "ACCEPT"
+      },
+      {
+        "case_id": "ict_case_0040",
+        "reason": "天气预报 is off-domain and should be refused.",
+        "verdict": "ACCEPT"
+      },
+      {
+        "case_id": "ict_case_0050",
+        "reason": "退货量 maps to Return Quantity; 一级品类 and 二级品类 resolve to segment_l2.",
+        "verdict": "ACCEPT"
+      },
+      {
+        "case_id": "ict_case_0060",
+        "reason": "问题品数量 maps to Defective Item Quantity.",
+        "verdict": "ACCEPT"
+      },
+      {
+        "case_id": "ict_case_0070",
+        "reason": "补发量 maps to Reshipment Quantity; 一级品类 and 二级品类 resolve to segment_l2.",
+        "verdict": "ACCEPT"
+      },
+      {
+        "case_id": "ict_case_0080",
+        "reason": "Quality issue问题占比 is an alias for Quality Defect Rate.",
+        "verdict": "ACCEPT"
+      },
+      {
+        "case_id": "ict_case_0090",
+        "reason": "问题次数 maps to Issue Count; 一级品类 and 二级品类 resolve to segment_l2.",
+        "verdict": "ACCEPT"
+      },
+      {
+        "case_id": "ict_case_0100",
+        "reason": "客诉率 is listed as an ambiguous query and should be refused despite being an alias.",
+        "verdict": "ACCEPT"
+      },
+      {
+        "case_id": "ict_case_0110",
+        "reason": "客诉数 maps to After-Sales Case Count.",
+        "verdict": "ACCEPT"
+      }
+    ],
+    "returncode": 0,
+    "stderr": "[gpt-provider/gpt-5.5 | prompt=4801 completion=2207]\n",
+    "stdout": "[\n  {\n    \"case_id\": \"iowa_001\",\n    \"verdict\": \"ACCEPT\",\n    \"reason\": \"Query asks for total sales dollars; metric and no dimensions match.\"\n  },\n  {\n    \"case_id\": \"iowa_002\",\n    \"verdict\": \"ACCEPT\",\n    \"reason\": \"Sales dollars by county matches sales_dollars with county_name.\"\n  },\n  {\n    \"case_id\": \"iowa_003\",\n    \"verdict\": \"ACCEPT\",\n    \"reason\": \"County and city are on one hierarchy path; finest requested level is store_city.\"\n  },\n  {\n    \"case_id\": \"iowa_004\",\n    \"verdict\": \"ACCEPT\",\n    \"reason\": \"Category and item are on one hierarchy path; finest requested level is item_desc.\"\n  },\n  {\n    \"case_id\": \"iowa_005\",\n    \"verdict\": \"ACCEPT\",\n    \"reason\": \"Monthly liquor sales maps to sales_dollars by ordered_month.\"\n  },\n  {\n    \"case_id\": \"iowa_006\",\n    \"verdict\": \"ACCEPT\",\n    \"reason\": \"Quarterly sales dollars by county matches sales_dollars with ordered_quarter and county_name.\"\n  },\n  {\n    \"case_id\": \"iowa_007\",\n    \"verdict\": \"ACCEPT\",\n    \"reason\": \"Bottles sold directly matches bottles_sold.\"\n  },\n  {\n    \"case_id\": \"iowa_008\",\n    \"verdict\": \"ACCEPT\",\n    \"reason\": \"Bottles sold by vendor matches bottles_sold with vendor_name.\"\n  },\n  {\n    \"case_id\": \"iowa_009\",\n    \"verdict\": \"ACCEPT\",\n    \"reason\": \"Category and item are on one hierarchy path; finest requested level is item_desc.\"\n  },\n  {\n    \"case_id\": \"iowa_010\",\n    \"verdict\": \"ACCEPT\",\n    \"reason\": \"Liters sold by county matches liters_sold with county_name.\"\n  },\n  {\n    \"case_id\": \"iowa_011\",\n    \"verdict\": \"ACCEPT\",\n    \"reason\": \"Volume in liters maps to liters_sold; county and city resolve to finest level store_city.\"\n  },\n  {\n    \"case_id\": \"iowa_012\",\n    \"verdict\": \"ACCEPT\",\n    \"reason\": \"Invoices maps to invoice_count with no requested dimension.\"\n  },\n  {\n    \"case_id\": \"iowa_013\",\n    \"verdict\": \"ACCEPT\",\n    \"reason\": \"Invoice count by month matches invoice_count with ordered_month.\"\n  },\n  {\n    \"case_id\": \"iowa_014\",\n    \"verdict\": \"ACCEPT\",\n    \"reason\": \"Order count maps to invoice_count; county and city resolve to store_city.\"\n  },\n  {\n    \"case_id\": \"iowa_015\",\n    \"verdict\": \"ACCEPT\",\n    \"reason\": \"Stores sold liquor maps to store_count.\"\n  },\n  {\n    \"case_id\": \"iowa_016\",\n    \"verdict\": \"ACCEPT\",\n    \"reason\": \"Store count by county matches store_count with county_name.\"\n  },\n  {\n    \"case_id\": \"ict_case_0001\",\n    \"verdict\": \"ACCEPT\",\n    \"reason\": \"销售额 maps to Sales Amount.\"\n  },\n  {\n    \"case_id\": \"ict_case_0002\",\n    \"verdict\": \"ACCEPT\",\n    \"reason\": \"问题次数 maps to Issue Count.\"\n  },\n  {\n    \"case_id\": \"ict_case_0008\",\n    \"verdict\": \"ACCEPT\",\n    \"reason\": \"销量 maps to Sales Quantity; 一级品类 and 二级品类 resolve to finest level segment_l2.\"\n  },\n  {\n    \"case_id\": \"ict_case_0012\",\n    \"verdict\": \"ACCEPT\",\n    \"reason\": \"商品客诉率 maps to Item Complaint Rate.\"\n  },\n  {\n    \"case_id\": \"ict_case_0020\",\n    \"verdict\": \"ACCEPT\",\n    \"reason\": \"Refund rate directly maps to ict_metric_007.\"\n  },\n  {\n    \"case_id\": \"ict_case_0030\",\n    \"verdict\": \"ACCEPT\",\n    \"reason\": \"退货量 maps to Return Quantity.\"\n  },\n  {\n    \"case_id\": \"ict_case_0040\",\n    \"verdict\": \"ACCEPT\",\n    \"reason\": \"天气预报 is off-domain and should be refused.\"\n  },\n  {\n    \"case_id\": \"ict_case_0050\",\n    \"verdict\": \"ACCEPT\",\n    \"reason\": \"退货量 maps to Return Quantity; 一级品类 and 二级品类 resolve to segment_l2.\"\n  },\n  {\n    \"case_id\": \"ict_case_0060\",\n    \"verdict\": \"ACCEPT\",\n    \"reason\": \"问题品数量 maps to Defective Item Quantity.\"\n  },\n  {\n    \"case_id\": \"ict_case_0070\",\n    \"verdict\": \"ACCEPT\",\n    \"reason\": \"补发量 maps to Reshipment Quantity; 一级品类 and 二级品类 resolve to segment_l2.\"\n  },\n  {\n    \"case_id\": \"ict_case_0080\",\n    \"verdict\": \"ACCEPT\",\n    \"reason\": \"Quality issue问题占比 is an alias for Quality Defect Rate.\"\n  },\n  {\n    \"case_id\": \"ict_case_0090\",\n    \"verdict\": \"ACCEPT\",\n    \"reason\": \"问题次数 maps to Issue Count; 一级品类 and 二级品类 resolve to segment_l2.\"\n  },\n  {\n    \"case_id\": \"ict_case_0100\",\n    \"verdict\": \"ACCEPT\",\n    \"reason\": \"客诉率 is listed as an ambiguous query and should be refused despite being an alias.\"\n  },\n  {\n    \"case_id\": \"ict_case_0110\",\n    \"verdict\": \"ACCEPT\",\n    \"reason\": \"客诉数 maps to After-Sales Case Count.\"\n  }\n]\n"
+  }
+]

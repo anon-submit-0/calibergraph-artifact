@@ -1,0 +1,6 @@
+{
+  "channel": "moonshot",
+  "model": "kimi-k2.6",
+  "mode": "llm_graph_rag",
+  "stdout": "```json\n[\n  {\n    \"case_id\": \"ict_case_0019\",\n    \"action\": \"refuse\",\n    \"metric_id\": \"\",\n    \"dimensions\": [],\n    \"reason\": \"Raw SQL/catalog dump request\"\n  },\n  {\n    \"case_id\": \"ict_case_0040\",\n    \"action\": \"refuse\",\n    \"metric_id\": \"\",\n    \"dimensions\": [],\n    \"reason\": \"Off-domain request with no governed metric\"\n  }\n]\n```"
+}

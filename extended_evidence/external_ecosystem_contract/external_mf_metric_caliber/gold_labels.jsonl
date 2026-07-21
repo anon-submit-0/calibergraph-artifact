@@ -1,0 +1,122 @@
+{"case_id": "extmf_001", "expected_action": "refuse", "expected_dimensions": [], "expected_metric_id": "", "expected_time_window": ""}
+{"case_id": "extmf_002", "expected_action": "answer", "expected_dimensions": ["listing__country_latest"], "expected_metric_id": "bookings_per_booker", "expected_time_window": ""}
+{"case_id": "extmf_003", "expected_action": "answer", "expected_dimensions": [], "expected_metric_id": "bookings_at_start_of_month", "expected_time_window": ""}
+{"case_id": "extmf_004", "expected_action": "refuse", "expected_dimensions": [], "expected_metric_id": "", "expected_time_window": ""}
+{"case_id": "extmf_005", "expected_action": "refuse", "expected_dimensions": [], "expected_metric_id": "", "expected_time_window": ""}
+{"case_id": "extmf_006", "expected_action": "answer", "expected_dimensions": ["metric_time__quarter"], "expected_metric_id": "bookings_1_month_ago", "expected_time_window": ""}
+{"case_id": "extmf_007", "expected_action": "refuse", "expected_dimensions": [], "expected_metric_id": "", "expected_time_window": ""}
+{"case_id": "extmf_008", "expected_action": "answer", "expected_dimensions": ["metric_time__day"], "expected_metric_id": "bookings_5_day_lag", "expected_time_window": ""}
+{"case_id": "extmf_009", "expected_action": "answer", "expected_dimensions": ["booking__is_instant", "listing__capacity_latest"], "expected_metric_id": "min_booking_value", "expected_time_window": ""}
+{"case_id": "extmf_010", "expected_action": "refuse", "expected_dimensions": [], "expected_metric_id": "", "expected_time_window": ""}
+{"case_id": "extmf_011", "expected_action": "answer", "expected_dimensions": ["booking__is_instant"], "expected_metric_id": "derived_shared_alias_1a", "expected_time_window": ""}
+{"case_id": "extmf_012", "expected_action": "answer", "expected_dimensions": ["metric_time__quarter"], "expected_metric_id": "bookings_offset_one_alien_day", "expected_time_window": ""}
+{"case_id": "extmf_013", "expected_action": "answer", "expected_dimensions": ["metric_time__day"], "expected_metric_id": "bookings_month_start_compared_to_1_month_prior", "expected_time_window": ""}
+{"case_id": "extmf_014", "expected_action": "answer", "expected_dimensions": [], "expected_metric_id": "bookers", "expected_time_window": ""}
+{"case_id": "extmf_015", "expected_action": "refuse", "expected_dimensions": [], "expected_metric_id": "", "expected_time_window": ""}
+{"case_id": "extmf_016", "expected_action": "answer", "expected_dimensions": ["metric_time__day"], "expected_metric_id": "bookings_offset_alien_day", "expected_time_window": ""}
+{"case_id": "extmf_017", "expected_action": "refuse", "expected_dimensions": [], "expected_metric_id": "", "expected_time_window": ""}
+{"case_id": "extmf_018", "expected_action": "refuse", "expected_dimensions": [], "expected_metric_id": "", "expected_time_window": ""}
+{"case_id": "extmf_019", "expected_action": "refuse", "expected_dimensions": [], "expected_metric_id": "", "expected_time_window": ""}
+{"case_id": "extmf_020", "expected_action": "answer", "expected_dimensions": [], "expected_metric_id": "bookings_per_listing", "expected_time_window": ""}
+{"case_id": "extmf_021", "expected_action": "answer", "expected_dimensions": ["metric_time__month"], "expected_metric_id": "identity_verifications", "expected_time_window": ""}
+{"case_id": "extmf_022", "expected_action": "answer", "expected_dimensions": ["listing__country_latest", "metric_time__day"], "expected_metric_id": "referred_bookings", "expected_time_window": ""}
+{"case_id": "extmf_023", "expected_action": "answer", "expected_dimensions": [], "expected_metric_id": "booking_value_p99", "expected_time_window": ""}
+{"case_id": "extmf_024", "expected_action": "refuse", "expected_dimensions": [], "expected_metric_id": "", "expected_time_window": ""}
+{"case_id": "extmf_025", "expected_action": "answer", "expected_dimensions": ["metric_time__quarter"], "expected_metric_id": "bookings_5_day_lag", "expected_time_window": ""}
+{"case_id": "extmf_026", "expected_action": "answer", "expected_dimensions": [], "expected_metric_id": "instant_booking_fraction_of_max_value", "expected_time_window": ""}
+{"case_id": "extmf_027", "expected_action": "answer", "expected_dimensions": ["metric_time__week"], "expected_metric_id": "smallest_listing", "expected_time_window": ""}
+{"case_id": "extmf_028", "expected_action": "refuse", "expected_dimensions": [], "expected_metric_id": "", "expected_time_window": ""}
+{"case_id": "extmf_029", "expected_action": "answer", "expected_dimensions": [], "expected_metric_id": "subdaily_offset_grain_to_date_metric", "expected_time_window": ""}
+{"case_id": "extmf_030", "expected_action": "answer", "expected_dimensions": ["metric_time__month"], "expected_metric_id": "simple_subdaily_metric_default_day", "expected_time_window": ""}
+{"case_id": "extmf_031", "expected_action": "answer", "expected_dimensions": ["metric_time__month"], "expected_metric_id": "test_simple_derived_metric", "expected_time_window": ""}
+{"case_id": "extmf_032", "expected_action": "answer", "expected_dimensions": ["metric_time__day"], "expected_metric_id": "derived_bookings_0", "expected_time_window": ""}
+{"case_id": "extmf_033", "expected_action": "answer", "expected_dimensions": ["listing__country_latest", "metric_time__quarter"], "expected_metric_id": "max_booking_value", "expected_time_window": ""}
+{"case_id": "extmf_034", "expected_action": "answer", "expected_dimensions": [], "expected_metric_id": "instant_booking_value_ratio", "expected_time_window": ""}
+{"case_id": "extmf_035", "expected_action": "refuse", "expected_dimensions": [], "expected_metric_id": "", "expected_time_window": ""}
+{"case_id": "extmf_036", "expected_action": "answer", "expected_dimensions": ["booking__is_instant"], "expected_metric_id": "bookings_fill_nulls_with_0", "expected_time_window": ""}
+{"case_id": "extmf_037", "expected_action": "answer", "expected_dimensions": ["listing__capacity_latest", "metric_time__quarter"], "expected_metric_id": "bookings", "expected_time_window": ""}
+{"case_id": "extmf_038", "expected_action": "refuse", "expected_dimensions": [], "expected_metric_id": "", "expected_time_window": ""}
+{"case_id": "extmf_039", "expected_action": "answer", "expected_dimensions": [], "expected_metric_id": "booking_value_sub_instant", "expected_time_window": ""}
+{"case_id": "extmf_040", "expected_action": "answer", "expected_dimensions": ["metric_time__quarter"], "expected_metric_id": "lux_listings", "expected_time_window": ""}
+{"case_id": "extmf_041", "expected_action": "refuse", "expected_dimensions": [], "expected_metric_id": "", "expected_time_window": ""}
+{"case_id": "extmf_042", "expected_action": "refuse", "expected_dimensions": [], "expected_metric_id": "", "expected_time_window": ""}
+{"case_id": "extmf_043", "expected_action": "answer", "expected_dimensions": ["metric_time__year", "user__home_state"], "expected_metric_id": "subdaily_join_to_time_spine_metric", "expected_time_window": ""}
+{"case_id": "extmf_044", "expected_action": "answer", "expected_dimensions": [], "expected_metric_id": "derived_shared_alias_1b", "expected_time_window": ""}
+{"case_id": "extmf_045", "expected_action": "answer", "expected_dimensions": ["metric_time__month"], "expected_metric_id": "booking_value_for_non_null_listing_id", "expected_time_window": ""}
+{"case_id": "extmf_046", "expected_action": "answer", "expected_dimensions": [], "expected_metric_id": "test_simple_derived_metric", "expected_time_window": ""}
+{"case_id": "extmf_047", "expected_action": "answer", "expected_dimensions": ["metric_time__hour"], "expected_metric_id": "subdaily_offset_grain_to_date_metric", "expected_time_window": ""}
+{"case_id": "extmf_048", "expected_action": "refuse", "expected_dimensions": [], "expected_metric_id": "", "expected_time_window": ""}
+{"case_id": "extmf_049", "expected_action": "refuse", "expected_dimensions": [], "expected_metric_id": "", "expected_time_window": ""}
+{"case_id": "extmf_050", "expected_action": "answer", "expected_dimensions": [], "expected_metric_id": "bookings_per_lux_listing_derived", "expected_time_window": ""}
+{"case_id": "extmf_051", "expected_action": "answer", "expected_dimensions": [], "expected_metric_id": "views_times_booking_value", "expected_time_window": ""}
+{"case_id": "extmf_052", "expected_action": "answer", "expected_dimensions": [], "expected_metric_id": "booking_fees_since_start_of_month", "expected_time_window": ""}
+{"case_id": "extmf_053", "expected_action": "refuse", "expected_dimensions": [], "expected_metric_id": "", "expected_time_window": ""}
+{"case_id": "extmf_054", "expected_action": "answer", "expected_dimensions": ["metric_time__year", "user__home_state"], "expected_metric_id": "current_account_balance_by_user", "expected_time_window": ""}
+{"case_id": "extmf_055", "expected_action": "refuse", "expected_dimensions": [], "expected_metric_id": "", "expected_time_window": ""}
+{"case_id": "extmf_056", "expected_action": "refuse", "expected_dimensions": [], "expected_metric_id": "", "expected_time_window": ""}
+{"case_id": "extmf_057", "expected_action": "answer", "expected_dimensions": [], "expected_metric_id": "instant_lux_booking_value_rate", "expected_time_window": ""}
+{"case_id": "extmf_058", "expected_action": "answer", "expected_dimensions": ["metric_time__month"], "expected_metric_id": "largest_listing", "expected_time_window": ""}
+{"case_id": "extmf_059", "expected_action": "answer", "expected_dimensions": ["company__company_name"], "expected_metric_id": "total_account_balance_first_day_of_month", "expected_time_window": ""}
+{"case_id": "extmf_060", "expected_action": "answer", "expected_dimensions": ["company__company_name", "metric_time__day"], "expected_metric_id": "archived_users_join_to_time_spine", "expected_time_window": ""}
+{"case_id": "extmf_061", "expected_action": "refuse", "expected_dimensions": [], "expected_metric_id": "", "expected_time_window": ""}
+{"case_id": "extmf_062", "expected_action": "answer", "expected_dimensions": ["metric_time__quarter"], "expected_metric_id": "archived_users_join_to_time_spine", "expected_time_window": ""}
+{"case_id": "extmf_063", "expected_action": "refuse", "expected_dimensions": [], "expected_metric_id": "", "expected_time_window": ""}
+{"case_id": "extmf_064", "expected_action": "refuse", "expected_dimensions": [], "expected_metric_id": "", "expected_time_window": ""}
+{"case_id": "extmf_065", "expected_action": "refuse", "expected_dimensions": [], "expected_metric_id": "", "expected_time_window": ""}
+{"case_id": "extmf_066", "expected_action": "refuse", "expected_dimensions": [], "expected_metric_id": "", "expected_time_window": ""}
+{"case_id": "extmf_067", "expected_action": "answer", "expected_dimensions": ["metric_time__quarter"], "expected_metric_id": "discrete_booking_value_p99", "expected_time_window": ""}
+{"case_id": "extmf_068", "expected_action": "answer", "expected_dimensions": ["booking__is_instant", "metric_time__month"], "expected_metric_id": "booking_fees_per_booker", "expected_time_window": ""}
+{"case_id": "extmf_069", "expected_action": "answer", "expected_dimensions": ["booking__is_instant"], "expected_metric_id": "bookings_growth_since_start_of_month", "expected_time_window": ""}
+{"case_id": "extmf_070", "expected_action": "answer", "expected_dimensions": ["booking__is_instant", "metric_time__month"], "expected_metric_id": "average_instant_booking_value", "expected_time_window": ""}
+{"case_id": "extmf_071", "expected_action": "refuse", "expected_dimensions": [], "expected_metric_id": "", "expected_time_window": ""}
+{"case_id": "extmf_072", "expected_action": "answer", "expected_dimensions": ["metric_time__quarter"], "expected_metric_id": "current_account_balance_by_user", "expected_time_window": ""}
+{"case_id": "extmf_073", "expected_action": "answer", "expected_dimensions": [], "expected_metric_id": "bookings_1_year_ago", "expected_time_window": ""}
+{"case_id": "extmf_074", "expected_action": "answer", "expected_dimensions": ["metric_time__month", "user__home_state"], "expected_metric_id": "new_users", "expected_time_window": ""}
+{"case_id": "extmf_075", "expected_action": "refuse", "expected_dimensions": [], "expected_metric_id": "", "expected_time_window": ""}
+{"case_id": "extmf_076", "expected_action": "answer", "expected_dimensions": ["metric_time__month"], "expected_metric_id": "smallest_listing", "expected_time_window": ""}
+{"case_id": "extmf_077", "expected_action": "answer", "expected_dimensions": ["listing__capacity_latest", "metric_time__year"], "expected_metric_id": "lux_booking_value_rate_expr", "expected_time_window": ""}
+{"case_id": "extmf_078", "expected_action": "answer", "expected_dimensions": [], "expected_metric_id": "derived_bookings_1", "expected_time_window": ""}
+{"case_id": "extmf_079", "expected_action": "answer", "expected_dimensions": ["company__company_name", "metric_time__week"], "expected_metric_id": "regional_starting_balance_ratios", "expected_time_window": ""}
+{"case_id": "extmf_080", "expected_action": "answer", "expected_dimensions": ["user__home_state"], "expected_metric_id": "subdaily_offset_window_metric", "expected_time_window": ""}
+{"case_id": "extmf_081", "expected_action": "answer", "expected_dimensions": [], "expected_metric_id": "listings", "expected_time_window": ""}
+{"case_id": "extmf_082", "expected_action": "answer", "expected_dimensions": ["metric_time__month"], "expected_metric_id": "bookings_5_day_lag", "expected_time_window": ""}
+{"case_id": "extmf_083", "expected_action": "refuse", "expected_dimensions": [], "expected_metric_id": "", "expected_time_window": ""}
+{"case_id": "extmf_084", "expected_action": "answer", "expected_dimensions": ["listing__is_lux_latest", "metric_time__quarter"], "expected_metric_id": "instant_bookings_with_measure_filter", "expected_time_window": ""}
+{"case_id": "extmf_085", "expected_action": "answer", "expected_dimensions": ["listing__is_lux_latest", "metric_time__day"], "expected_metric_id": "derived_shared_alias_2", "expected_time_window": ""}
+{"case_id": "extmf_086", "expected_action": "refuse", "expected_dimensions": [], "expected_metric_id": "", "expected_time_window": ""}
+{"case_id": "extmf_087", "expected_action": "answer", "expected_dimensions": ["metric_time__quarter"], "expected_metric_id": "instant_booking_value_ratio", "expected_time_window": ""}
+{"case_id": "extmf_088", "expected_action": "answer", "expected_dimensions": ["booking__is_instant", "listing__is_lux_latest"], "expected_metric_id": "bookings_growth_2_weeks", "expected_time_window": ""}
+{"case_id": "extmf_089", "expected_action": "refuse", "expected_dimensions": [], "expected_metric_id": "", "expected_time_window": ""}
+{"case_id": "extmf_090", "expected_action": "answer", "expected_dimensions": ["company__company_name"], "expected_metric_id": "revenue", "expected_time_window": ""}
+{"case_id": "extmf_091", "expected_action": "answer", "expected_dimensions": ["account__account_type", "metric_time__quarter"], "expected_metric_id": "account_balance", "expected_time_window": ""}
+{"case_id": "extmf_092", "expected_action": "refuse", "expected_dimensions": [], "expected_metric_id": "", "expected_time_window": ""}
+{"case_id": "extmf_093", "expected_action": "answer", "expected_dimensions": [], "expected_metric_id": "bookings_offset_twice", "expected_time_window": ""}
+{"case_id": "extmf_094", "expected_action": "answer", "expected_dimensions": ["metric_time__week"], "expected_metric_id": "booking_value_sub_instant_add_10", "expected_time_window": ""}
+{"case_id": "extmf_095", "expected_action": "answer", "expected_dimensions": ["listing__capacity_latest", "metric_time__year"], "expected_metric_id": "booking_payments", "expected_time_window": ""}
+{"case_id": "extmf_096", "expected_action": "answer", "expected_dimensions": ["metric_time__quarter"], "expected_metric_id": "booking_fees_per_booker", "expected_time_window": ""}
+{"case_id": "extmf_097", "expected_action": "refuse", "expected_dimensions": [], "expected_metric_id": "", "expected_time_window": ""}
+{"case_id": "extmf_098", "expected_action": "refuse", "expected_dimensions": [], "expected_metric_id": "", "expected_time_window": ""}
+{"case_id": "extmf_099", "expected_action": "answer", "expected_dimensions": ["metric_time__quarter"], "expected_metric_id": "total_account_balance_first_day", "expected_time_window": ""}
+{"case_id": "extmf_100", "expected_action": "refuse", "expected_dimensions": [], "expected_metric_id": "", "expected_time_window": ""}
+{"case_id": "extmf_101", "expected_action": "refuse", "expected_dimensions": [], "expected_metric_id": "", "expected_time_window": ""}
+{"case_id": "extmf_102", "expected_action": "answer", "expected_dimensions": ["booking__is_instant", "metric_time__year"], "expected_metric_id": "bookings_growth_2_weeks_fill_nulls_with_0", "expected_time_window": ""}
+{"case_id": "extmf_103", "expected_action": "answer", "expected_dimensions": ["metric_time__day"], "expected_metric_id": "booking_value_sub_instant", "expected_time_window": ""}
+{"case_id": "extmf_104", "expected_action": "answer", "expected_dimensions": [], "expected_metric_id": "bookings_join_to_time_spine_with_tiered_filters", "expected_time_window": ""}
+{"case_id": "extmf_105", "expected_action": "refuse", "expected_dimensions": [], "expected_metric_id": "", "expected_time_window": ""}
+{"case_id": "extmf_106", "expected_action": "answer", "expected_dimensions": ["metric_time__quarter"], "expected_metric_id": "views", "expected_time_window": ""}
+{"case_id": "extmf_107", "expected_action": "answer", "expected_dimensions": ["metric_time__day"], "expected_metric_id": "archived_users_join_to_time_spine", "expected_time_window": ""}
+{"case_id": "extmf_108", "expected_action": "answer", "expected_dimensions": ["metric_time__day"], "expected_metric_id": "bookings_growth_2_weeks", "expected_time_window": ""}
+{"case_id": "extmf_109", "expected_action": "refuse", "expected_dimensions": [], "expected_metric_id": "", "expected_time_window": ""}
+{"case_id": "extmf_110", "expected_action": "answer", "expected_dimensions": ["listing__is_lux_latest", "metric_time__quarter"], "expected_metric_id": "bookings_join_to_time_spine", "expected_time_window": ""}
+{"case_id": "extmf_111", "expected_action": "refuse", "expected_dimensions": [], "expected_metric_id": "", "expected_time_window": ""}
+{"case_id": "extmf_112", "expected_action": "answer", "expected_dimensions": ["listing__capacity_latest", "metric_time__day"], "expected_metric_id": "non_referred_bookings_pct", "expected_time_window": ""}
+{"case_id": "extmf_113", "expected_action": "refuse", "expected_dimensions": [], "expected_metric_id": "", "expected_time_window": ""}
+{"case_id": "extmf_114", "expected_action": "answer", "expected_dimensions": ["booking__is_instant"], "expected_metric_id": "average_booking_value", "expected_time_window": ""}
+{"case_id": "extmf_115", "expected_action": "refuse", "expected_dimensions": [], "expected_metric_id": "", "expected_time_window": ""}
+{"case_id": "extmf_116", "expected_action": "refuse", "expected_dimensions": [], "expected_metric_id": "", "expected_time_window": ""}
+{"case_id": "extmf_117", "expected_action": "answer", "expected_dimensions": [], "expected_metric_id": "bookings_mom", "expected_time_window": ""}
+{"case_id": "extmf_118", "expected_action": "refuse", "expected_dimensions": [], "expected_metric_id": "", "expected_time_window": ""}
+{"case_id": "extmf_119", "expected_action": "answer", "expected_dimensions": ["metric_time__day"], "expected_metric_id": "bookings_join_to_time_spine_with_tiered_filters", "expected_time_window": ""}
+{"case_id": "extmf_120", "expected_action": "answer", "expected_dimensions": ["listing__capacity_latest"], "expected_metric_id": "booking_value", "expected_time_window": ""}
+{"case_id": "extmf_121", "expected_action": "answer", "expected_dimensions": ["metric_time__day"], "expected_metric_id": "referred_bookings", "expected_time_window": ""}
+{"case_id": "extmf_122", "expected_action": "answer", "expected_dimensions": ["metric_time__month"], "expected_metric_id": "booking_fees", "expected_time_window": ""}

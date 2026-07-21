@@ -1,0 +1,18 @@
+COMMAND: mf query --metrics sales_dollars --limit 20 --csv <TEMP_CSV> --group-by metric_time__month --start-time 2023-01-01 --end-time 2023-12-31
+EXIT_CODE: 0
+WALL_SECONDS: 2.69
+DATA_ROWS: 0
+GOVERNANCE_SAYS: physical coverage is 2024-only; out-of-coverage must be refused/caveated
+PRE_REGISTERED_PREDICTION: exit 0 with EMPTY result (silent empty answer, no coverage refusal)
+----- STDOUT -----
+
+
+⠋ Initiating query…
+
+⠙ Initiating query…
+✔ Success 🦄 - query completed after 0.03 seconds
+🕳 Query returned an empty result set
+
+
+----- STDERR -----
+

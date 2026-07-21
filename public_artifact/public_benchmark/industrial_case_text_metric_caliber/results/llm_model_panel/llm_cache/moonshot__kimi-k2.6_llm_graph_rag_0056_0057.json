@@ -1,0 +1,6 @@
+{
+  "channel": "moonshot",
+  "model": "kimi-k2.6",
+  "mode": "llm_graph_rag",
+  "stdout": "[\n  {\"case_id\":\"ict_case_0051\", \"action\":\"answer\", \"metric_id\":\"ict_metric_004\", \"dimensions\":[\"segment_l2\"], \"reason\":\"Finest requested grain segment_l2 selected per hierarchy policy.\"},\n  {\"case_id\":\"ict_case_0052\", \"action\":\"answer\", \"metric_id\":\"ict_metric_003\", \"dimensions\":[], \"reason\":\"Exact alias match for flat metric query.\"}\n]"
+}

@@ -1,0 +1,26 @@
+{
+  "direct": {
+    "n": 206,
+    "metric_accuracy": 0.19902912621359223,
+    "dimension_exact_accuracy": 0.9174757281553398,
+    "joint_accuracy": 0.18932038834951456
+  },
+  "schema_rag": {
+    "n": 206,
+    "metric_accuracy": 0.8300970873786407,
+    "dimension_exact_accuracy": 0.8106796116504854,
+    "joint_accuracy": 0.6650485436893204
+  },
+  "autolink_derived_e3": {
+    "n": 206,
+    "metric_accuracy": 0.8300970873786407,
+    "dimension_exact_accuracy": 0.8106796116504854,
+    "joint_accuracy": 0.6650485436893204
+  },
+  "caliber_graph": {
+    "n": 206,
+    "metric_accuracy": 0.8300970873786407,
+    "dimension_exact_accuracy": 0.8106796116504854,
+    "joint_accuracy": 0.6650485436893204
+  }
+}

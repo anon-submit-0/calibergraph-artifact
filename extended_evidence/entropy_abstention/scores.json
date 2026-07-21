@@ -1,0 +1,608 @@
+{
+  "arms": {
+    "any": {
+      "govtwin": {
+        "abstention_as_refusal_precision": 1.0,
+        "abstention_as_refusal_recall": 1.0,
+        "abstention_coverage_of_errors_overall": 0.0,
+        "abstention_rate": 0.0,
+        "answered_full_case_accuracy": 0.7987421383647799,
+        "answered_full_case_wilson95": [
+          0.7297120153083602,
+          0.8536775016364936
+        ],
+        "answered_joint_accuracy": 0.7987421383647799,
+        "answered_refusal_precision": 1.0,
+        "answered_refusal_recall": 1.0,
+        "false_abstention_rate_on_correct": 0.0,
+        "n": 159,
+        "n_abstained": 0,
+        "n_answered": 159,
+        "n_would_be_errors": 32,
+        "per_error_family": {
+          "1_metric_identity": {
+            "coverage": null,
+            "fisher_two_sided_p_abstained_x_error_within_family": 1.0,
+            "lift_vs_overall_abstention_rate": null,
+            "n_cases": 86,
+            "n_errors_abstained": 0,
+            "n_errors_unanimous_confident_c1_eq_5": 0,
+            "n_would_be_errors": 0
+          },
+          "3_grain": {
+            "coverage": 0.0,
+            "fisher_two_sided_p_abstained_x_error_within_family": 1.0,
+            "lift_vs_overall_abstention_rate": null,
+            "n_cases": 64,
+            "n_errors_abstained": 0,
+            "n_errors_unanimous_confident_c1_eq_5": 7,
+            "n_would_be_errors": 32
+          },
+          "5_refusal": {
+            "coverage": null,
+            "fisher_two_sided_p_abstained_x_error_within_family": 1.0,
+            "lift_vs_overall_abstention_rate": null,
+            "n_cases": 9,
+            "n_errors_abstained": 0,
+            "n_errors_unanimous_confident_c1_eq_5": 0,
+            "n_would_be_errors": 0
+          }
+        },
+        "pooled_fisher_two_sided_p_abstained_x_error": 1.0
+      },
+      "multigov": {
+        "abstention_as_refusal_precision": 0.972972972972973,
+        "abstention_as_refusal_recall": 1.0,
+        "abstention_coverage_of_errors_overall": 0.0,
+        "abstention_rate": 0.0,
+        "answered_full_case_accuracy": 0.975,
+        "answered_full_case_wilson95": [
+          0.942821659593358,
+          0.9892752803482386
+        ],
+        "answered_joint_accuracy": 0.975,
+        "answered_refusal_precision": 0.972972972972973,
+        "answered_refusal_recall": 1.0,
+        "false_abstention_rate_on_correct": 0.0,
+        "n": 200,
+        "n_abstained": 0,
+        "n_answered": 200,
+        "n_would_be_errors": 5,
+        "per_error_family": {
+          "1_metric_identity": {
+            "coverage": null,
+            "fisher_two_sided_p_abstained_x_error_within_family": 1.0,
+            "lift_vs_overall_abstention_rate": null,
+            "n_cases": 45,
+            "n_errors_abstained": 0,
+            "n_errors_unanimous_confident_c1_eq_5": 0,
+            "n_would_be_errors": 0
+          },
+          "2_caliber": {
+            "coverage": null,
+            "fisher_two_sided_p_abstained_x_error_within_family": 1.0,
+            "lift_vs_overall_abstention_rate": null,
+            "n_cases": 11,
+            "n_errors_abstained": 0,
+            "n_errors_unanimous_confident_c1_eq_5": 0,
+            "n_would_be_errors": 0
+          },
+          "3_grain": {
+            "coverage": 0.0,
+            "fisher_two_sided_p_abstained_x_error_within_family": 1.0,
+            "lift_vs_overall_abstention_rate": null,
+            "n_cases": 64,
+            "n_errors_abstained": 0,
+            "n_errors_unanimous_confident_c1_eq_5": 0,
+            "n_would_be_errors": 5
+          },
+          "4_temporal_coverage": {
+            "coverage": null,
+            "fisher_two_sided_p_abstained_x_error_within_family": 1.0,
+            "lift_vs_overall_abstention_rate": null,
+            "n_cases": 8,
+            "n_errors_abstained": 0,
+            "n_errors_unanimous_confident_c1_eq_5": 0,
+            "n_would_be_errors": 0
+          },
+          "5_refusal": {
+            "coverage": null,
+            "fisher_two_sided_p_abstained_x_error_within_family": 1.0,
+            "lift_vs_overall_abstention_rate": null,
+            "n_cases": 72,
+            "n_errors_abstained": 0,
+            "n_errors_unanimous_confident_c1_eq_5": 0,
+            "n_would_be_errors": 0
+          }
+        },
+        "pooled_fisher_two_sided_p_abstained_x_error": 1.0
+      },
+      "pooled_359": {
+        "abstention_as_refusal_precision": 0.9759036144578314,
+        "abstention_as_refusal_recall": 1.0,
+        "abstention_coverage_of_errors_overall": 0.0,
+        "abstention_rate": 0.0,
+        "answered_full_case_accuracy": 0.8969359331476323,
+        "answered_full_case_wilson95": [
+          0.861168392106939,
+          0.9242986295677779
+        ],
+        "answered_joint_accuracy": 0.8969359331476323,
+        "answered_refusal_precision": 0.9759036144578314,
+        "answered_refusal_recall": 1.0,
+        "false_abstention_rate_on_correct": 0.0,
+        "n": 359,
+        "n_abstained": 0,
+        "n_answered": 359,
+        "n_would_be_errors": 37,
+        "per_error_family": {
+          "1_metric_identity": {
+            "coverage": null,
+            "fisher_two_sided_p_abstained_x_error_within_family": 1.0,
+            "lift_vs_overall_abstention_rate": null,
+            "n_cases": 131,
+            "n_errors_abstained": 0,
+            "n_errors_unanimous_confident_c1_eq_5": 0,
+            "n_would_be_errors": 0
+          },
+          "2_caliber": {
+            "coverage": null,
+            "fisher_two_sided_p_abstained_x_error_within_family": 1.0,
+            "lift_vs_overall_abstention_rate": null,
+            "n_cases": 11,
+            "n_errors_abstained": 0,
+            "n_errors_unanimous_confident_c1_eq_5": 0,
+            "n_would_be_errors": 0
+          },
+          "3_grain": {
+            "coverage": 0.0,
+            "fisher_two_sided_p_abstained_x_error_within_family": 1.0,
+            "lift_vs_overall_abstention_rate": null,
+            "n_cases": 128,
+            "n_errors_abstained": 0,
+            "n_errors_unanimous_confident_c1_eq_5": 7,
+            "n_would_be_errors": 37
+          },
+          "4_temporal_coverage": {
+            "coverage": null,
+            "fisher_two_sided_p_abstained_x_error_within_family": 1.0,
+            "lift_vs_overall_abstention_rate": null,
+            "n_cases": 8,
+            "n_errors_abstained": 0,
+            "n_errors_unanimous_confident_c1_eq_5": 0,
+            "n_would_be_errors": 0
+          },
+          "5_refusal": {
+            "coverage": null,
+            "fisher_two_sided_p_abstained_x_error_within_family": 1.0,
+            "lift_vs_overall_abstention_rate": null,
+            "n_cases": 81,
+            "n_errors_abstained": 0,
+            "n_errors_unanimous_confident_c1_eq_5": 0,
+            "n_would_be_errors": 0
+          }
+        },
+        "pooled_fisher_two_sided_p_abstained_x_error": 1.0
+      }
+    },
+    "majority": {
+      "govtwin": {
+        "abstention_as_refusal_precision": 1.0,
+        "abstention_as_refusal_recall": 1.0,
+        "abstention_coverage_of_errors_overall": 0.0,
+        "abstention_rate": 0.0,
+        "answered_full_case_accuracy": 0.7987421383647799,
+        "answered_full_case_wilson95": [
+          0.7297120153083602,
+          0.8536775016364936
+        ],
+        "answered_joint_accuracy": 0.7987421383647799,
+        "answered_refusal_precision": 1.0,
+        "answered_refusal_recall": 1.0,
+        "false_abstention_rate_on_correct": 0.0,
+        "n": 159,
+        "n_abstained": 0,
+        "n_answered": 159,
+        "n_would_be_errors": 32,
+        "per_error_family": {
+          "1_metric_identity": {
+            "coverage": null,
+            "fisher_two_sided_p_abstained_x_error_within_family": 1.0,
+            "lift_vs_overall_abstention_rate": null,
+            "n_cases": 86,
+            "n_errors_abstained": 0,
+            "n_errors_unanimous_confident_c1_eq_5": 0,
+            "n_would_be_errors": 0
+          },
+          "3_grain": {
+            "coverage": 0.0,
+            "fisher_two_sided_p_abstained_x_error_within_family": 1.0,
+            "lift_vs_overall_abstention_rate": null,
+            "n_cases": 64,
+            "n_errors_abstained": 0,
+            "n_errors_unanimous_confident_c1_eq_5": 7,
+            "n_would_be_errors": 32
+          },
+          "5_refusal": {
+            "coverage": null,
+            "fisher_two_sided_p_abstained_x_error_within_family": 1.0,
+            "lift_vs_overall_abstention_rate": null,
+            "n_cases": 9,
+            "n_errors_abstained": 0,
+            "n_errors_unanimous_confident_c1_eq_5": 0,
+            "n_would_be_errors": 0
+          }
+        },
+        "pooled_fisher_two_sided_p_abstained_x_error": 1.0
+      },
+      "multigov": {
+        "abstention_as_refusal_precision": 0.8888888888888888,
+        "abstention_as_refusal_recall": 1.0,
+        "abstention_coverage_of_errors_overall": 0.4,
+        "abstention_rate": 0.035,
+        "answered_full_case_accuracy": 0.9844559585492227,
+        "answered_full_case_wilson95": [
+          0.9553033351151177,
+          0.994699784757821
+        ],
+        "answered_joint_accuracy": 0.9844559585492227,
+        "answered_refusal_precision": 0.972972972972973,
+        "answered_refusal_recall": 1.0,
+        "false_abstention_rate_on_correct": 0.02564102564102564,
+        "n": 200,
+        "n_abstained": 7,
+        "n_answered": 193,
+        "n_would_be_errors": 5,
+        "per_error_family": {
+          "1_metric_identity": {
+            "coverage": null,
+            "fisher_two_sided_p_abstained_x_error_within_family": 1.0,
+            "lift_vs_overall_abstention_rate": null,
+            "n_cases": 45,
+            "n_errors_abstained": 0,
+            "n_errors_unanimous_confident_c1_eq_5": 0,
+            "n_would_be_errors": 0
+          },
+          "2_caliber": {
+            "coverage": null,
+            "fisher_two_sided_p_abstained_x_error_within_family": 1.0,
+            "lift_vs_overall_abstention_rate": null,
+            "n_cases": 11,
+            "n_errors_abstained": 0,
+            "n_errors_unanimous_confident_c1_eq_5": 0,
+            "n_would_be_errors": 0
+          },
+          "3_grain": {
+            "coverage": 0.4,
+            "fisher_two_sided_p_abstained_x_error_within_family": 0.08818085668958216,
+            "lift_vs_overall_abstention_rate": 11.428571428571429,
+            "n_cases": 64,
+            "n_errors_abstained": 2,
+            "n_errors_unanimous_confident_c1_eq_5": 0,
+            "n_would_be_errors": 5
+          },
+          "4_temporal_coverage": {
+            "coverage": null,
+            "fisher_two_sided_p_abstained_x_error_within_family": 1.0,
+            "lift_vs_overall_abstention_rate": null,
+            "n_cases": 8,
+            "n_errors_abstained": 0,
+            "n_errors_unanimous_confident_c1_eq_5": 0,
+            "n_would_be_errors": 0
+          },
+          "5_refusal": {
+            "coverage": null,
+            "fisher_two_sided_p_abstained_x_error_within_family": 1.0,
+            "lift_vs_overall_abstention_rate": null,
+            "n_cases": 72,
+            "n_errors_abstained": 0,
+            "n_errors_unanimous_confident_c1_eq_5": 0,
+            "n_would_be_errors": 0
+          }
+        },
+        "pooled_fisher_two_sided_p_abstained_x_error": 0.010027879083818171
+      },
+      "pooled_359": {
+        "abstention_as_refusal_precision": 0.9,
+        "abstention_as_refusal_recall": 1.0,
+        "abstention_coverage_of_errors_overall": 0.05405405405405406,
+        "abstention_rate": 0.019498607242339833,
+        "answered_full_case_accuracy": 0.9005681818181818,
+        "answered_full_case_wilson95": [
+          0.8648531622632629,
+          0.9276345960057861
+        ],
+        "answered_joint_accuracy": 0.9005681818181818,
+        "answered_refusal_precision": 0.9759036144578314,
+        "answered_refusal_recall": 1.0,
+        "false_abstention_rate_on_correct": 0.015527950310559006,
+        "n": 359,
+        "n_abstained": 7,
+        "n_answered": 352,
+        "n_would_be_errors": 37,
+        "per_error_family": {
+          "1_metric_identity": {
+            "coverage": null,
+            "fisher_two_sided_p_abstained_x_error_within_family": 1.0,
+            "lift_vs_overall_abstention_rate": null,
+            "n_cases": 131,
+            "n_errors_abstained": 0,
+            "n_errors_unanimous_confident_c1_eq_5": 0,
+            "n_would_be_errors": 0
+          },
+          "2_caliber": {
+            "coverage": null,
+            "fisher_two_sided_p_abstained_x_error_within_family": 1.0,
+            "lift_vs_overall_abstention_rate": null,
+            "n_cases": 11,
+            "n_errors_abstained": 0,
+            "n_errors_unanimous_confident_c1_eq_5": 0,
+            "n_would_be_errors": 0
+          },
+          "3_grain": {
+            "coverage": 0.05405405405405406,
+            "fisher_two_sided_p_abstained_x_error_within_family": 1.0,
+            "lift_vs_overall_abstention_rate": 2.7722007722007724,
+            "n_cases": 128,
+            "n_errors_abstained": 2,
+            "n_errors_unanimous_confident_c1_eq_5": 7,
+            "n_would_be_errors": 37
+          },
+          "4_temporal_coverage": {
+            "coverage": null,
+            "fisher_two_sided_p_abstained_x_error_within_family": 1.0,
+            "lift_vs_overall_abstention_rate": null,
+            "n_cases": 8,
+            "n_errors_abstained": 0,
+            "n_errors_unanimous_confident_c1_eq_5": 0,
+            "n_would_be_errors": 0
+          },
+          "5_refusal": {
+            "coverage": null,
+            "fisher_two_sided_p_abstained_x_error_within_family": 1.0,
+            "lift_vs_overall_abstention_rate": null,
+            "n_cases": 81,
+            "n_errors_abstained": 0,
+            "n_errors_unanimous_confident_c1_eq_5": 0,
+            "n_would_be_errors": 0
+          }
+        },
+        "pooled_fisher_two_sided_p_abstained_x_error": 0.15597796959840868
+      }
+    },
+    "unanimous": {
+      "govtwin": {
+        "abstention_as_refusal_precision": 0.15517241379310345,
+        "abstention_as_refusal_recall": 1.0,
+        "abstention_coverage_of_errors_overall": 0.78125,
+        "abstention_rate": 0.3081761006289308,
+        "answered_full_case_accuracy": 0.9363636363636364,
+        "answered_full_case_wilson95": [
+          0.874442538117898,
+          0.9688354819855223
+        ],
+        "answered_joint_accuracy": 0.9363636363636364,
+        "answered_refusal_precision": 1.0,
+        "answered_refusal_recall": 1.0,
+        "false_abstention_rate_on_correct": 0.1889763779527559,
+        "n": 159,
+        "n_abstained": 49,
+        "n_answered": 110,
+        "n_would_be_errors": 32,
+        "per_error_family": {
+          "1_metric_identity": {
+            "coverage": null,
+            "fisher_two_sided_p_abstained_x_error_within_family": 1.0,
+            "lift_vs_overall_abstention_rate": null,
+            "n_cases": 86,
+            "n_errors_abstained": 0,
+            "n_errors_unanimous_confident_c1_eq_5": 0,
+            "n_would_be_errors": 0
+          },
+          "3_grain": {
+            "coverage": 0.78125,
+            "fisher_two_sided_p_abstained_x_error_within_family": 0.00035253031197412377,
+            "lift_vs_overall_abstention_rate": 2.535076530612245,
+            "n_cases": 64,
+            "n_errors_abstained": 25,
+            "n_errors_unanimous_confident_c1_eq_5": 7,
+            "n_would_be_errors": 32
+          },
+          "5_refusal": {
+            "coverage": null,
+            "fisher_two_sided_p_abstained_x_error_within_family": 1.0,
+            "lift_vs_overall_abstention_rate": null,
+            "n_cases": 9,
+            "n_errors_abstained": 0,
+            "n_errors_unanimous_confident_c1_eq_5": 0,
+            "n_would_be_errors": 0
+          }
+        },
+        "pooled_fisher_two_sided_p_abstained_x_error": 5.763992176324338e-10
+      },
+      "multigov": {
+        "abstention_as_refusal_precision": 0.5538461538461539,
+        "abstention_as_refusal_recall": 1.0,
+        "abstention_coverage_of_errors_overall": 1.0,
+        "abstention_rate": 0.295,
+        "answered_full_case_accuracy": 1.0,
+        "answered_full_case_wilson95": [
+          0.9734781819240744,
+          1.0
+        ],
+        "answered_joint_accuracy": 1.0,
+        "answered_refusal_precision": 1.0,
+        "answered_refusal_recall": 1.0,
+        "false_abstention_rate_on_correct": 0.27692307692307694,
+        "n": 200,
+        "n_abstained": 59,
+        "n_answered": 141,
+        "n_would_be_errors": 5,
+        "per_error_family": {
+          "1_metric_identity": {
+            "coverage": null,
+            "fisher_two_sided_p_abstained_x_error_within_family": 1.0,
+            "lift_vs_overall_abstention_rate": null,
+            "n_cases": 45,
+            "n_errors_abstained": 0,
+            "n_errors_unanimous_confident_c1_eq_5": 0,
+            "n_would_be_errors": 0
+          },
+          "2_caliber": {
+            "coverage": null,
+            "fisher_two_sided_p_abstained_x_error_within_family": 1.0,
+            "lift_vs_overall_abstention_rate": null,
+            "n_cases": 11,
+            "n_errors_abstained": 0,
+            "n_errors_unanimous_confident_c1_eq_5": 0,
+            "n_would_be_errors": 0
+          },
+          "3_grain": {
+            "coverage": 1.0,
+            "fisher_two_sided_p_abstained_x_error_within_family": 0.999999999999955,
+            "lift_vs_overall_abstention_rate": 3.3898305084745766,
+            "n_cases": 64,
+            "n_errors_abstained": 5,
+            "n_errors_unanimous_confident_c1_eq_5": 0,
+            "n_would_be_errors": 5
+          },
+          "4_temporal_coverage": {
+            "coverage": null,
+            "fisher_two_sided_p_abstained_x_error_within_family": 1.0,
+            "lift_vs_overall_abstention_rate": null,
+            "n_cases": 8,
+            "n_errors_abstained": 0,
+            "n_errors_unanimous_confident_c1_eq_5": 0,
+            "n_would_be_errors": 0
+          },
+          "5_refusal": {
+            "coverage": null,
+            "fisher_two_sided_p_abstained_x_error_within_family": 1.0,
+            "lift_vs_overall_abstention_rate": null,
+            "n_cases": 72,
+            "n_errors_abstained": 0,
+            "n_errors_unanimous_confident_c1_eq_5": 0,
+            "n_would_be_errors": 0
+          }
+        },
+        "pooled_fisher_two_sided_p_abstained_x_error": 0.001974399432502034
+      },
+      "pooled_359": {
+        "abstention_as_refusal_precision": 0.4308510638297872,
+        "abstention_as_refusal_recall": 1.0,
+        "abstention_coverage_of_errors_overall": 0.8108108108108109,
+        "abstention_rate": 0.3008356545961003,
+        "answered_full_case_accuracy": 0.9721115537848606,
+        "answered_full_case_wilson95": [
+          0.9435634718389174,
+          0.9864264956363225
+        ],
+        "answered_joint_accuracy": 0.9721115537848606,
+        "answered_refusal_precision": 1.0,
+        "answered_refusal_recall": 1.0,
+        "false_abstention_rate_on_correct": 0.2422360248447205,
+        "n": 359,
+        "n_abstained": 108,
+        "n_answered": 251,
+        "n_would_be_errors": 37,
+        "per_error_family": {
+          "1_metric_identity": {
+            "coverage": null,
+            "fisher_two_sided_p_abstained_x_error_within_family": 1.0,
+            "lift_vs_overall_abstention_rate": null,
+            "n_cases": 131,
+            "n_errors_abstained": 0,
+            "n_errors_unanimous_confident_c1_eq_5": 0,
+            "n_would_be_errors": 0
+          },
+          "2_caliber": {
+            "coverage": null,
+            "fisher_two_sided_p_abstained_x_error_within_family": 1.0,
+            "lift_vs_overall_abstention_rate": null,
+            "n_cases": 11,
+            "n_errors_abstained": 0,
+            "n_errors_unanimous_confident_c1_eq_5": 0,
+            "n_would_be_errors": 0
+          },
+          "3_grain": {
+            "coverage": 0.8108108108108109,
+            "fisher_two_sided_p_abstained_x_error_within_family": 0.13427298600108228,
+            "lift_vs_overall_abstention_rate": 2.695195195195195,
+            "n_cases": 128,
+            "n_errors_abstained": 30,
+            "n_errors_unanimous_confident_c1_eq_5": 7,
+            "n_would_be_errors": 37
+          },
+          "4_temporal_coverage": {
+            "coverage": null,
+            "fisher_two_sided_p_abstained_x_error_within_family": 1.0,
+            "lift_vs_overall_abstention_rate": null,
+            "n_cases": 8,
+            "n_errors_abstained": 0,
+            "n_errors_unanimous_confident_c1_eq_5": 0,
+            "n_would_be_errors": 0
+          },
+          "5_refusal": {
+            "coverage": null,
+            "fisher_two_sided_p_abstained_x_error_within_family": 1.0,
+            "lift_vs_overall_abstention_rate": null,
+            "n_cases": 81,
+            "n_errors_abstained": 0,
+            "n_errors_unanimous_confident_c1_eq_5": 0,
+            "n_would_be_errors": 0
+          }
+        },
+        "pooled_fisher_two_sided_p_abstained_x_error": 1.4781111600640346e-11
+      }
+    }
+  },
+  "confidence_signal": "sampling_consistency_entropy_over_normalized_answer_tuples (gateway logprobs unavailable; canary-verified)",
+  "cost": {
+    "latency_ms_mean": 26513.348189415043,
+    "sampling_cost_multiplier_vs_single_call": 5,
+    "total_calls": 1795,
+    "total_completion_tokens": 1785634,
+    "total_prompt_tokens": 10634605
+  },
+  "k_samples": 5,
+  "mechanism_entropy_by_family": {
+    "1_metric_identity": {
+      "mean_entropy_bits": null,
+      "n_would_be_errors": 0,
+      "share_unanimous_confident_c1_eq_5": null
+    },
+    "2_caliber": {
+      "mean_entropy_bits": null,
+      "n_would_be_errors": 0,
+      "share_unanimous_confident_c1_eq_5": null
+    },
+    "3_grain": {
+      "mean_entropy_bits": 0.730976108108108,
+      "n_would_be_errors": 37,
+      "share_unanimous_confident_c1_eq_5": 0.1891891891891892
+    },
+    "4_temporal_coverage": {
+      "mean_entropy_bits": null,
+      "n_would_be_errors": 0,
+      "share_unanimous_confident_c1_eq_5": null
+    },
+    "5_refusal": {
+      "mean_entropy_bits": null,
+      "n_would_be_errors": 0,
+      "share_unanimous_confident_c1_eq_5": null
+    },
+    "_correct_cases_reference": {
+      "mean_entropy_bits": 0.24139174844720493,
+      "n": 322,
+      "share_unanimous_c1_eq_5": 0.7577639751552795
+    }
+  },
+  "model": "deepseek-3.2",
+  "n_raw_error_records": 0,
+  "parse_status_counts": {
+    "ok": 1793,
+    "ok_first_brace_block": 2
+  },
+  "protocol_sha256": "01e35be46b462314b2ac68336b2ceb6eee5e2545e6974486611af1997c991f27",
+  "temperature": 0.7
+}

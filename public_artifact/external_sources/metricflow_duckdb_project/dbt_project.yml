@@ -1,0 +1,12 @@
+name: metricflow_duckdb_caliber_probe
+version: "1.0"
+config-version: 2
+profile: metricflow_duckdb_caliber_probe
+
+model-paths: ["models"]
+target-path: "target"
+clean-targets: ["target", "dbt_packages"]
+
+models:
+  metricflow_duckdb_caliber_probe:
+    +materialized: table

@@ -1,0 +1,481 @@
+{
+  "bootstrap_replicates": 10000,
+  "bootstrap_seed": 20260711,
+  "layers": {
+    "govtwin": {
+      "cluster_count": 159,
+      "compiler_accuracy": 1.0,
+      "difference_ci95": [
+        0.0,
+        0.0440251572327044
+      ],
+      "llm_calls_per_case_mean": 1.220125786163522,
+      "llm_calls_total": 194,
+      "mcnemar_compiler_only": 3,
+      "mcnemar_exact_two_sided_p": 0.25,
+      "mcnemar_replan_only": 0,
+      "n": 159,
+      "paired_difference_compiler_minus_replan": 0.018867924528301886,
+      "prompt_tokens_total": 958245,
+      "replan_final_accuracy": 0.9811320754716981,
+      "replan_round0_accuracy": 0.779874213836478,
+      "validator_invisible_final_errors": {
+        "by_kind": {
+          "wrong_dimension_set_only": 3
+        },
+        "cases": [
+          {
+            "case_id": "govtwin_0011",
+            "expected_dimensions": [],
+            "expected_metric_id": "signal_count_b",
+            "kind": "wrong_dimension_set_only",
+            "pred_dimensions": [
+              "issue_type",
+              "market_region",
+              "segment_l3"
+            ],
+            "pred_metric_id": "signal_count_b"
+          },
+          {
+            "case_id": "govtwin_0131",
+            "expected_dimensions": [],
+            "expected_metric_id": "item_signal_ratio",
+            "kind": "wrong_dimension_set_only",
+            "pred_dimensions": [
+              "issue_type",
+              "market_region",
+              "segment_l3"
+            ],
+            "pred_metric_id": "item_signal_ratio"
+          },
+          {
+            "case_id": "govtwin_0152",
+            "expected_dimensions": [],
+            "expected_metric_id": "signal_count_a",
+            "kind": "wrong_dimension_set_only",
+            "pred_dimensions": [
+              "issue_type",
+              "market_region",
+              "segment_l3"
+            ],
+            "pred_metric_id": "signal_count_a"
+          }
+        ],
+        "n": 3
+      }
+    },
+    "ict": {
+      "cluster_count": 114,
+      "compiler_accuracy": 1.0,
+      "difference_ci95": [
+        0.07017543859649122,
+        0.18064516129032257
+      ],
+      "llm_calls_per_case_mean": 1.1656050955414012,
+      "llm_calls_total": 183,
+      "mcnemar_compiler_only": 19,
+      "mcnemar_exact_two_sided_p": 3.814697265625e-06,
+      "mcnemar_replan_only": 0,
+      "n": 157,
+      "paired_difference_compiler_minus_replan": 0.12101910828025478,
+      "prompt_tokens_total": 815984,
+      "replan_final_accuracy": 0.8789808917197452,
+      "replan_round0_accuracy": 0.7707006369426752,
+      "validator_invisible_final_errors": {
+        "by_kind": {
+          "wrong_dimension_set_only": 12,
+          "wrong_metric_only": 7
+        },
+        "cases": [
+          {
+            "case_id": "ict_case_0007",
+            "expected_dimensions": [],
+            "expected_metric_id": "ict_metric_010",
+            "kind": "wrong_dimension_set_only",
+            "pred_dimensions": [
+              "segment_l3"
+            ],
+            "pred_metric_id": "ict_metric_010"
+          },
+          {
+            "case_id": "ict_case_0041",
+            "expected_dimensions": [
+              "market_region"
+            ],
+            "expected_metric_id": "ict_metric_001",
+            "kind": "wrong_metric_only",
+            "pred_dimensions": [
+              "market_region"
+            ],
+            "pred_metric_id": "ict_metric_015"
+          },
+          {
+            "case_id": "ict_case_0047",
+            "expected_dimensions": [],
+            "expected_metric_id": "ict_metric_007",
+            "kind": "wrong_dimension_set_only",
+            "pred_dimensions": [
+              "segment_l1"
+            ],
+            "pred_metric_id": "ict_metric_007"
+          },
+          {
+            "case_id": "ict_case_0048",
+            "expected_dimensions": [],
+            "expected_metric_id": "ict_metric_014",
+            "kind": "wrong_dimension_set_only",
+            "pred_dimensions": [
+              "segment_l1"
+            ],
+            "pred_metric_id": "ict_metric_014"
+          },
+          {
+            "case_id": "ict_case_0067",
+            "expected_dimensions": [],
+            "expected_metric_id": "ict_metric_005",
+            "kind": "wrong_dimension_set_only",
+            "pred_dimensions": [
+              "segment_l1"
+            ],
+            "pred_metric_id": "ict_metric_005"
+          },
+          {
+            "case_id": "ict_case_0068",
+            "expected_dimensions": [],
+            "expected_metric_id": "ict_metric_013",
+            "kind": "wrong_dimension_set_only",
+            "pred_dimensions": [
+              "segment_l3"
+            ],
+            "pred_metric_id": "ict_metric_013"
+          },
+          {
+            "case_id": "ict_case_0077",
+            "expected_dimensions": [
+              "segment_l2"
+            ],
+            "expected_metric_id": "ict_metric_015",
+            "kind": "wrong_metric_only",
+            "pred_dimensions": [
+              "segment_l2"
+            ],
+            "pred_metric_id": "ict_metric_001"
+          },
+          {
+            "case_id": "ict_case_0078",
+            "expected_dimensions": [],
+            "expected_metric_id": "ict_metric_013",
+            "kind": "wrong_metric_only",
+            "pred_dimensions": [],
+            "pred_metric_id": "ict_metric_007"
+          },
+          {
+            "case_id": "ict_case_0088",
+            "expected_dimensions": [],
+            "expected_metric_id": "ict_metric_009",
+            "kind": "wrong_dimension_set_only",
+            "pred_dimensions": [
+              "segment_l1"
+            ],
+            "pred_metric_id": "ict_metric_009"
+          },
+          {
+            "case_id": "ict_case_0109",
+            "expected_dimensions": [],
+            "expected_metric_id": "ict_metric_011",
+            "kind": "wrong_dimension_set_only",
+            "pred_dimensions": [
+              "segment_l1"
+            ],
+            "pred_metric_id": "ict_metric_011"
+          },
+          {
+            "case_id": "ict_case_0110",
+            "expected_dimensions": [],
+            "expected_metric_id": "ict_metric_012",
+            "kind": "wrong_dimension_set_only",
+            "pred_dimensions": [
+              "segment_l3"
+            ],
+            "pred_metric_id": "ict_metric_012"
+          },
+          {
+            "case_id": "ict_case_0119",
+            "expected_dimensions": [],
+            "expected_metric_id": "ict_metric_013",
+            "kind": "wrong_metric_only",
+            "pred_dimensions": [],
+            "pred_metric_id": "ict_metric_012"
+          },
+          {
+            "case_id": "ict_case_0123",
+            "expected_dimensions": [
+              "segment_l1"
+            ],
+            "expected_metric_id": "ict_metric_003",
+            "kind": "wrong_metric_only",
+            "pred_dimensions": [
+              "segment_l1"
+            ],
+            "pred_metric_id": "ict_metric_002"
+          },
+          {
+            "case_id": "ict_case_0126",
+            "expected_dimensions": [],
+            "expected_metric_id": "ict_metric_005",
+            "kind": "wrong_dimension_set_only",
+            "pred_dimensions": [
+              "segment_l3"
+            ],
+            "pred_metric_id": "ict_metric_005"
+          },
+          {
+            "case_id": "ict_case_0127",
+            "expected_dimensions": [],
+            "expected_metric_id": "ict_metric_006",
+            "kind": "wrong_dimension_set_only",
+            "pred_dimensions": [
+              "segment_l2"
+            ],
+            "pred_metric_id": "ict_metric_006"
+          },
+          {
+            "case_id": "ict_case_0135",
+            "expected_dimensions": [
+              "segment_l2"
+            ],
+            "expected_metric_id": "ict_metric_015",
+            "kind": "wrong_metric_only",
+            "pred_dimensions": [
+              "segment_l2"
+            ],
+            "pred_metric_id": "ict_metric_001"
+          },
+          {
+            "case_id": "ict_case_0148",
+            "expected_dimensions": [],
+            "expected_metric_id": "ict_metric_012",
+            "kind": "wrong_dimension_set_only",
+            "pred_dimensions": [
+              "segment_l3"
+            ],
+            "pred_metric_id": "ict_metric_012"
+          },
+          {
+            "case_id": "ict_case_0157",
+            "expected_dimensions": [],
+            "expected_metric_id": "ict_metric_010",
+            "kind": "wrong_metric_only",
+            "pred_dimensions": [],
+            "pred_metric_id": "ict_metric_011"
+          },
+          {
+            "case_id": "ict_case_0159",
+            "expected_dimensions": [],
+            "expected_metric_id": "ict_metric_006",
+            "kind": "wrong_dimension_set_only",
+            "pred_dimensions": [
+              "market_region"
+            ],
+            "pred_metric_id": "ict_metric_006"
+          }
+        ],
+        "n": 19
+      }
+    },
+    "iowa": {
+      "cluster_count": 32,
+      "compiler_accuracy": 1.0,
+      "difference_ci95": [
+        0.0,
+        0.0
+      ],
+      "llm_calls_per_case_mean": 1.25,
+      "llm_calls_total": 40,
+      "mcnemar_compiler_only": 0,
+      "mcnemar_exact_two_sided_p": 1.0,
+      "mcnemar_replan_only": 0,
+      "n": 32,
+      "paired_difference_compiler_minus_replan": 0.0,
+      "prompt_tokens_total": 198123,
+      "replan_final_accuracy": 1.0,
+      "replan_round0_accuracy": 0.8125,
+      "validator_invisible_final_errors": {
+        "by_kind": {},
+        "cases": [],
+        "n": 0
+      }
+    },
+    "multigov": {
+      "cluster_count": 130,
+      "compiler_accuracy": 1.0,
+      "difference_ci95": [
+        0.019417475728155338,
+        0.075
+      ],
+      "llm_calls_per_case_mean": 1.1,
+      "llm_calls_total": 220,
+      "mcnemar_compiler_only": 9,
+      "mcnemar_exact_two_sided_p": 0.00390625,
+      "mcnemar_replan_only": 0,
+      "n": 200,
+      "paired_difference_compiler_minus_replan": 0.045,
+      "prompt_tokens_total": 1497640,
+      "replan_final_accuracy": 0.955,
+      "replan_round0_accuracy": 0.865,
+      "validator_invisible_final_errors": {
+        "by_kind": {
+          "wrong_dimension_set_only": 9
+        },
+        "cases": [
+          {
+            "case_id": "mg_case_0095",
+            "expected_dimensions": [
+              "mg_domain_02_fine_scope"
+            ],
+            "expected_metric_id": "mg_metric_0032",
+            "kind": "wrong_dimension_set_only",
+            "pred_dimensions": [
+              "mg_domain_02_fine_scope",
+              "mg_domain_02_time_anchor"
+            ],
+            "pred_metric_id": "mg_metric_0032"
+          },
+          {
+            "case_id": "mg_case_0206",
+            "expected_dimensions": [
+              "mg_domain_04_fine_scope"
+            ],
+            "expected_metric_id": "mg_metric_0069",
+            "kind": "wrong_dimension_set_only",
+            "pred_dimensions": [
+              "mg_domain_04_fine_scope",
+              "mg_domain_04_time_anchor"
+            ],
+            "pred_metric_id": "mg_metric_0069"
+          },
+          {
+            "case_id": "mg_case_0254",
+            "expected_dimensions": [
+              "mg_domain_05_fine_scope"
+            ],
+            "expected_metric_id": "mg_metric_0085",
+            "kind": "wrong_dimension_set_only",
+            "pred_dimensions": [
+              "mg_domain_05_fine_scope",
+              "mg_domain_05_time_anchor"
+            ],
+            "pred_metric_id": "mg_metric_0085"
+          },
+          {
+            "case_id": "mg_case_0281",
+            "expected_dimensions": [
+              "mg_domain_06_fine_scope"
+            ],
+            "expected_metric_id": "mg_metric_0094",
+            "kind": "wrong_dimension_set_only",
+            "pred_dimensions": [
+              "mg_domain_06_fine_scope",
+              "mg_domain_06_time_anchor"
+            ],
+            "pred_metric_id": "mg_metric_0094"
+          },
+          {
+            "case_id": "mg_case_0326",
+            "expected_dimensions": [
+              "mg_domain_07_fine_scope"
+            ],
+            "expected_metric_id": "mg_metric_0109",
+            "kind": "wrong_dimension_set_only",
+            "pred_dimensions": [
+              "mg_domain_07_fine_scope",
+              "mg_domain_07_time_anchor"
+            ],
+            "pred_metric_id": "mg_metric_0109"
+          },
+          {
+            "case_id": "mg_case_0362",
+            "expected_dimensions": [
+              "mg_domain_08_fine_scope"
+            ],
+            "expected_metric_id": "mg_metric_0121",
+            "kind": "wrong_dimension_set_only",
+            "pred_dimensions": [
+              "mg_domain_08_fine_scope",
+              "mg_domain_08_time_anchor"
+            ],
+            "pred_metric_id": "mg_metric_0121"
+          },
+          {
+            "case_id": "mg_case_0374",
+            "expected_dimensions": [
+              "mg_domain_08_fine_scope"
+            ],
+            "expected_metric_id": "mg_metric_0125",
+            "kind": "wrong_dimension_set_only",
+            "pred_dimensions": [
+              "mg_domain_08_fine_scope",
+              "mg_domain_08_time_anchor"
+            ],
+            "pred_metric_id": "mg_metric_0125"
+          },
+          {
+            "case_id": "mg_case_0419",
+            "expected_dimensions": [
+              "mg_domain_10_fine_scope"
+            ],
+            "expected_metric_id": "mg_metric_0140",
+            "kind": "wrong_dimension_set_only",
+            "pred_dimensions": [
+              "mg_domain_10_fine_scope",
+              "mg_domain_10_time_anchor"
+            ],
+            "pred_metric_id": "mg_metric_0140"
+          },
+          {
+            "case_id": "mg_case_0449",
+            "expected_dimensions": [
+              "mg_domain_11_fine_scope"
+            ],
+            "expected_metric_id": "mg_metric_0150",
+            "kind": "wrong_dimension_set_only",
+            "pred_dimensions": [
+              "mg_domain_11_fine_scope",
+              "mg_domain_11_time_anchor"
+            ],
+            "pred_metric_id": "mg_metric_0150"
+          }
+        ],
+        "n": 9
+      }
+    }
+  },
+  "paired_metric": "action-aware full-case correctness",
+  "pooled": {
+    "branch_thresholds": {
+      "a": "pooled>=0.98 and all layers>=0.98",
+      "b": "sign test p<0.05 and micro gain>=0.02",
+      "c": "otherwise"
+    },
+    "compiler_joint": 1.0,
+    "discordant_right_to_wrong": 0,
+    "discordant_wrong_to_right": 73,
+    "final_joint": 0.9434306569343066,
+    "final_joint_wilson95": [
+      0.9208236071787993,
+      0.9598641197611087
+    ],
+    "h1_same_scope_joint": 0.8156934306569343,
+    "layer_final_joint": {
+      "govtwin": 0.9811320754716981,
+      "ict": 0.8789808917197452,
+      "iowa": 1.0,
+      "multigov": 0.955
+    },
+    "micro_gain": 0.13321167883211682,
+    "n": 548,
+    "preregistered_branch": "b_significant_improvement_not_closed",
+    "round0_joint": 0.8102189781021898,
+    "sign_test_p_two_sided": 2.117582368135751e-22
+  }
+}

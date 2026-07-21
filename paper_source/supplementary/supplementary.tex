@@ -1,0 +1,934 @@
+\documentclass[letterpaper]{article}
+\usepackage[submission]{aaai2027}
+\usepackage[hyphens]{url}
+\usepackage{graphicx}
+\urlstyle{rm}
+\def\UrlFont{\rm}
+\usepackage{natbib}
+\usepackage{caption}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\frenchspacing
+\raggedbottom
+\renewcommand{\topfraction}{0.95}
+\renewcommand{\bottomfraction}{0.6}
+\renewcommand{\textfraction}{0.05}
+\renewcommand{\floatpagefraction}{0.85}
+\usepackage{booktabs}
+\usepackage{array}
+\pdfinfo{/TemplateVersion (2027.1)}
+% aaai2027.sty empties \addcontentsline; restore the standard definition so the
+% supplement can carry a table of contents (supplement-only; main paper untouched)
+\makeatletter
+\def\addcontentsline#1#2#3{\addtocontents{#1}{\protect\contentsline{#2}{#3}{\thepage}{}\protected@file@percent}}
+\makeatother
+\setcounter{secnumdepth}{2}
+\renewcommand{\thesection}{\Alph{section}}
+\renewcommand{\thesubsection}{\Alph{section}.\arabic{subsection}}
+\setcounter{tocdepth}{2}
+\renewcommand{\contentsname}{Supplementary Contents}
+
+\title{Supplementary Material for CaliberGraph}
+\author{Anonymous Submission}
+\affiliations{}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\bigskip
+
+\section{Guide to the Claim-Driven Evaluation}
+
+The main paper organizes evidence by research question rather than dataset. This supplement preserves dataset-level detail for reproducibility while keeping each artifact tied to a claim:
+\begin{itemize}
+    \item \textbf{RQ1} uses full public per-dataset metric/refusal tables and paired uncertainty for complete-system effectiveness.
+    \item \textbf{RQ2} uses candidate-recall protocols, validators, BIRD diagnostics, and certificates to test the post-linking bottleneck.
+    \item \textbf{RQ3} uses CaliberGraph ablations and query-family breakdowns to attribute module contributions.
+    \item \textbf{RQ4} uses perturbations, paraphrases, policy sensitivity, a fixed pre-specified model panel, and external anchors for robustness and external validity.
+    \item \textbf{RQ5} uses reproducible prompt counts, six-family trace census, counterfactual contract mutations, and the key-free rebuild for efficiency and auditability.
+\end{itemize}
+
+\section{Benchmark Construction}
+
+\paragraph{MetricCaliberBench protocol.}
+MetricCaliberBench is a reusable benchmark protocol for governed business metrics. Each public instance exposes four objects: label-free source inputs, governed semantic artifacts, blind prediction cases, and scorer-only gold labels. Source-side inputs may be externally public rows and schemas, public sample databases, anonymized governance catalogs, or desensitized case text. Governed semantic artifacts include metric definitions, dimensions, hierarchy policy, coverage records, refusal policies, and typed edges. CaliberGraph and all non-oracle comparators read only the legal prediction inputs: label-free source artifacts, public catalogs/policies, and \texttt{blind\_cases.jsonl}. Rebuild-only label files and \texttt{gold\_labels.jsonl} are not legal inputs for these predictors; the scorer joins their predictions with gold only afterward. The separately marked oracle-candidate diagnostic receives the scorer metric by definition and is excluded from headline paired tests. The public contract is key-free: it does not require DataHub, private mappings, private source ids, private table/column names, or private provenance digests.
+
+\paragraph{External benchmark and baseline triage.}
+The release includes reviewer-facing external audits that separate direct NL2Metric-Caliber evidence from adjacent evidence. BIS is the nearest public BI NL2SQL benchmark, BI-Bench is the nearest end-to-end BI-system benchmark, TrustSQL is the nearest public abstention/reliability benchmark, Spider 2.0/Spider2-DBT is the nearest enterprise workflow and dbt-project diagnostic, and DataBench is the nearest public real-table QA benchmark. None directly exposes the governed metric catalog, coverage/refusal contract, finest-grain policy, and witness labels required by NL2Metric-Caliber. On the baseline side, AutoLink is mapped to candidate availability, SafeNLIDB to safety/refusal control, TrustSQL-style abstention to answerability control, strong SQL agents to SQL-planner controls, and semantic-layer/post-hoc validators to fully runnable non-witness controls. The experiments are organized into overall comparison, post-linking mechanism, ablation, robustness/external validity, and efficiency/auditability claims.
+
+\paragraph{Executed external evidence.}
+The deterministic public artifact reports 547 AutoLink Spider2-Lite records, 540 SafeNLIDB ShieldSQL records, 206 BIRD-MetricCaliber diagnostics, and the 1525 public scored MetricCaliber cases used by the main paper. At Spider2 commit \texttt{01a4c67c}, Spider2-DBT is audited as third-party dbt project semantics: 69 projects, 46 dbt-parse passes, 23 failures, 2046 YAML files, 10007 SQL files, 3589 model entries, and 4049 metric-like columns. TrustSQL raw splits are scored with official \texttt{evaluate.py}; DataBench contributes 7 tables, 145 QA cases, and 265464 rows. MetricFlow 0.211.0 is executed for 64 real \texttt{mf query} calls plus nine preregistered probes on the released Iowa project: lexical linking reaches 0.625 joint, while giving the engine gold metric identity reaches 0.781. Path-sanitized stdout/stderr, exit codes, and data-row counts are released. LightRAG remains a runnable preflight rather than an accuracy row because a fair comparison requires frozen LLM, embedding, and query-policy services.
+
+\paragraph{BIRD-MetricCaliber.}
+We derive a public diagnostic split from BIRD Mini-Dev public prompt records. We retain records whose gold SQL contains aggregate expressions. The derived split contains 206 aggregate cases, 166 unique metric signatures, and 782 schema dimensions parsed from the BIRD schema text. Metric signatures are normalized aggregate expressions in the \texttt{SELECT} clause. Measure columns are columns appearing inside aggregate expressions. Dimensions are \texttt{GROUP BY} expressions. This split is diagnostic: it evaluates metric-caliber properties of plans and generated SQL, not full SQL execution accuracy.
+
+\paragraph{Chinook-MetricCaliber.}
+The public benchmark is built over the public Chinook SQLite database. We use the public schema as the physical database and add a governed semantic layer consisting of metric definitions, dimension definitions, hierarchy relations, and refusal policies. The benchmark contains 40 cases. Answerable cases ask for metrics such as revenue, invoice count, average order value, revenue per customer, customer count, units sold, track count, and playlist track count. Refusal cases include personally sensitive requests, SQL/DDL requests, off-domain requests, and unsupported refund metrics.
+
+\paragraph{IowaLiquor-MetricCaliber.}
+This layer is built from the real public State of Iowa 2024 Liquor Sales dataset. The released benchmark includes the public schema returned by the source API, a 5000-row public row snapshot, a SQLite copy, 8 answerable metrics, 8 dimensions, hierarchy and refusal policies, 32 public natural-language cases, gold labels, and generated SQL for answer predictions. Unlike GovTwin, the row values are externally public and inspectable. The authored part is the governed semantic layer and the NL2Metric labels over that public schema.
+
+\paragraph{GovTwin-MetricCaliber.}
+A public anonymized semantic twin of a private industrial governance graph. It preserves graph shape and task mechanics--metric types, numerator/denominator roles, allowed dimensions, hierarchy relations, typed edges, refusal policies, and gold labels--while replacing private metric names, aliases, natural-language requests, table names, column names, owner fields, timestamps, document tokens, and all raw row-level facts. The public release contains 18 synthetic metrics, 5 synthetic dimensions, 102 typed governance edges, 159 synthetic NL2Metric-Caliber base cases, 468 deterministic perturbation cases, and 159 LLM-paraphrased cases generated only from public synthetic queries. The private-to-public mapping is not released.
+
+\paragraph{GovTwin privacy protocol.}
+The released-artifact threat model assumes that reviewers see only the public GovTwin files and not the private graph snapshot or mapping. The release process removes row-level facts, raw enterprise queries, physical table and column names, owners, timestamps, document tokens, product/customer/employee identifiers, and deployment-specific strings. Public identifiers are regenerated synthetically, and the author-side generator is excluded from the reviewer artifact because it reads the private snapshot. A sensitive-token scan is run before packaging.
+
+\paragraph{MultiGov-MetricCaliber.}
+MultiGov-MetricCaliber is derived from a read-only mining pass over production DataGov-line artifacts. The author-side builder inspects 12 domain versions and then writes only an anonymized public benchmark. The public artifact contains 12 anonymous domain records, 170 governed metric/policy signals, 48 dimensions, 1,035 typed governance edges, 26 policies, 189 anonymous physical-coverage records, 178 metric-specific coverage bindings spanning 142 metrics, 170 source-provenance records, and 510 benchmark cases. Source-provenance records expose only category and public provenance id, such as \texttt{semantic\_\allowbreak{}assertion}, \texttt{caliber\_\allowbreak{}route}, \texttt{disclosure\_\allowbreak{}policy}, \texttt{temporal\_\allowbreak{}binding}, and \texttt{valid\_\allowbreak{}time\_\allowbreak{}anchor}. Raw rows, raw domain names, source table names, source column names, private query text, identifiers, and private-to-public mappings are withheld.
+
+\paragraph{MultiGov audits.}
+The released audit reports 510 normalized query groups, 0 duplicate query groups, 0 conflicting duplicate groups, and a passed private-term leakage scan. The public evaluator reads only the released MultiGov benchmark directory; it does not access DataHub, raw enterprise rows, or author-side mappings.
+
+\paragraph{Author-side DataHub production audit.}
+We additionally ran a read-only DataHub inventory over production DataGov-line artifacts. This audit is not a public prediction input and not a scored benchmark; it is author-side evidence that the failure taxonomy is not RMA-specific. The inspected inventory contains 12 domain versions, 2956 governance rows, 189 semantic nodes, 29 caliber-routing records, 115 semantic test cases, and zero manifest validation issues. The domains cover return management, fulfillment, email marketing, review/social signals, quality voice-of-customer, recommendation, and domestic new-product launch.
+
+\begin{table}[h]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2pt}
+\begin{tabular}{lrrrrl}
+\toprule
+Domain version & Tables & Gov & Nodes & Tests & Main trap \\
+\midrule
+aibuy 06.23 & 14 & 178 & 14 & 10 & disclosure/provenance \\
+domestic 06.23 & 27 & 374 & 27 & 15 & valid-time state bridge \\
+email 06.18 & 17 & 291 & 17 & 10 & thread denominator \\
+email 06.23 & 17 & 301 & 17 & 14 & thread + disclosure \\
+fulfillment 06.18 & 11 & 179 & 11 & 7 & SLA denominator \\
+quality VOC 06.18 & 15 & 184 & 15 & 8 & complaint/sales rate \\
+quality VOC 06.23 & 15 & 192 & 15 & 11 & rate + valid-time \\
+review 06.18 & 17 & 191 & 17 & 9 & population coverage \\
+RMA 06.18 & 18 & 399 & 18 & 7 & matched sales denominator \\
+RMA bridge 06.18 & 12 & 157 & 12 & 7 & SKU-category coverage \\
+RMA 06.23 & 18 & 406 & 18 & 10 & denominator + as-of \\
+social 06.18 & 8 & 104 & 8 & 7 & denominator/sample caveat \\
+\bottomrule
+\end{tabular}
+\caption{Author-side DataHub inventory used for the paper. Raw enterprise rows and private source identifiers are not public prediction inputs; public reproducibility is provided by IowaLiquor, Chinook, GovTwin, MultiGov, and IndustrialCaseText.}
+\end{table}
+
+\paragraph{IndustrialCaseText-MetricCaliber.}
+This layer is built from real enterprise NL2Metric-Caliber case text under an anonymization policy that permits releasing desensitized case text and labels but not raw rows. The public release contains 157 conflict-free scored cases, 15 anonymized metrics, 4 anonymized dimensions, label-free source candidates, rebuild-only candidate labels, \texttt{blind\_cases.jsonl}, \texttt{gold\_labels.jsonl}, catalogs, predictions, and release audits. Two candidate cases are withheld because a duplicate public query had incompatible answer/refuse labels. Private provenance digests are stored only in internal author evidence; they are not part of the public artifact.
+
+\paragraph{IndustrialCaseText privacy and label audits.}
+The release replaces private domain names, raw table names, private metric ids, product names, and source identifiers with public placeholders. The public audit reports 159 source candidates, 157 released cases, 2 withheld label-conflict cases, 0 conflicting duplicate groups after withholding, and a passed private-term scan. CaliberGraph and non-oracle predictors read only label-free source files, public catalogs/policies, and \texttt{blind\_cases.jsonl}; candidate labels and gold labels are otherwise used only for rebuild/scoring. The oracle-candidate diagnostic is the sole declared exception.
+
+\paragraph{Independent practitioner validity.}
+Three BI/governance practitioners who did not author CaliberGraph or the labels independently annotated a stratified 120-case sample using only released query text and catalogs. Anonymous sheets A/B/C are released with a deterministic recomputation script. Fleiss action agreement is $\kappa{=}0.9676$ (observed agreement 0.9889); pairwise Cohen's $\kappa$ ranges from 0.9509 to 1.000. Majority action matches released gold on 117/120 cases; among 93 majority-answer cases, metric identity matches on 93/93 and exact dimensions on 92/93. Agreement is 1.000 on Iowa, Chinook, GovTwin, and MultiGov action labels, and 0.900 on the 30 sampled IndustrialCaseText actions.
+
+We do not hide the disagreements. All three ICT action disagreements replace a released answer with practitioner refusal; one Chinook case replaces the released finest-grain dimension with a parent+child set. A no-cherry-picking sensitivity run replaces all four labels simultaneously. CaliberGraph changes from 1.000 to 0.981 on ICT and 0.975 on Chinook; the strongest corresponding baselines change from 0.898 to 0.885 (the \texttt{safenlidb\_guarded} control on IndustrialCaseText as recomputed by the released sensitivity script, 141/157; the main-text E3 row reports 0.904 under its own scorer---both values are released, per-method figures in \texttt{disagreement\_sensitivity.json}) and from 0.925 to 0.950 (GraphRAG on Chinook). The ordering of every evaluated method is unchanged on both layers. These annotations validate that released action/metric/grain contracts are largely reconstructible; they do not validate private rows or MultiGov physical bindings. A follow-up practitioner pass extends validation to the \emph{binding layer}: three practitioners (BI metrics, data governance, and BI access-control backgrounds; 65/78/81 minutes; none involved in authoring the labels or compiler), given only the released catalogs with the bindings file withheld, independently reconstruct all 60 stratified metric-to-physical bindings in a position-balanced multiple-choice task (each annotator 60/60 against released bindings; complete three-way agreement, under which Fleiss $\kappa$ degenerates to 1.0; zero ``cannot be derived'' votes; confidence 5 on 53/60, 60/60, and 56/60 items respectively, remainder 4). Anonymized sheets, the key, and recomputation scripts are released. The binding layer of the released contract is thus practitioner-reconstructible from the released catalogs alone; MultiGov \emph{private} physical mappings remain outside this validation.
+
+\paragraph{Ethics and intended use.}
+The enterprise-derived release is authorized only at the desensitized case-text, anonymized-label, and governance-structure level. It excludes raw business rows, personal identifiers, customer or employee names, private source ids, private table/column names, and reversible mappings. The artifact is intended to evaluate governed analytics planning and refusal behavior, not to reconstruct operational data or infer individuals. The private-term and duplicate-conflict audits are part of the release verifier; these controls reduce but cannot prove the absence of every contextual re-identification risk.
+
+\paragraph{Gold convention.}
+If a query requests multiple levels along the same hierarchy path, the gold dimension is the finest requested grain. Examples include country+city mapping to city, year+month mapping to month, and artist+album+track mapping to track. This convention isolates a common business-caliber failure: returning both parent and child dimensions may be understandable as a surface parse, but it is not the governed aggregate grain.
+
+\section{Evaluation Coverage}
+
+\begin{table}[h]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2pt}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.17\linewidth}>{\raggedright\arraybackslash}p{0.28\linewidth}>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{0.23\linewidth}@{}}
+\toprule
+Component & What is evaluated & Evidence & Boundary \\
+\midrule
+Metric id & exact governed metric id & all main result tables & not a claim of SQL execution equivalence \\
+Dimension grain & exact governed dimension set & all public suites & policy-specific; finest-grain is configurable \\
+Action/refusal & answer vs. refuse, precision/recall & all result tables; refusal breakdowns & categories are benchmark policies \\
+Coverage & formula fields; metric-specific released bindings & Iowa field-level; MultiGov anonymized metric-to-asset bindings & inactive when a public contract does not expose a required binding \\
+Time binding & gold field included in cases and trace & trace artifacts and default-binding audit & not reported as primary headline metric \\
+Trace & deterministic decision evidence & released trace examples & not scored as free-form explanation quality \\
+\bottomrule
+\end{tabular}
+\caption{Task component versus evidence coverage. The formal interface is broader than the headline metric tables; this table states which components are directly scored and which are audited.}
+\end{table}
+
+\paragraph{Executable constraint audit.}
+One structured record is written by the released \texttt{ContractCompiler} for each of $\Gamma_f,\Gamma_c,\Gamma_g,\Gamma_v,\Gamma_t,\Gamma_p$. A counterfactual suite over the public Iowa contract leaves the valid case unchanged and mutates one contract input at a time. This is an implementation test rather than an accuracy benchmark.
+
+\begin{table}[h]
+\centering
+\scriptsize
+\begin{tabular}{lcc}
+\toprule
+Mutation & Expected primary result & Observed \\
+\midrule
+None & witness admitted & witness admitted \\
+Unknown metric & field failure & field failure \\
+Missing ratio route & caliber failure & caliber failure \\
+Disallowed dimension & grain failure & grain failure \\
+Missing physical field & coverage failure & coverage failure \\
+Out-of-range year & time failure & time failure \\
+Raw identifier request & policy failure & policy failure \\
+\bottomrule
+\end{tabular}
+\caption{All 7/7 expected contract-mutation outcomes are recovered. Full check evidence and certificates are in \texttt{contract\_mutation\_suite\_results.json}.}
+\end{table}
+
+The stricter MultiGov isolation suite keeps 4 numerator edges, 1 denominator edge, and 11 coverage bindings belonging to other metrics in the same domain. It then removes only the current metric's numerator edge, denominator edge, numerator-to-asset binding, or denominator-to-asset binding. The valid fixture is answered, and each of the four deletions produces the expected typed refusal (5/5 total). Thus domain-level evidence cannot satisfy a current-metric witness.
+
+The companion trace audit confirms that field, caliber, grain, and policy checks are recorded for every CaliberGraph prediction. Coverage is active for all 32 Iowa cases and 426 MultiGov cases, inactive for 84 MultiGov cases without a required public metric binding, and inactive for GovTwin and IndustrialCaseText. Time is active for all Iowa cases and 57 MultiGov cases; it is inactive elsewhere. These counts prevent either an unavailable family or an empty requirement set from being reported as a success.
+
+\section{Reproduction Commands}
+
+The public benchmark and evaluation can be recreated with the released files. For IndustrialCaseText, the public artifact includes a desensitized source-candidate JSONL containing no raw enterprise rows, private table/column names, private metric ids, source case ids, private provenance digests, or private-to-public mappings. The builder defaults to this public source; rebuilding from private author source is possible only with an explicit \texttt{--source private} flag outside the anonymous artifact.
+
+\begin{scriptsize}
+\begin{verbatim}
+python3 scripts/build_public_chinook_benchmark.py
+python3 scripts/build_blind_gold_splits.py
+python3 scripts/normalize_multigov_coverage.py
+python3 scripts/run_iowa_liquor_eval.py
+python3 scripts/run_public_chinook_eval.py \
+  --refresh
+python3 scripts/build_bird_metric_caliber_benchmark.py
+python3 scripts/build_govtwin_llm_paraphrases.py \
+  --reuse
+python3 scripts/run_govtwin_eval.py
+python3 scripts/run_multigov_metric_caliber_eval.py
+python3 scripts/\
+  build_industrial_case_text_metric_caliber.py \
+  --source public
+python3 scripts/run_industrial_case_text_eval.py
+python3 scripts/run_contract_mutation_suite.py
+python3 scripts/run_multigov_binding_negative_suite.py
+python3 scripts/run_prompt_token_audit.py
+python3 scripts/run_statistical_audit.py
+python3 scripts/run_industrial_llm_panel.py \
+  --limit 60 --modes llm_graph_rag
+python3 scripts/run_official_baseline_preflight.py
+python3 scripts/run_policy_sensitivity_audit.py
+python3 scripts/run_mechanism_evidence_audit.py
+python3 scripts/run_external_benchmark_baseline_audit.py
+python3 scripts/run_external_anchor_experiment_audit.py
+python3 scripts/run_external_evidence_summary.py
+\end{verbatim}
+\end{scriptsize}
+
+The GovTwin evaluator writes base predictions, deterministic perturbation predictions, LLM-paraphrase predictions, ablations, refusal breakdowns, witness traces, and query-family breakdowns under the GovTwin \texttt{results/} directory. The released LLM-paraphrase split is fixed; regenerating it requires an LLM route, while evaluating it is deterministic. Across Iowa, GovTwin, MultiGov, and IndustrialCaseText, CaliberGraph and non-oracle predictors read only label-free splits; scorer-only gold is joined after their predictions are materialized. Oracle-candidate diagnostics are scored and labeled separately. The one-command public rebuild invokes all deterministic headline evaluators, the contract-mutation suite, token audit, and statistical audit before checksum verification.
+
+The LLM baselines require access to the same LLM router used in the experiments. Public deterministic baselines do not require private keys.
+
+\section{Main-Text Companion Tables and Figure Data}
+
+\subsection{Witness-guided planning pseudo-code}
+The complete planning procedure referenced in the main text is Algorithm~\ref{alg:calibergraph}; its line order is an implementation detail of the conjunctive check groups M1--M3, not a module pipeline.
+
+\begin{algorithm}[tb]
+\caption{\textsc{CaliberGraph} witness-guided planning}
+\label{alg:calibergraph}
+\footnotesize
+\begin{algorithmic}[1]
+\STATE \textbf{Input:} request $q$, governance graph $G$
+\STATE $C_m,C_d\leftarrow$ link metric and dimension candidates
+\STATE $\Gamma\leftarrow$ compile field, caliber, grain, coverage, time/disclosure, and policy constraints
+\IF{$q$ triggers an explicit refusal policy \textup{(M3)}}
+    \RETURN $(\textsc{refuse},\emptyset,\emptyset,\emptyset,\tau)$
+\ENDIF
+\STATE $m\leftarrow$ highest-ranked candidate satisfying metric-caliber constraints \hfill (M2)
+\STATE $\Delta\leftarrow$ resolve dimensions under governed hierarchy policy \hfill (M1)
+\STATE $t\leftarrow$ bind requested or default valid time \hfill (M2)
+\STATE $w\leftarrow$ construct a coverage-caliber witness for $(m,\Delta,t)$ \hfill (M1--M3)
+\IF{$w$ lacks a required dependency, asset, binding, or policy proof}
+    \RETURN $(\textsc{refuse},\emptyset,\emptyset,\emptyset,\tau)$
+\ENDIF
+\RETURN $(\textsc{answer},m,\Delta,t,\tau\cup w)$
+\end{algorithmic}
+\end{algorithm}
+
+
+
+This section holds the tables condensed into prose in the main text and documents the data provenance of the two main-text figures.
+
+\subsection{Evidence groups}
+
+\begin{table}[h]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2pt}
+\begin{tabular}{>{\raggedright\arraybackslash}p{.20\linewidth}>{\raggedright\arraybackslash}p{.31\linewidth}>{\raggedright\arraybackslash}p{.39\linewidth}}
+\toprule
+Group & Instances & Role in the argument \\
+\midrule
+Public-native & Iowa 32; Chinook 40; BIRD 206 diagnostics & Inspectable rows/schema and connection to public SQL behavior \\
+Enterprise-derived public & MultiGov 510; IndustrialCaseText 157 & Multi-domain governance recurrence and real desensitized request language \\
+Controlled public stress & GovTwin 159 base, 468 perturbations, 159 paraphrases & Mechanism isolation, ablation, and wording robustness \\
+Supporting evidence & DataHub inventory; external anchors & Domain recurrence and scope checks outside the headline table \\
+\bottomrule
+\end{tabular}
+\caption{Evidence groups. The 1525 public scored cases exclude the 206 BIRD SQL diagnostics and adjacent external audits.}
+\label{tab:evidence-supp}
+\end{table}
+
+\subsection{Baseline families}
+
+\begin{table}[h]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2pt}
+\begin{tabular}{>{\raggedright\arraybackslash}p{.20\linewidth}>{\raggedright\arraybackslash}p{.32\linewidth}>{\raggedright\arraybackslash}p{.38\linewidth}}
+\toprule
+Family & Controlled capability & Alternative explanation tested \\
+\midrule
+Retrieval & lexical/schema candidate access & relevant candidates alone solve the task \\
+Prompt execution & compact RAG or full contract & an LLM can execute visible rules reliably and cheaply \\
+Semantic engine & SQLite planner; real MetricFlow & executable semantic queries enforce the contract \\
+Validation/repair & post-hoc checks; feedback re-planning & detecting and iteratively repairing violations closes the gap \\
+Published-mechanism adaptations & AutoLink link; SafeNLIDB guard; oracle & stronger linking or refusal removes the residual gap \\
+\bottomrule
+\end{tabular}
+\caption{Baseline selection is claim-driven. Ablations are excluded because they answer a different question.}
+\label{tab:baselines-supp}
+\end{table}
+
+\subsection[Wording and label-policy robustness]{Wording, duplication, and label-policy robustness}
+
+\begin{table}[h]
+\centering
+\scriptsize
+\begin{tabular}{lcc}
+\toprule
+Robustness test & SafeNLIDB E3 & CaliberGraph \\
+\midrule
+GovTwin base & .736 & 1.000 \\
+GovTwin perturbations & .718 & .987 \\
+GovTwin LLM paraphrases & .736 & 1.000 \\
+IndustrialCaseText exact & .904 & 1.000 \\
+IndustrialCaseText deduplicated & .868 & 1.000 \\
+IndustrialCaseText lenient policy & .975 & 1.000 \\
+\bottomrule
+\end{tabular}
+\caption{Joint/full-case accuracy under wording, duplication, and label-policy checks (main-text RQ4 summary).}
+\label{tab:robustness-supp}
+\end{table}
+
+\subsection{Accuracy--cost boundary}
+
+\begin{table}[h]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2.4pt}
+\begin{tabular}{lrrrr}
+\toprule
+Finalizer & J$\uparrow$ & Tokens/case$\downarrow$ & Calls$\downarrow$ & Latency$\downarrow$ \\
+\midrule
+Full-contract deepseek-3.2 & .865 & 132336 & 1 & 38.05 s \\
+Full-contract opus-4-6 & .985 & 141016 & 1 & 9.10 s \\
+Full-contract gpt-5.5 & 1.000 & 115363 & 1 & 7.24 s \\
+CaliberGraph & 1.000 & 0 & 0 & 0.058 ms \\
+\bottomrule
+\end{tabular}
+\caption{Accuracy--cost boundary on the same MultiGov-200 cases (main-text RQ5 summary). Provider token counts are not cross-tokenizer normalized; CaliberGraph latency is deterministic finalization after candidates exist.}
+\label{tab:cost-supp}
+\end{table}
+
+\subsection{Figure data provenance}
+
+\begin{table}[h]
+\centering
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.26\columnwidth}>{\raggedright\arraybackslash}p{0.66\columnwidth}@{}}
+\toprule
+Figure element & Released source \\
+\midrule
+Fig.~1 request vocabulary & \path{blind_cases.jsonl} (IndustrialCaseText) \\
+Fig.~1 trace-card fields & \path{experiments/witness_failure_certificates.jsonl}; GovTwin witness-trace examples \\
+Fig.~1 running example & \path{ict_case_0141} ($q$) and \path{ict_cf_color_001} ($q'$, controlled one-factor mutation); certificate \texttt{MISSING\_COVERAGE} with partial witness $T.\mathrm{status}{=}\mathrm{missing}$ \\
+Fig.~1 edge vocabulary & \path{governance_edges.jsonl} \\
+Fig.~2(a) candidate fate & \path{extended_controls/candidate_fate_same_denominator/per_case_candidate_fate.jsonl} (deterministic rescore; no new LLM calls) \\
+Fig.~2(b) per-round accuracy & \path{extended_controls/validator_feedback_replanning/scores.json} (field \path{per_round}; intervals \path{joint_wilson95}) \\
+Fig.~2(c) entropy sweep & \path{predictions_govtwin.jsonl}, \path{predictions_multigov.jsonl} under \path{extended_evidence/entropy_abstention/} \\
+\bottomrule
+\end{tabular}
+\caption{Released artifact sources for the two main-text figures.}
+\label{tab:figprov}
+\end{table}
+
+
+\paragraph{Method figure (main-text Figure~1).}
+The running example condenses released desensitized IndustrialCaseText request vocabulary (\texttt{blind\_cases.jsonl} contains, verbatim, ``this quarter complaint\_rate by region'', two Chinese requests literally reading ``last-month complaint rate'' and ``last-month sales volume by category L1 and category L2'', and the desensitized entity ``Product Family A''). Trace-card fields (\texttt{requested}, \texttt{removed\_ancestors}, \texttt{resolved\_finest}; caliber numerator/denominator; policy \texttt{hits}) follow the released witness-failure certificates and the GovTwin witness-trace examples verbatim (Table~\ref{tab:figprov}). The refusal branch is the released one-factor plan mutation \path{ict_cf_color_001} of the released request \path{ict_case_0141}: only the requested dimension set changes to Product Color, and the compiler emits \texttt{MISSING\_COVERAGE} with partial witness $T.\mathrm{status}{=}\mathrm{missing}$ (Table~\ref{tab:figprov}); it is a controlled mutation, not a verbatim production request. Graph edge names follow the main-text edge vocabulary; \texttt{numerator\_of}/\texttt{denominator\_of} appear verbatim in the released \texttt{governance\_edges.jsonl}. Entity, field, and table names in the figure are desensitized illustrations of the private enterprise contract; they are not released bindings.
+
+\paragraph{Dynamics figure (main-text Figure~2).}
+Panel (a) partitions the same 149 answerable IndustrialCaseText cases by candidate fate across retrieved-metric budgets $k\in\{1,3,5,10\}$; the counts are a deterministic rescore of the released per-arm raw responses (\path{extended_controls/candidate_fate_same_denominator/}: \path{per_case_candidate_fate.jsonl}, \path{candidate_fate_results.json}, rebuild script \path{recompute_candidate_fate.py}; no new LLM calls). Panel (b) reads the released per-round joint accuracy (Table~\ref{tab:figprov}): Iowa-32 $0.8125\to1.000$; GovTwin-159 $0.7799\to0.9811$; seeded MultiGov-200 $0.865\to0.945\to0.955$; IndustrialCaseText-157 (labeled extension) $0.7707\to0.8726\to0.8790$; rounds 2--3 change nothing except MultiGov round~2 ($+0.010$) and ICT round~2 ($+0.006$). Panel (c) is a deterministic recomputation from the released per-case consistency entropies (Table~\ref{tab:figprov}): sweeping the abstention threshold over the observed entropy values yields (abstention rate, answered joint accuracy) points GovTwin $(0,.799)$, $(12.6\%,.842)$, $(30.8\%,.936)$ and MultiGov $(0,.975)$, $(2.0\%,.980)$, $(3.5\%,.984)$, $(14.0\%,.988)$, $(16.0\%,.994)$, $(29.5\%,1.000)$; the pooled strictest point matches the main text (0.972 answered-joint at 30.1\% abstention). GovTwin saturates because its 7 remaining grain errors are unanimous ($c_1{=}5$) zero-entropy predictions. The main-text figure plots identity transforms of these released numbers: panel (b) shows residual error ($1-{}$joint accuracy) with final-round Wilson 95\% intervals taken from the same released scores file (\texttt{joint\_wilson95}); panel (c) re-expresses the sweep in standard risk--coverage coordinates (coverage $=1-$ abstention rate; selective risk $=1-$ answered joint accuracy), with terminal-point Wilson intervals computed on the answered subsets (GovTwin floor $7/110$; MultiGov terminal $0/141$). No quantity beyond these deterministic transforms is introduced.
+
+\section{Extended Results}
+The tables in this section report the complete per-dataset extended results; each table is cited from the corresponding research-question claim in the main paper.
+
+\begin{table}[h]
+\centering
+\scriptsize
+\begin{tabular}{lccccc}
+\toprule
+Method & Metric & Dim. & Joint & Ref.P & Ref.R \\
+\midrule
+Direct keyword & 0.750 & 0.375 & 0.156 & 0.000 & 0.000 \\
+Schema proxy & 0.781 & 0.719 & 0.562 & 0.000 & 0.000 \\
+Open SQL end-to-end & 0.781 & 0.719 & 0.562 & 0.000 & 0.000 \\
+AutoLink-derived E3 & 0.781 & 0.719 & 0.562 & 0.000 & 0.000 \\
+SafeNLIDB-derived E3 & 1.000 & 0.781 & 0.781 & 1.000 & 1.000 \\
+Oracle-candidate prompt & 1.000 & 0.781 & 0.781 & 1.000 & 1.000 \\
+CaliberGraph & 1.000 & 1.000 & 1.000 & 1.000 & 1.000 \\
+\bottomrule
+\end{tabular}
+\caption{IowaLiquor-MetricCaliber results over real public row-level business data. The Open SQL end-to-end baseline emits executable SQLite for every answer prediction, but its metric-caliber joint accuracy remains 0.562.}
+\end{table}
+
+\begin{table}[h]
+\centering
+\scriptsize
+\begin{tabular}{lrrrrr}
+\toprule
+SQL baseline & Agg & Measure & Dim. & Table & Joint \\
+\midrule
+GPT-3.5 & 0.626 & 0.063 & 0.869 & 0.709 & 0.049 \\
+GPT-4-Turbo & 0.694 & 0.083 & 0.903 & 0.830 & 0.078 \\
+GPT-4o & 0.641 & 0.073 & 0.913 & 0.830 & 0.053 \\
+Llama-3-70B & 0.636 & 0.068 & 0.903 & 0.825 & 0.044 \\
+\bottomrule
+\end{tabular}
+\caption{BIRD-MetricCaliber diagnostics on strong public Text-to-SQL outputs from the BIRD package.}
+\end{table}
+
+\begin{table}[h]
+\centering
+\scriptsize
+\begin{tabular}{lccc}
+\toprule
+Planner & Metric & Dim. & Joint \\
+\midrule
+Direct keyword & 0.199 & 0.917 & 0.189 \\
+Schema-RAG & 0.830 & 0.811 & 0.665 \\
+AutoLink-derived E3 & 0.830 & 0.811 & 0.665 \\
+Candidate-only graph planner & 0.830 & 0.811 & 0.665 \\
+\bottomrule
+\end{tabular}
+\caption{BIRD-MetricCaliber plan-level diagnostic when official BIRD evidence is available as metric documentation. This split is useful for external validity and for showing that candidate linking can saturate; it is not the strongest stress test for coverage-caliber witness construction because BIRD lacks a complete governance graph with refusal and coverage metadata.}
+\end{table}
+
+\begin{table}[h]
+\centering
+\scriptsize
+\begin{tabular}{lccccc}
+\toprule
+Method & Metric & Dim. & Joint & Ref.P & Ref.R \\
+\midrule
+Direct keyword & 0.667 & 0.591 & 0.415 & 0.000 & 0.000 \\
+Schema proxy & 0.943 & 0.736 & 0.679 & 0.000 & 0.000 \\
+AutoLink-derived E3 & 0.943 & 0.736 & 0.679 & 0.000 & 0.000 \\
+SafeNLIDB-derived E3 & 1.000 & 0.736 & 0.736 & 1.000 & 1.000 \\
+Oracle-candidate prompt & 1.000 & 0.736 & 0.736 & 1.000 & 1.000 \\
+CaliberGraph & 1.000 & 1.000 & 1.000 & 1.000 & 1.000 \\
+\bottomrule
+\end{tabular}
+\caption{GovTwin-MetricCaliber public semantic-twin results over 159 cases. Candidate recall@3 is 1.000 for metric, dimension, and joint candidate coverage on the 150 answerable cases.}
+\end{table}
+
+\begin{table}[h]
+\centering
+\scriptsize
+\begin{tabular}{lccccc}
+\toprule
+Method & Metric & Dim. & Joint & Ref.P & Ref.R \\
+\midrule
+Direct keyword & 0.639 & 0.361 & 0.000 & 0.000 & 0.000 \\
+Schema proxy & 0.639 & 0.680 & 0.320 & 0.000 & 0.000 \\
+AutoLink-derived E3 & 0.639 & 0.680 & 0.320 & 0.000 & 0.000 \\
+SafeNLIDB-derived E3 & 1.000 & 0.680 & 0.680 & 1.000 & 1.000 \\
+Oracle-candidate prompt & 1.000 & 0.680 & 0.680 & 1.000 & 1.000 \\
+CaliberGraph & 1.000 & 1.000 & 1.000 & 1.000 & 1.000 \\
+\bottomrule
+\end{tabular}
+\caption{MultiGov-MetricCaliber results over 510 public anonymized cases. The task-aligned AutoLink-derived E3 protocol has 1.000 joint candidate recall on 326 answerable cases, but finalization still fails on finest-grain and refusal policy.}
+\end{table}
+
+\begin{table}[h]
+\centering
+\scriptsize
+\begin{tabular}{lccccc}
+\toprule
+Method & Metric & Dim. & Joint & Ref.P & Ref.R \\
+\midrule
+Direct keyword & 0.936 & 0.586 & 0.522 & 1.000 & 0.250 \\
+Schema proxy & 0.936 & 0.930 & 0.866 & 1.000 & 0.250 \\
+SafeNLIDB-derived E3 & 0.975 & 0.930 & 0.904 & 1.000 & 1.000 \\
+CaliberGraph & 1.000 & 1.000 & 1.000 & 1.000 & 1.000 \\
+\bottomrule
+\end{tabular}
+\caption{IndustrialCaseText-MetricCaliber results over 157 public real-desensitized enterprise cases after withholding a 2-case answer/refuse conflict group.}
+\end{table}
+
+\begin{table}[h]
+\centering
+\scriptsize
+\begin{tabular}{lccccc}
+\toprule
+Method & Metric & Dim. & Joint & Ref.P & Ref.R \\
+\midrule
+Direct keyword & 0.912 & 0.623 & 0.535 & 1.000 & 0.250 \\
+Schema proxy & 0.912 & 0.904 & 0.816 & 1.000 & 0.250 \\
+SafeNLIDB-derived E3 & 0.965 & 0.904 & 0.868 & 1.000 & 1.000 \\
+CaliberGraph & 1.000 & 1.000 & 1.000 & 1.000 & 1.000 \\
+\bottomrule
+\end{tabular}
+\caption{IndustrialCaseText deduplicated normalized-query results over 114 groups. The conclusion is unchanged when duplicate public query groups are counted once.}
+\end{table}
+
+\begin{table}[h]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{1.5pt}
+\begin{tabular}{lrrrrrr}
+\toprule
+Method & Act. & Metr. & Ex.\ Dim. & Len.\ Dim. & Ex.\ Full & Len.\ Full \\
+\midrule
+Direct keyword & 0.962 & 0.936 & 0.586 & 0.586 & 0.522 & 0.522 \\
+Schema proxy & 0.962 & 0.936 & 0.930 & 1.000 & 0.866 & 0.936 \\
+SafeNLIDB E3 & 1.000 & 0.975 & 0.930 & 1.000 & 0.904 & 0.975 \\
+CaliberGraph & 1.000 & 1.000 & 1.000 & 1.000 & 1.000 & 1.000 \\
+\bottomrule
+\end{tabular}
+\caption{IndustrialCaseText label-policy sensitivity. Lenient dimension scoring accepts predictions containing the governed finest grain plus extra parent dimensions. CaliberGraph remains best, so the result is not solely an artifact of exact finest-grain scoring.}
+\end{table}
+
+\begin{table}[h]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2pt}
+\begin{tabular}{lrrrr}
+\toprule
+Model & Full & Action & Ref.P & Ref.R \\
+\midrule
+glm-5 & 0.967 & 0.967 & 0.875 & 0.875 \\
+gpt-5.5 & 0.950 & 0.950 & 0.778 & 0.875 \\
+claude-opus-4-6 & 0.950 & 0.967 & 0.875 & 0.875 \\
+deepseek-chat & 0.933 & 0.983 & 1.000 & 0.875 \\
+deepseek-3.2 & 0.933 & 0.933 & 0.700 & 0.875 \\
+minimax-m2.5 & 0.933 & 0.950 & 0.778 & 0.875 \\
+deepseek-v4-pro & 0.917 & 0.917 & 0.615 & 1.000 \\
+deepseek-reasoner & 0.917 & 0.917 & 0.636 & 0.875 \\
+qwen3-coder-next & 0.917 & 0.917 & 0.636 & 0.875 \\
+gemini-2.5-pro & 0.917 & 0.917 & 0.615 & 1.000 \\
+gemini-2.5-flash & 0.850 & 0.850 & 0.467 & 0.875 \\
+kimi-k2.6 & 0.967 & 0.967 & 0.875 & 0.875 \\
+\bottomrule
+\end{tabular}
+\caption{IndustrialCaseText 12-model LLM GraphRAG panel over 60 stratified cases. All 12 pre-specified models completed 60/60 cases; gold-field leakage count is zero.}
+\end{table}
+
+\begin{table}[h]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{1.5pt}
+\begin{tabular}{lccc}
+\toprule
+Family & AutoLink E3 & SafeNLIDB E3 & CaliberGraph \\
+\midrule
+Answerable direct & 1.000 & 1.000 & 1.000 \\
+Denominator caliber & 1.000 & 1.000 & 1.000 \\
+Finest-grain trap & 0.000 & 0.000 & 1.000 \\
+Policy refusal & 0.000 & 1.000 & 1.000 \\
+Temporal anchor & 1.000 & 1.000 & 1.000 \\
+\bottomrule
+\end{tabular}
+\caption{MultiGov query-family joint accuracy. The gap concentrates in finest-grain and refusal-policy execution after candidate recall is saturated.}
+\end{table}
+
+\begin{table}[h]
+\centering
+\scriptsize
+\begin{tabular}{lccccc}
+\toprule
+Method & Metric & Dim. & Joint & Ref.P & Ref.R \\
+\midrule
+Direct keyword & 0.688 & 0.583 & 0.365 & 0.000 & 0.000 \\
+Schema proxy & 0.949 & 0.724 & 0.679 & 0.000 & 0.000 \\
+AutoLink-derived E3 & 0.949 & 0.724 & 0.679 & 0.000 & 0.000 \\
+SafeNLIDB-derived E3 & 0.987 & 0.731 & 0.718 & 1.000 & 1.000 \\
+Oracle-candidate prompt & 1.000 & 0.731 & 0.731 & 1.000 & 1.000 \\
+CaliberGraph & 0.987 & 1.000 & 0.987 & 1.000 & 1.000 \\
+\bottomrule
+\end{tabular}
+\caption{GovTwin deterministic perturbation robustness over 468 public cases. Perturbations include alias swaps, dimension-fronted queries, punctuation noise, and refusal paraphrases.}
+\end{table}
+
+\begin{table}[h]
+\centering
+\scriptsize
+\begin{tabular}{lccccc}
+\toprule
+Method & Metric & Dim. & Joint & Ref.P & Ref.R \\
+\midrule
+Direct keyword & 0.943 & 0.591 & 0.535 & 0.000 & 0.000 \\
+Schema proxy & 0.943 & 0.736 & 0.679 & 0.000 & 0.000 \\
+AutoLink-derived E3 & 0.943 & 0.736 & 0.679 & 0.000 & 0.000 \\
+SafeNLIDB-derived E3 & 1.000 & 0.736 & 0.736 & 1.000 & 1.000 \\
+Oracle-candidate prompt & 1.000 & 0.736 & 0.736 & 1.000 & 1.000 \\
+CaliberGraph & 1.000 & 1.000 & 1.000 & 1.000 & 1.000 \\
+\bottomrule
+\end{tabular}
+\caption{GovTwin LLM-paraphrase robustness over 159 public cases. The paraphrases were generated from public synthetic queries using an LLM and then frozen before evaluation; no private source text or mapping was sent to the LLM.}
+\end{table}
+
+\begin{table}[h]
+\centering
+\scriptsize
+\begin{tabular}{lccccc}
+\toprule
+Variant & Metric & Dim. & Joint & Ref.P & Ref.R \\
+\midrule
+CaliberGraph & 1.000 & 1.000 & 1.000 & 1.000 & 1.000 \\
+No grain compiler (M1) & 1.000 & 0.736 & 0.736 & 1.000 & 1.000 \\
+No typed grounding (M2) & 0.943 & 0.736 & 0.679 & 0.000 & 0.000 \\
+No policy compiler (M3) & 0.943 & 1.000 & 0.943 & 0.000 & 0.000 \\
+\bottomrule
+\end{tabular}
+\caption{GovTwin CaliberGraph ablations over the 159 base cases. Removing the grain compiler (M1) recreates the SafeNLIDB-derived E3 failure mode; removing typed grounding (M2) recreates retrieval-style behavior.}
+\end{table}
+
+\begin{table}[h]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{1.5pt}
+\begin{tabular}{lccc}
+\toprule
+Family & AutoLink E3 & SafeNLIDB E3 & CaliberGraph \\
+\midrule
+Hierarchy & 0.344 & 0.344 & 1.000 \\
+Single/flat & 1.000 & 1.000 & 1.000 \\
+Synthetic refusal & 0.000 & 1.000 & 1.000 \\
+\bottomrule
+\end{tabular}
+\caption{GovTwin query-family joint accuracy. The gap is concentrated in hierarchy planning and refusal policy, not in single-metric candidate discovery.}
+\end{table}
+
+\begin{table}[h]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2pt}
+\begin{tabular}{lrrrrrr}
+\toprule
+GovTwin category & N & CG TP & CG FN & AutoLink TP & AutoLink FN & Safe TP \\
+\midrule
+SQL/DDL & 7 & 7 & 0 & 0 & 7 & 7 \\
+Sensitive/id & 1 & 1 & 0 & 0 & 1 & 1 \\
+Unsupported & 1 & 1 & 0 & 0 & 1 & 1 \\
+\bottomrule
+\end{tabular}
+\caption{GovTwin refusal breakdown on the 159-case base split. CaliberGraph and the SafeNLIDB-derived E3 guard catch all synthetic refusal categories; AutoLink-derived E3 retrieval does not include an answerability-policy compiler.}
+\end{table}
+
+\begin{table}[h]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2pt}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.18\linewidth}>{\raggedright\arraybackslash}p{0.27\linewidth}>{\raggedright\arraybackslash}p{0.23\linewidth}>{\raggedright\arraybackslash}p{0.22\linewidth}@{}}
+\toprule
+Trace case & Triggered evidence & Witness-check decision & Why prompt baselines fail \\
+\midrule
+Hierarchy answer & extracts three segment levels; hierarchy policy collapses to level 3 & answer the reversal-rate metric at level 3 & they preserve all mentioned hierarchy levels as dimensions \\
+SQL/DDL refusal & refusal priority triggers the SQL/DDL policy before metric finalization & refuse with empty metric and dimensions & retrieval methods still return nearby catalog entries unless guarded \\
+\bottomrule
+\end{tabular}
+\caption{Two representative deterministic witness-check traces. Full structured records are released; these are executed graph/policy checks rather than post-hoc natural-language rationales.}
+\end{table}
+
+\begin{table}[h]
+\centering
+\scriptsize
+\begin{tabular}{lccc}
+\toprule
+LLM mode & Batch-10 mean & Batch-10 p95 & Single-case mean \\
+\midrule
+LLM Direct & 791.2 & 792.8 & 907.9 \\
+LLM Schema-RAG & 372.7 & 412.9 & 491.3 \\
+LLM GraphRAG & 437.7 & 477.9 & 556.3 \\
+\bottomrule
+\end{tabular}
+\caption{Serialized input-prompt tokens over 157 public IndustrialCaseText cases using \texttt{tiktoken} 0.12.0 and \texttt{cl100k\_base}. Counts exclude completions, hidden reasoning, and provider billing adjustments.}
+\end{table}
+
+\begin{table}[h]
+\centering
+\scriptsize
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.28\linewidth}>{\raggedright\arraybackslash}p{0.27\linewidth}>{\raggedright\arraybackslash}p{0.27\linewidth}@{}}
+\toprule
+Failure type & Typical prompt-level behavior & CaliberGraph behavior \\
+\midrule
+Hierarchy over-expansion & returns both parent and child dimensions & resolves to governed finest grain \\
+Unsupported metric & retrieves a nearby metric and answers & refuses when catalog/coverage is missing \\
+Comparison ambiguity & refuses or chooses a ratio metric inconsistently & applies explicit comparison policy \\
+Sensitive request & may answer if schema has the field & refuses via policy node \\
+\bottomrule
+\end{tabular}
+\caption{Qualitative error modes addressed by coverage-caliber witness construction.}
+\end{table}
+
+\section{Closest-Baseline Diagnostics}
+
+We cloned and audited the official AutoLink and SafeNLIDB repositories before implementing mechanism-derived protocols. AutoLink commit \texttt{26c7231} includes 547 official Spider2-Lite records and passes shell syntax checks; its official full chain requires Spider2-Lite resources plus BigQuery/Snowflake credentials and API configuration. SafeNLIDB commit \texttt{0ad16d8} includes the 540-case ShieldSQL test set and passes shell syntax checks; its full training chain requires OmniSQL/SecureSQL/Spider/BIRD downloads, CUDA/vLLM/LLaMA-Factory training, model checkpoints, and GPU hardware. The release therefore separates five evidence levels: key-free public reproduction, self-contained official-subtask reproduction, mechanism-derived unified-backbone protocol, official resource-gated run contract, and reported-claim context. AutoLink and SafeNLIDB remain closest published baseline families in the main comparison design; what changes is that every number is evidence-labeled instead of being presented as an unqualified full upstream retraining.
+
+\begin{table}[h]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2pt}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.17\linewidth}>{\raggedright\arraybackslash}p{0.18\linewidth}>{\raggedright\arraybackslash}p{0.23\linewidth}>{\raggedright\arraybackslash}p{0.32\linewidth}@{}}
+\toprule
+Baseline family & Evidence level & Release evidence & Boundary \\
+\midrule
+AutoLink & E3 + resource-gated official run & repo audit plus iterative metric/dimension candidate recall & no copied headline claim; official scores require mounted Spider2-Lite, warehouse credentials, and API settings \\
+SafeNLIDB & E2 + E3 + resource-gated official run & repo audit, ShieldSQL-540 subtask, and refusal guard transfer & no copied headline claim; official scores require external datasets, CUDA/vLLM/LLaMA-Factory, checkpoints, and GPU \\
+External-anchor audit and executed evidence & E1/E2/E3 boundary check plus executed adjacent checks & released-file counts, five-family capability matrix, Spider2-DBT, TrustSQL raw, DataBench, MetricFlow, and LightRAG preflight summaries & separates empirical failures from N/A-by-design cells and reports executed adjacent checks with explicit boundaries \\
+Open SQL e2e & key-free public run & emits and executes SQLite on IowaLiquor & execution is separate from governed metric-caliber correctness \\
+Oracle-candidate prompt & oracle diagnostic & gold metric candidate then prompt finalization & isolates post-linking planning, not a deployable method \\
+CaliberGraph & key-free public run & released candidates plus compiled grain, coverage, and refusal checks & deterministic witness compiler, not a learned SQL generator \\
+\bottomrule
+\end{tabular}
+\caption{Baseline evidence statement. The release keeps AutoLink and SafeNLIDB as closest published baseline families, but follows an evidence-level protocol: reported claims are context only, while result tables use key-free public reproduction, self-contained official-subtask reproduction, or mechanism-derived unified-backbone protocols.}
+\end{table}
+
+\begin{table}[h]
+\centering
+\scriptsize
+\begin{tabular}{lrrrr}
+\toprule
+Dataset & k & Metric R@k & Dim. R@k & Joint cand. R@k \\
+\midrule
+Iowa & 3 & 1.000 & 1.000 & 1.000 \\
+MultiGov & 3 & 1.000 & 1.000 & 1.000 \\
+IndustrialCaseText & 3 & 0.973 & 1.000 & 0.973 \\
+\bottomrule
+\end{tabular}
+\caption{AutoLink-derived E3 candidate recall on answerable cases. Joint recall requires the gold metric and all gold dimensions before witness construction. ICT has four metric-candidate misses among 149 answerable cases; these are not counted as post-linking residuals.}
+\end{table}
+
+\begin{table}[h]
+\centering
+\scriptsize
+\begin{tabular}{lccccc}
+\toprule
+Dataset & Metric & Dim. & Joint & Ref.P & Ref.R \\
+\midrule
+Public & 1.000 & 0.575 & 0.575 & 1.000 & 1.000 \\
+MultiGov & 1.000 & 0.680 & 0.680 & 1.000 & 1.000 \\
+IndustrialCaseText & 0.975 & 0.930 & 0.904 & 1.000 & 1.000 \\
+\bottomrule
+\end{tabular}
+\caption{SafeNLIDB-derived E3 task-aligned guard layered on Schema-RAG. The guard improves refusal decisions but does not solve finest-grain dimension planning.}
+\end{table}
+
+\begin{table}[h]
+\centering
+\scriptsize
+\begin{tabular}{lccc}
+\toprule
+Setting & Accuracy & Unsafe precision & Unsafe recall \\
+\midrule
+ShieldSQL-540 & 0.789 & 0.793 & 0.781 \\
+\bottomrule
+\end{tabular}
+\caption{SafeNLIDB-derived E3 safety classification on the 540-case ShieldSQL set included in the official repository, using \texttt{minimax-m2.1}. Stronger routes are separately evaluated in the specified-model ShieldSQL-60 panel.}
+\end{table}
+
+\begin{table}[h]
+\centering
+\scriptsize
+\begin{tabular}{lccc}
+\toprule
+Model & Chinook Joint & BIRD-20 Joint & ShieldSQL-60 Acc. \\
+\midrule
+gpt-5.5 & 0.925 & 1.000 & 0.850 \\
+claude-opus-4-6 & 0.950 & 1.000 & 0.817 \\
+deepseek-3.2 & 0.950 & 1.000 & 0.850 \\
+glm-5 & 0.925 & 0.900 & 0.733 \\
+minimax-m2.5 & 0.925 & 0.950 & 0.833 \\
+qwen3-coder-next & 0.900 & 0.900 & 0.850 \\
+gemini-2.5-pro & 0.925 & 1.000 & 0.717 \\
+gemini-2.5-flash & 0.925 & 1.000 & 0.717 \\
+kimi-k2.6 & 0.925 & 0.950 & 0.767 \\
+deepseek-v4-pro & 0.925 & 0.900 & 0.750 \\
+deepseek-chat & 0.925 & 0.950 & 0.817 \\
+deepseek-reasoner & 0.950 & 1.000 & 0.750 \\
+\bottomrule
+\end{tabular}
+\caption{Specified advanced-model panel over the final formal run. The panel uses a fixed 12-model policy covering GPT, Claude, DeepSeek, GLM, MiniMax, Qwen, Gemini, and Kimi model families. One \texttt{kimi-k2.6} ShieldSQL batch is non-JSON; all other final-run batches parse successfully.}
+\end{table}
+
+\section{Complete Runnable Controls}
+
+\paragraph{Verbatim-contract instructed execution.}
+The complete released contract is reproduced in one system prompt and executed by \texttt{deepseek-3.2}, temperature 0, one case per request. All 898 calls return parseable JSON and the scorer replays every released baseline row exactly. Prompt migration is audited per case: unchanged source-run Chinook/ICT response histories have exact SHA identity; Iowa and GovTwin are rerun after adding profile/schema files; MultiGov is rerun on all 510 cases with the 178 metric-specific bindings and 189 physical coverage rows.
+
+\begin{table}[t]
+\centering
+\scriptsize
+\begin{tabular}{lrrrrrr}
+\toprule
+Layer & N & Metric & Dim. & Joint & Ref.P & Ref.R \\
+\midrule
+Iowa & 32 & .969 & .875 & .875 & .875 & 1.000 \\
+Chinook & 40 & .950 & .950 & .925 & .750 & 1.000 \\
+GovTwin & 159 & .994 & .736 & .736 & .900 & 1.000 \\
+MultiGov & 510 & .869 & .855 & .855 & .733 & 1.000 \\
+IndustrialCaseText & 157 & .943 & .866 & .822 & .500 & .875 \\
+\bottomrule
+\end{tabular}
+\caption{Complete-contract single-turn prompting; micro joint accuracy is 747/898=0.832. GovTwin retains 41 finest-grain violations, while MultiGov errors are dominated by over-refusal.}
+\end{table}
+
+\paragraph{Strongest-model transport and execution.}
+For the 375,318-byte MultiGov prompt, each strongest-model route must first return the exact \texttt{coverage\_id} from the final contract file in a policy-valid refusal; both routes pass 2/2 before benchmark calls. A first GPT quote-only diagnostic conflicted with the system refusal rule; it is retained in the release but excluded from scoring. On the same seeded 200 cases, DeepSeek/Opus/GPT-5.5 score 0.865/0.985/1.000. Their provider-reported prompt tokens per case are 132,336/141,016/115,363 and mean latencies are 38.05/9.10/7.24 seconds. Opus's three errors are false refusals that misread \texttt{coverage\_required=false} as unavailable. These results force the paper's bounded interpretation: prompt execution is model-dependent, not intrinsically impossible.
+
+\paragraph{Real MetricFlow engine.}
+MetricFlow 0.211.0 and dbt-metricflow 0.13.0 execute 64 Iowa \texttt{mf query} calls after a mechanical DuckDB translation whose row/schema parity audit passes. Lexical linking reaches 0.625 joint and 0.286 refusal recall; gold metric identity reaches 0.781 joint and 1.000 refusal recall. Nine preregistered probes show that the engine accepts two metric--dimension combinations denied by the governed contract, preserves county+city rather than resolving finest grain, and returns a successful empty result for a 2023 request outside the released 2024 coverage window. Raw exit codes, row counts, stdout/stderr, and path-sanitization manifests are released.
+
+\paragraph{Validator-feedback replanning.}
+The strongest iterative mechanism control begins with Schema-RAG and gives the model gold-free typed violations from the released compiler, with at most three repair rounds. It therefore shares CaliberGraph's checks and is not an independent semantic engine. The preregistered 391-case primary scope uses 452 calls and improves joint accuracy from 0.826 to 0.969: 56 cases change wrong-to-right and none right-to-wrong ($p=2.78\times10^{-17}$). A later full 157-case IndustrialCaseText extension improves 0.771 to 0.879; combining it with the primary scope gives a descriptive 548-case aggregate of 0.810 to 0.943 (73 wrong-to-right, zero reverse). We separately extend the unchanged protocol from seeded MultiGov-200 to all 510 cases. This extension uses 552 calls and improves 0.894 to 0.971, with 39 wrong-to-right and zero right-to-wrong transitions. All visible violations are repaired, yet 15 candidate-selection errors pass every validator check. Against the 1.000 compiler reference, the paired difference is 0.029 (170-cluster CI [0.016,0.045], exact $p=6.10\times10^{-5}$). The remaining delta combines candidate binding and compiled validation; it is not attributed to witness checks alone.
+
+\begin{table}[t]
+\centering
+\scriptsize
+\begin{tabular}{lrrrrr}
+\toprule
+Layer & N & Round 0 & Final & Compiler & Calls/case \\
+\midrule
+Iowa & 32 & .813 & 1.000 & 1.000 & 1.250 \\
+GovTwin & 159 & .780 & .981 & 1.000 & 1.220 \\
+MultiGov full & 510 & .894 & .971 & 1.000 & 1.082 \\
+IndustrialCaseText & 157 & .771 & .879 & 1.000 & 1.166 \\
+\bottomrule
+\end{tabular}
+\caption{Public validator-feedback loop. MultiGov is the exhaustive 510-case extension; the original 200-case sample is retained for exact strongest-model comparisons. On ICT, the CaliberGraph--loop difference is 0.121 with 114 normalized-query clusters, CI [0.070,0.181], exact $p=3.81\times10^{-6}$.}
+\end{table}
+
+The private paired run points in the same direction but is deliberately not overstated: CaliberGraph scores 0.925 and the feedback loop 0.899; their paired difference 0.025 has CI $[-0.019,0.069]$ and exact $p=0.388$. It provides no significant predictive-superiority claim. Its value is to show the same residual near-synonym metric errors outside the public authored contracts. The feedback baseline also depends on the compiled contract as its validator oracle, whereas CaliberGraph needs zero online repair calls.
+
+\paragraph{Coverage-activity stratification.}
+We recompute the headline Iowa-32, MultiGov-510, and IndustrialCaseText-157 cases after reading the released compiler trace flag rather than treating an unavailable coverage family as passed. The active stratum contains 458 cases (Iowa-32 and MultiGov-426); the inactive stratum contains 241 (MultiGov-84 and all IndustrialCaseText-157). Complete-contract DeepSeek/shared-validator repair/compiler score 0.867/0.974/1.000 on active cases and 0.813/0.909/1.000 on inactive cases. The inactive result is evidence only for the remaining metric, grain, time, and policy contract; it makes no physical-coverage claim. The exact per-layer counts and correct numerators are released in \texttt{coverage\_activity\_results.json}.
+
+\paragraph{Frontier-model breadth on the four remaining public layers.}
+The full-contract protocol of the main text's model-sensitivity paragraph, run with \texttt{gpt-5.5} and \texttt{claude-opus-4-6} (temperature 0, end-of-prompt canaries passed, raw responses retained):
+
+\begin{table}[t]
+\centering
+\scriptsize
+\begin{tabular}{lrcc}
+\toprule
+Layer & N & gpt-5.5 Joint & opus Joint \\
+\midrule
+Iowa & 32 & 1.000 & .938 \\
+Chinook & 40 & .925 & .925 \\
+GovTwin & 159 & .994 & .899 \\
+IndustrialCaseText & 157 & .860 & .764 \\
+\bottomrule
+\end{tabular}
+\caption{Frontier full-contract instructed execution on the four public layers outside MultiGov. The gpt-5.5 IndustrialCaseText row is protocol-literal over all 157 cases (.882 on the 153-case completed subset); 9 of the 16 opus GovTwin errors are semantically-correct refusals under a lenient parse (.899 strict $\to$ .956 lenient). Emulation degrades exactly where request language is noisy.}
+\end{table}
+
+\paragraph{Private-contract frontier arms.}
+On the private non-saturated 159-case enterprise contract (CaliberGraph 0.925; 3 of its 12 errors are pre-registered policy divergences that cap any policy-compliant system at 156/159, the remaining 9 are within-policy binding errors), the same two frontier models run both strongest controls, paired per case against the compiler arm. Instructed execution: deepseek-3.2 0.780 (exact McNemar vs.\ CaliberGraph $p{=}6.6{\times}10^{-5}$, worse), claude-opus-4-6 0.723, gpt-5.5 \textbf{0.981} ($p{=}0.0039$, better; 9 of CaliberGraph's 12 errors repaired, none reversed)---exactly the pre-registered released-policy ceiling of 156/159, the three residual errors being the three policy-divergence cases. Validator-feedback replanning converges all three families to 0.899 (deepseek), 0.937 (opus), 0.925 (gpt-5.5, exact tie) with zero regressions; residuals are validator-invisible near-synonym caliber confusions. Anonymous per-case correctness pairs for every arm are released; prompts and raw case text are not (SHA-256 and character counts only).
+
+\paragraph{Multi-pass robustness of the private inversion (pre-registered).}
+Because the inversion rests on 9 discordant cases in a single pass through a non-bit-reproducible gateway, the gpt-5.5 instructed-execution arm was rerun twice more under a protocol frozen before any call (three pre-registered outcomes: stable / point-stable / unstable). All three independent passes score exactly 156/159 (0.981), each with the same one-sided discordance against CaliberGraph (9 repaired, 0 reversed; exact McNemar $p{=}0.0039$ per pass). Per-case agreement across the three passes is 157/159 (98.7\%); the two fluctuating cases cancel, leaving the 3-pass majority at 156/159. The pre-registered branch is \emph{stable inversion}: the frontier arm sits exactly at the released-policy ceiling in every pass, so the main text's contract-centrality reading does not depend on sampling luck.
+
+\paragraph{External-ecosystem contract: a third-party semantic manifest (pre-registered).}
+To break the remaining circularity between catalog authorship and scoring, a governance contract is derived from a semantic manifest the authors did not write: the \texttt{simple\_manifest} test manifest maintained by the MetricFlow upstream project (dbt Labs), frozen at the audited commit in the released MetricFlow run. A mechanical converter (released) maps 12 semantic models and 31 measures to 119 metrics (89 answerable: 40 simple, 9 ratio with explicit numerator/denominator edges, 40 derived; 24 cumulative/conversion metrics are retained as non-expressible and marked unanswerable; 6 refusal stubs), 16 dimensions, 1{,}054 governance edges, and 110 coverage bindings. Three refusal policies (undefined metric, SQL/DDL, unauthorized dimension combinations) are protocol-added and labeled as such---the source manifest contains none. A deterministic template generator (seed 20260712, no LLM involvement) derives 122 cases across five strata (60 answerable, 20 grain traps, 15 ratio-denominator traps, 15 undefined-metric, 12 SQL-request); gold labels are mechanically derived from the converted contract and the derivation script is released. The CaliberGraph arm (\texttt{compiler\_arm} in the released artifact), run blind with a byte-identical copy of the released scripts, reaches joint 1.000 and refusal P/R 1.000/1.000 on all 122 cases (every stratum exact)---the pre-registered outcome (a) on the CaliberGraph side: by-construction conformance transfers to a contract of independent authorship. A control linker configuration (character-overlap ranking without alias boost) drops to 0.984 via exactly two nested-metric-name linking errors (\texttt{lux\_listings}$\to$\allowbreak\texttt{listings}, \texttt{bookings\_mom}$\to$\allowbreak\texttt{bookings}); both are candidate-selection front-end errors with zero mis-compilations and refusal P/R still 1.000, reproducing on external material the paper's separation between linking and caliber checking. The full pipeline replays byte-identically on a second run. Both LLM arms run with the full converted contract verbatim in the system prompt (254{,}707 characters, fully released---this layer contains no private data), temperature 0, after 2/2 end-of-prompt canaries per model; all 244 calls succeed with zero API or parse errors. gpt-5.5 scores joint 1.000 (122/122, all five strata, refusal P/R 1.000/1.000), pairwise identical to the CaliberGraph arm. deepseek-3.2 scores 0.811 (99/122; Wilson 95\% [0.733, 0.871]; metric 0.926, dimension 0.820; refusal P/R 0.884/0.905; strata: answerable 0.817, grain traps 0.600, ratio-denominator traps 0.733, both refusal strata 1.000), a one-sided 23/0 discordance against CaliberGraph (exact McNemar $p{=}2.4{\times}10^{-7}$). Its 23 errors are contract-execution failures, not contract-readability failures: 8 finest-grain violations on the grain-trap stratum (ancestor and descendant emitted together), 6 hallucinated dimensions on answerable requests, 4 unrefused ratio-denominator traps, and 5 over-refusals---the same families observed on our layers. Pre-registered outcome (a) therefore holds (CaliberGraph exact and strongest arm exact on independent authorship), with outcome (c) simultaneously manifest for the mid-tier model.
+
+\paragraph{Deterministic alias-matching control (pre-registered).}
+A zero-LLM control isolates what alias resolution alone buys: RapidFuzz \texttt{token\_set\_ratio} over the released alias catalogs (thresholds frozen in the protocol: $\theta_m{=}60$, $\theta_d{=}85$; answer unless zero match). Per layer (metric / joint / refusal P / refusal R): GovTwin-159 1.000/\allowbreak 0.597/\allowbreak 1.000/\allowbreak 1.000; MultiGov-510 0.639/\allowbreak 0.000/\allowbreak 0.000/\allowbreak 0.000; Iowa-32 0.812/\allowbreak 0.500/\allowbreak 1.000/\allowbreak 0.571. On the 326 answerable MultiGov cases metric identity is fully resolvable (1.000), yet joint accuracy is 0.000: same-name dimensions across the 12 domains collide, finest-grain policies are violated, and all 184 policy refusals are answered. The asymmetry is informative: \emph{identity-style} refusals (out-of-catalog requests) are correctly caught by the zero-match fallback (GovTwin refusal P/R 1.000/1.000), while \emph{governance-style} refusals pass through---alias resolution handles identity, only witness construction handles governance. Protocol, runner, and per-case predictions are released; the run replays byte-identically.
+
+\paragraph{Uncertainty-abstention control (pre-registered).}
+This control abstains on sampling-consistency entropy (following the AAAI-25 selective-generation recipe; entropy over $k{=}5$ samples at temperature 0.7, three abstention thresholds all reported); it runs on GovTwin-159 and seeded MultiGov-200 (1,795 calls, zero errors). The confidence channel carries \emph{zero information on the caliber axis}: the denominator-caliber stratum records zero would-be errors on its 11 cases, all sampled unanimously with entropy exactly 0.000 (an underpowered stratum, reported as such per the frozen protocol), and 7/37 of all errors (18.9\%, all grain-family) are zero-entropy confident mistakes that no threshold can catch, and within the grain family entropy has no discriminative power (Fisher $p{=}0.134$). The strictest threshold reaches 0.972 answered-joint while abstaining on 30.1\% of cases (24.2\% of them correct) at $5\times$ sampling cost; identity-style unanswerables are well signaled (refusal P/R 1.000/1.000 unanimous). Caliber errors are confident errors; uncertainty abstention is not a substitute for witness construction. Protocol (frozen before calls), runner, raw samples, and scores are released.
+
+\paragraph{External policy anchor: SecureSQL and the compilability boundary (pre-registered).}
+To test the refusal/disclosure family on a community-recognized external anchor, the 146 natural-language security conditions of SecureSQL (EMNLP 2024 Findings; 932 cases over 57 databases; the primary evaluation set of SafeNLIDB) are mechanically compiled into disclosure policy rules under a protocol frozen before any call, with three pre-registered outcomes. The outcome is the \emph{compilability-boundary} branch: 29/146 conditions (19.9\%) are self-reported by the converter as non-mechanizable, and the compiled judgment agrees with the official gold on 0.609 [0.578, 0.640] of the 932 cases---false negatives concentrate on semantic-leakage inferences invisible to any rule (100/100), and safe categories are over-refused (SA 47\%, SU 36\%). A verbatim-policy gpt-5.5 arm on a stratified 300-case sample (299 valid; one invalid output scored per protocol) reaches 0.702 (paired exact McNemar $p{=}0.033$, better), yet collapses on the same semantic-leakage category (SU 36\%$\to$23\% under paraphrase perturbation); neither arm degrades significantly under the perturbed blind split ($p{=}0.68$/$0.13$; no contamination signal). For scale: the 2024 paper's best system reports 61.7\% and humans 94\%. The reading is a boundary, not a defect: CaliberGraph's disclosure checks are by-construction \emph{within structured governance contracts}; free-text security conditions requiring semantic-leakage inference sit outside the compilable class for both compilation and frontier prompting. Converter, per-condition compilability labels, raw responses, and scores are released.
+
+\paragraph{Finalization latency.}
+Across 20 deterministic replays of all 858 base public plans (17,160 calls), pooled compiler median/p95 latency is 0.045/0.068 ms on the reported CPU. The replay set covers the four base public contracts (Iowa, GovTwin, MultiGov, IndustrialCaseText); Chinook's 40 cases are outside this replay audit. Layer medians are 0.023 ms Iowa, 0.032 ms GovTwin, 0.058 ms MultiGov, and 0.022 ms ICT. Every replay matches the released action, metric, and dimension plan.
+
+\onecolumn
+\section{Statistical and Scale Details}
+
+\begin{table}[t]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2pt}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.48\linewidth}rrr@{}}
+\toprule
+Comparison & Cases & Delta full & 95\% cluster CI \\
+\midrule
+Iowa: CaliberGraph--SafeNLIDB E3 & 32 & 0.219 & [0.094, 0.375] \\
+MultiGov: CaliberGraph--SafeNLIDB E3 & 510 & 0.320 & [0.310, 0.329] \\
+IndustrialCaseText: CaliberGraph--SafeNLIDB E3 & 157 & 0.096 & [0.051, 0.147] \\
+\bottomrule
+\end{tabular}
+\caption{Action-aware paired full-case differences using 10,000 cluster-bootstrap replicates and seed 20260711. Paired exact McNemar $p$ values are 0.0156, $1.71\times10^{-49}$, and $6.10\times10^{-5}$, respectively.}
+\end{table}
+
+\begin{table}[t]
+\centering
+\scriptsize
+\begin{tabular}{rrrrrr}
+\toprule
+Scale & Metrics & Dims. & ms/case & Joint & Catalog chars \\
+\midrule
+1 & 9 & 12 & 0.288 & 1.000 & 2881 \\
+5 & 45 & 60 & 1.515 & 1.000 & 20001 \\
+10 & 90 & 120 & 3.104 & 1.000 & 41401 \\
+25 & 225 & 300 & 7.785 & 1.000 & 106996 \\
+50 & 450 & 600 & 16.031 & 1.000 & 216321 \\
+100 & 900 & 1200 & 32.390 & 1.000 & 434971 \\
+200 & 1800 & 2400 & 63.591 & 1.000 & 881571 \\
+\bottomrule
+\end{tabular}
+\caption{Synthetic catalog scaling. Distractor metrics and dimensions expand the semantic layer while preserving the original public gold cases; the sweep evaluates latency scalability only---gold plans are unchanged and no accuracy robustness is claimed.}
+\end{table}
+
+\begin{table}[t]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2pt}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.18\linewidth}>{\raggedright\arraybackslash}p{0.13\linewidth}>{\raggedright\arraybackslash}p{0.29\linewidth}>{\raggedright\arraybackslash}p{0.30\linewidth}@{}}
+\toprule
+Artifact layer & Count & Construction boundary & Freeze and maintenance rule \\
+\midrule
+Metrics & 18 & synthetic public metric catalog preserving formula role, numerator/denominator role, comparison flag, and allowed dimensions & catalog frozen before the reported GovTwin runs; future updates create a new graph version \\
+Dimensions & 5 & synthetic governed dimensions with parent and grain-rank fields & hierarchy policy is deterministic and versioned with the catalog \\
+Typed edges & 102 & generated \texttt{measures\_of}, numerator, and denominator links from the public semantic catalog & evaluator reads the released edge file; no run-time prompt edits change edges \\
+Policies & 4 & explicit refusal triggers for SQL/DDL, sensitive/id, off-domain, and unsupported metric requests & refusal priority is applied before metric finalization \\
+Gold cases & 159 base; 468 deterministic; 159 LLM paraphrase & synthetic public requests with no released private-to-public mapping; LLM paraphrases are generated only from public queries & labels are frozen before evaluation; regenerated LLM paraphrases are treated as a new split \\
+\bottomrule
+\end{tabular}
+\caption{GovTwin construction and maintenance boundary. This table makes the graph-building cost explicit: CaliberGraph avoids online LLM calls at inference time, but it relies on a versioned semantic layer whose metric, dimension, edge, and policy files must be governed.}
+\end{table}
+
+\begin{table}[t]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.13\textwidth}>{\raggedright\arraybackslash}p{0.07\textwidth}>{\raggedright\arraybackslash}p{0.37\textwidth}>{\raggedright\arraybackslash}p{0.34\textwidth}@{}}
+\toprule
+Artifact layer & Count & Public release content & Withheld boundary \\
+\midrule
+Domains & 12 & anonymous domain IDs, broad type, aggregate counts, public provenance categories & raw domain names and private mappings \\
+Metrics/pol. & 170 & anonymous metric/policy IDs, role, denominator flag, temporal/disclosure flags & source metric names, formulas with private fields \\
+Dimensions & 48 & anonymous hierarchy and policy/time dimensions & source dimension names and business identifiers \\
+Typed edges & 1,035 & anonymous edge endpoints, edge type, and current-metric dependency identity & raw node IDs, tables, columns \\
+Physical assets & 189 & anonymous semantic coverage and layer tag & physical table names and column names \\
+Metric bindings & 178 & current metric, dependency node, anonymous physical node, and role; spans 142 metrics & private-to-public physical mappings \\
+Cases & 510 & public queries, expected action, metric, dimensions, provenance category & raw enterprise rows and raw private queries \\
+Audits & 0 conflicts; leakage pass & normalized-query conflict audit and private-term scan & private-to-public mapping \\
+\bottomrule
+\end{tabular}
+\caption{MultiGov construction and release boundary. MultiGov is production-derived and publicly evaluable, but it is intentionally an anonymized governance benchmark rather than a raw enterprise row release.}
+\end{table}
+
+\section{Compute Environment}
+
+Deterministic public experiments and scale measurements were run on macOS Darwin 24.0.0 with an Apple M2 Pro CPU, 16 GB memory, Python 3.9.6, SQLite 3.43.2, \texttt{tiktoken} 0.12.0, and no GPU. LLM baselines use the model/channel identities reported in the released panel with JSON-only prompts. The cluster-bootstrap experiment uses seed 20260711.
+
+Final settings were fixed before reporting results rather than tuned on a validation split. Public LLM batches use batch size 10 and max output length 3000 tokens. Candidate diagnostics report $k\in\{1,3,5\}$. Scale experiments use catalog factors $\{1,5,10,25,50,100,200\}$ and preserve the original public gold cases. GovTwin deterministic perturbations use no learned paraphraser. The LLM-paraphrase split was generated once from public synthetic queries using \texttt{gpt-5.5}; no private graph, mapping, raw enterprise query, or row-level fact was sent to the LLM. The deterministic planner has no learned parameters.
+
+\end{document}

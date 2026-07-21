@@ -1,0 +1,362 @@
+[
+ {
+  "item_id": "bind_001",
+  "binding_id": "mg_binding_0003",
+  "correct_option": "A",
+  "correct_node": "mg_domain_01_node_007"
+ },
+ {
+  "item_id": "bind_002",
+  "binding_id": "mg_binding_0005",
+  "correct_option": "D",
+  "correct_node": "mg_domain_01_node_013"
+ },
+ {
+  "item_id": "bind_003",
+  "binding_id": "mg_binding_0007",
+  "correct_option": "C",
+  "correct_node": "mg_domain_01_node_011"
+ },
+ {
+  "item_id": "bind_004",
+  "binding_id": "mg_binding_0013",
+  "correct_option": "D",
+  "correct_node": "mg_domain_01_node_004"
+ },
+ {
+  "item_id": "bind_005",
+  "binding_id": "mg_binding_0012",
+  "correct_option": "B",
+  "correct_node": "mg_domain_01_node_003"
+ },
+ {
+  "item_id": "bind_006",
+  "binding_id": "mg_binding_0044",
+  "correct_option": "D",
+  "correct_node": "mg_domain_02_node_017"
+ },
+ {
+  "item_id": "bind_007",
+  "binding_id": "mg_binding_0045",
+  "correct_option": "C",
+  "correct_node": "mg_domain_02_node_010"
+ },
+ {
+  "item_id": "bind_008",
+  "binding_id": "mg_binding_0020",
+  "correct_option": "A",
+  "correct_node": "mg_domain_02_node_025"
+ },
+ {
+  "item_id": "bind_009",
+  "binding_id": "mg_binding_0035",
+  "correct_option": "A",
+  "correct_node": "mg_domain_02_node_016"
+ },
+ {
+  "item_id": "bind_010",
+  "binding_id": "mg_binding_0039",
+  "correct_option": "D",
+  "correct_node": "mg_domain_02_node_010"
+ },
+ {
+  "item_id": "bind_011",
+  "binding_id": "mg_binding_0047",
+  "correct_option": "B",
+  "correct_node": "mg_domain_03_node_010"
+ },
+ {
+  "item_id": "bind_012",
+  "binding_id": "mg_binding_0048",
+  "correct_option": "C",
+  "correct_node": "mg_domain_03_node_010"
+ },
+ {
+  "item_id": "bind_013",
+  "binding_id": "mg_binding_0049",
+  "correct_option": "C",
+  "correct_node": "mg_domain_03_node_010"
+ },
+ {
+  "item_id": "bind_014",
+  "binding_id": "mg_binding_0053",
+  "correct_option": "A",
+  "correct_node": "mg_domain_03_node_015"
+ },
+ {
+  "item_id": "bind_015",
+  "binding_id": "mg_binding_0055",
+  "correct_option": "A",
+  "correct_node": "mg_domain_03_node_010"
+ },
+ {
+  "item_id": "bind_016",
+  "binding_id": "mg_binding_0068",
+  "correct_option": "C",
+  "correct_node": "mg_domain_04_node_010"
+ },
+ {
+  "item_id": "bind_017",
+  "binding_id": "mg_binding_0069",
+  "correct_option": "D",
+  "correct_node": "mg_domain_04_node_010"
+ },
+ {
+  "item_id": "bind_018",
+  "binding_id": "mg_binding_0065",
+  "correct_option": "A",
+  "correct_node": "mg_domain_04_node_015"
+ },
+ {
+  "item_id": "bind_019",
+  "binding_id": "mg_binding_0061",
+  "correct_option": "C",
+  "correct_node": "mg_domain_04_node_010"
+ },
+ {
+  "item_id": "bind_020",
+  "binding_id": "mg_binding_0074",
+  "correct_option": "D",
+  "correct_node": "mg_domain_04_node_003"
+ },
+ {
+  "item_id": "bind_021",
+  "binding_id": "mg_binding_0085",
+  "correct_option": "D",
+  "correct_node": "mg_domain_05_node_006"
+ },
+ {
+  "item_id": "bind_022",
+  "binding_id": "mg_binding_0078",
+  "correct_option": "C",
+  "correct_node": "mg_domain_05_node_006"
+ },
+ {
+  "item_id": "bind_023",
+  "binding_id": "mg_binding_0082",
+  "correct_option": "B",
+  "correct_node": "mg_domain_05_node_006"
+ },
+ {
+  "item_id": "bind_024",
+  "binding_id": "mg_binding_0087",
+  "correct_option": "B",
+  "correct_node": "mg_domain_05_node_007"
+ },
+ {
+  "item_id": "bind_025",
+  "binding_id": "mg_binding_0081",
+  "correct_option": "C",
+  "correct_node": "mg_domain_05_node_010"
+ },
+ {
+  "item_id": "bind_026",
+  "binding_id": "mg_binding_0090",
+  "correct_option": "D",
+  "correct_node": "mg_domain_06_node_011"
+ },
+ {
+  "item_id": "bind_027",
+  "binding_id": "mg_binding_0092",
+  "correct_option": "A",
+  "correct_node": "mg_domain_06_node_013"
+ },
+ {
+  "item_id": "bind_028",
+  "binding_id": "mg_binding_0099",
+  "correct_option": "C",
+  "correct_node": "mg_domain_06_node_002"
+ },
+ {
+  "item_id": "bind_029",
+  "binding_id": "mg_binding_0094",
+  "correct_option": "A",
+  "correct_node": "mg_domain_06_node_010"
+ },
+ {
+  "item_id": "bind_030",
+  "binding_id": "mg_binding_0091",
+  "correct_option": "D",
+  "correct_node": "mg_domain_06_node_013"
+ },
+ {
+  "item_id": "bind_031",
+  "binding_id": "mg_binding_0116",
+  "correct_option": "A",
+  "correct_node": "mg_domain_07_node_011"
+ },
+ {
+  "item_id": "bind_032",
+  "binding_id": "mg_binding_0112",
+  "correct_option": "C",
+  "correct_node": "mg_domain_07_node_012"
+ },
+ {
+  "item_id": "bind_033",
+  "binding_id": "mg_binding_0118",
+  "correct_option": "B",
+  "correct_node": "mg_domain_07_node_010"
+ },
+ {
+  "item_id": "bind_034",
+  "binding_id": "mg_binding_0108",
+  "correct_option": "C",
+  "correct_node": "mg_domain_07_node_010"
+ },
+ {
+  "item_id": "bind_035",
+  "binding_id": "mg_binding_0109",
+  "correct_option": "A",
+  "correct_node": "mg_domain_07_node_011"
+ },
+ {
+  "item_id": "bind_036",
+  "binding_id": "mg_binding_0124",
+  "correct_option": "B",
+  "correct_node": "mg_domain_08_node_009"
+ },
+ {
+  "item_id": "bind_037",
+  "binding_id": "mg_binding_0123",
+  "correct_option": "A",
+  "correct_node": "mg_domain_08_node_009"
+ },
+ {
+  "item_id": "bind_038",
+  "binding_id": "mg_binding_0125",
+  "correct_option": "D",
+  "correct_node": "mg_domain_08_node_004"
+ },
+ {
+  "item_id": "bind_039",
+  "binding_id": "mg_binding_0129",
+  "correct_option": "B",
+  "correct_node": "mg_domain_08_node_017"
+ },
+ {
+  "item_id": "bind_040",
+  "binding_id": "mg_binding_0133",
+  "correct_option": "B",
+  "correct_node": "mg_domain_08_node_003"
+ },
+ {
+  "item_id": "bind_041",
+  "binding_id": "mg_binding_0139",
+  "correct_option": "D",
+  "correct_node": "mg_domain_09_node_017"
+ },
+ {
+  "item_id": "bind_042",
+  "binding_id": "mg_binding_0141",
+  "correct_option": "B",
+  "correct_node": "mg_domain_09_node_013"
+ },
+ {
+  "item_id": "bind_043",
+  "binding_id": "mg_binding_0138",
+  "correct_option": "D",
+  "correct_node": "mg_domain_09_node_017"
+ },
+ {
+  "item_id": "bind_044",
+  "binding_id": "mg_binding_0143",
+  "correct_option": "D",
+  "correct_node": "mg_domain_09_node_012"
+ },
+ {
+  "item_id": "bind_045",
+  "binding_id": "mg_binding_0137",
+  "correct_option": "B",
+  "correct_node": "mg_domain_09_node_014"
+ },
+ {
+  "item_id": "bind_046",
+  "binding_id": "mg_binding_0151",
+  "correct_option": "D",
+  "correct_node": "mg_domain_10_node_007"
+ },
+ {
+  "item_id": "bind_047",
+  "binding_id": "mg_binding_0148",
+  "correct_option": "A",
+  "correct_node": "mg_domain_10_node_012"
+ },
+ {
+  "item_id": "bind_048",
+  "binding_id": "mg_binding_0149",
+  "correct_option": "C",
+  "correct_node": "mg_domain_10_node_012"
+ },
+ {
+  "item_id": "bind_049",
+  "binding_id": "mg_binding_0145",
+  "correct_option": "A",
+  "correct_node": "mg_domain_10_node_008"
+ },
+ {
+  "item_id": "bind_050",
+  "binding_id": "mg_binding_0144",
+  "correct_option": "D",
+  "correct_node": "mg_domain_10_node_007"
+ },
+ {
+  "item_id": "bind_051",
+  "binding_id": "mg_binding_0155",
+  "correct_option": "B",
+  "correct_node": "mg_domain_11_node_014"
+ },
+ {
+  "item_id": "bind_052",
+  "binding_id": "mg_binding_0162",
+  "correct_option": "B",
+  "correct_node": "mg_domain_11_node_012"
+ },
+ {
+  "item_id": "bind_053",
+  "binding_id": "mg_binding_0160",
+  "correct_option": "A",
+  "correct_node": "mg_domain_11_node_013"
+ },
+ {
+  "item_id": "bind_054",
+  "binding_id": "mg_binding_0168",
+  "correct_option": "C",
+  "correct_node": "mg_domain_11_node_013"
+ },
+ {
+  "item_id": "bind_055",
+  "binding_id": "mg_binding_0153",
+  "correct_option": "B",
+  "correct_node": "mg_domain_11_node_012"
+ },
+ {
+  "item_id": "bind_056",
+  "binding_id": "mg_binding_0176",
+  "correct_option": "B",
+  "correct_node": "mg_domain_12_node_006"
+ },
+ {
+  "item_id": "bind_057",
+  "binding_id": "mg_binding_0172",
+  "correct_option": "C",
+  "correct_node": "mg_domain_12_node_005"
+ },
+ {
+  "item_id": "bind_058",
+  "binding_id": "mg_binding_0174",
+  "correct_option": "C",
+  "correct_node": "mg_domain_12_node_007"
+ },
+ {
+  "item_id": "bind_059",
+  "binding_id": "mg_binding_0173",
+  "correct_option": "A",
+  "correct_node": "mg_domain_12_node_007"
+ },
+ {
+  "item_id": "bind_060",
+  "binding_id": "mg_binding_0170",
+  "correct_option": "B",
+  "correct_node": "mg_domain_12_node_004"
+ }
+]

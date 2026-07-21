@@ -1,0 +1,18 @@
+COMMAND: mf query --metrics sales_dollars --limit 20 --csv <TEMP_CSV> --group-by sale_line__county_name,sale_line__store_city
+EXIT_CODE: 0
+WALL_SECONDS: 2.68
+DATA_ROWS: 20
+GOVERNANCE_SAYS: county rolls up to city's parent; finest-grain resolution should collapse to store_city
+PRE_REGISTERED_PREDICTION: engine returns both columns, no collapse
+----- STDOUT -----
+
+
+⠋ Initiating query…
+
+⠙ Initiating query…
+✔ Success 🦄 - query completed after 0.03 seconds
+🖨 Wrote query output to <TEMP_CSV>
+
+
+----- STDERR -----
+

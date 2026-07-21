@@ -1,0 +1,16 @@
+{"aliases": ["account type", "account account type"], "dimension_id": "account__account_type", "grain_rank": 1, "name": "Account Type", "parent": "", "source_model": "accounts_source", "sql": "account_type"}
+{"aliases": ["is instant", "booking is instant"], "dimension_id": "booking__is_instant", "grain_rank": 1, "name": "Is Instant", "parent": "", "source_model": "bookings_source", "sql": "is_instant"}
+{"aliases": ["company name", "company company name"], "dimension_id": "company__company_name", "grain_rank": 1, "name": "Company Name", "parent": "", "source_model": "companies", "sql": "company_name"}
+{"aliases": ["verification type", "verification verification type"], "dimension_id": "verification__verification_type", "grain_rank": 1, "name": "Verification Type", "parent": "", "source_model": "id_verifications", "sql": "verification_type"}
+{"aliases": ["country latest", "listing country latest"], "dimension_id": "listing__country_latest", "grain_rank": 1, "name": "Country Latest", "parent": "", "source_model": "listings_latest", "sql": "country"}
+{"aliases": ["is lux latest", "listing is lux latest"], "dimension_id": "listing__is_lux_latest", "grain_rank": 1, "name": "Is Lux Latest", "parent": "", "source_model": "listings_latest", "sql": "is_lux"}
+{"aliases": ["capacity latest", "listing capacity latest"], "dimension_id": "listing__capacity_latest", "grain_rank": 1, "name": "Capacity Latest", "parent": "", "source_model": "listings_latest", "sql": "capacity"}
+{"aliases": ["home state", "user home state"], "dimension_id": "user__home_state", "grain_rank": 1, "name": "Home State", "parent": "", "source_model": "users_ds_source", "sql": "home_state"}
+{"aliases": ["home state latest", "user home state latest"], "dimension_id": "user__home_state_latest", "grain_rank": 1, "name": "Home State Latest", "parent": "", "source_model": "users_latest", "sql": "home_state_latest"}
+{"aliases": ["referrer id", "visit referrer id"], "dimension_id": "visit__referrer_id", "grain_rank": 1, "name": "Referrer Id", "parent": "", "source_model": "visits_source", "sql": "referrer_id"}
+{"aliases": ["hour", "hourly"], "dimension_id": "metric_time__hour", "grain_rank": 6, "name": "Hour", "parent": "metric_time__day", "source_model": "metric_time_grain_ladder(agg_time_dimension)", "sql": ""}
+{"aliases": ["day", "daily"], "dimension_id": "metric_time__day", "grain_rank": 5, "name": "Day", "parent": "metric_time__month", "source_model": "metric_time_grain_ladder(agg_time_dimension)", "sql": ""}
+{"aliases": ["week", "weekly"], "dimension_id": "metric_time__week", "grain_rank": 4, "name": "Week", "parent": "", "source_model": "metric_time_grain_ladder(agg_time_dimension)", "sql": ""}
+{"aliases": ["month", "monthly"], "dimension_id": "metric_time__month", "grain_rank": 3, "name": "Month", "parent": "metric_time__quarter", "source_model": "metric_time_grain_ladder(agg_time_dimension)", "sql": ""}
+{"aliases": ["quarter", "quarterly"], "dimension_id": "metric_time__quarter", "grain_rank": 2, "name": "Quarter", "parent": "metric_time__year", "source_model": "metric_time_grain_ladder(agg_time_dimension)", "sql": ""}
+{"aliases": ["year", "yearly"], "dimension_id": "metric_time__year", "grain_rank": 1, "name": "Year", "parent": "", "source_model": "metric_time_grain_ladder(agg_time_dimension)", "sql": ""}

@@ -1,0 +1,8 @@
+{"aliases": ["month", "monthly", "ordered month"], "dimension_id": "ordered_month", "grain_rank": 2, "name": "Order Month", "parent": "ordered_quarter", "sql": "substr(ordered_on, 1, 7)"}
+{"aliases": ["quarter", "quarterly", "ordered quarter"], "dimension_id": "ordered_quarter", "grain_rank": 1, "name": "Order Quarter", "parent": "", "sql": "strftime('%Y', ordered_on) || '-Q' || ((cast(strftime('%m', ordered_on) as integer) + 2) / 3)"}
+{"aliases": ["county"], "dimension_id": "county_name", "grain_rank": 1, "name": "County", "parent": "", "sql": "county_name"}
+{"aliases": ["city", "store city"], "dimension_id": "store_city", "grain_rank": 2, "name": "Store City", "parent": "county_name", "sql": "store_city"}
+{"aliases": ["store", "retailer", "store name"], "dimension_id": "store_name", "grain_rank": 3, "name": "Store Name", "parent": "store_city", "sql": "store_name"}
+{"aliases": ["category", "liquor category"], "dimension_id": "category_name", "grain_rank": 1, "name": "Category", "parent": "", "sql": "category_name"}
+{"aliases": ["vendor", "supplier"], "dimension_id": "vendor_name", "grain_rank": 1, "name": "Vendor", "parent": "", "sql": "vendor_name"}
+{"aliases": ["item", "product", "sku", "item description"], "dimension_id": "item_desc", "grain_rank": 2, "name": "Item Description", "parent": "category_name", "sql": "im_desc"}

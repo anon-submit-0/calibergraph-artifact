@@ -1,0 +1,6 @@
+{
+  "channel": "moonshot",
+  "model": "kimi-k2.6",
+  "mode": "llm_graph_rag",
+  "stdout": "```json\n[\n  {\"case_id\":\"ict_case_0015\",\"action\":\"answer\",\"metric_id\":\"ict_metric_010\",\"dimensions\":[\"segment_l2\"],\"reason\":\"Query maps to governed Return Quantity metric and Segment Level 2 grain\"},\n  {\"case_id\":\"ict_case_0016\",\"action\":\"answer\",\"metric_id\":\"ict_metric_007\",\"dimensions\":[\"segment_l3\"],\"reason\":\"Query maps to governed Refund Rate metric and Segment Level 3 grain\"}\n]\n```"
+}

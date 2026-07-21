@@ -1,0 +1,6 @@
+{
+  "channel": "moonshot",
+  "model": "kimi-k2.6",
+  "mode": "llm_graph_rag",
+  "stdout": "[\n  {\"case_id\":\"ict_case_0009\", \"action\":\"answer\", \"metric_id\":\"ict_metric_003\", \"dimensions\":[\"segment_l2\"], \"reason\":\"Mapped '问题品' to Defective Item Quantity; finest requested hierarchy grain is segment_l2.\"},\n  {\"case_id\":\"ict_case_0010\", \"action\":\"answer\", \"metric_id\":\"ict_metric_011\", \"dimensions\":[], \"reason\":\"Mapped '退货率' to Return Rate; no dimensions requested.\"}\n]"
+}

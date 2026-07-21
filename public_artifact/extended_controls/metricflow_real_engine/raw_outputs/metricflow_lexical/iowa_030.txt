@@ -1,0 +1,36 @@
+COMMAND: mf query --metrics profit_margin --limit 20 --csv <TEMP_CSV> --group-by sale_line__category_name
+EXIT_CODE: 1
+WALL_SECONDS: 2.87
+DATA_ROWS: 0
+ERROR_CATEGORY: unknown_metric_name
+----- STDOUT -----
+
+
+⠋ Initiating query…
+
+⠙ Initiating query…
+ERROR: Got error(s) during query resolution.
+
+Error #1:
+  Message:
+
+    The given input does not exactly match any known metrics.
+
+    Suggestions:
+      ['average_bottle_price', 'item_count', 'invoice_count', 'average_invoice_value', 'liters_sold', 'store_count']
+
+  Query Input:
+
+    profit_margin
+
+Log File:: <LOCAL_PATH>
+Artifact Path: <LOCAL_PATH>
+Artifact Modified Time: 2026-07-11T19:11:35.008950
+
+If you think you found a bug, please report it here:
+    https://github.com/dbt-labs/metricflow/issues
+
+
+
+----- STDERR -----
+

@@ -1,0 +1,6 @@
+{
+  "channel": "moonshot",
+  "model": "kimi-k2.6",
+  "mode": "llm_graph_rag",
+  "stdout": "[{\"case_id\":\"ict_case_0041\",\"action\":\"answer\",\"metric_id\":\"ict_metric_001\",\"dimensions\":[\"market_region\"],\"reason\":\"Matched complaint rate metric and region dimension\"},{\"case_id\":\"ict_case_0042\",\"action\":\"answer\",\"metric_id\":\"ict_metric_009\",\"dimensions\":[],\"reason\":\"Exact match on reshipment quantity metric\"}]"
+}

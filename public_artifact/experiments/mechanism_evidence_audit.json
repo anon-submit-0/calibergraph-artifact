@@ -1,0 +1,410 @@
+{
+  "candidate_residual": {
+    "ict": {
+      "safenlidb_guarded": {
+        "candidate_available": 0.9731543624161074,
+        "dimension_recall": 1.0,
+        "metric_hit": 0.9731543624161074,
+        "n_answerable": 149,
+        "residual_counts": {
+          "hierarchy_overexpansion": 11
+        },
+        "residual_failure_given_candidate": 0.07586206896551724
+      },
+      "schema_proxy": {
+        "candidate_available": 0.9731543624161074,
+        "dimension_recall": 1.0,
+        "metric_hit": 0.9731543624161074,
+        "n_answerable": 149,
+        "residual_counts": {
+          "hierarchy_overexpansion": 11
+        },
+        "residual_failure_given_candidate": 0.07586206896551724
+      }
+    },
+    "iowa": {
+      "autolink_iterative": {
+        "candidate_available": 1.0,
+        "dimension_recall": 1.0,
+        "metric_hit": 1.0,
+        "n_answerable": 25,
+        "residual_counts": {
+          "hierarchy_overexpansion": 7
+        },
+        "residual_failure_given_candidate": 0.28
+      },
+      "open_sql_end_to_end": {
+        "candidate_available": 1.0,
+        "dimension_recall": 1.0,
+        "metric_hit": 1.0,
+        "n_answerable": 25,
+        "residual_counts": {
+          "hierarchy_overexpansion": 7
+        },
+        "residual_failure_given_candidate": 0.28
+      },
+      "oracle_candidate_prompt": {
+        "candidate_available": 1.0,
+        "dimension_recall": 1.0,
+        "metric_hit": 1.0,
+        "n_answerable": 25,
+        "residual_counts": {
+          "hierarchy_overexpansion": 7
+        },
+        "residual_failure_given_candidate": 0.28
+      },
+      "safenlidb_guarded": {
+        "candidate_available": 1.0,
+        "dimension_recall": 1.0,
+        "metric_hit": 1.0,
+        "n_answerable": 25,
+        "residual_counts": {
+          "hierarchy_overexpansion": 7
+        },
+        "residual_failure_given_candidate": 0.28
+      },
+      "schema_proxy": {
+        "candidate_available": 1.0,
+        "dimension_recall": 1.0,
+        "metric_hit": 1.0,
+        "n_answerable": 25,
+        "residual_counts": {
+          "hierarchy_overexpansion": 7
+        },
+        "residual_failure_given_candidate": 0.28
+      }
+    },
+    "multigov": {
+      "autolink_iterative": {
+        "candidate_available": 1.0,
+        "dimension_recall": 1.0,
+        "metric_hit": 1.0,
+        "n_answerable": 326,
+        "residual_counts": {
+          "hierarchy_overexpansion": 163
+        },
+        "residual_failure_given_candidate": 0.5
+      },
+      "oracle_candidate_prompt": {
+        "candidate_available": 1.0,
+        "dimension_recall": 1.0,
+        "metric_hit": 1.0,
+        "n_answerable": 326,
+        "residual_counts": {
+          "hierarchy_overexpansion": 163
+        },
+        "residual_failure_given_candidate": 0.5
+      },
+      "safenlidb_guarded": {
+        "candidate_available": 1.0,
+        "dimension_recall": 1.0,
+        "metric_hit": 1.0,
+        "n_answerable": 326,
+        "residual_counts": {
+          "hierarchy_overexpansion": 163
+        },
+        "residual_failure_given_candidate": 0.5
+      },
+      "schema_proxy": {
+        "candidate_available": 1.0,
+        "dimension_recall": 1.0,
+        "metric_hit": 1.0,
+        "n_answerable": 326,
+        "residual_counts": {
+          "hierarchy_overexpansion": 163
+        },
+        "residual_failure_given_candidate": 0.5
+      }
+    }
+  },
+  "claim_boundary": "fixed governed contracts; mechanism evidence after candidate availability, not universal NL2BI SOTA",
+  "generated_failure_certificate_count": 21,
+  "mechanism_baselines": {
+    "ict": {
+      "caliber_graph": {
+        "action_accuracy": 1.0,
+        "dimension_exact_accuracy": 1.0,
+        "family": {
+          "flat_metric": {
+            "action": 1.0,
+            "joint": 1.0,
+            "n": 84
+          },
+          "policy_refusal": {
+            "action": 1.0,
+            "joint": 1.0,
+            "n": 8
+          },
+          "ranking_topk": {
+            "action": 1.0,
+            "joint": 1.0,
+            "n": 30
+          },
+          "single_dimension": {
+            "action": 1.0,
+            "joint": 1.0,
+            "n": 35
+          }
+        },
+        "joint_metric_dimension_accuracy": 1.0,
+        "metric_accuracy": 1.0,
+        "n": 157,
+        "refusal_precision": 1.0,
+        "refusal_recall": 1.0
+      },
+      "posthoc_answerability_validator": {
+        "action_accuracy": 0.8280254777070064,
+        "dimension_exact_accuracy": 0.9044585987261147,
+        "family": {
+          "flat_metric": {
+            "action": 0.9047619047619048,
+            "joint": 0.8690476190476191,
+            "n": 84
+          },
+          "policy_refusal": {
+            "action": 0.5,
+            "joint": 0.5,
+            "n": 8
+          },
+          "ranking_topk": {
+            "action": 0.9,
+            "joint": 0.9,
+            "n": 30
+          },
+          "single_dimension": {
+            "action": 0.6571428571428571,
+            "joint": 0.6571428571428571,
+            "n": 35
+          }
+        },
+        "joint_metric_dimension_accuracy": 0.8089171974522293,
+        "metric_accuracy": 0.8089171974522293,
+        "n": 157,
+        "refusal_precision": 0.14814814814814814,
+        "refusal_recall": 0.5
+      },
+      "semantic_layer_validator": {
+        "action_accuracy": 0.89171974522293,
+        "dimension_exact_accuracy": 0.9044585987261147,
+        "family": {
+          "flat_metric": {
+            "action": 0.9047619047619048,
+            "joint": 0.8690476190476191,
+            "n": 84
+          },
+          "policy_refusal": {
+            "action": 0.5,
+            "joint": 0.5,
+            "n": 8
+          },
+          "ranking_topk": {
+            "action": 0.9,
+            "joint": 0.9,
+            "n": 30
+          },
+          "single_dimension": {
+            "action": 0.9428571428571428,
+            "joint": 0.6571428571428571,
+            "n": 35
+          }
+        },
+        "joint_metric_dimension_accuracy": 0.8089171974522293,
+        "metric_accuracy": 0.8726114649681529,
+        "n": 157,
+        "refusal_precision": 0.23529411764705882,
+        "refusal_recall": 0.5
+      }
+    },
+    "iowa": {
+      "caliber_graph": {
+        "action_accuracy": 1.0,
+        "dimension_exact_accuracy": 1.0,
+        "family": {
+          "metric_identity": {
+            "action": 1.0,
+            "joint": 1.0,
+            "n": 25
+          },
+          "policy_refusal": {
+            "action": 1.0,
+            "joint": 1.0,
+            "n": 2
+          },
+          "unsupported_or_refusal": {
+            "action": 1.0,
+            "joint": 1.0,
+            "n": 5
+          }
+        },
+        "joint_metric_dimension_accuracy": 1.0,
+        "metric_accuracy": 1.0,
+        "n": 32,
+        "refusal_precision": 1.0,
+        "refusal_recall": 1.0
+      },
+      "posthoc_answerability_validator": {
+        "action_accuracy": 0.78125,
+        "dimension_exact_accuracy": 0.78125,
+        "family": {
+          "metric_identity": {
+            "action": 0.72,
+            "joint": 0.72,
+            "n": 25
+          },
+          "policy_refusal": {
+            "action": 1.0,
+            "joint": 1.0,
+            "n": 2
+          },
+          "unsupported_or_refusal": {
+            "action": 1.0,
+            "joint": 1.0,
+            "n": 5
+          }
+        },
+        "joint_metric_dimension_accuracy": 0.78125,
+        "metric_accuracy": 0.78125,
+        "n": 32,
+        "refusal_precision": 0.5,
+        "refusal_recall": 1.0
+      },
+      "semantic_layer_validator": {
+        "action_accuracy": 1.0,
+        "dimension_exact_accuracy": 0.78125,
+        "family": {
+          "metric_identity": {
+            "action": 1.0,
+            "joint": 0.72,
+            "n": 25
+          },
+          "policy_refusal": {
+            "action": 1.0,
+            "joint": 1.0,
+            "n": 2
+          },
+          "unsupported_or_refusal": {
+            "action": 1.0,
+            "joint": 1.0,
+            "n": 5
+          }
+        },
+        "joint_metric_dimension_accuracy": 0.78125,
+        "metric_accuracy": 1.0,
+        "n": 32,
+        "refusal_precision": 1.0,
+        "refusal_recall": 1.0
+      }
+    },
+    "multigov": {
+      "caliber_graph": {
+        "action_accuracy": 1.0,
+        "dimension_exact_accuracy": 1.0,
+        "family": {
+          "answerable_direct": {
+            "action": 1.0,
+            "joint": 1.0,
+            "n": 115
+          },
+          "denominator_caliber": {
+            "action": 1.0,
+            "joint": 1.0,
+            "n": 29
+          },
+          "finest_grain_trap": {
+            "action": 1.0,
+            "joint": 1.0,
+            "n": 163
+          },
+          "policy_refusal": {
+            "action": 1.0,
+            "joint": 1.0,
+            "n": 184
+          },
+          "temporal_anchor": {
+            "action": 1.0,
+            "joint": 1.0,
+            "n": 19
+          }
+        },
+        "joint_metric_dimension_accuracy": 1.0,
+        "metric_accuracy": 1.0,
+        "n": 510,
+        "refusal_precision": 1.0,
+        "refusal_recall": 1.0
+      },
+      "posthoc_answerability_validator": {
+        "action_accuracy": 0.6803921568627451,
+        "dimension_exact_accuracy": 0.6803921568627451,
+        "family": {
+          "answerable_direct": {
+            "action": 1.0,
+            "joint": 1.0,
+            "n": 115
+          },
+          "denominator_caliber": {
+            "action": 1.0,
+            "joint": 1.0,
+            "n": 29
+          },
+          "finest_grain_trap": {
+            "action": 0.0,
+            "joint": 0.0,
+            "n": 163
+          },
+          "policy_refusal": {
+            "action": 1.0,
+            "joint": 1.0,
+            "n": 184
+          },
+          "temporal_anchor": {
+            "action": 1.0,
+            "joint": 1.0,
+            "n": 19
+          }
+        },
+        "joint_metric_dimension_accuracy": 0.6803921568627451,
+        "metric_accuracy": 0.6803921568627451,
+        "n": 510,
+        "refusal_precision": 0.5302593659942363,
+        "refusal_recall": 1.0
+      },
+      "semantic_layer_validator": {
+        "action_accuracy": 1.0,
+        "dimension_exact_accuracy": 0.6803921568627451,
+        "family": {
+          "answerable_direct": {
+            "action": 1.0,
+            "joint": 1.0,
+            "n": 115
+          },
+          "denominator_caliber": {
+            "action": 1.0,
+            "joint": 1.0,
+            "n": 29
+          },
+          "finest_grain_trap": {
+            "action": 1.0,
+            "joint": 0.0,
+            "n": 163
+          },
+          "policy_refusal": {
+            "action": 1.0,
+            "joint": 1.0,
+            "n": 184
+          },
+          "temporal_anchor": {
+            "action": 1.0,
+            "joint": 1.0,
+            "n": 19
+          }
+        },
+        "joint_metric_dimension_accuracy": 0.6803921568627451,
+        "metric_accuracy": 1.0,
+        "n": 510,
+        "refusal_precision": 1.0,
+        "refusal_recall": 1.0
+      }
+    }
+  },
+  "released_failure_certificate_count": 20
+}

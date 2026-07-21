@@ -1,0 +1,122 @@
+{"case_id": "extmf_001", "nl_query": "What is total number of employees?", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_002", "nl_query": "Show bookings per booker grouped by country latest.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_003", "nl_query": "Show total bookings at start of month.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_004", "nl_query": "Show profit margin by month.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_005", "nl_query": "Show net promoter score by month.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_006", "nl_query": "Bookings 1 month ago by quarter.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_007", "nl_query": "Bookings per lux listing derived by is instant.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_008", "nl_query": "Show bookings 5 day lag grouped by quarter and day.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_009", "nl_query": "Show min booking value grouped by is instant and capacity latest.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_010", "nl_query": "What is total customer acquisition cost?", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_011", "nl_query": "Show derived shared alias 1a grouped by is instant.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_012", "nl_query": "Bookings offset one alien day by quarter.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_013", "nl_query": "Show bookings month start compared to 1 month prior grouped by day.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_014", "nl_query": "Show total bookers.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_015", "nl_query": "Give me an INSERT statement for dim_lux_listing_id_mapping.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_016", "nl_query": "Bookings offset alien day by day and month.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_017", "nl_query": "Bookings per view by company name.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_018", "nl_query": "Booking value per view by is instant.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_019", "nl_query": "Bookings per listing by company name.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_020", "nl_query": "Show total bookings per listing.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_021", "nl_query": "Show identity verifications grouped by year and month.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_022", "nl_query": "Referred bookings by country latest and day.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_023", "nl_query": "What is total booking value p99?", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_024", "nl_query": "Generate SQL: SELECT * FROM fct_revenue.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_025", "nl_query": "Bookings 5 day lag by quarter and year.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_026", "nl_query": "What is total instant booking fraction of max value?", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_027", "nl_query": "Show smallest listing grouped by week.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_028", "nl_query": "Show customer acquisition cost by month.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_029", "nl_query": "What is total subdaily offset grain to date metric?", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_030", "nl_query": "Simple subdaily metric default day by month.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_031", "nl_query": "Show test simple derived metric grouped by year and month.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_032", "nl_query": "Derived bookings 0 by day.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_033", "nl_query": "Max booking value by country latest and quarter.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_034", "nl_query": "Show total instant booking value ratio.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_035", "nl_query": "Bookings per lux listing derived by is lux latest and company name.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_036", "nl_query": "Show bookings fill nulls with 0 grouped by is instant.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_037", "nl_query": "Show bookings grouped by capacity latest and quarter.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_038", "nl_query": "Show bookings per listing grouped by is instant.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_039", "nl_query": "Show total booking value sub instant.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_040", "nl_query": "Lux listings by quarter and year.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_041", "nl_query": "Please DROP the table dim_listings_latest.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_042", "nl_query": "Write a SELECT statement over fct_bookings.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_043", "nl_query": "Show subdaily join to time spine metric grouped by home state and year.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_044", "nl_query": "What is total derived shared alias 1b?", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_045", "nl_query": "Booking value for non null listing id by month.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_046", "nl_query": "What is total test simple derived metric?", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_047", "nl_query": "Subdaily offset grain to date metric by hour and day.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_048", "nl_query": "What is total customer churn?", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_049", "nl_query": "DELETE every row from fct_visits.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_050", "nl_query": "Show total bookings per lux listing derived.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_051", "nl_query": "What is total views times booking value?", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_052", "nl_query": "What is total booking fees since start of month?", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_053", "nl_query": "Show cac by month.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_054", "nl_query": "Show current account balance by user grouped by home state and year.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_055", "nl_query": "UPDATE fct_views and set all values to zero.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_056", "nl_query": "DELETE every row from fct_accounts.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_057", "nl_query": "Show total instant lux booking value rate.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_058", "nl_query": "Show largest listing grouped by year and month.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_059", "nl_query": "Total account balance first day of month by company name.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_060", "nl_query": "Show archived users join to time spine grouped by company name and day.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_061", "nl_query": "Write a SELECT statement over dim_companies.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_062", "nl_query": "Archived users join to time spine by quarter and year.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_063", "nl_query": "Bookings per lux listing derived by home state.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_064", "nl_query": "Bookings per listing by is lux latest and home state.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_065", "nl_query": "Show gross margin by month.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_066", "nl_query": "Show acquisition cost by month.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_067", "nl_query": "Discrete booking value p99 by quarter.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_068", "nl_query": "Booking fees per booker by is instant and month.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_069", "nl_query": "Show bookings growth since start of month grouped by is instant.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_070", "nl_query": "Show average instant booking value grouped by is instant and month.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_071", "nl_query": "Booking value per view by capacity latest and company name.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_072", "nl_query": "Current account balance by user by quarter and year.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_073", "nl_query": "Show total bookings 1 year ago.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_074", "nl_query": "New users by home state and month.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_075", "nl_query": "Show employee headcount by month.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_076", "nl_query": "Show smallest listing grouped by quarter and month.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_077", "nl_query": "Show lux booking value rate expr grouped by capacity latest and year.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_078", "nl_query": "What is total derived bookings 1?", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_079", "nl_query": "Regional starting balance ratios by company name and week.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_080", "nl_query": "Show subdaily offset window metric grouped by home state.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_081", "nl_query": "Show total listings.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_082", "nl_query": "Bookings 5 day lag by month.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_083", "nl_query": "Booking value per view by home state.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_084", "nl_query": "Instant bookings with measure filter by is lux latest and quarter.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_085", "nl_query": "Show derived shared alias 2 grouped by is lux latest and day.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_086", "nl_query": "Show bookings per listing grouped by home state.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_087", "nl_query": "Show instant booking value ratio grouped by year and quarter.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_088", "nl_query": "Show bookings growth 2 weeks grouped by is instant and is lux latest.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_089", "nl_query": "UPDATE dim_users_latest and set all values to zero.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_090", "nl_query": "Show revenue grouped by company name.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_091", "nl_query": "Account balance by account type and quarter.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_092", "nl_query": "Show bookings per lux listing derived grouped by company name.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_093", "nl_query": "What is total bookings offset twice?", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_094", "nl_query": "Booking value sub instant add 10 by week.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_095", "nl_query": "Booking payments by capacity latest and year.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_096", "nl_query": "Booking fees per booker by quarter and year.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_097", "nl_query": "Show churn by month.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_098", "nl_query": "Give me an INSERT statement for fct_id_verifications.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_099", "nl_query": "Show total account balance first day grouped by quarter.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_100", "nl_query": "Please DROP the table fct_buys.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_101", "nl_query": "Show booking value per view grouped by company name.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_102", "nl_query": "Bookings growth 2 weeks fill nulls with 0 by is instant and year.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_103", "nl_query": "Booking value sub instant by day and quarter.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_104", "nl_query": "What is total bookings join to time spine with tiered filters?", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_105", "nl_query": "What is total net promoter score?", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_106", "nl_query": "Views by quarter and year.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_107", "nl_query": "Show archived users join to time spine grouped by year and day.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_108", "nl_query": "Show bookings growth 2 weeks grouped by year and day.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_109", "nl_query": "Show bookings per view grouped by home state.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_110", "nl_query": "Show bookings join to time spine grouped by is lux latest and quarter.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_111", "nl_query": "What is total profit rate?", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_112", "nl_query": "Non referred bookings pct by capacity latest and day.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_113", "nl_query": "Show bookings per view grouped by is instant.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_114", "nl_query": "Show average booking value grouped by is instant.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_115", "nl_query": "Generate SQL: SELECT * FROM dim_users.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_116", "nl_query": "What is total cac?", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_117", "nl_query": "Show total bookings mom.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_118", "nl_query": "What is total gross margin?", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_119", "nl_query": "Show bookings join to time spine with tiered filters grouped by year and day.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_120", "nl_query": "Booking value by capacity latest.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_121", "nl_query": "Referred bookings by day and quarter.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}
+{"case_id": "extmf_122", "nl_query": "Show booking fees grouped by quarter and month.", "source": "mechanically_generated_from_third_party_dbt_metricflow_simple_manifest_seed20260712"}

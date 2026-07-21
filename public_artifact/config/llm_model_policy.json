@@ -1,0 +1,23 @@
+{
+  "updated_at": "2026-07-04",
+  "purpose": "Stable LLM model policy for CaliberGraph experiments. Use these channels and models according to experimental need; use the full list for cross-model comparison panels.",
+  "key_mapping_note": {
+    "relay": "Provider credential is resolved at runtime by the local LLM router. This route is used for claude-opus-4-6.",
+    "gpt-provider": "Provider credential is resolved at runtime by the local LLM router. This route is the GPT-5.x / group-B-capable group and is used for gpt-5.5.",
+    "secret_policy": "Keys are loaded only at runtime from a user-local environment file and must not be written to repository artifacts."
+  },
+  "models": [
+    {"channel": "gpt-provider", "model": "gpt-5.5", "role": "frontier_gpt"},
+    {"channel": "relay", "model": "claude-opus-4-6", "role": "frontier_claude"},
+    {"channel": "gateway", "model": "deepseek-3.2", "role": "gateway_strong"},
+    {"channel": "gateway", "model": "glm-5", "role": "gateway_strong"},
+    {"channel": "gateway", "model": "minimax-m2.5", "role": "gateway_strong"},
+    {"channel": "gateway", "model": "qwen3-coder-next", "role": "gateway_code_reasoning"},
+    {"channel": "gemini-vertex", "model": "gemini-2.5-pro", "role": "frontier_gemini"},
+    {"channel": "gemini-vertex", "model": "gemini-2.5-flash", "role": "efficient_gemini"},
+    {"channel": "moonshot", "model": "kimi-k2.6", "role": "frontier_kimi"},
+    {"channel": "deepseek", "model": "deepseek-v4-pro", "role": "frontier_deepseek"},
+    {"channel": "deepseek", "model": "deepseek-chat", "role": "deepseek_baseline"},
+    {"channel": "deepseek", "model": "deepseek-reasoner", "role": "reasoning_deepseek"}
+  ]
+}

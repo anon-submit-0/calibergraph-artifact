@@ -1,0 +1,82 @@
+{
+  "description": "Synthetic public-catalog scale curve. Distractor metrics/dimensions are added without changing the original 40 gold cases.",
+  "rows": [
+    {
+      "scale_factor": 1,
+      "metrics": 9,
+      "dimensions": 12,
+      "cases_evaluated": 3200,
+      "mean_ms_per_case": 0.28802510437499995,
+      "joint_metric_dimension_accuracy": 1.0,
+      "refusal_precision": 1.0,
+      "refusal_recall": 1.0,
+      "direct_catalog_chars": 2881
+    },
+    {
+      "scale_factor": 5,
+      "metrics": 45,
+      "dimensions": 60,
+      "cases_evaluated": 1760,
+      "mean_ms_per_case": 1.51491328125,
+      "joint_metric_dimension_accuracy": 1.0,
+      "refusal_precision": 1.0,
+      "refusal_recall": 1.0,
+      "direct_catalog_chars": 20001
+    },
+    {
+      "scale_factor": 10,
+      "metrics": 90,
+      "dimensions": 120,
+      "cases_evaluated": 880,
+      "mean_ms_per_case": 3.1035593272727273,
+      "joint_metric_dimension_accuracy": 1.0,
+      "refusal_precision": 1.0,
+      "refusal_recall": 1.0,
+      "direct_catalog_chars": 41401
+    },
+    {
+      "scale_factor": 25,
+      "metrics": 225,
+      "dimensions": 300,
+      "cases_evaluated": 320,
+      "mean_ms_per_case": 7.785203646875,
+      "joint_metric_dimension_accuracy": 1.0,
+      "refusal_precision": 1.0,
+      "refusal_recall": 1.0,
+      "direct_catalog_chars": 106996
+    },
+    {
+      "scale_factor": 50,
+      "metrics": 450,
+      "dimensions": 600,
+      "cases_evaluated": 160,
+      "mean_ms_per_case": 16.031088281250007,
+      "joint_metric_dimension_accuracy": 1.0,
+      "refusal_precision": 1.0,
+      "refusal_recall": 1.0,
+      "direct_catalog_chars": 216321
+    },
+    {
+      "scale_factor": 100,
+      "metrics": 900,
+      "dimensions": 1200,
+      "cases_evaluated": 120,
+      "mean_ms_per_case": 32.389676733333346,
+      "joint_metric_dimension_accuracy": 1.0,
+      "refusal_precision": 1.0,
+      "refusal_recall": 1.0,
+      "direct_catalog_chars": 434971
+    },
+    {
+      "scale_factor": 200,
+      "metrics": 1800,
+      "dimensions": 2400,
+      "cases_evaluated": 120,
+      "mean_ms_per_case": 63.591112158333345,
+      "joint_metric_dimension_accuracy": 1.0,
+      "refusal_precision": 1.0,
+      "refusal_recall": 1.0,
+      "direct_catalog_chars": 881571
+    }
+  ]
+}

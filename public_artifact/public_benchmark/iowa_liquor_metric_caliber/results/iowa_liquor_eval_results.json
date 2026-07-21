@@ -1,0 +1,81 @@
+{
+  "blind_protocol": {
+    "gold_field_leaks_in_predictions": 0,
+    "oracle_candidate_prompt_uses_scorer_metric": true,
+    "prediction_input": "blind_cases.jsonl",
+    "scoring_input": "gold_labels.jsonl"
+  },
+  "linking": {
+    "avg_candidate_dimension_count": 7.72,
+    "avg_candidate_metric_count": 3.0,
+    "dimension_candidate_recall": 1.0,
+    "joint_candidate_recall": 1.0,
+    "metric_candidate_recall_at_3": 1.0,
+    "n_answerable": 25
+  },
+  "plan": {
+    "autolink_iterative": {
+      "dimension_exact_accuracy": 0.71875,
+      "joint_metric_dimension_accuracy": 0.5625,
+      "metric_accuracy": 0.78125,
+      "n": 32,
+      "refusal_precision": 0.0,
+      "refusal_recall": 0.0,
+      "sql_execution_success_rate_on_answer_predictions": 1.0
+    },
+    "caliber_graph": {
+      "dimension_exact_accuracy": 1.0,
+      "joint_metric_dimension_accuracy": 1.0,
+      "metric_accuracy": 1.0,
+      "n": 32,
+      "refusal_precision": 1.0,
+      "refusal_recall": 1.0,
+      "sql_execution_success_rate_on_answer_predictions": 1.0
+    },
+    "direct_keyword": {
+      "dimension_exact_accuracy": 0.375,
+      "joint_metric_dimension_accuracy": 0.15625,
+      "metric_accuracy": 0.75,
+      "n": 32,
+      "refusal_precision": 0.0,
+      "refusal_recall": 0.0,
+      "sql_execution_success_rate_on_answer_predictions": 1.0
+    },
+    "open_sql_end_to_end": {
+      "dimension_exact_accuracy": 0.71875,
+      "joint_metric_dimension_accuracy": 0.5625,
+      "metric_accuracy": 0.78125,
+      "n": 32,
+      "refusal_precision": 0.0,
+      "refusal_recall": 0.0,
+      "sql_execution_success_rate_on_answer_predictions": 1.0
+    },
+    "oracle_candidate_prompt": {
+      "dimension_exact_accuracy": 0.78125,
+      "joint_metric_dimension_accuracy": 0.78125,
+      "metric_accuracy": 1.0,
+      "n": 32,
+      "refusal_precision": 1.0,
+      "refusal_recall": 1.0,
+      "sql_execution_success_rate_on_answer_predictions": 1.0
+    },
+    "safenlidb_guarded": {
+      "dimension_exact_accuracy": 0.78125,
+      "joint_metric_dimension_accuracy": 0.78125,
+      "metric_accuracy": 1.0,
+      "n": 32,
+      "refusal_precision": 1.0,
+      "refusal_recall": 1.0,
+      "sql_execution_success_rate_on_answer_predictions": 1.0
+    },
+    "schema_proxy": {
+      "dimension_exact_accuracy": 0.71875,
+      "joint_metric_dimension_accuracy": 0.5625,
+      "metric_accuracy": 0.78125,
+      "n": 32,
+      "refusal_precision": 0.0,
+      "refusal_recall": 0.0,
+      "sql_execution_success_rate_on_answer_predictions": 1.0
+    }
+  }
+}

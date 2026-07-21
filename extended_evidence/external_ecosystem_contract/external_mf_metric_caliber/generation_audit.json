@@ -1,0 +1,196 @@
+{
+  "ambiguity_guard": {
+    "excluded_dimensions": {
+      "user__home_state_latest": "phrase 'home state latest' word-contains alias 'home state' of user__home_state"
+    },
+    "rejected_draws": [],
+    "rule": "rendered query kept only if published detection grammar mentions exactly the intended dims"
+  },
+  "answerable_metric_pool": 89,
+  "generator": "generate_cases.py (pure templates, no LLM, no network)",
+  "gold_derivation": "mechanical from contract: allowed_dimensions scope + parent-map finest-grain resolution + protocol refusal classes (r1 undefined stub, r2 sql_or_ddl rule, r3 unauthorized dimension combination). Compiler decision function never called during generation.",
+  "s2_universe_size": 547,
+  "s3_universe": {
+    "pairs": 36,
+    "singles": 12
+  },
+  "s4_universe_size": 34,
+  "seed": 20260712,
+  "strata_case_ids": {
+    "answerable": [
+      "extmf_002",
+      "extmf_003",
+      "extmf_006",
+      "extmf_009",
+      "extmf_011",
+      "extmf_012",
+      "extmf_013",
+      "extmf_014",
+      "extmf_020",
+      "extmf_022",
+      "extmf_023",
+      "extmf_026",
+      "extmf_027",
+      "extmf_029",
+      "extmf_030",
+      "extmf_032",
+      "extmf_033",
+      "extmf_034",
+      "extmf_036",
+      "extmf_037",
+      "extmf_039",
+      "extmf_043",
+      "extmf_044",
+      "extmf_045",
+      "extmf_046",
+      "extmf_050",
+      "extmf_051",
+      "extmf_052",
+      "extmf_054",
+      "extmf_057",
+      "extmf_059",
+      "extmf_060",
+      "extmf_067",
+      "extmf_068",
+      "extmf_069",
+      "extmf_070",
+      "extmf_073",
+      "extmf_074",
+      "extmf_077",
+      "extmf_078",
+      "extmf_079",
+      "extmf_080",
+      "extmf_081",
+      "extmf_082",
+      "extmf_084",
+      "extmf_085",
+      "extmf_088",
+      "extmf_090",
+      "extmf_091",
+      "extmf_093",
+      "extmf_094",
+      "extmf_095",
+      "extmf_099",
+      "extmf_102",
+      "extmf_104",
+      "extmf_110",
+      "extmf_112",
+      "extmf_114",
+      "extmf_117",
+      "extmf_120"
+    ],
+    "grain_hierarchy_trap": [
+      "extmf_008",
+      "extmf_016",
+      "extmf_021",
+      "extmf_025",
+      "extmf_031",
+      "extmf_040",
+      "extmf_047",
+      "extmf_058",
+      "extmf_062",
+      "extmf_072",
+      "extmf_076",
+      "extmf_087",
+      "extmf_096",
+      "extmf_103",
+      "extmf_106",
+      "extmf_107",
+      "extmf_108",
+      "extmf_119",
+      "extmf_121",
+      "extmf_122"
+    ],
+    "ratio_denominator_trap": [
+      "extmf_007",
+      "extmf_017",
+      "extmf_018",
+      "extmf_019",
+      "extmf_035",
+      "extmf_038",
+      "extmf_063",
+      "extmf_064",
+      "extmf_071",
+      "extmf_083",
+      "extmf_086",
+      "extmf_092",
+      "extmf_101",
+      "extmf_109",
+      "extmf_113"
+    ],
+    "sql_request_refusal": [
+      "extmf_015",
+      "extmf_024",
+      "extmf_041",
+      "extmf_042",
+      "extmf_049",
+      "extmf_055",
+      "extmf_056",
+      "extmf_061",
+      "extmf_089",
+      "extmf_098",
+      "extmf_100",
+      "extmf_115"
+    ],
+    "undefined_metric_refusal": [
+      "extmf_001",
+      "extmf_004",
+      "extmf_005",
+      "extmf_010",
+      "extmf_028",
+      "extmf_048",
+      "extmf_053",
+      "extmf_065",
+      "extmf_066",
+      "extmf_075",
+      "extmf_097",
+      "extmf_105",
+      "extmf_111",
+      "extmf_116",
+      "extmf_118"
+    ]
+  },
+  "strata_counts": {
+    "answerable": 60,
+    "grain_hierarchy_trap": 20,
+    "ratio_denominator_trap": 15,
+    "sql_request_refusal": 12,
+    "undefined_metric_refusal": 15
+  },
+  "template_families": {
+    "S1_size0": [
+      "What is total {m}?",
+      "Show total {m}."
+    ],
+    "S1_size1": [
+      "{M} by {d}.",
+      "Show {m} grouped by {d}."
+    ],
+    "S1_size2": [
+      "{M} by {d1} and {d2}.",
+      "Show {m} grouped by {d1} and {d2}."
+    ],
+    "S2": [
+      "{M} by {child} and {anc}.",
+      "Show {m} grouped by {anc} and {child}."
+    ],
+    "S3": [
+      "{M} by {t}.",
+      "Show {m} grouped by {t}.",
+      "{M} by {l} and {t}."
+    ],
+    "S4": [
+      "What is total {p}?",
+      "Show {p} by month."
+    ],
+    "S5": [
+      "Write a SELECT statement over {t}.",
+      "Please DROP the table {t}.",
+      "Give me an INSERT statement for {t}.",
+      "Generate SQL: SELECT * FROM {t}.",
+      "UPDATE {t} and set all values to zero.",
+      "DELETE every row from {t}."
+    ]
+  },
+  "total_cases": 122
+}

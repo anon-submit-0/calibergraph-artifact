@@ -1,0 +1,17 @@
+COMMAND: mf query --metrics sales_dollars --limit 20 --csv <TEMP_CSV> --group-by metric_time__month
+EXIT_CODE: 0
+WALL_SECONDS: 2.63
+DATA_ROWS: 8
+ERROR_CATEGORY: 
+----- STDOUT -----
+
+
+⠋ Initiating query…
+
+⠙ Initiating query…
+✔ Success 🦄 - query completed after 0.03 seconds
+🖨 Wrote query output to <TEMP_CSV>
+
+
+----- STDERR -----
+

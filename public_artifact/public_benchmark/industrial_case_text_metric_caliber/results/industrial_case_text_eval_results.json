@@ -1,0 +1,85 @@
+{
+  "artifact_counts": {
+    "cases": 157,
+    "dimensions": 4,
+    "metrics": 15
+  },
+  "blind_protocol": {
+    "gold_field_leaks_in_predictions": 0,
+    "prediction_input": "blind_cases.jsonl",
+    "scoring_input": "gold_labels.jsonl"
+  },
+  "deduplicated_normalized_query_summary": {
+    "caliber_graph": {
+      "dimension_exact_accuracy": 1.0,
+      "joint_metric_dimension_accuracy": 1.0,
+      "metric_accuracy": 1.0,
+      "n": 114,
+      "refusal_precision": 1.0,
+      "refusal_recall": 1.0
+    },
+    "direct_keyword": {
+      "dimension_exact_accuracy": 0.6228070175438597,
+      "joint_metric_dimension_accuracy": 0.5350877192982456,
+      "metric_accuracy": 0.9122807017543859,
+      "n": 114,
+      "refusal_precision": 1.0,
+      "refusal_recall": 0.25
+    },
+    "safenlidb_guarded": {
+      "dimension_exact_accuracy": 0.9035087719298246,
+      "joint_metric_dimension_accuracy": 0.868421052631579,
+      "metric_accuracy": 0.9649122807017544,
+      "n": 114,
+      "refusal_precision": 1.0,
+      "refusal_recall": 1.0
+    },
+    "schema_proxy": {
+      "dimension_exact_accuracy": 0.9035087719298246,
+      "joint_metric_dimension_accuracy": 0.8157894736842105,
+      "metric_accuracy": 0.9122807017543859,
+      "n": 114,
+      "refusal_precision": 1.0,
+      "refusal_recall": 0.25
+    }
+  },
+  "deduplication_audit": {
+    "conflict_examples": [],
+    "conflicting_groups_after_public_withholding": 0,
+    "dedup_rows": 456
+  },
+  "summary": {
+    "caliber_graph": {
+      "dimension_exact_accuracy": 1.0,
+      "joint_metric_dimension_accuracy": 1.0,
+      "metric_accuracy": 1.0,
+      "n": 157,
+      "refusal_precision": 1.0,
+      "refusal_recall": 1.0
+    },
+    "direct_keyword": {
+      "dimension_exact_accuracy": 0.5859872611464968,
+      "joint_metric_dimension_accuracy": 0.5222929936305732,
+      "metric_accuracy": 0.9363057324840764,
+      "n": 157,
+      "refusal_precision": 1.0,
+      "refusal_recall": 0.25
+    },
+    "safenlidb_guarded": {
+      "dimension_exact_accuracy": 0.9299363057324841,
+      "joint_metric_dimension_accuracy": 0.9044585987261147,
+      "metric_accuracy": 0.9745222929936306,
+      "n": 157,
+      "refusal_precision": 1.0,
+      "refusal_recall": 1.0
+    },
+    "schema_proxy": {
+      "dimension_exact_accuracy": 0.9299363057324841,
+      "joint_metric_dimension_accuracy": 0.8662420382165605,
+      "metric_accuracy": 0.9363057324840764,
+      "n": 157,
+      "refusal_precision": 1.0,
+      "refusal_recall": 0.25
+    }
+  }
+}

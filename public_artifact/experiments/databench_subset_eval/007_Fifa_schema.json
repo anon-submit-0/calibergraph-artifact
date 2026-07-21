@@ -1,0 +1,253 @@
+{
+  "columns": [
+    {
+      "name": "ID<gx:number>",
+      "type": "UINTEGER"
+    },
+    {
+      "name": "Name<gx:text>",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "Age<gx:number>",
+      "type": "UTINYINT"
+    },
+    {
+      "name": "Photo<gx:url>",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "Nationality<gx:category>",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "Overall<gx:number>",
+      "type": "UTINYINT"
+    },
+    {
+      "name": "Potential<gx:number>",
+      "type": "UTINYINT"
+    },
+    {
+      "name": "Club<gx:category>",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "Value_€<gx:currency>",
+      "type": "UINTEGER"
+    },
+    {
+      "name": "Wage_€<gx:currency>",
+      "type": "UINTEGER"
+    },
+    {
+      "name": "Preferred Foot<gx:category>",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "International Reputation<gx:number>",
+      "type": "UTINYINT"
+    },
+    {
+      "name": "Weak Foot<gx:number>",
+      "type": "UTINYINT"
+    },
+    {
+      "name": "Skill Moves<gx:number>",
+      "type": "UTINYINT"
+    },
+    {
+      "name": "Work Rate<gx:category>",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "Position<gx:category>",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "Joined<gx:date>",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "Contract Valid Until<gx:date>",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "Height_ft<gx:number>",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "Weight_lbs<gx:number>",
+      "type": "UTINYINT"
+    },
+    {
+      "name": "Crossing<gx:number>",
+      "type": "UTINYINT"
+    },
+    {
+      "name": "Finishing<gx:number>",
+      "type": "UTINYINT"
+    },
+    {
+      "name": "HeadingAccuracy<gx:number>",
+      "type": "UTINYINT"
+    },
+    {
+      "name": "ShortPassing<gx:number>",
+      "type": "UTINYINT"
+    },
+    {
+      "name": "Volleys<gx:number>",
+      "type": "UTINYINT"
+    },
+    {
+      "name": "Dribbling<gx:number>",
+      "type": "UTINYINT"
+    },
+    {
+      "name": "Curve<gx:number>",
+      "type": "UTINYINT"
+    },
+    {
+      "name": "FKAccuracy<gx:number>",
+      "type": "UTINYINT"
+    },
+    {
+      "name": "LongPassing<gx:number>",
+      "type": "UTINYINT"
+    },
+    {
+      "name": "BallControl<gx:number>",
+      "type": "UTINYINT"
+    },
+    {
+      "name": "Acceleration<gx:number>",
+      "type": "UTINYINT"
+    },
+    {
+      "name": "SprintSpeed<gx:number>",
+      "type": "UTINYINT"
+    },
+    {
+      "name": "Agility<gx:number>",
+      "type": "UTINYINT"
+    },
+    {
+      "name": "Reactions<gx:number>",
+      "type": "UTINYINT"
+    },
+    {
+      "name": "Balance<gx:number>",
+      "type": "UTINYINT"
+    },
+    {
+      "name": "ShotPower<gx:number>",
+      "type": "UTINYINT"
+    },
+    {
+      "name": "Jumping<gx:number>",
+      "type": "UTINYINT"
+    },
+    {
+      "name": "Stamina<gx:number>",
+      "type": "UTINYINT"
+    },
+    {
+      "name": "Strength<gx:number>",
+      "type": "UTINYINT"
+    },
+    {
+      "name": "LongShots<gx:number>",
+      "type": "UTINYINT"
+    },
+    {
+      "name": "Aggression<gx:number>",
+      "type": "UTINYINT"
+    },
+    {
+      "name": "Interceptions<gx:number>",
+      "type": "UTINYINT"
+    },
+    {
+      "name": "Positioning<gx:number>",
+      "type": "UTINYINT"
+    },
+    {
+      "name": "Vision<gx:number>",
+      "type": "UTINYINT"
+    },
+    {
+      "name": "Penalties<gx:number>",
+      "type": "UTINYINT"
+    },
+    {
+      "name": "Composure<gx:number>",
+      "type": "UTINYINT"
+    },
+    {
+      "name": "Marking<gx:number>",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "StandingTackle<gx:number>",
+      "type": "UTINYINT"
+    },
+    {
+      "name": "SlidingTackle<gx:number>",
+      "type": "UTINYINT"
+    },
+    {
+      "name": "GKDiving<gx:number>",
+      "type": "UTINYINT"
+    },
+    {
+      "name": "GKHandling<gx:number>",
+      "type": "UTINYINT"
+    },
+    {
+      "name": "GKKicking<gx:number>",
+      "type": "UTINYINT"
+    },
+    {
+      "name": "GKPositioning<gx:number>",
+      "type": "UTINYINT"
+    },
+    {
+      "name": "GKReflexes<gx:number>",
+      "type": "UTINYINT"
+    },
+    {
+      "name": "Best Position<gx:category>",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "Best Overall Rating<gx:number>",
+      "type": "UTINYINT"
+    },
+    {
+      "name": "DefensiveAwareness<gx:number>",
+      "type": "UTINYINT"
+    },
+    {
+      "name": "General Postion<gx:category>",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "Legend",
+      "type": "BOOLEAN"
+    }
+  ],
+  "dataset": "007_Fifa",
+  "qa_count": 20,
+  "qa_types": {
+    "boolean": 4,
+    "category": 4,
+    "list[category]": 4,
+    "list[number]": 4,
+    "number": 4
+  },
+  "rows": 14620,
+  "sample_rows": 20,
+  "sha256_all": "6deaf1d44333a862bf589514fceb134cd64e80cfb6a2e906782c74ec418378ec",
+  "sha256_qa": "7c808fe845fc112f40b1494bce035aa2a635adce3b8ebd156e21de81d846bc30"
+}

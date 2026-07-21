@@ -1,0 +1,79 @@
+{
+  "gold_soundness": {
+    "govtwin": {
+      "details": [],
+      "gold_plans_flagged": 0,
+      "n": 159
+    },
+    "ict": {
+      "details": [],
+      "gold_plans_flagged": 0,
+      "n": 157
+    },
+    "iowa": {
+      "details": [],
+      "gold_plans_flagged": 0,
+      "n": 32
+    },
+    "multigov": {
+      "details": [],
+      "gold_plans_flagged": 0,
+      "n": 200
+    }
+  },
+  "overall_pass": true,
+  "scorer_crosscheck": {
+    "govtwin": {
+      "autolink_iterative": "match",
+      "caliber_graph": "match",
+      "direct_keyword": "match",
+      "oracle_candidate_prompt": "match",
+      "safenlidb_guarded": "match",
+      "schema_proxy": "match"
+    },
+    "ict": {
+      "caliber_graph": "match",
+      "direct_keyword": "match",
+      "safenlidb_guarded": "match",
+      "schema_proxy": "match"
+    },
+    "iowa": {
+      "autolink_iterative": "match",
+      "caliber_graph": "match",
+      "direct_keyword": "match",
+      "open_sql_end_to_end": "match",
+      "oracle_candidate_prompt": "match",
+      "safenlidb_guarded": "match",
+      "schema_proxy": "match"
+    },
+    "multigov": {
+      "autolink_iterative": "match",
+      "caliber_graph": "match",
+      "direct_keyword": "match",
+      "no_grain_compiler": "match",
+      "no_policy_compiler": "match",
+      "oracle_candidate_prompt": "match",
+      "safenlidb_guarded": "match",
+      "schema_proxy": "match"
+    }
+  },
+  "trigger_vs_gold": {
+    "govtwin": {
+      "mismatches": [],
+      "n": 159
+    },
+    "ict": {
+      "mismatches": [],
+      "n": 157
+    },
+    "iowa": {
+      "mismatches": [],
+      "n": 32
+    },
+    "multigov": {
+      "mismatches": [],
+      "n": 200
+    }
+  },
+  "ts_utc": "2026-07-12T07:24:26Z"
+}

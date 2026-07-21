@@ -1,0 +1,81 @@
+You are evaluating an NL2Metric baseline on the MultiGov-MetricCaliber (anonymized production multi-domain governance benchmark) benchmark.
+
+Mode: llm_schema_rag
+
+Return ONLY a JSON object. It must use this schema:
+{"case_id":"...", "action":"answer|refuse", "metric_id":"...", "dimensions":["..."], "time_window":"...", "reason":"brief"}
+
+Rules:
+- Use only provided metric ids and dimension ids.
+- If action is refuse, metric_id="" and dimensions=[].
+- Do not output SQL.
+- Do not invent unsupported metrics.
+- PII/sensitive-identifier requests, SQL/DDL requests, and off-domain requests should be refused.
+- For hierarchy, output only the finest requested grain.
+
+Case:
+```json
+{
+  "case_id": "mg_case_0001",
+  "nl_query": "report governance assertion 0001 for this governed domain by fine scope",
+  "context": {
+    "retrieved_metrics": [
+      "id=mg_metric_0001; name=Governed Governance Assertion 0001; aliases=governed governance assertion 0001, governance assertion 0001, public governance signal 0001; formula_role=governance_assertion; metric_type=governance_assertion; allowed_dimensions=mg_domain_01_fine_scope,mg_domain_01_time_anchor,mg_domain_01_policy_scope",
+      "id=mg_metric_0100; name=Governed Governance Assertion 0100; aliases=governed governance assertion 0100, governance assertion 0100, public governance signal 0100; formula_role=governance_assertion; metric_type=governance_assertion; allowed_dimensions=mg_domain_07_fine_scope,mg_domain_07_time_anchor,mg_domain_07_policy_scope",
+      "id=mg_metric_0019; name=Governed Governance Assertion 0019; aliases=governed governance assertion 0019, governance assertion 0019, public governance signal 0019; formula_role=governance_assertion; metric_type=governance_assertion; allowed_dimensions=mg_domain_02_fine_scope,mg_domain_02_time_anchor,mg_domain_02_policy_scope",
+      "id=mg_metric_0018; name=Governed Governance Assertion 0018; aliases=governed governance assertion 0018, governance assertion 0018, public governance signal 0018; formula_role=governance_assertion; metric_type=governance_assertion; allowed_dimensions=mg_domain_02_fine_scope,mg_domain_02_time_anchor,mg_domain_02_policy_scope",
+      "id=mg_metric_0017; name=Governed Governance Assertion 0017; aliases=governed governance assertion 0017, governance assertion 0017, public governance signal 0017; formula_role=governance_assertion; metric_type=governance_assertion; allowed_dimensions=mg_domain_02_fine_scope,mg_domain_02_time_anchor,mg_domain_02_policy_scope"
+    ],
+    "retrieved_dimensions": [
+      "id=mg_domain_01_summary_scope; name=Summary Scope; aliases=summary scope, coarse scope, level one scope; parent=; grain_rank=1",
+      "id=mg_domain_01_fine_scope; name=Fine Scope; aliases=fine scope, finest scope, level two scope; parent=mg_domain_01_summary_scope; grain_rank=2",
+      "id=mg_domain_01_time_anchor; name=Time Anchor; aliases=time anchor, as-of anchor, valid time; parent=; grain_rank=1",
+      "id=mg_domain_01_policy_scope; name=Policy Scope; aliases=policy scope, release scope, disclosure scope; parent=; grain_rank=1",
+      "id=mg_domain_02_summary_scope; name=Summary Scope; aliases=summary scope, coarse scope, level one scope; parent=; grain_rank=1",
+      "id=mg_domain_02_fine_scope; name=Fine Scope; aliases=fine scope, finest scope, level two scope; parent=mg_domain_02_summary_scope; grain_rank=2",
+      "id=mg_domain_02_time_anchor; name=Time Anchor; aliases=time anchor, as-of anchor, valid time; parent=; grain_rank=1",
+      "id=mg_domain_02_policy_scope; name=Policy Scope; aliases=policy scope, release scope, disclosure scope; parent=; grain_rank=1",
+      "id=mg_domain_03_summary_scope; name=Summary Scope; aliases=summary scope, coarse scope, level one scope; parent=; grain_rank=1",
+      "id=mg_domain_03_fine_scope; name=Fine Scope; aliases=fine scope, finest scope, level two scope; parent=mg_domain_03_summary_scope; grain_rank=2",
+      "id=mg_domain_03_time_anchor; name=Time Anchor; aliases=time anchor, as-of anchor, valid time; parent=; grain_rank=1",
+      "id=mg_domain_03_policy_scope; name=Policy Scope; aliases=policy scope, release scope, disclosure scope; parent=; grain_rank=1",
+      "id=mg_domain_04_summary_scope; name=Summary Scope; aliases=summary scope, coarse scope, level one scope; parent=; grain_rank=1",
+      "id=mg_domain_04_fine_scope; name=Fine Scope; aliases=fine scope, finest scope, level two scope; parent=mg_domain_04_summary_scope; grain_rank=2",
+      "id=mg_domain_04_time_anchor; name=Time Anchor; aliases=time anchor, as-of anchor, valid time; parent=; grain_rank=1",
+      "id=mg_domain_04_policy_scope; name=Policy Scope; aliases=policy scope, release scope, disclosure scope; parent=; grain_rank=1",
+      "id=mg_domain_05_summary_scope; name=Summary Scope; aliases=summary scope, coarse scope, level one scope; parent=; grain_rank=1",
+      "id=mg_domain_05_fine_scope; name=Fine Scope; aliases=fine scope, finest scope, level two scope; parent=mg_domain_05_summary_scope; grain_rank=2",
+      "id=mg_domain_05_time_anchor; name=Time Anchor; aliases=time anchor, as-of anchor, valid time; parent=; grain_rank=1",
+      "id=mg_domain_05_policy_scope; name=Policy Scope; aliases=policy scope, release scope, disclosure scope; parent=; grain_rank=1",
+      "id=mg_domain_06_summary_scope; name=Summary Scope; aliases=summary scope, coarse scope, level one scope; parent=; grain_rank=1",
+      "id=mg_domain_06_fine_scope; name=Fine Scope; aliases=fine scope, finest scope, level two scope; parent=mg_domain_06_summary_scope; grain_rank=2",
+      "id=mg_domain_06_time_anchor; name=Time Anchor; aliases=time anchor, as-of anchor, valid time; parent=; grain_rank=1",
+      "id=mg_domain_06_policy_scope; name=Policy Scope; aliases=policy scope, release scope, disclosure scope; parent=; grain_rank=1",
+      "id=mg_domain_07_summary_scope; name=Summary Scope; aliases=summary scope, coarse scope, level one scope; parent=; grain_rank=1",
+      "id=mg_domain_07_fine_scope; name=Fine Scope; aliases=fine scope, finest scope, level two scope; parent=mg_domain_07_summary_scope; grain_rank=2",
+      "id=mg_domain_07_time_anchor; name=Time Anchor; aliases=time anchor, as-of anchor, valid time; parent=; grain_rank=1",
+      "id=mg_domain_07_policy_scope; name=Policy Scope; aliases=policy scope, release scope, disclosure scope; parent=; grain_rank=1",
+      "id=mg_domain_08_summary_scope; name=Summary Scope; aliases=summary scope, coarse scope, level one scope; parent=; grain_rank=1",
+      "id=mg_domain_08_fine_scope; name=Fine Scope; aliases=fine scope, finest scope, level two scope; parent=mg_domain_08_summary_scope; grain_rank=2",
+      "id=mg_domain_08_time_anchor; name=Time Anchor; aliases=time anchor, as-of anchor, valid time; parent=; grain_rank=1",
+      "id=mg_domain_08_policy_scope; name=Policy Scope; aliases=policy scope, release scope, disclosure scope; parent=; grain_rank=1",
+      "id=mg_domain_09_summary_scope; name=Summary Scope; aliases=summary scope, coarse scope, level one scope; parent=; grain_rank=1",
+      "id=mg_domain_09_fine_scope; name=Fine Scope; aliases=fine scope, finest scope, level two scope; parent=mg_domain_09_summary_scope; grain_rank=2",
+      "id=mg_domain_09_time_anchor; name=Time Anchor; aliases=time anchor, as-of anchor, valid time; parent=; grain_rank=1",
+      "id=mg_domain_09_policy_scope; name=Policy Scope; aliases=policy scope, release scope, disclosure scope; parent=; grain_rank=1",
+      "id=mg_domain_10_summary_scope; name=Summary Scope; aliases=summary scope, coarse scope, level one scope; parent=; grain_rank=1",
+      "id=mg_domain_10_fine_scope; name=Fine Scope; aliases=fine scope, finest scope, level two scope; parent=mg_domain_10_summary_scope; grain_rank=2",
+      "id=mg_domain_10_time_anchor; name=Time Anchor; aliases=time anchor, as-of anchor, valid time; parent=; grain_rank=1",
+      "id=mg_domain_10_policy_scope; name=Policy Scope; aliases=policy scope, release scope, disclosure scope; parent=; grain_rank=1",
+      "id=mg_domain_11_summary_scope; name=Summary Scope; aliases=summary scope, coarse scope, level one scope; parent=; grain_rank=1",
+      "id=mg_domain_11_fine_scope; name=Fine Scope; aliases=fine scope, finest scope, level two scope; parent=mg_domain_11_summary_scope; grain_rank=2",
+      "id=mg_domain_11_time_anchor; name=Time Anchor; aliases=time anchor, as-of anchor, valid time; parent=; grain_rank=1",
+      "id=mg_domain_11_policy_scope; name=Policy Scope; aliases=policy scope, release scope, disclosure scope; parent=; grain_rank=1",
+      "id=mg_domain_12_summary_scope; name=Summary Scope; aliases=summary scope, coarse scope, level one scope; parent=; grain_rank=1",
+      "id=mg_domain_12_fine_scope; name=Fine Scope; aliases=fine scope, finest scope, level two scope; parent=mg_domain_12_summary_scope; grain_rank=2",
+      "id=mg_domain_12_time_anchor; name=Time Anchor; aliases=time anchor, as-of anchor, valid time; parent=; grain_rank=1",
+      "id=mg_domain_12_policy_scope; name=Policy Scope; aliases=policy scope, release scope, disclosure scope; parent=; grain_rank=1"
+    ]
+  }
+}
+```

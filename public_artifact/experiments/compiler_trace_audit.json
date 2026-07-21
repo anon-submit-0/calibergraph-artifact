@@ -1,0 +1,176 @@
+{
+  "constraint_families": [
+    "field",
+    "caliber",
+    "grain",
+    "coverage",
+    "time",
+    "policy"
+  ],
+  "datasets": {
+    "GovTwin": {
+      "families": {
+        "caliber": {
+          "active": 159,
+          "failed": 0,
+          "inactive": 0,
+          "passed": 159
+        },
+        "coverage": {
+          "active": 0,
+          "failed": 0,
+          "inactive": 159,
+          "passed": 0
+        },
+        "field": {
+          "active": 159,
+          "failed": 0,
+          "inactive": 0,
+          "passed": 159
+        },
+        "grain": {
+          "active": 159,
+          "failed": 0,
+          "inactive": 0,
+          "passed": 159
+        },
+        "policy": {
+          "active": 159,
+          "failed": 9,
+          "inactive": 0,
+          "passed": 150
+        },
+        "time": {
+          "active": 0,
+          "failed": 0,
+          "inactive": 159,
+          "passed": 0
+        }
+      },
+      "n": 159
+    },
+    "IndustrialCaseText": {
+      "families": {
+        "caliber": {
+          "active": 157,
+          "failed": 0,
+          "inactive": 0,
+          "passed": 157
+        },
+        "coverage": {
+          "active": 0,
+          "failed": 0,
+          "inactive": 157,
+          "passed": 0
+        },
+        "field": {
+          "active": 157,
+          "failed": 2,
+          "inactive": 0,
+          "passed": 155
+        },
+        "grain": {
+          "active": 157,
+          "failed": 0,
+          "inactive": 0,
+          "passed": 157
+        },
+        "policy": {
+          "active": 157,
+          "failed": 8,
+          "inactive": 0,
+          "passed": 149
+        },
+        "time": {
+          "active": 0,
+          "failed": 0,
+          "inactive": 157,
+          "passed": 0
+        }
+      },
+      "n": 157
+    },
+    "IowaLiquor": {
+      "families": {
+        "caliber": {
+          "active": 32,
+          "failed": 0,
+          "inactive": 0,
+          "passed": 32
+        },
+        "coverage": {
+          "active": 32,
+          "failed": 0,
+          "inactive": 0,
+          "passed": 32
+        },
+        "field": {
+          "active": 32,
+          "failed": 0,
+          "inactive": 0,
+          "passed": 32
+        },
+        "grain": {
+          "active": 32,
+          "failed": 0,
+          "inactive": 0,
+          "passed": 32
+        },
+        "policy": {
+          "active": 32,
+          "failed": 7,
+          "inactive": 0,
+          "passed": 25
+        },
+        "time": {
+          "active": 32,
+          "failed": 0,
+          "inactive": 0,
+          "passed": 32
+        }
+      },
+      "n": 32
+    },
+    "MultiGov": {
+      "families": {
+        "caliber": {
+          "active": 510,
+          "failed": 0,
+          "inactive": 0,
+          "passed": 510
+        },
+        "coverage": {
+          "active": 426,
+          "failed": 0,
+          "inactive": 84,
+          "passed": 426
+        },
+        "field": {
+          "active": 510,
+          "failed": 0,
+          "inactive": 0,
+          "passed": 510
+        },
+        "grain": {
+          "active": 510,
+          "failed": 0,
+          "inactive": 0,
+          "passed": 510
+        },
+        "policy": {
+          "active": 510,
+          "failed": 184,
+          "inactive": 0,
+          "passed": 326
+        },
+        "time": {
+          "active": 57,
+          "failed": 19,
+          "inactive": 453,
+          "passed": 38
+        }
+      },
+      "n": 510
+    }
+  }
+}

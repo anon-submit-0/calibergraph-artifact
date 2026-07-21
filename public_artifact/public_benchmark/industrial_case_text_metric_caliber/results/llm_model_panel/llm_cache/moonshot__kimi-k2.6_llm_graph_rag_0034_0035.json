@@ -1,0 +1,6 @@
+{
+  "channel": "moonshot",
+  "model": "kimi-k2.6",
+  "mode": "llm_graph_rag",
+  "stdout": "[\n  {\"case_id\":\"ict_case_0028\",\"action\":\"answer\",\"metric_id\":\"ict_metric_008\",\"dimensions\":[],\"reason\":\"Flat metric mapped to Reshipment Share\"},\n  {\"case_id\":\"ict_case_0029\",\"action\":\"answer\",\"metric_id\":\"ict_metric_012\",\"dimensions\":[\"segment_l2\"],\"reason\":\"Finest requested hierarchy grain is segment_l2 per policy\"}\n]"
+}

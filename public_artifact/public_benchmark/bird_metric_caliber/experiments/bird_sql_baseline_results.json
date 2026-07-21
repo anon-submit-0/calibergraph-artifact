@@ -1,0 +1,38 @@
+{
+  "bird_gpt35_sql": {
+    "n": 206,
+    "parse_rate": 0.9320388349514563,
+    "agg_func_accuracy": 0.6262135922330098,
+    "measure_column_accuracy": 0.06310679611650485,
+    "dimension_exact_accuracy": 0.8689320388349514,
+    "table_recall_exact": 0.7087378640776699,
+    "joint_caliber_accuracy": 0.04854368932038835
+  },
+  "bird_gpt4_turbo_sql": {
+    "n": 206,
+    "parse_rate": 1.0,
+    "agg_func_accuracy": 0.6941747572815534,
+    "measure_column_accuracy": 0.0825242718446602,
+    "dimension_exact_accuracy": 0.9029126213592233,
+    "table_recall_exact": 0.8300970873786407,
+    "joint_caliber_accuracy": 0.07766990291262135
+  },
+  "bird_gpt4o_sql": {
+    "n": 206,
+    "parse_rate": 0.9951456310679612,
+    "agg_func_accuracy": 0.6407766990291263,
+    "measure_column_accuracy": 0.07281553398058252,
+    "dimension_exact_accuracy": 0.912621359223301,
+    "table_recall_exact": 0.8300970873786407,
+    "joint_caliber_accuracy": 0.05339805825242718
+  },
+  "bird_llama3_70b_sql": {
+    "n": 206,
+    "parse_rate": 0.9902912621359223,
+    "agg_func_accuracy": 0.6359223300970874,
+    "measure_column_accuracy": 0.06796116504854369,
+    "dimension_exact_accuracy": 0.9029126213592233,
+    "table_recall_exact": 0.8252427184466019,
+    "joint_caliber_accuracy": 0.043689320388349516
+  }
+}

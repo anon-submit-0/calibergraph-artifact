@@ -1,0 +1,177 @@
+{
+  "blind_protocol": {
+    "gold_fields_read_at_prediction_time": [],
+    "prediction_input": "blind_cases.jsonl",
+    "scoring_input": "gold_labels.jsonl"
+  },
+  "input_sha256": {
+    "govtwin/blind_cases.jsonl": "06a9802e451142be846a4158f5b289eb22b9279b315628790517879908c1f394",
+    "govtwin/dimension_catalog.jsonl": "9defe52af986c1dc20f20bac1fdcc15e638c2a8b45d8a67e2131fb0ceadf05c4",
+    "govtwin/gold_labels.jsonl": "b40751be0615ba72f13ef922585f5af9b0960a650db990d0433c0f4c49951eba",
+    "govtwin/metric_catalog.jsonl": "d3fa633ff8ec87abd70ecc030f52edc54dea10b99fcd8fbbffa4a8ac4b2b3be3",
+    "iowa/blind_cases.jsonl": "10e3d39696d01b0808840a97cdfb330fe8641fa9e012ed975882145911fe9088",
+    "iowa/dimension_catalog.jsonl": "9abd5443ac7051907908d8904fb0d2bc852454f6db145f19b6d087f84bfe4626",
+    "iowa/gold_labels.jsonl": "e91aa3fa9ac4801f019f7579be29064954854567788df43db2154ba884ef4001",
+    "iowa/metric_catalog.jsonl": "011fd0c4698696c3a7b3524eb4a2f98fcf2926e2031b9788ff5a2ec44d781554",
+    "multigov/blind_cases.jsonl": "41d1fdfb4fc5799a0df3ff58d45b009fbdf2276f5005b8606ab3246c97c01345",
+    "multigov/dimension_catalog.jsonl": "6deea320148b6f88b28eace486368df9ad6b4e882be68d59e678333b60c595c5",
+    "multigov/gold_labels.jsonl": "46cc0c4f5b0792d72eae63c485d913a5da691b28ce5e5a3644f400c07c23695b",
+    "multigov/metric_catalog.jsonl": "3881401c18b1a90730e098129f7aea0b28dff4db622de5a73d396ceff703b88f"
+  },
+  "layers": {
+    "govtwin": {
+      "family_breakdown": {
+        "hierarchy": {
+          "dimension_exact_accuracy": 0.0,
+          "dimension_recall_accuracy": 1.0,
+          "joint_metric_dimension_accuracy": 0.0,
+          "metric_accuracy": 1.0,
+          "n": 64,
+          "refusal_fn": 0,
+          "refusal_fp": 0,
+          "refusal_precision": 0.0,
+          "refusal_recall": 0.0,
+          "refusal_tp": 0
+        },
+        "single_or_flat_dimension": {
+          "dimension_exact_accuracy": 1.0,
+          "dimension_recall_accuracy": 1.0,
+          "joint_metric_dimension_accuracy": 1.0,
+          "metric_accuracy": 1.0,
+          "n": 86,
+          "refusal_fn": 0,
+          "refusal_fp": 0,
+          "refusal_precision": 0.0,
+          "refusal_recall": 0.0,
+          "refusal_tp": 0
+        },
+        "synthetic_refusal": {
+          "dimension_exact_accuracy": 1.0,
+          "dimension_recall_accuracy": 1.0,
+          "joint_metric_dimension_accuracy": 1.0,
+          "metric_accuracy": 1.0,
+          "n": 9,
+          "refusal_fn": 0,
+          "refusal_fp": 0,
+          "refusal_precision": 1.0,
+          "refusal_recall": 1.0,
+          "refusal_tp": 9
+        }
+      },
+      "gold_field_leaks_in_predictions": 0,
+      "overall": {
+        "dimension_exact_accuracy": 0.5974842767295597,
+        "dimension_recall_accuracy": 1.0,
+        "joint_metric_dimension_accuracy": 0.5974842767295597,
+        "metric_accuracy": 1.0,
+        "n": 159,
+        "refusal_fn": 0,
+        "refusal_fp": 0,
+        "refusal_precision": 1.0,
+        "refusal_recall": 1.0,
+        "refusal_tp": 9
+      }
+    },
+    "iowa": {
+      "family_breakdown": {},
+      "gold_field_leaks_in_predictions": 0,
+      "overall": {
+        "dimension_exact_accuracy": 0.5625,
+        "dimension_recall_accuracy": 1.0,
+        "joint_metric_dimension_accuracy": 0.5,
+        "metric_accuracy": 0.8125,
+        "n": 32,
+        "refusal_fn": 3,
+        "refusal_fp": 0,
+        "refusal_precision": 1.0,
+        "refusal_recall": 0.5714285714285714,
+        "refusal_tp": 4
+      }
+    },
+    "multigov": {
+      "family_breakdown": {
+        "answerable_direct": {
+          "dimension_exact_accuracy": 0.0,
+          "dimension_recall_accuracy": 1.0,
+          "joint_metric_dimension_accuracy": 0.0,
+          "metric_accuracy": 1.0,
+          "n": 115,
+          "refusal_fn": 0,
+          "refusal_fp": 0,
+          "refusal_precision": 0.0,
+          "refusal_recall": 0.0,
+          "refusal_tp": 0
+        },
+        "denominator_caliber": {
+          "dimension_exact_accuracy": 0.0,
+          "dimension_recall_accuracy": 1.0,
+          "joint_metric_dimension_accuracy": 0.0,
+          "metric_accuracy": 1.0,
+          "n": 29,
+          "refusal_fn": 0,
+          "refusal_fp": 0,
+          "refusal_precision": 0.0,
+          "refusal_recall": 0.0,
+          "refusal_tp": 0
+        },
+        "finest_grain_trap": {
+          "dimension_exact_accuracy": 0.0,
+          "dimension_recall_accuracy": 1.0,
+          "joint_metric_dimension_accuracy": 0.0,
+          "metric_accuracy": 1.0,
+          "n": 163,
+          "refusal_fn": 0,
+          "refusal_fp": 0,
+          "refusal_precision": 0.0,
+          "refusal_recall": 0.0,
+          "refusal_tp": 0
+        },
+        "policy_refusal": {
+          "dimension_exact_accuracy": 0.9456521739130435,
+          "dimension_recall_accuracy": 1.0,
+          "joint_metric_dimension_accuracy": 0.0,
+          "metric_accuracy": 0.0,
+          "n": 184,
+          "refusal_fn": 184,
+          "refusal_fp": 0,
+          "refusal_precision": 0.0,
+          "refusal_recall": 0.0,
+          "refusal_tp": 0
+        },
+        "temporal_anchor": {
+          "dimension_exact_accuracy": 0.0,
+          "dimension_recall_accuracy": 1.0,
+          "joint_metric_dimension_accuracy": 0.0,
+          "metric_accuracy": 1.0,
+          "n": 19,
+          "refusal_fn": 0,
+          "refusal_fp": 0,
+          "refusal_precision": 0.0,
+          "refusal_recall": 0.0,
+          "refusal_tp": 0
+        }
+      },
+      "gold_field_leaks_in_predictions": 0,
+      "overall": {
+        "dimension_exact_accuracy": 0.3411764705882353,
+        "dimension_recall_accuracy": 1.0,
+        "joint_metric_dimension_accuracy": 0.0,
+        "metric_accuracy": 0.6392156862745098,
+        "n": 510,
+        "refusal_fn": 184,
+        "refusal_fp": 0,
+        "refusal_precision": 0.0,
+        "refusal_recall": 0.0,
+        "refusal_tp": 0
+      }
+    }
+  },
+  "llm_calls": 0,
+  "mode": "rapidfuzz_alias_top1",
+  "protocol_sha256": "1e5cddd750ce9b8dcb01b46dae3293f8255faef502cb3d274ba205521a362f04",
+  "python_version": "3.9.6",
+  "rapidfuzz_version": "3.13.0",
+  "scorer": "fuzz.token_set_ratio + utils.default_process",
+  "theta_dim": 85.0,
+  "theta_metric": 60.0
+}

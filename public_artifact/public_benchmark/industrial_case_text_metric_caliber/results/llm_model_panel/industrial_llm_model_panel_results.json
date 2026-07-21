@@ -1,0 +1,220 @@
+{
+  "case_count": 60,
+  "failures": {},
+  "finished_at": "2026-07-11T20:01:29+0800",
+  "gold_field_leaks_in_predictions": 0,
+  "modes": [
+    "llm_graph_rag"
+  ],
+  "policy_models": [
+    {
+      "channel": "gpt-provider",
+      "model": "gpt-5.5",
+      "role": "frontier_gpt"
+    },
+    {
+      "channel": "relay",
+      "model": "claude-opus-4-6",
+      "role": "frontier_claude"
+    },
+    {
+      "channel": "gateway",
+      "model": "deepseek-3.2",
+      "role": "gateway_strong"
+    },
+    {
+      "channel": "gateway",
+      "model": "glm-5",
+      "role": "gateway_strong"
+    },
+    {
+      "channel": "gateway",
+      "model": "minimax-m2.5",
+      "role": "gateway_strong"
+    },
+    {
+      "channel": "gateway",
+      "model": "qwen3-coder-next",
+      "role": "gateway_code_reasoning"
+    },
+    {
+      "channel": "gemini-vertex",
+      "model": "gemini-2.5-pro",
+      "role": "frontier_gemini"
+    },
+    {
+      "channel": "gemini-vertex",
+      "model": "gemini-2.5-flash",
+      "role": "efficient_gemini"
+    },
+    {
+      "channel": "moonshot",
+      "model": "kimi-k2.6",
+      "role": "frontier_kimi"
+    },
+    {
+      "channel": "deepseek",
+      "model": "deepseek-v4-pro",
+      "role": "frontier_deepseek"
+    },
+    {
+      "channel": "deepseek",
+      "model": "deepseek-chat",
+      "role": "deepseek_baseline"
+    },
+    {
+      "channel": "deepseek",
+      "model": "deepseek-reasoner",
+      "role": "reasoning_deepseek"
+    }
+  ],
+  "prediction_input": "blind_cases.jsonl",
+  "scoring_input": "gold_labels.jsonl",
+  "started_at": "2026-07-11T19:24:50+0800",
+  "summary": {
+    "deepseek/deepseek-chat/llm_graph_rag": {
+      "action_accuracy": 0.9833333333333333,
+      "channel": "deepseek",
+      "dimension_accuracy_with_refusal": 0.9666666666666667,
+      "full_case_accuracy": 0.9333333333333333,
+      "metric_accuracy_with_refusal": 0.9666666666666667,
+      "mode": "llm_graph_rag",
+      "model": "deepseek-chat",
+      "n": 60,
+      "refusal_precision": 1.0,
+      "refusal_recall": 0.875
+    },
+    "deepseek/deepseek-reasoner/llm_graph_rag": {
+      "action_accuracy": 0.9166666666666666,
+      "channel": "deepseek",
+      "dimension_accuracy_with_refusal": 0.9833333333333333,
+      "full_case_accuracy": 0.9166666666666666,
+      "metric_accuracy_with_refusal": 0.9166666666666666,
+      "mode": "llm_graph_rag",
+      "model": "deepseek-reasoner",
+      "n": 60,
+      "refusal_precision": 0.6363636363636364,
+      "refusal_recall": 0.875
+    },
+    "deepseek/deepseek-v4-pro/llm_graph_rag": {
+      "action_accuracy": 0.9166666666666666,
+      "channel": "deepseek",
+      "dimension_accuracy_with_refusal": 0.9833333333333333,
+      "full_case_accuracy": 0.9166666666666666,
+      "metric_accuracy_with_refusal": 0.9166666666666666,
+      "mode": "llm_graph_rag",
+      "model": "deepseek-v4-pro",
+      "n": 60,
+      "refusal_precision": 0.6153846153846154,
+      "refusal_recall": 1.0
+    },
+    "gateway/deepseek-3.2/llm_graph_rag": {
+      "action_accuracy": 0.9333333333333333,
+      "channel": "gateway",
+      "dimension_accuracy_with_refusal": 0.9833333333333333,
+      "full_case_accuracy": 0.9333333333333333,
+      "metric_accuracy_with_refusal": 0.9333333333333333,
+      "mode": "llm_graph_rag",
+      "model": "deepseek-3.2",
+      "n": 60,
+      "refusal_precision": 0.7,
+      "refusal_recall": 0.875
+    },
+    "gateway/glm-5/llm_graph_rag": {
+      "action_accuracy": 0.9666666666666667,
+      "channel": "gateway",
+      "dimension_accuracy_with_refusal": 0.9833333333333333,
+      "full_case_accuracy": 0.9666666666666667,
+      "metric_accuracy_with_refusal": 0.9666666666666667,
+      "mode": "llm_graph_rag",
+      "model": "glm-5",
+      "n": 60,
+      "refusal_precision": 0.875,
+      "refusal_recall": 0.875
+    },
+    "gateway/minimax-m2.5/llm_graph_rag": {
+      "action_accuracy": 0.95,
+      "channel": "gateway",
+      "dimension_accuracy_with_refusal": 1.0,
+      "full_case_accuracy": 0.9333333333333333,
+      "metric_accuracy_with_refusal": 0.9333333333333333,
+      "mode": "llm_graph_rag",
+      "model": "minimax-m2.5",
+      "n": 60,
+      "refusal_precision": 0.7777777777777778,
+      "refusal_recall": 0.875
+    },
+    "gateway/qwen3-coder-next/llm_graph_rag": {
+      "action_accuracy": 0.9166666666666666,
+      "channel": "gateway",
+      "dimension_accuracy_with_refusal": 0.9833333333333333,
+      "full_case_accuracy": 0.9166666666666666,
+      "metric_accuracy_with_refusal": 0.9166666666666666,
+      "mode": "llm_graph_rag",
+      "model": "qwen3-coder-next",
+      "n": 60,
+      "refusal_precision": 0.6363636363636364,
+      "refusal_recall": 0.875
+    },
+    "gemini-vertex/gemini-2.5-flash/llm_graph_rag": {
+      "action_accuracy": 0.85,
+      "channel": "gemini-vertex",
+      "dimension_accuracy_with_refusal": 0.9833333333333333,
+      "full_case_accuracy": 0.85,
+      "metric_accuracy_with_refusal": 0.85,
+      "mode": "llm_graph_rag",
+      "model": "gemini-2.5-flash",
+      "n": 60,
+      "refusal_precision": 0.4666666666666667,
+      "refusal_recall": 0.875
+    },
+    "gemini-vertex/gemini-2.5-pro/llm_graph_rag": {
+      "action_accuracy": 0.9166666666666666,
+      "channel": "gemini-vertex",
+      "dimension_accuracy_with_refusal": 0.9833333333333333,
+      "full_case_accuracy": 0.9166666666666666,
+      "metric_accuracy_with_refusal": 0.9166666666666666,
+      "mode": "llm_graph_rag",
+      "model": "gemini-2.5-pro",
+      "n": 60,
+      "refusal_precision": 0.6153846153846154,
+      "refusal_recall": 1.0
+    },
+    "moonshot/kimi-k2.6/llm_graph_rag": {
+      "action_accuracy": 0.9666666666666667,
+      "channel": "moonshot",
+      "dimension_accuracy_with_refusal": 1.0,
+      "full_case_accuracy": 0.9666666666666667,
+      "metric_accuracy_with_refusal": 0.9666666666666667,
+      "mode": "llm_graph_rag",
+      "model": "kimi-k2.6",
+      "n": 60,
+      "refusal_precision": 0.875,
+      "refusal_recall": 0.875
+    },
+    "gpt-provider/gpt-5.5/llm_graph_rag": {
+      "action_accuracy": 0.95,
+      "channel": "gpt-provider",
+      "dimension_accuracy_with_refusal": 0.9833333333333333,
+      "full_case_accuracy": 0.95,
+      "metric_accuracy_with_refusal": 0.95,
+      "mode": "llm_graph_rag",
+      "model": "gpt-5.5",
+      "n": 60,
+      "refusal_precision": 0.7777777777777778,
+      "refusal_recall": 0.875
+    },
+    "relay/claude-opus-4-6/llm_graph_rag": {
+      "action_accuracy": 0.9666666666666667,
+      "channel": "relay",
+      "dimension_accuracy_with_refusal": 0.9666666666666667,
+      "full_case_accuracy": 0.95,
+      "metric_accuracy_with_refusal": 0.9666666666666667,
+      "mode": "llm_graph_rag",
+      "model": "claude-opus-4-6",
+      "n": 60,
+      "refusal_precision": 0.875,
+      "refusal_recall": 0.875
+    }
+  }
+}

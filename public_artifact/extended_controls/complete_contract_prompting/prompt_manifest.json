@@ -1,0 +1,81 @@
+{
+  "experiment_id": "complete-contract-instructed-execution",
+  "layers": {
+    "chinook": {
+      "cases_file": "chinook_metric_cases.jsonl",
+      "contract_files": [
+        "chinook_metric_catalog.jsonl",
+        "chinook_dimension_catalog.jsonl"
+      ],
+      "gold_file": null,
+      "system_prompt_bytes": 8340,
+      "system_prompt_chars": 8176,
+      "system_prompt_file": "prompts/chinook_system.txt",
+      "system_prompt_sha256": "e0d1d344cd80e29955a76c9ee543592036a055423c47acabb4462239b3c1cc39"
+    },
+    "govtwin": {
+      "cases_file": "blind_cases.jsonl",
+      "contract_files": [
+        "contract_profile.json",
+        "metric_catalog.jsonl",
+        "dimension_catalog.jsonl",
+        "governance_edges.jsonl",
+        "policy_catalog.jsonl"
+      ],
+      "gold_file": "gold_labels.jsonl",
+      "system_prompt_bytes": 23389,
+      "system_prompt_chars": 23347,
+      "system_prompt_file": "prompts/govtwin_system.txt",
+      "system_prompt_sha256": "06cf91783013e6f2eafd1127d57dcaf76c46967d9540968c89cccc93c2b1c726"
+    },
+    "ict": {
+      "cases_file": "blind_cases.jsonl",
+      "contract_files": [
+        "metric_catalog.jsonl",
+        "dimension_catalog.jsonl",
+        "policy_catalog.jsonl",
+        "LABEL_POLICY.md"
+      ],
+      "gold_file": "gold_labels.jsonl",
+      "system_prompt_bytes": 10449,
+      "system_prompt_chars": 10225,
+      "system_prompt_file": "prompts/ict_system.txt",
+      "system_prompt_sha256": "94f55fb26f44ca84c5173fb5c87c0861e9e4278d0d7ec1070c7b9974852cb900"
+    },
+    "iowa": {
+      "cases_file": "blind_cases.jsonl",
+      "contract_files": [
+        "contract_profile.json",
+        "metric_catalog.jsonl",
+        "dimension_catalog.jsonl",
+        "governance_edges.jsonl",
+        "schema_columns.json"
+      ],
+      "gold_file": "gold_labels.jsonl",
+      "system_prompt_bytes": 15097,
+      "system_prompt_chars": 15095,
+      "system_prompt_file": "prompts/iowa_system.txt",
+      "system_prompt_sha256": "e3a8f54742287f85c853a92c4d086285075cf775d66b278262e5922e8cdf670a"
+    },
+    "multigov": {
+      "cases_file": "blind_cases.jsonl",
+      "contract_files": [
+        "contract_profile.json",
+        "domain_catalog.jsonl",
+        "metric_catalog.jsonl",
+        "dimension_catalog.jsonl",
+        "governance_edges.jsonl",
+        "policy_catalog.jsonl",
+        "metric_coverage_bindings.jsonl",
+        "physical_coverage.jsonl"
+      ],
+      "gold_file": "gold_labels.jsonl",
+      "system_prompt_bytes": 375318,
+      "system_prompt_chars": 375296,
+      "system_prompt_file": "prompts/multigov_system.txt",
+      "system_prompt_sha256": "2ee068724803108443db6c4f754966358fac8548edcbcfbdd5e2b57626b89966"
+    }
+  },
+  "llmhub_channel": "gateway",
+  "model": "deepseek-3.2"
+}

@@ -1,0 +1,73 @@
+{
+  "columns": [
+    {
+      "name": "yr",
+      "type": "USMALLINT"
+    },
+    {
+      "name": "mo",
+      "type": "UTINYINT"
+    },
+    {
+      "name": "dy",
+      "type": "UTINYINT"
+    },
+    {
+      "name": "date",
+      "type": "TIMESTAMP WITH TIME ZONE"
+    },
+    {
+      "name": "st",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "mag",
+      "type": "TINYINT"
+    },
+    {
+      "name": "inj",
+      "type": "USMALLINT"
+    },
+    {
+      "name": "fat",
+      "type": "UTINYINT"
+    },
+    {
+      "name": "slat",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "slon",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "elat",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "elon",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "len",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "wid",
+      "type": "USMALLINT"
+    }
+  ],
+  "dataset": "008_Tornados",
+  "qa_count": 20,
+  "qa_types": {
+    "boolean": 4,
+    "category": 4,
+    "list[category]": 4,
+    "list[number]": 4,
+    "number": 4
+  },
+  "rows": 67558,
+  "sample_rows": 20,
+  "sha256_all": "468ff32e2d1be19109d5a014490fe2012a24059313ef2380b928b80c62f16056",
+  "sha256_qa": "6246ecf646b3c850938fcd54713ddc777a26e0d51254d63bcb7f531cf8fb190c"
+}

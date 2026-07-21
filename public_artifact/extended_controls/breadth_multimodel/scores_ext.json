@@ -1,0 +1,814 @@
+{
+  "_meta": {
+    "max_tokens": 4000,
+    "protocol": "protocol_ext.md",
+    "subsample_sha256": "010e0b168b0bc10536b647638deeedee400b6655f82ea1d0c16abb1585842097",
+    "temperature": 0,
+    "ts_utc": "2026-07-12T05:54:16Z"
+  },
+  "chinook": {
+    "claude-opus-4-6": {
+      "conformance": {
+        "dimension_not_allowed": 0,
+        "dimension_not_allowed_rate": 0.0,
+        "dimension_not_in_catalog": 0,
+        "dimension_not_in_catalog_rate": 0.0,
+        "finest_grain_violation": 0,
+        "finest_grain_violation_rate": 0.0,
+        "metric_not_in_catalog": 0,
+        "metric_not_in_catalog_rate": 0.0,
+        "n_answer_predictions": 33
+      },
+      "counts": {
+        "dim_ok": 38,
+        "joint_ok": 37,
+        "metric_ok": 39,
+        "refusal_fn": 0,
+        "refusal_fp": 1,
+        "refusal_tp": 6
+      },
+      "dimension_exact_accuracy": 0.95,
+      "false_refusal_share_of_errors": 0.3333333333333333,
+      "false_refusals_by_family": {
+        "n/a": 1
+      },
+      "joint_metric_dimension_accuracy": 0.925,
+      "joint_wilson95": [
+        0.8013576647568946,
+        0.9741639742254119
+      ],
+      "latency_ms_mean": 4487.025,
+      "metric_accuracy": 0.975,
+      "n": 40,
+      "n_errors_vs_calibergraph": 3,
+      "n_false_refusal_errors": 1,
+      "n_total_errors": 3,
+      "parse_status_counts": {
+        "ok": 40
+      },
+      "refusal_precision": 0.8571428571428571,
+      "refusal_recall": 1.0,
+      "total_completion_tokens": 2248,
+      "total_prompt_tokens": 105133
+    },
+    "deepseek-3.2_reference_same_cases": {
+      "conformance": {
+        "dimension_not_allowed": 0,
+        "dimension_not_allowed_rate": 0.0,
+        "dimension_not_in_catalog": 0,
+        "dimension_not_in_catalog_rate": 0.0,
+        "finest_grain_violation": 0,
+        "finest_grain_violation_rate": 0.0,
+        "metric_not_in_catalog": 0,
+        "metric_not_in_catalog_rate": 0.0,
+        "n_answer_predictions": 32
+      },
+      "counts": {
+        "dim_ok": 38,
+        "joint_ok": 37,
+        "metric_ok": 38,
+        "refusal_fn": 0,
+        "refusal_fp": 2,
+        "refusal_tp": 6
+      },
+      "dimension_exact_accuracy": 0.95,
+      "false_refusal_share_of_errors": 0.6666666666666666,
+      "false_refusals_by_family": {
+        "n/a": 2
+      },
+      "joint_metric_dimension_accuracy": 0.925,
+      "joint_wilson95": [
+        0.8013576647568946,
+        0.9741639742254119
+      ],
+      "metric_accuracy": 0.95,
+      "n": 40,
+      "n_false_refusal_errors": 2,
+      "n_total_errors": 3,
+      "refusal_precision": 0.75,
+      "refusal_recall": 1.0
+    },
+    "gpt-5.5": {
+      "conformance": {
+        "dimension_not_allowed": 0,
+        "dimension_not_allowed_rate": 0.0,
+        "dimension_not_in_catalog": 0,
+        "dimension_not_in_catalog_rate": 0.0,
+        "finest_grain_violation": 0,
+        "finest_grain_violation_rate": 0.0,
+        "metric_not_in_catalog": 0,
+        "metric_not_in_catalog_rate": 0.0,
+        "n_answer_predictions": 33
+      },
+      "counts": {
+        "dim_ok": 38,
+        "joint_ok": 37,
+        "metric_ok": 39,
+        "refusal_fn": 0,
+        "refusal_fp": 1,
+        "refusal_tp": 6
+      },
+      "dimension_exact_accuracy": 0.95,
+      "false_refusal_share_of_errors": 0.3333333333333333,
+      "false_refusals_by_family": {
+        "n/a": 1
+      },
+      "joint_metric_dimension_accuracy": 0.925,
+      "joint_wilson95": [
+        0.8013576647568946,
+        0.9741639742254119
+      ],
+      "latency_ms_mean": 4525.2,
+      "metric_accuracy": 0.975,
+      "n": 40,
+      "n_errors_vs_calibergraph": 3,
+      "n_false_refusal_errors": 1,
+      "n_total_errors": 3,
+      "parse_status_counts": {
+        "ok": 40
+      },
+      "refusal_precision": 0.8571428571428571,
+      "refusal_recall": 1.0,
+      "total_completion_tokens": 3856,
+      "total_prompt_tokens": 85176
+    }
+  },
+  "govtwin": {
+    "claude-opus-4-6": {
+      "conformance": {
+        "dimension_not_allowed": 0,
+        "dimension_not_allowed_rate": 0.0,
+        "dimension_not_in_catalog": 0,
+        "dimension_not_in_catalog_rate": 0.0,
+        "finest_grain_violation": 7,
+        "finest_grain_violation_rate": 0.0440251572327044,
+        "metric_not_in_catalog": 9,
+        "metric_not_in_catalog_rate": 0.05660377358490566,
+        "n_answer_predictions": 159
+      },
+      "counts": {
+        "dim_ok": 152,
+        "joint_ok": 143,
+        "metric_ok": 150,
+        "refusal_fn": 9,
+        "refusal_fp": 0,
+        "refusal_tp": 0
+      },
+      "dimension_exact_accuracy": 0.9559748427672956,
+      "false_refusal_share_of_errors": 0.0,
+      "false_refusals_by_family": {},
+      "joint_metric_dimension_accuracy": 0.89937106918239,
+      "joint_wilson95": [
+        0.8427933347715684,
+        0.9371063352494464
+      ],
+      "latency_ms_mean": 5217.685534591195,
+      "metric_accuracy": 0.9433962264150944,
+      "n": 159,
+      "n_errors_vs_calibergraph": 16,
+      "n_false_refusal_errors": 0,
+      "n_total_errors": 16,
+      "parse_status_counts": {
+        "ok": 150,
+        "parse_error": 9
+      },
+      "refusal_precision": 0.0,
+      "refusal_recall": 0.0,
+      "total_completion_tokens": 10621,
+      "total_prompt_tokens": 1356550
+    },
+    "deepseek-3.2_reference_same_cases": {
+      "conformance": {
+        "dimension_not_allowed": 0,
+        "dimension_not_allowed_rate": 0.0,
+        "dimension_not_in_catalog": 0,
+        "dimension_not_in_catalog_rate": 0.0,
+        "finest_grain_violation": 31,
+        "finest_grain_violation_rate": 0.22302158273381295,
+        "metric_not_in_catalog": 0,
+        "metric_not_in_catalog_rate": 0.0,
+        "n_answer_predictions": 139
+      },
+      "counts": {
+        "dim_ok": 119,
+        "joint_ok": 117,
+        "metric_ok": 148,
+        "refusal_fn": 0,
+        "refusal_fp": 11,
+        "refusal_tp": 9
+      },
+      "dimension_exact_accuracy": 0.7484276729559748,
+      "false_refusal_share_of_errors": 0.2619047619047619,
+      "false_refusals_by_family": {
+        "hierarchy": 9,
+        "single_or_flat_dimension": 2
+      },
+      "joint_metric_dimension_accuracy": 0.7358490566037735,
+      "joint_wilson95": [
+        0.6623419704318209,
+        0.798228700840432
+      ],
+      "metric_accuracy": 0.9308176100628931,
+      "n": 159,
+      "n_false_refusal_errors": 11,
+      "n_total_errors": 42,
+      "refusal_precision": 0.45,
+      "refusal_recall": 1.0
+    },
+    "gpt-5.5": {
+      "conformance": {
+        "dimension_not_allowed": 0,
+        "dimension_not_allowed_rate": 0.0,
+        "dimension_not_in_catalog": 0,
+        "dimension_not_in_catalog_rate": 0.0,
+        "finest_grain_violation": 0,
+        "finest_grain_violation_rate": 0.0,
+        "metric_not_in_catalog": 1,
+        "metric_not_in_catalog_rate": 0.006666666666666667,
+        "n_answer_predictions": 150
+      },
+      "counts": {
+        "dim_ok": 159,
+        "joint_ok": 158,
+        "metric_ok": 158,
+        "refusal_fn": 0,
+        "refusal_fp": 0,
+        "refusal_tp": 9
+      },
+      "dimension_exact_accuracy": 1.0,
+      "false_refusal_share_of_errors": 0.0,
+      "false_refusals_by_family": {},
+      "joint_metric_dimension_accuracy": 0.9937106918238994,
+      "joint_wilson95": [
+        0.965239019933237,
+        0.9988889185966789
+      ],
+      "latency_ms_mean": 9382.283018867925,
+      "metric_accuracy": 0.9937106918238994,
+      "n": 159,
+      "n_errors_vs_calibergraph": 1,
+      "n_false_refusal_errors": 0,
+      "n_total_errors": 1,
+      "parse_status_counts": {
+        "ok": 158,
+        "parse_error": 1
+      },
+      "refusal_precision": 1.0,
+      "refusal_recall": 1.0,
+      "total_completion_tokens": 7867,
+      "total_prompt_tokens": 972553
+    }
+  },
+  "ict": {
+    "claude-opus-4-6": {
+      "conformance": {
+        "dimension_not_allowed": null,
+        "dimension_not_allowed_rate": null,
+        "dimension_not_in_catalog": 0,
+        "dimension_not_in_catalog_rate": 0.0,
+        "finest_grain_violation": 0,
+        "finest_grain_violation_rate": 0.0,
+        "metric_not_in_catalog": 0,
+        "metric_not_in_catalog_rate": 0.0,
+        "n_answer_predictions": 134
+      },
+      "counts": {
+        "dim_ok": 133,
+        "joint_ok": 120,
+        "metric_ok": 142,
+        "refusal_fn": 0,
+        "refusal_fp": 15,
+        "refusal_tp": 8
+      },
+      "dimension_exact_accuracy": 0.8471337579617835,
+      "false_refusal_share_of_errors": 0.40540540540540543,
+      "false_refusals_by_family": {
+        "flat_metric": 13,
+        "single_dimension": 2
+      },
+      "joint_metric_dimension_accuracy": 0.7643312101910829,
+      "joint_wilson95": [
+        0.6921244319364905,
+        0.823911673484117
+      ],
+      "latency_ms_mean": 4708.764331210191,
+      "metric_accuracy": 0.9044585987261147,
+      "n": 157,
+      "n_errors_vs_calibergraph": 37,
+      "n_false_refusal_errors": 15,
+      "n_total_errors": 37,
+      "parse_status_counts": {
+        "ok": 157
+      },
+      "refusal_precision": 0.34782608695652173,
+      "refusal_recall": 1.0,
+      "total_completion_tokens": 11865,
+      "total_prompt_tokens": 510265
+    },
+    "deepseek-3.2_reference_same_153_cases": {
+      "conformance": {
+        "dimension_not_allowed": null,
+        "dimension_not_allowed_rate": null,
+        "dimension_not_in_catalog": 0,
+        "dimension_not_in_catalog_rate": 0.0,
+        "finest_grain_violation": 0,
+        "finest_grain_violation_rate": 0.0,
+        "metric_not_in_catalog": 0,
+        "metric_not_in_catalog_rate": 0.0,
+        "n_answer_predictions": 139
+      },
+      "counts": {
+        "dim_ok": 132,
+        "joint_ok": 125,
+        "metric_ok": 144,
+        "refusal_fn": 1,
+        "refusal_fp": 7,
+        "refusal_tp": 7
+      },
+      "dimension_exact_accuracy": 0.8627450980392157,
+      "false_refusal_share_of_errors": 0.25,
+      "false_refusals_by_family": {
+        "flat_metric": 5,
+        "ranking_topk": 1,
+        "single_dimension": 1
+      },
+      "joint_metric_dimension_accuracy": 0.8169934640522876,
+      "joint_wilson95": [
+        0.7482188251416456,
+        0.8702400997456402
+      ],
+      "metric_accuracy": 0.9411764705882353,
+      "n": 153,
+      "n_false_refusal_errors": 7,
+      "n_total_errors": 28,
+      "refusal_precision": 0.5,
+      "refusal_recall": 0.875
+    },
+    "deepseek-3.2_reference_same_cases": {
+      "conformance": {
+        "dimension_not_allowed": null,
+        "dimension_not_allowed_rate": null,
+        "dimension_not_in_catalog": 0,
+        "dimension_not_in_catalog_rate": 0.0,
+        "finest_grain_violation": 0,
+        "finest_grain_violation_rate": 0.0,
+        "metric_not_in_catalog": 0,
+        "metric_not_in_catalog_rate": 0.0,
+        "n_answer_predictions": 143
+      },
+      "counts": {
+        "dim_ok": 136,
+        "joint_ok": 129,
+        "metric_ok": 148,
+        "refusal_fn": 1,
+        "refusal_fp": 7,
+        "refusal_tp": 7
+      },
+      "dimension_exact_accuracy": 0.8662420382165605,
+      "false_refusal_share_of_errors": 0.25,
+      "false_refusals_by_family": {
+        "flat_metric": 5,
+        "ranking_topk": 1,
+        "single_dimension": 1
+      },
+      "joint_metric_dimension_accuracy": 0.821656050955414,
+      "joint_wilson95": [
+        0.7543177218856917,
+        0.8736298280839633
+      ],
+      "metric_accuracy": 0.9426751592356688,
+      "n": 157,
+      "n_false_refusal_errors": 7,
+      "n_total_errors": 28,
+      "refusal_precision": 0.5,
+      "refusal_recall": 0.875
+    },
+    "gpt-5.5__completed_subset_n153": {
+      "conformance": {
+        "dimension_not_allowed": null,
+        "dimension_not_allowed_rate": null,
+        "dimension_not_in_catalog": 0,
+        "dimension_not_in_catalog_rate": 0.0,
+        "finest_grain_violation": 0,
+        "finest_grain_violation_rate": 0.0,
+        "metric_not_in_catalog": 0,
+        "metric_not_in_catalog_rate": 0.0,
+        "n_answer_predictions": 130
+      },
+      "counts": {
+        "dim_ok": 148,
+        "joint_ok": 135,
+        "metric_ok": 138,
+        "refusal_fn": 0,
+        "refusal_fp": 15,
+        "refusal_tp": 8
+      },
+      "dimension_exact_accuracy": 0.9673202614379085,
+      "false_refusal_share_of_errors": 0.8333333333333334,
+      "false_refusals_by_family": {
+        "flat_metric": 13,
+        "ranking_topk": 1,
+        "single_dimension": 1
+      },
+      "joint_metric_dimension_accuracy": 0.8823529411764706,
+      "joint_wilson95": [
+        0.8217027670645526,
+        0.9242734619232046
+      ],
+      "latency_ms_mean": 5717.183006535948,
+      "metric_accuracy": 0.9019607843137255,
+      "n": 153,
+      "n_errors_vs_calibergraph": 18,
+      "n_false_refusal_errors": 15,
+      "n_total_errors": 18,
+      "parse_status_counts": {
+        "ok": 153
+      },
+      "refusal_precision": 0.34782608695652173,
+      "refusal_recall": 1.0,
+      "total_completion_tokens": 26133,
+      "total_prompt_tokens": 387141
+    },
+    "gpt-5.5__protocol_literal_full_set": {
+      "_partial_run": {
+        "n_transport_blocked": 4,
+        "note": "cases without a successful raw response were blocked by channel quota (HTTP 403), not model behavior"
+      },
+      "conformance": {
+        "dimension_not_allowed": null,
+        "dimension_not_allowed_rate": null,
+        "dimension_not_in_catalog": 0,
+        "dimension_not_in_catalog_rate": 0.0,
+        "finest_grain_violation": 0,
+        "finest_grain_violation_rate": 0.0,
+        "metric_not_in_catalog": 4,
+        "metric_not_in_catalog_rate": 0.029850746268656716,
+        "n_answer_predictions": 134
+      },
+      "counts": {
+        "dim_ok": 149,
+        "joint_ok": 135,
+        "metric_ok": 138,
+        "refusal_fn": 0,
+        "refusal_fp": 15,
+        "refusal_tp": 8
+      },
+      "dimension_exact_accuracy": 0.9490445859872612,
+      "false_refusal_share_of_errors": 0.6818181818181818,
+      "false_refusals_by_family": {
+        "flat_metric": 13,
+        "ranking_topk": 1,
+        "single_dimension": 1
+      },
+      "joint_metric_dimension_accuracy": 0.8598726114649682,
+      "joint_wilson95": [
+        0.7969485978007499,
+        0.9056065818682698
+      ],
+      "latency_ms_mean": 5717.183006535948,
+      "metric_accuracy": 0.8789808917197452,
+      "n": 157,
+      "n_errors_vs_calibergraph": 22,
+      "n_false_refusal_errors": 15,
+      "n_total_errors": 22,
+      "parse_status_counts": {
+        "api_error": 4,
+        "ok": 153
+      },
+      "refusal_precision": 0.34782608695652173,
+      "refusal_recall": 1.0,
+      "total_completion_tokens": 26133,
+      "total_prompt_tokens": 387141
+    }
+  },
+  "iowa": {
+    "claude-opus-4-6": {
+      "conformance": {
+        "dimension_not_allowed": 0,
+        "dimension_not_allowed_rate": 0.0,
+        "dimension_not_in_catalog": 0,
+        "dimension_not_in_catalog_rate": 0.0,
+        "finest_grain_violation": 1,
+        "finest_grain_violation_rate": 0.04,
+        "metric_not_in_catalog": 0,
+        "metric_not_in_catalog_rate": 0.0,
+        "n_answer_predictions": 25
+      },
+      "counts": {
+        "dim_ok": 30,
+        "joint_ok": 30,
+        "metric_ok": 32,
+        "refusal_fn": 0,
+        "refusal_fp": 0,
+        "refusal_tp": 7
+      },
+      "dimension_exact_accuracy": 0.9375,
+      "false_refusal_share_of_errors": 0.0,
+      "false_refusals_by_family": {},
+      "joint_metric_dimension_accuracy": 0.9375,
+      "joint_wilson95": [
+        0.7985287685584542,
+        0.982689432968359
+      ],
+      "latency_ms_mean": 5092.71875,
+      "metric_accuracy": 1.0,
+      "n": 32,
+      "n_errors_vs_calibergraph": 2,
+      "n_false_refusal_errors": 0,
+      "n_total_errors": 2,
+      "parse_status_counts": {
+        "ok": 32
+      },
+      "refusal_precision": 1.0,
+      "refusal_recall": 1.0,
+      "total_completion_tokens": 1939,
+      "total_prompt_tokens": 138885
+    },
+    "deepseek-3.2_reference_same_cases": {
+      "conformance": {
+        "dimension_not_allowed": 0,
+        "dimension_not_allowed_rate": 0.0,
+        "dimension_not_in_catalog": 0,
+        "dimension_not_in_catalog_rate": 0.0,
+        "finest_grain_violation": 1,
+        "finest_grain_violation_rate": 0.04,
+        "metric_not_in_catalog": 0,
+        "metric_not_in_catalog_rate": 0.0,
+        "n_answer_predictions": 25
+      },
+      "counts": {
+        "dim_ok": 31,
+        "joint_ok": 31,
+        "metric_ok": 32,
+        "refusal_fn": 0,
+        "refusal_fp": 0,
+        "refusal_tp": 7
+      },
+      "dimension_exact_accuracy": 0.96875,
+      "false_refusal_share_of_errors": 0.0,
+      "false_refusals_by_family": {},
+      "joint_metric_dimension_accuracy": 0.96875,
+      "joint_wilson95": [
+        0.8425573617998744,
+        0.9944621398359969
+      ],
+      "metric_accuracy": 1.0,
+      "n": 32,
+      "n_false_refusal_errors": 0,
+      "n_total_errors": 1,
+      "refusal_precision": 1.0,
+      "refusal_recall": 1.0
+    },
+    "gpt-5.5": {
+      "conformance": {
+        "dimension_not_allowed": 0,
+        "dimension_not_allowed_rate": 0.0,
+        "dimension_not_in_catalog": 0,
+        "dimension_not_in_catalog_rate": 0.0,
+        "finest_grain_violation": 0,
+        "finest_grain_violation_rate": 0.0,
+        "metric_not_in_catalog": 0,
+        "metric_not_in_catalog_rate": 0.0,
+        "n_answer_predictions": 25
+      },
+      "counts": {
+        "dim_ok": 32,
+        "joint_ok": 32,
+        "metric_ok": 32,
+        "refusal_fn": 0,
+        "refusal_fp": 0,
+        "refusal_tp": 7
+      },
+      "dimension_exact_accuracy": 1.0,
+      "false_refusal_share_of_errors": null,
+      "false_refusals_by_family": {},
+      "joint_metric_dimension_accuracy": 1.0,
+      "joint_wilson95": [
+        0.8928208017449293,
+        1.0
+      ],
+      "latency_ms_mean": 4915.4375,
+      "metric_accuracy": 1.0,
+      "n": 32,
+      "n_errors_vs_calibergraph": 0,
+      "n_false_refusal_errors": 0,
+      "n_total_errors": 0,
+      "parse_status_counts": {
+        "ok": 32
+      },
+      "refusal_precision": 1.0,
+      "refusal_recall": 1.0,
+      "total_completion_tokens": 3989,
+      "total_prompt_tokens": 118348
+    }
+  },
+  "multigov": {
+    "claude-opus-4-6": {
+      "by_query_family": {
+        "answerable_direct": {
+          "joint_accuracy": 1.0,
+          "joint_ok": 45,
+          "n": 45
+        },
+        "denominator_caliber": {
+          "joint_accuracy": 1.0,
+          "joint_ok": 11,
+          "n": 11
+        },
+        "finest_grain_trap": {
+          "joint_accuracy": 0.96875,
+          "joint_ok": 62,
+          "n": 64
+        },
+        "policy_refusal": {
+          "joint_accuracy": 1.0,
+          "joint_ok": 72,
+          "n": 72
+        },
+        "temporal_anchor": {
+          "joint_accuracy": 1.0,
+          "joint_ok": 8,
+          "n": 8
+        }
+      },
+      "conformance": {
+        "dimension_not_allowed": 0,
+        "dimension_not_allowed_rate": 0.0,
+        "dimension_not_in_catalog": 0,
+        "dimension_not_in_catalog_rate": 0.0,
+        "finest_grain_violation": 0,
+        "finest_grain_violation_rate": 0.0,
+        "metric_not_in_catalog": 0,
+        "metric_not_in_catalog_rate": 0.0,
+        "n_answer_predictions": 126
+      },
+      "counts": {
+        "dim_ok": 198,
+        "joint_ok": 198,
+        "metric_ok": 198,
+        "refusal_fn": 0,
+        "refusal_fp": 2,
+        "refusal_tp": 72
+      },
+      "dimension_exact_accuracy": 0.99,
+      "false_refusal_share_of_errors": 1.0,
+      "false_refusals_by_family": {
+        "finest_grain_trap": 2
+      },
+      "joint_metric_dimension_accuracy": 0.99,
+      "joint_wilson95": [
+        0.9642782382838231,
+        0.9972533418664555
+      ],
+      "latency_ms_mean": 8162.97,
+      "metric_accuracy": 0.99,
+      "n": 200,
+      "n_errors_vs_calibergraph": 2,
+      "n_false_refusal_errors": 2,
+      "n_total_errors": 2,
+      "parse_status_counts": {
+        "ok": 200
+      },
+      "refusal_precision": 0.972972972972973,
+      "refusal_recall": 1.0,
+      "total_completion_tokens": 18758,
+      "total_prompt_tokens": 16606324
+    },
+    "deepseek-3.2_reference_same_cases": {
+      "by_query_family": {
+        "answerable_direct": {
+          "joint_accuracy": 0.9555555555555556,
+          "joint_ok": 43,
+          "n": 45
+        },
+        "denominator_caliber": {
+          "joint_accuracy": 0.9090909090909091,
+          "joint_ok": 10,
+          "n": 11
+        },
+        "finest_grain_trap": {
+          "joint_accuracy": 0.5,
+          "joint_ok": 32,
+          "n": 64
+        },
+        "policy_refusal": {
+          "joint_accuracy": 1.0,
+          "joint_ok": 72,
+          "n": 72
+        },
+        "temporal_anchor": {
+          "joint_accuracy": 0.75,
+          "joint_ok": 6,
+          "n": 8
+        }
+      },
+      "conformance": {
+        "dimension_not_allowed": 0,
+        "dimension_not_allowed_rate": 0.0,
+        "dimension_not_in_catalog": 0,
+        "dimension_not_in_catalog_rate": 0.0,
+        "finest_grain_violation": 0,
+        "finest_grain_violation_rate": 0.0,
+        "metric_not_in_catalog": 1,
+        "metric_not_in_catalog_rate": 0.010752688172043012,
+        "n_answer_predictions": 93
+      },
+      "counts": {
+        "dim_ok": 163,
+        "joint_ok": 163,
+        "metric_ok": 164,
+        "refusal_fn": 0,
+        "refusal_fp": 35,
+        "refusal_tp": 72
+      },
+      "dimension_exact_accuracy": 0.815,
+      "false_refusal_share_of_errors": 0.9459459459459459,
+      "false_refusals_by_family": {
+        "answerable_direct": 1,
+        "denominator_caliber": 1,
+        "finest_grain_trap": 31,
+        "temporal_anchor": 2
+      },
+      "joint_metric_dimension_accuracy": 0.815,
+      "joint_wilson95": [
+        0.7554293723884824,
+        0.8626980719938395
+      ],
+      "metric_accuracy": 0.82,
+      "n": 200,
+      "n_false_refusal_errors": 35,
+      "n_total_errors": 37,
+      "refusal_precision": 0.6728971962616822,
+      "refusal_recall": 1.0
+    },
+    "gpt-5.5": {
+      "by_query_family": {
+        "answerable_direct": {
+          "joint_accuracy": 1.0,
+          "joint_ok": 45,
+          "n": 45
+        },
+        "denominator_caliber": {
+          "joint_accuracy": 1.0,
+          "joint_ok": 11,
+          "n": 11
+        },
+        "finest_grain_trap": {
+          "joint_accuracy": 1.0,
+          "joint_ok": 64,
+          "n": 64
+        },
+        "policy_refusal": {
+          "joint_accuracy": 1.0,
+          "joint_ok": 72,
+          "n": 72
+        },
+        "temporal_anchor": {
+          "joint_accuracy": 1.0,
+          "joint_ok": 8,
+          "n": 8
+        }
+      },
+      "conformance": {
+        "dimension_not_allowed": 0,
+        "dimension_not_allowed_rate": 0.0,
+        "dimension_not_in_catalog": 0,
+        "dimension_not_in_catalog_rate": 0.0,
+        "finest_grain_violation": 0,
+        "finest_grain_violation_rate": 0.0,
+        "metric_not_in_catalog": 0,
+        "metric_not_in_catalog_rate": 0.0,
+        "n_answer_predictions": 128
+      },
+      "counts": {
+        "dim_ok": 200,
+        "joint_ok": 200,
+        "metric_ok": 200,
+        "refusal_fn": 0,
+        "refusal_fp": 0,
+        "refusal_tp": 72
+      },
+      "dimension_exact_accuracy": 1.0,
+      "false_refusal_share_of_errors": null,
+      "false_refusals_by_family": {},
+      "joint_metric_dimension_accuracy": 1.0,
+      "joint_wilson95": [
+        0.9811546736227335,
+        1.0
+      ],
+      "latency_ms_mean": 5962.145,
+      "metric_accuracy": 1.0,
+      "n": 200,
+      "n_errors_vs_calibergraph": 0,
+      "n_false_refusal_errors": 0,
+      "n_total_errors": 0,
+      "parse_status_counts": {
+        "ok": 200
+      },
+      "refusal_precision": 1.0,
+      "refusal_recall": 1.0,
+      "total_completion_tokens": 27473,
+      "total_prompt_tokens": 13799958
+    }
+  }
+}

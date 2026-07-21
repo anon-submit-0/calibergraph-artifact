@@ -1,0 +1,566 @@
+{
+  "all_passed": true,
+  "case_count": 7,
+  "cases": [
+    {
+      "case_id": "contract_valid",
+      "decision": {
+        "action": "answer",
+        "pred_dimensions": [
+          "category_name"
+        ],
+        "pred_metric_id": "average_bottle_price",
+        "reason": "witness_satisfied",
+        "trace": {
+          "candidate_metrics": [
+            "average_bottle_price"
+          ],
+          "certificate": null,
+          "checks": {
+            "caliber": {
+              "active": true,
+              "denominator": [
+                "sales_bottles"
+              ],
+              "metric_id": "average_bottle_price",
+              "numerator": [
+                "sales_dollars"
+              ],
+              "passed": true,
+              "ratio_like": true,
+              "route_source": "metric_formula"
+            },
+            "coverage": {
+              "active": true,
+              "missing": [],
+              "mode": "physical_schema_columns",
+              "passed": true,
+              "required": [
+                "category_name",
+                "sales_bottles",
+                "sales_dollars"
+              ]
+            },
+            "field": {
+              "active": true,
+              "metric_id": "average_bottle_price",
+              "passed": true,
+              "unknown_dimensions": []
+            },
+            "grain": {
+              "active": true,
+              "disallowed": [],
+              "passed": true,
+              "removed_ancestors": [],
+              "requested": [
+                "category_name"
+              ],
+              "resolved_finest": [
+                "category_name"
+              ]
+            },
+            "policy": {
+              "active": true,
+              "hits": [],
+              "passed": true
+            },
+            "time": {
+              "active": true,
+              "available": [
+                "2024"
+              ],
+              "detected": "2024",
+              "passed": true,
+              "required": false
+            }
+          },
+          "used_gold_label": false
+        }
+      },
+      "expected_action": "answer",
+      "expected_primary_failure": null,
+      "observed_action": "answer",
+      "observed_primary_failure": null,
+      "passed": true
+    },
+    {
+      "case_id": "contract_field_failure",
+      "decision": {
+        "action": "refuse",
+        "pred_dimensions": [],
+        "pred_metric_id": "",
+        "reason": "constraint_failure:field",
+        "trace": {
+          "candidate_metrics": [
+            "not_in_catalog"
+          ],
+          "certificate": {
+            "failed_constraints": [
+              "field",
+              "policy"
+            ],
+            "primary_failure": "field",
+            "repairable": false
+          },
+          "checks": {
+            "caliber": {
+              "active": true,
+              "denominator": [],
+              "numerator": [],
+              "passed": true,
+              "ratio_like": false,
+              "route_source": "not_required"
+            },
+            "coverage": {
+              "active": true,
+              "missing": [],
+              "mode": "physical_schema_columns",
+              "passed": true,
+              "required": []
+            },
+            "field": {
+              "active": true,
+              "metric_id": "not_in_catalog",
+              "passed": false,
+              "unknown_dimensions": []
+            },
+            "grain": {
+              "active": true,
+              "disallowed": [],
+              "passed": true,
+              "removed_ancestors": [],
+              "requested": [],
+              "resolved_finest": []
+            },
+            "policy": {
+              "active": true,
+              "hits": [
+                {
+                  "policy_id": "no_governed_metric",
+                  "trigger": "empty_metric_candidate"
+                }
+              ],
+              "passed": false
+            },
+            "time": {
+              "active": true,
+              "available": [
+                "2024"
+              ],
+              "detected": "2024",
+              "passed": true,
+              "required": false
+            }
+          },
+          "used_gold_label": false
+        }
+      },
+      "expected_action": "refuse",
+      "expected_primary_failure": "field",
+      "observed_action": "refuse",
+      "observed_primary_failure": "field",
+      "passed": true
+    },
+    {
+      "case_id": "contract_caliber_failure",
+      "decision": {
+        "action": "refuse",
+        "pred_dimensions": [],
+        "pred_metric_id": "",
+        "reason": "constraint_failure:caliber",
+        "trace": {
+          "candidate_metrics": [
+            "average_bottle_price"
+          ],
+          "certificate": {
+            "failed_constraints": [
+              "caliber"
+            ],
+            "primary_failure": "caliber",
+            "repairable": false
+          },
+          "checks": {
+            "caliber": {
+              "active": true,
+              "denominator": [],
+              "metric_id": "average_bottle_price",
+              "numerator": [
+                "sales_dollars"
+              ],
+              "passed": false,
+              "ratio_like": true,
+              "route_source": "metric_specific_typed_graph_edges"
+            },
+            "coverage": {
+              "active": true,
+              "missing": [],
+              "mode": "physical_schema_columns",
+              "passed": true,
+              "required": [
+                "sales_dollars"
+              ]
+            },
+            "field": {
+              "active": true,
+              "metric_id": "average_bottle_price",
+              "passed": true,
+              "unknown_dimensions": []
+            },
+            "grain": {
+              "active": true,
+              "disallowed": [],
+              "passed": true,
+              "removed_ancestors": [],
+              "requested": [],
+              "resolved_finest": []
+            },
+            "policy": {
+              "active": true,
+              "hits": [],
+              "passed": true
+            },
+            "time": {
+              "active": true,
+              "available": [
+                "2024"
+              ],
+              "detected": "2024",
+              "passed": true,
+              "required": false
+            }
+          },
+          "used_gold_label": false
+        }
+      },
+      "expected_action": "refuse",
+      "expected_primary_failure": "caliber",
+      "observed_action": "refuse",
+      "observed_primary_failure": "caliber",
+      "passed": true
+    },
+    {
+      "case_id": "contract_grain_failure",
+      "decision": {
+        "action": "refuse",
+        "pred_dimensions": [],
+        "pred_metric_id": "",
+        "reason": "constraint_failure:grain",
+        "trace": {
+          "candidate_metrics": [
+            "store_count"
+          ],
+          "certificate": {
+            "failed_constraints": [
+              "grain"
+            ],
+            "primary_failure": "grain",
+            "repairable": true
+          },
+          "checks": {
+            "caliber": {
+              "active": true,
+              "denominator": [],
+              "numerator": [],
+              "passed": true,
+              "ratio_like": false,
+              "route_source": "not_required"
+            },
+            "coverage": {
+              "active": true,
+              "missing": [],
+              "mode": "physical_schema_columns",
+              "passed": true,
+              "required": [
+                "store_name",
+                "store_no"
+              ]
+            },
+            "field": {
+              "active": true,
+              "metric_id": "store_count",
+              "passed": true,
+              "unknown_dimensions": []
+            },
+            "grain": {
+              "active": true,
+              "disallowed": [
+                "store_name"
+              ],
+              "passed": false,
+              "removed_ancestors": [],
+              "requested": [
+                "store_name"
+              ],
+              "resolved_finest": [
+                "store_name"
+              ]
+            },
+            "policy": {
+              "active": true,
+              "hits": [],
+              "passed": true
+            },
+            "time": {
+              "active": true,
+              "available": [
+                "2024"
+              ],
+              "detected": "2024",
+              "passed": true,
+              "required": false
+            }
+          },
+          "used_gold_label": false
+        }
+      },
+      "expected_action": "refuse",
+      "expected_primary_failure": "grain",
+      "observed_action": "refuse",
+      "observed_primary_failure": "grain",
+      "passed": true
+    },
+    {
+      "case_id": "contract_coverage_failure",
+      "decision": {
+        "action": "refuse",
+        "pred_dimensions": [],
+        "pred_metric_id": "",
+        "reason": "constraint_failure:coverage",
+        "trace": {
+          "candidate_metrics": [
+            "average_bottle_price"
+          ],
+          "certificate": {
+            "failed_constraints": [
+              "coverage"
+            ],
+            "primary_failure": "coverage",
+            "repairable": false
+          },
+          "checks": {
+            "caliber": {
+              "active": true,
+              "denominator": [
+                "sales_bottles"
+              ],
+              "metric_id": "average_bottle_price",
+              "numerator": [
+                "sales_dollars"
+              ],
+              "passed": true,
+              "ratio_like": true,
+              "route_source": "metric_formula"
+            },
+            "coverage": {
+              "active": true,
+              "missing": [
+                "sales_bottles"
+              ],
+              "mode": "explicit_override",
+              "passed": false,
+              "required": [
+                "category_name",
+                "sales_bottles",
+                "sales_dollars"
+              ]
+            },
+            "field": {
+              "active": true,
+              "metric_id": "average_bottle_price",
+              "passed": true,
+              "unknown_dimensions": []
+            },
+            "grain": {
+              "active": true,
+              "disallowed": [],
+              "passed": true,
+              "removed_ancestors": [],
+              "requested": [
+                "category_name"
+              ],
+              "resolved_finest": [
+                "category_name"
+              ]
+            },
+            "policy": {
+              "active": true,
+              "hits": [],
+              "passed": true
+            },
+            "time": {
+              "active": true,
+              "available": [
+                "2024"
+              ],
+              "detected": "2024",
+              "passed": true,
+              "required": false
+            }
+          },
+          "used_gold_label": false
+        }
+      },
+      "expected_action": "refuse",
+      "expected_primary_failure": "coverage",
+      "observed_action": "refuse",
+      "observed_primary_failure": "coverage",
+      "passed": true
+    },
+    {
+      "case_id": "contract_time_failure",
+      "decision": {
+        "action": "refuse",
+        "pred_dimensions": [],
+        "pred_metric_id": "",
+        "reason": "constraint_failure:time",
+        "trace": {
+          "candidate_metrics": [
+            "sales_dollars"
+          ],
+          "certificate": {
+            "failed_constraints": [
+              "time"
+            ],
+            "primary_failure": "time",
+            "repairable": false
+          },
+          "checks": {
+            "caliber": {
+              "active": true,
+              "denominator": [],
+              "numerator": [],
+              "passed": true,
+              "ratio_like": false,
+              "route_source": "not_required"
+            },
+            "coverage": {
+              "active": true,
+              "missing": [],
+              "mode": "physical_schema_columns",
+              "passed": true,
+              "required": [
+                "sales_dollars"
+              ]
+            },
+            "field": {
+              "active": true,
+              "metric_id": "sales_dollars",
+              "passed": true,
+              "unknown_dimensions": []
+            },
+            "grain": {
+              "active": true,
+              "disallowed": [],
+              "passed": true,
+              "removed_ancestors": [],
+              "requested": [],
+              "resolved_finest": []
+            },
+            "policy": {
+              "active": true,
+              "hits": [],
+              "passed": true
+            },
+            "time": {
+              "active": true,
+              "available": [
+                "2024"
+              ],
+              "detected": "2025",
+              "passed": false,
+              "required": false
+            }
+          },
+          "used_gold_label": false
+        }
+      },
+      "expected_action": "refuse",
+      "expected_primary_failure": "time",
+      "observed_action": "refuse",
+      "observed_primary_failure": "time",
+      "passed": true
+    },
+    {
+      "case_id": "contract_policy_failure",
+      "decision": {
+        "action": "refuse",
+        "pred_dimensions": [],
+        "pred_metric_id": "",
+        "reason": "constraint_failure:policy",
+        "trace": {
+          "candidate_metrics": [
+            "invoice_count"
+          ],
+          "certificate": {
+            "failed_constraints": [
+              "policy"
+            ],
+            "primary_failure": "policy",
+            "repairable": false
+          },
+          "checks": {
+            "caliber": {
+              "active": true,
+              "denominator": [],
+              "numerator": [],
+              "passed": true,
+              "ratio_like": false,
+              "route_source": "not_required"
+            },
+            "coverage": {
+              "active": true,
+              "missing": [],
+              "mode": "physical_schema_columns",
+              "passed": true,
+              "required": [
+                "invoice_id"
+              ]
+            },
+            "field": {
+              "active": true,
+              "metric_id": "invoice_count",
+              "passed": true,
+              "unknown_dimensions": []
+            },
+            "grain": {
+              "active": true,
+              "disallowed": [],
+              "passed": true,
+              "removed_ancestors": [],
+              "requested": [],
+              "resolved_finest": []
+            },
+            "policy": {
+              "active": true,
+              "hits": [
+                {
+                  "policy_id": "aggregate_only",
+                  "trigger": "contains"
+                }
+              ],
+              "passed": false
+            },
+            "time": {
+              "active": true,
+              "available": [
+                "2024"
+              ],
+              "detected": "2024",
+              "passed": true,
+              "required": false
+            }
+          },
+          "used_gold_label": false
+        }
+      },
+      "expected_action": "refuse",
+      "expected_primary_failure": "policy",
+      "observed_action": "refuse",
+      "observed_primary_failure": "policy",
+      "passed": true
+    }
+  ],
+  "dataset": "IowaLiquor-MetricCaliber",
+  "passed_count": 7,
+  "purpose": "executable unit tests for each formal constraint family"
+}

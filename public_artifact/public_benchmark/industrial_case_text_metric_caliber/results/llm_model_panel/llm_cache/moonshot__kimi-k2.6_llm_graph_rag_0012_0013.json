@@ -1,0 +1,6 @@
+{
+  "channel": "moonshot",
+  "model": "kimi-k2.6",
+  "mode": "llm_graph_rag",
+  "stdout": "[\n  {\"case_id\":\"ict_case_0005\",\"action\":\"answer\",\"metric_id\":\"ict_metric_005\",\"dimensions\":[\"segment_l1\"],\"reason\":\"Matched 质量不良率 to ict_metric_005 and 一级品类 to segment_l1\"},\n  {\"case_id\":\"ict_case_0006\",\"action\":\"answer\",\"metric_id\":\"ict_metric_008\",\"dimensions\":[\"segment_l1\"],\"reason\":\"Matched 补发占比 to ict_metric_008 and 一级品类 to segment_l1\"}\n]"
+}

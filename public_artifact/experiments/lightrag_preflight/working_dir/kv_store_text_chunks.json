@@ -1,0 +1,15 @@
+{
+  "chunk-0dcdf259cfc0afbde57f86463c61a0ef": {
+    "content": "total_revenue is sum(revenue) and can be grouped by channel; this is a preflight KG chunk only.",
+    "source_id": "metric_catalog",
+    "tokens": 24,
+    "chunk_order_index": 0,
+    "full_doc_id": "metric_catalog",
+    "file_path": "custom_kg",
+    "status": "processed",
+    "llm_cache_list": [],
+    "create_time": 1783527567,
+    "update_time": 1783527567,
+    "_id": "chunk-0dcdf259cfc0afbde57f86463c61a0ef"
+  }
+}

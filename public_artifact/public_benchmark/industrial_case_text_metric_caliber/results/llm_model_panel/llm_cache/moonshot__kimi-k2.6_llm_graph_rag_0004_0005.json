@@ -1,0 +1,6 @@
+{
+  "channel": "moonshot",
+  "model": "kimi-k2.6",
+  "mode": "llm_graph_rag",
+  "stdout": "[\n  {\"case_id\":\"ict_case_0100\", \"action\":\"answer\", \"metric_id\":\"ict_metric_001\", \"dimensions\":[], \"reason\":\"Exact alias match for governed metric.\"},\n  {\"case_id\":\"ict_case_0120\", \"action\":\"refuse\", \"metric_id\":\"\", \"dimensions\":[], \"reason\":\"No governed metric found.\"}\n]"
+}

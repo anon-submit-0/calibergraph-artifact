@@ -1,0 +1,55 @@
+COMMAND: mf query --metrics invoice_count --limit 20 --csv <TEMP_CSV> --group-by sale_line__invoice_id
+EXIT_CODE: 1
+WALL_SECONDS: 2.74
+DATA_ROWS: 0
+ERROR_CATEGORY: unknown_group_by_item
+----- STDOUT -----
+
+
+⠋ Initiating query…
+
+⠙ Initiating query…
+ERROR: Got error(s) during query resolution.
+
+Error #1:
+  Message:
+
+    The given input does not match any of the available group-by-items for
+    SimpleMetric('invoice_count'). Common issues are:
+
+      * Incorrect names.
+      * No valid join paths exist from the measure to the group-by-item.
+        (fan-out join support is pending).
+      * There are multiple matching join paths.
+        (disambiguation support is pending).
+
+    Suggestions:
+      [
+        'sale_line__item_desc',
+        'sale_line__store_city',
+        'sale_line__store_name',
+        'sale_line__vendor_name',
+        'sale_line__ordered_on__day',
+        'sale_line__category_name',
+      ]
+
+  Query Input:
+
+    sale_line__invoice_id
+
+  Issue Location:
+
+    [Resolve Query(['invoice_count'])]
+      -> [Resolve SimpleMetric('invoice_count')]
+
+Log File:: <LOCAL_PATH>
+Artifact Path: <LOCAL_PATH>
+Artifact Modified Time: 2026-07-11T19:11:35.008950
+
+If you think you found a bug, please report it here:
+    https://github.com/dbt-labs/metricflow/issues
+
+
+
+----- STDERR -----
+

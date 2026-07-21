@@ -1,0 +1,50 @@
+{
+  "direct_keyword": {
+    "n": 40,
+    "metric_accuracy": 0.6,
+    "dimension_exact_accuracy": 0.275,
+    "joint_metric_dimension_accuracy": 0.15,
+    "refusal_precision": 0.16666666666666666,
+    "refusal_recall": 0.16666666666666666
+  },
+  "llm_direct": {
+    "n": 40,
+    "metric_accuracy": 0.975,
+    "dimension_exact_accuracy": 0.775,
+    "joint_metric_dimension_accuracy": 0.75,
+    "refusal_precision": 0.8571428571428571,
+    "refusal_recall": 1.0
+  },
+  "llm_graph_rag": {
+    "n": 40,
+    "metric_accuracy": 0.975,
+    "dimension_exact_accuracy": 0.95,
+    "joint_metric_dimension_accuracy": 0.925,
+    "refusal_precision": 0.8571428571428571,
+    "refusal_recall": 1.0
+  },
+  "llm_schema_rag": {
+    "n": 40,
+    "metric_accuracy": 0.975,
+    "dimension_exact_accuracy": 0.625,
+    "joint_metric_dimension_accuracy": 0.6,
+    "refusal_precision": 0.8571428571428571,
+    "refusal_recall": 1.0
+  },
+  "public_caliber_graph": {
+    "n": 40,
+    "metric_accuracy": 1.0,
+    "dimension_exact_accuracy": 1.0,
+    "joint_metric_dimension_accuracy": 1.0,
+    "refusal_precision": 1.0,
+    "refusal_recall": 1.0
+  },
+  "schema_rag": {
+    "n": 40,
+    "metric_accuracy": 0.85,
+    "dimension_exact_accuracy": 0.95,
+    "joint_metric_dimension_accuracy": 0.85,
+    "refusal_precision": 0.0,
+    "refusal_recall": 0.0
+  }
+}

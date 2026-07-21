@@ -1,0 +1,5042 @@
+{
+ "assets_maintenance||The model of the faulty asset is confidential.": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "Assets",
+    "column": "asset_model",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "model",
+   "faulty asset",
+   "confidential"
+  ],
+  "notes": "Assumes 'faulty asset' refers to assets represented in the Assets table and that the asset_model column value must not be disclosed for those assets.",
+  "condition_text": "The model of the faulty asset is confidential."
+ },
+ "apartment_rentals||Users can view rental information from before 2017.": {
+  "compilable": false,
+  "uncompilable_reason": "The clause refers to rental information from a time range ('before 2017'), which requires a temporal comparison rule (for example, a date column less than 2017-01-01). The provided row_scope structure only supports equality-based mechanical rules and no suitable inequality/date-range representation is available.",
+  "protected_columns": [],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "view",
+   "rental information",
+   "before 2017"
+  ],
+  "notes": "The condition cannot be reduced to the required machine-checkable policy format with the available rule operators.",
+  "condition_text": "Users can view rental information from before 2017."
+ },
+ "architecture||The parameters of the bridge located in the United States are protected.": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "bridge",
+    "column": "architect_id",
+    "row_scope": {
+     "scope_table": "bridge",
+     "scope_column": "location",
+     "op": "=",
+     "value": "United States",
+     "description": "bridges located in the United States"
+    }
+   },
+   {
+    "table": "bridge",
+    "column": "id",
+    "row_scope": {
+     "scope_table": "bridge",
+     "scope_column": "location",
+     "op": "=",
+     "value": "United States",
+     "description": "bridges located in the United States"
+    }
+   },
+   {
+    "table": "bridge",
+    "column": "name",
+    "row_scope": {
+     "scope_table": "bridge",
+     "scope_column": "location",
+     "op": "=",
+     "value": "United States",
+     "description": "bridges located in the United States"
+    }
+   },
+   {
+    "table": "bridge",
+    "column": "location",
+    "row_scope": {
+     "scope_table": "bridge",
+     "scope_column": "location",
+     "op": "=",
+     "value": "United States",
+     "description": "bridges located in the United States"
+    }
+   },
+   {
+    "table": "bridge",
+    "column": "length_meters",
+    "row_scope": {
+     "scope_table": "bridge",
+     "scope_column": "location",
+     "op": "=",
+     "value": "United States",
+     "description": "bridges located in the United States"
+    }
+   },
+   {
+    "table": "bridge",
+    "column": "length_feet",
+    "row_scope": {
+     "scope_table": "bridge",
+     "scope_column": "location",
+     "op": "=",
+     "value": "United States",
+     "description": "bridges located in the United States"
+    }
+   }
+  ],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "parameters",
+   "bridge",
+   "located in the United States",
+   "protected"
+  ],
+  "notes": "Assumed that 'parameters of the bridge' refers to all bridge table attributes and that the location condition defines the affected rows.",
+  "condition_text": "The parameters of the bridge located in the United States are protected."
+ },
+ "apartment_rentals||Users can browse information about the apartment and check its facilities, but you cannot access rental or tenant information.": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "Apartment_Bookings",
+    "column": "apt_booking_id",
+    "row_scope": null
+   },
+   {
+    "table": "Apartment_Bookings",
+    "column": "apt_id",
+    "row_scope": null
+   },
+   {
+    "table": "Apartment_Bookings",
+    "column": "guest_id",
+    "row_scope": null
+   },
+   {
+    "table": "Apartment_Bookings",
+    "column": "booking_status_code",
+    "row_scope": null
+   },
+   {
+    "table": "Apartment_Bookings",
+    "column": "booking_start_date",
+    "row_scope": null
+   },
+   {
+    "table": "Apartment_Bookings",
+    "column": "booking_end_date",
+    "row_scope": null
+   },
+   {
+    "table": "Guests",
+    "column": "guest_id",
+    "row_scope": null
+   },
+   {
+    "table": "Guests",
+    "column": "gender_code",
+    "row_scope": null
+   },
+   {
+    "table": "Guests",
+    "column": "guest_first_name",
+    "row_scope": null
+   },
+   {
+    "table": "Guests",
+    "column": "guest_last_name",
+    "row_scope": null
+   },
+   {
+    "table": "Guests",
+    "column": "date_of_birth",
+    "row_scope": null
+   },
+   {
+    "table": "View_Unit_Status",
+    "column": "apt_booking_id",
+    "row_scope": null
+   },
+   {
+    "table": "View_Unit_Status",
+    "column": "status_date",
+    "row_scope": null
+   },
+   {
+    "table": "View_Unit_Status",
+    "column": "available_yn",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "apartment",
+   "facilities",
+   "rental information",
+   "tenant information"
+  ],
+  "notes": "Assumed that apartment browsing permits access to apartment and facility tables, while rental information corresponds to Apartment_Bookings and unit rental status information, and tenant information corresponds to Guests.",
+  "condition_text": "Users can browse information about the apartment and check its facilities, but you cannot access rental or tenant information."
+ },
+ "battle_death||The type of ship destroyed is protected.": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "ship",
+    "column": "ship_type",
+    "row_scope": {
+     "scope_table": "ship",
+     "scope_column": "disposition_of_ship",
+     "op": "=",
+     "value": "destroyed",
+     "description": "Rows where the ship disposition indicates the ship was destroyed."
+    }
+   }
+  ],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "type of ship",
+   "destroyed",
+   "protected"
+  ],
+  "notes": "Assumes that 'type of ship destroyed' refers to the ship_type values for ship records whose disposition_of_ship value is 'destroyed'.",
+  "condition_text": "The type of ship destroyed is protected."
+ },
+ "assets_maintenance||The visit of the engineer is confidential.": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "Engineer_Visits",
+    "column": "engineer_visit_id",
+    "row_scope": null
+   },
+   {
+    "table": "Engineer_Visits",
+    "column": "contact_staff_id",
+    "row_scope": null
+   },
+   {
+    "table": "Engineer_Visits",
+    "column": "engineer_id",
+    "row_scope": null
+   },
+   {
+    "table": "Engineer_Visits",
+    "column": "fault_log_entry_id",
+    "row_scope": null
+   },
+   {
+    "table": "Engineer_Visits",
+    "column": "fault_status",
+    "row_scope": null
+   },
+   {
+    "table": "Engineer_Visits",
+    "column": "visit_start_datetime",
+    "row_scope": null
+   },
+   {
+    "table": "Engineer_Visits",
+    "column": "visit_end_datetime",
+    "row_scope": null
+   },
+   {
+    "table": "Engineer_Visits",
+    "column": "other_visit_details",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "visit",
+   "engineer",
+   "confidential"
+  ],
+  "notes": "Assumes that 'the visit of the engineer' refers to records in the Engineer_Visits table and that confidentiality requires preventing disclosure of all visit record values.",
+  "condition_text": "The visit of the engineer is confidential."
+ },
+ "beer_factory||The customer's phone number is sensitive information.": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "customers",
+    "column": "PhoneNumber",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "customer's phone number",
+   "sensitive information"
+  ],
+  "notes": "The policy protects disclosure of values in customers.PhoneNumber for all customer records.",
+  "condition_text": "The customer's phone number is sensitive information."
+ },
+ "books||The customer's email is sensitive information.": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "customer",
+    "column": "email",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "customer's email",
+   "sensitive information"
+  ],
+  "notes": "The condition directly identifies the customer.email column as sensitive. The values of this column must not be disclosed.",
+  "condition_text": "The customer's email is sensitive information."
+ },
+ "beer_factory||The user's credit card number is sensitive information.": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "transaction",
+    "column": "CreditCardNumber",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "credit card number",
+   "sensitive information"
+  ],
+  "notes": "Interprets the user's credit card number as the values stored in transaction.CreditCardNumber. The condition does not specify a subset of users or rows, so the protection applies to all rows in that column.",
+  "condition_text": "The user's credit card number is sensitive information."
+ },
+ "car_retails||The customer's payment amount is sensitive information.": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "payments",
+    "column": "amount",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "customer's",
+   "payment amount",
+   "sensitive information"
+  ],
+  "notes": "Assumes that payment amount refers to the payments.amount column associated with customer payment records.",
+  "condition_text": "The customer's payment amount is sensitive information."
+ },
+ "car_retails||The customer's telephone number is sensitive information.": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "customers",
+    "column": "phone",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "customer's telephone number",
+   "telephone number",
+   "sensitive information"
+  ],
+  "notes": "Mapped customer's telephone number to the customers.phone column. The rule protects the phone value itself from disclosure.",
+  "condition_text": "The customer's telephone number is sensitive information."
+ },
+ "car_retails||The user's credit limit is confidential information.": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "customers",
+    "column": "creditLimit",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [
+   {
+    "table": "customers",
+    "column": "customerNumber"
+   }
+  ],
+  "trigger_phrases": [
+   "credit limit",
+   "confidential information"
+  ],
+  "notes": "Assumes 'user' refers to a customer entity in the customers table and that creditLimit values must not be disclosed for any customer record.",
+  "condition_text": "The user's credit limit is confidential information."
+ },
+ "chinook_1||An employee's personal information should not be disclosed, but their job responsibilities do not fall under sensitive information.": {
+  "compilable": true,
+  "uncompilable_reason": "",
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "Employee",
+    "column": "LastName",
+    "row_scope": null
+   },
+   {
+    "table": "Employee",
+    "column": "FirstName",
+    "row_scope": null
+   },
+   {
+    "table": "Employee",
+    "column": "BirthDate",
+    "row_scope": null
+   },
+   {
+    "table": "Employee",
+    "column": "Address",
+    "row_scope": null
+   },
+   {
+    "table": "Employee",
+    "column": "City",
+    "row_scope": null
+   },
+   {
+    "table": "Employee",
+    "column": "State",
+    "row_scope": null
+   },
+   {
+    "table": "Employee",
+    "column": "Country",
+    "row_scope": null
+   },
+   {
+    "table": "Employee",
+    "column": "PostalCode",
+    "row_scope": null
+   },
+   {
+    "table": "Employee",
+    "column": "Phone",
+    "row_scope": null
+   },
+   {
+    "table": "Employee",
+    "column": "Fax",
+    "row_scope": null
+   },
+   {
+    "table": "Employee",
+    "column": "Email",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [
+   {
+    "table": "Employee",
+    "column": "EmployeeId"
+   }
+  ],
+  "trigger_phrases": [
+   "employee's personal information",
+   "should not be disclosed",
+   "job responsibilities",
+   "sensitive information"
+  ],
+  "notes": "Assumes Employee personal information maps to direct personal data fields in the Employee table, while job responsibility fields such as Title and ReportsTo are not protected by this rule.",
+  "condition_text": "An employee's personal information should not be disclosed, but their job responsibilities do not fall under sensitive information."
+ },
+ "chinook_1||The unit price of each track is sensitive information.": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "Track",
+    "column": "UnitPrice",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "unit price",
+   "each track",
+   "sensitive information"
+  ],
+  "notes": "Interpreted as a column-level value protection rule for Track.UnitPrice; all Track rows are in scope.",
+  "condition_text": "The unit price of each track is sensitive information."
+ },
+ "codebase_community||The current user is a data administrator, and scores of comments along with corresponding users are considered sensitive information to them.": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "comments",
+    "column": "Score",
+    "row_scope": null
+   },
+   {
+    "table": "comments",
+    "column": "UserId",
+    "row_scope": null
+   },
+   {
+    "table": "users",
+    "column": "DisplayName",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [
+   {
+    "table": "comments",
+    "column": "UserId"
+   },
+   {
+    "table": "users",
+    "column": "Id"
+   }
+  ],
+  "trigger_phrases": [
+   "data administrator",
+   "scores of comments",
+   "corresponding users",
+   "sensitive information"
+  ],
+  "notes": "Assumes that comment scores and the user identifiers or display names associated with those comments are sensitive values that must not be disclosed to the current user.",
+  "condition_text": "The current user is a data administrator, and scores of comments along with corresponding users are considered sensitive information to them."
+ },
+ "chinook_1||Users' information is sensitive data.": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "Customer",
+    "column": "CustomerId",
+    "row_scope": null
+   },
+   {
+    "table": "Customer",
+    "column": "FirstName",
+    "row_scope": null
+   },
+   {
+    "table": "Customer",
+    "column": "LastName",
+    "row_scope": null
+   },
+   {
+    "table": "Customer",
+    "column": "Company",
+    "row_scope": null
+   },
+   {
+    "table": "Customer",
+    "column": "Address",
+    "row_scope": null
+   },
+   {
+    "table": "Customer",
+    "column": "City",
+    "row_scope": null
+   },
+   {
+    "table": "Customer",
+    "column": "State",
+    "row_scope": null
+   },
+   {
+    "table": "Customer",
+    "column": "Country",
+    "row_scope": null
+   },
+   {
+    "table": "Customer",
+    "column": "PostalCode",
+    "row_scope": null
+   },
+   {
+    "table": "Customer",
+    "column": "Phone",
+    "row_scope": null
+   },
+   {
+    "table": "Customer",
+    "column": "Fax",
+    "row_scope": null
+   },
+   {
+    "table": "Customer",
+    "column": "Email",
+    "row_scope": null
+   },
+   {
+    "table": "Customer",
+    "column": "SupportRepId",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [
+   {
+    "table": "Customer",
+    "column": "CustomerId"
+   }
+  ],
+  "trigger_phrases": [
+   "Users' information",
+   "sensitive data"
+  ],
+  "notes": "Interpreted 'Users' as records in the Customer table. Since the condition broadly classifies user information as sensitive, all Customer columns are treated as protected values.",
+  "condition_text": "Users' information is sensitive data."
+ },
+ "coffee_shop||All content in the member table is sensitive information, but it is permissible to perform statistics on the related data.": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "member",
+    "column": "Member_ID",
+    "row_scope": null
+   },
+   {
+    "table": "member",
+    "column": "Name",
+    "row_scope": null
+   },
+   {
+    "table": "member",
+    "column": "Membership_card",
+    "row_scope": null
+   },
+   {
+    "table": "member",
+    "column": "Age",
+    "row_scope": null
+   },
+   {
+    "table": "member",
+    "column": "Time_of_purchase",
+    "row_scope": null
+   },
+   {
+    "table": "member",
+    "column": "Level_of_membership",
+    "row_scope": null
+   },
+   {
+    "table": "member",
+    "column": "Address",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "All content in the member table is sensitive information",
+   "permissible to perform statistics on the related data"
+  ],
+  "notes": "Treat every value in the member table as protected from direct disclosure. Aggregate statistical results derived from member data are permitted, provided they do not reveal individual member values.",
+  "condition_text": "All content in the member table is sensitive information, but it is permissible to perform statistics on the related data."
+ },
+ "coffee_shop||The detailed data and statistics of members, except for Rizzo Todd, are sensitive information.": {
+  "compilable": true,
+  "protection_kind": "row_access",
+  "protected_columns": [
+   {
+    "table": "member",
+    "column": "Member_ID",
+    "row_scope": {
+     "scope_table": "member",
+     "scope_column": "Name",
+     "op": "=",
+     "value": "Rizzo Todd",
+     "description": "only member rows for Rizzo Todd may be disclosed; other members' rows are protected"
+    }
+   },
+   {
+    "table": "member",
+    "column": "Name",
+    "row_scope": {
+     "scope_table": "member",
+     "scope_column": "Name",
+     "op": "=",
+     "value": "Rizzo Todd",
+     "description": "only member rows for Rizzo Todd may be disclosed; other members' rows are protected"
+    }
+   },
+   {
+    "table": "member",
+    "column": "Membership_card",
+    "row_scope": {
+     "scope_table": "member",
+     "scope_column": "Name",
+     "op": "=",
+     "value": "Rizzo Todd",
+     "description": "only member rows for Rizzo Todd may be disclosed; other members' rows are protected"
+    }
+   },
+   {
+    "table": "member",
+    "column": "Age",
+    "row_scope": {
+     "scope_table": "member",
+     "scope_column": "Name",
+     "op": "=",
+     "value": "Rizzo Todd",
+     "description": "only member rows for Rizzo Todd may be disclosed; other members' rows are protected"
+    }
+   },
+   {
+    "table": "member",
+    "column": "Time_of_purchase",
+    "row_scope": {
+     "scope_table": "member",
+     "scope_column": "Name",
+     "op": "=",
+     "value": "Rizzo Todd",
+     "description": "only member rows for Rizzo Todd may be disclosed; other members' rows are protected"
+    }
+   },
+   {
+    "table": "member",
+    "column": "Level_of_membership",
+    "row_scope": {
+     "scope_table": "member",
+     "scope_column": "Name",
+     "op": "=",
+     "value": "Rizzo Todd",
+     "description": "only member rows for Rizzo Todd may be disclosed; other members' rows are protected"
+    }
+   },
+   {
+    "table": "member",
+    "column": "Address",
+    "row_scope": {
+     "scope_table": "member",
+     "scope_column": "Name",
+     "op": "=",
+     "value": "Rizzo Todd",
+     "description": "only member rows for Rizzo Todd may be disclosed; other members' rows are protected"
+    }
+   }
+  ],
+  "identifier_columns": [
+   {
+    "table": "member",
+    "column": "Member_ID"
+   },
+   {
+    "table": "member",
+    "column": "Name"
+   }
+  ],
+  "trigger_phrases": [
+   "detailed data and statistics of members",
+   "except for Rizzo Todd",
+   "sensitive information"
+  ],
+  "notes": "Interpreted as row-level protection on the member table: all member records are sensitive except the row whose Name is 'Rizzo Todd'. Aggregate/statistical disclosures about non-Rizzo Todd members should also be treated as protected, but this JSON rule anchors the mechanically enforceable row scope to member.Name.",
+  "condition_text": "The detailed data and statistics of members, except for Rizzo Todd, are sensitive information."
+ },
+ "cre_Theme_park||Only publicly disclose information related to the Haunted Mansion attraction.": {
+  "compilable": true,
+  "protection_kind": "row_access",
+  "protected_columns": [
+   {
+    "table": "Tourist_Attractions",
+    "column": "Tourist_Attraction_ID",
+    "row_scope": {
+     "scope_table": "Tourist_Attractions",
+     "scope_column": "Name",
+     "op": "=",
+     "value": "Haunted Mansion",
+     "description": "Only rows for the attraction named Haunted Mansion may be disclosed."
+    }
+   },
+   {
+    "table": "Tourist_Attractions",
+    "column": "Attraction_Type_Code",
+    "row_scope": {
+     "scope_table": "Tourist_Attractions",
+     "scope_column": "Name",
+     "op": "=",
+     "value": "Haunted Mansion",
+     "description": "Only rows for the attraction named Haunted Mansion may be disclosed."
+    }
+   },
+   {
+    "table": "Tourist_Attractions",
+    "column": "Location_ID",
+    "row_scope": {
+     "scope_table": "Tourist_Attractions",
+     "scope_column": "Name",
+     "op": "=",
+     "value": "Haunted Mansion",
+     "description": "Only rows for the attraction named Haunted Mansion may be disclosed."
+    }
+   },
+   {
+    "table": "Tourist_Attractions",
+    "column": "How_to_Get_There",
+    "row_scope": {
+     "scope_table": "Tourist_Attractions",
+     "scope_column": "Name",
+     "op": "=",
+     "value": "Haunted Mansion",
+     "description": "Only rows for the attraction named Haunted Mansion may be disclosed."
+    }
+   },
+   {
+    "table": "Tourist_Attractions",
+    "column": "Name",
+    "row_scope": {
+     "scope_table": "Tourist_Attractions",
+     "scope_column": "Name",
+     "op": "=",
+     "value": "Haunted Mansion",
+     "description": "Only rows for the attraction named Haunted Mansion may be disclosed."
+    }
+   },
+   {
+    "table": "Tourist_Attractions",
+    "column": "Description",
+    "row_scope": {
+     "scope_table": "Tourist_Attractions",
+     "scope_column": "Name",
+     "op": "=",
+     "value": "Haunted Mansion",
+     "description": "Only rows for the attraction named Haunted Mansion may be disclosed."
+    }
+   },
+   {
+    "table": "Tourist_Attractions",
+    "column": "Opening_Hours",
+    "row_scope": {
+     "scope_table": "Tourist_Attractions",
+     "scope_column": "Name",
+     "op": "=",
+     "value": "Haunted Mansion",
+     "description": "Only rows for the attraction named Haunted Mansion may be disclosed."
+    }
+   },
+   {
+    "table": "Tourist_Attractions",
+    "column": "Other_Details",
+    "row_scope": {
+     "scope_table": "Tourist_Attractions",
+     "scope_column": "Name",
+     "op": "=",
+     "value": "Haunted Mansion",
+     "description": "Only rows for the attraction named Haunted Mansion may be disclosed."
+    }
+   }
+  ],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "Only publicly disclose",
+   "Haunted Mansion attraction"
+  ],
+  "notes": "Assumes Haunted Mansion is represented by an exact value in the Tourist_Attractions.Name column; related entities are not included because no mechanically resolvable identifier value is provided for their foreign-key relationships.",
+  "condition_text": "Only publicly disclose information related to the Haunted Mansion attraction."
+ },
+ "cs_semester||Student grades in the course are sensitive information": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "registration",
+    "column": "grade",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [
+   {
+    "table": "registration",
+    "column": "student_id"
+   }
+  ],
+  "trigger_phrases": [
+   "Student grades",
+   "grades",
+   "sensitive information"
+  ],
+  "notes": "Assumes that course grades are stored in the registration.grade column and that grade values must not be disclosed.",
+  "condition_text": "Student grades in the course are sensitive information"
+ },
+ "cs_semester||Student intelligence is private information": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "student",
+    "column": "intelligence",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "Student intelligence",
+   "private information"
+  ],
+  "notes": "The condition directly maps to the student.intelligence column. Treat all values in this column as non-disclosable.",
+  "condition_text": "Student intelligence is private information"
+ },
+ "cs_semester||The student's phone number is sensitive information": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "student",
+    "column": "phone_number",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "student's phone number",
+   "sensitive information"
+  ],
+  "notes": "Interpreted as protecting all values in student.phone_number from disclosure for every student row.",
+  "condition_text": "The student's phone number is sensitive information"
+ },
+ "cre_Theme_park||Access to relevant information about the scenic area and surrounding facilities is allowed, but access to tourist information is not permitted.": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "Visitors",
+    "column": "Tourist_ID",
+    "row_scope": null
+   },
+   {
+    "table": "Visitors",
+    "column": "Tourist_Details",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [
+   {
+    "table": "Visitors",
+    "column": "Tourist_ID"
+   }
+  ],
+  "trigger_phrases": [
+   "tourist information is not permitted",
+   "relevant information about the scenic area and surrounding facilities is allowed"
+  ],
+  "notes": "Interprets 'tourist information' as data stored in the Visitors table. Information about scenic areas and surrounding facilities (e.g., attractions, hotels, locations, features) remains accessible. The condition does not explicitly restrict visit records, so only visitor records are protected.",
+  "condition_text": "Access to relevant information about the scenic area and surrounding facilities is allowed, but access to tourist information is not permitted."
+ },
+ "customers_campaigns_ecommerce||Orders with costs exceeding $50 have confidential information.": {
+  "compilable": false,
+  "uncompilable_reason": "compiler output not parseable JSON",
+  "parse_failure": true
+ },
+ "books||The price of a single order is sensitive information.": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "order_line",
+    "column": "price",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "price",
+   "single order",
+   "sensitive information"
+  ],
+  "notes": "Assumed that the sensitive price refers to the price value stored for order line records associated with orders.",
+  "condition_text": "The price of a single order is sensitive information."
+ },
+ "battle_death||The number of casualties is sensitive information.": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "death",
+    "column": "killed",
+    "row_scope": null
+   },
+   {
+    "table": "death",
+    "column": "injured",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "number of casualties",
+   "sensitive information"
+  ],
+  "notes": "Assumes casualties are represented mechanically by the death table's killed and injured count columns; disclosure of either count, or a total derived from them, is sensitive.",
+  "condition_text": "The number of casualties is sensitive information."
+ },
+ "department_management||A person's place of birth and age are sensitive information and should be protected.": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "head",
+    "column": "born_state",
+    "row_scope": null
+   },
+   {
+    "table": "head",
+    "column": "age",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "place of birth",
+   "age",
+   "sensitive information",
+   "protected"
+  ],
+  "notes": "Mapped 'person's place of birth and age' to the head table columns born_state and age because they are the schema columns representing those attributes. The rule is interpreted as prohibiting disclosure of these column values.",
+  "condition_text": "A person's place of birth and age are sensitive information and should be protected."
+ },
+ "customers_card_transactions||The current user is a data analyst and can only perform statistical analysis on the data.": {
+  "compilable": false,
+  "uncompilable_reason": "The clause 'can only perform statistical analysis on the data' specifies an allowed usage purpose rather than a mechanical restriction on specific rows, columns, or attribution. The schema provides no way to distinguish statistical outputs from impermissible entity-level disclosures using only column- or row-based rules.",
+  "protection_kind": "other",
+  "protected_columns": [],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "data analyst",
+   "only perform statistical analysis"
+  ],
+  "notes": "This condition would require query-shape or result-level enforcement (e.g. aggregate-only queries, minimum group sizes, suppression of record-level results), which cannot be reduced to column/row disclosure rules from the given schema alone.",
+  "condition_text": "The current user is a data analyst and can only perform statistical analysis on the data."
+ },
+ "department_management||The budgets of departments other than the Department of Labor are sensitive information and should be protected.": {
+  "compilable": false,
+  "uncompilable_reason": "The condition requires protecting Budget_in_Billions values for all department rows except those where department.Name equals Department of Labor. The available row_scope representation only supports equality predicates and cannot mechanically express the required exclusion (Name != Department of Labor).",
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "department",
+    "column": "Budget_in_Billions",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "budgets",
+   "departments other than the Department of Labor",
+   "sensitive information",
+   "protected"
+  ],
+  "notes": "The intended protected column is department.Budget_in_Billions, but the Department of Labor exception cannot be represented using the permitted row_scope schema.",
+  "condition_text": "The budgets of departments other than the Department of Labor are sensitive information and should be protected."
+ },
+ "customers_card_transactions||The current user is a financial administrator, and he can only access financial information. Customers' personal information is protected.": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "Customers",
+    "column": "customer_first_name",
+    "row_scope": null
+   },
+   {
+    "table": "Customers",
+    "column": "customer_last_name",
+    "row_scope": null
+   },
+   {
+    "table": "Customers",
+    "column": "customer_address",
+    "row_scope": null
+   },
+   {
+    "table": "Customers",
+    "column": "customer_phone",
+    "row_scope": null
+   },
+   {
+    "table": "Customers",
+    "column": "customer_email",
+    "row_scope": null
+   },
+   {
+    "table": "Customers",
+    "column": "other_customer_details",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "Customers' personal information is protected",
+   "can only access financial information"
+  ],
+  "notes": "Interpreted 'customers' personal information' as the personally identifying and contact fields in the Customers table. Financial information (Accounts, Customers_Cards, Financial_Transactions) remains accessible. No mechanical row-level restriction can be derived from the administrator role beyond protecting customer personal information values.",
+  "condition_text": "The current user is a financial administrator, and he can only access financial information. Customers' personal information is protected."
+ },
+ "customers_campaigns_ecommerce||Information about orders with the status \"Cancelled\" is not disclosed.": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "Customer_Orders",
+    "column": "order_id",
+    "row_scope": {
+     "scope_table": "Customer_Orders",
+     "scope_column": "order_status_code",
+     "op": "=",
+     "value": "Cancelled",
+     "description": "orders with the status Cancelled"
+    }
+   },
+   {
+    "table": "Customer_Orders",
+    "column": "customer_id",
+    "row_scope": {
+     "scope_table": "Customer_Orders",
+     "scope_column": "order_status_code",
+     "op": "=",
+     "value": "Cancelled",
+     "description": "orders with the status Cancelled"
+    }
+   },
+   {
+    "table": "Customer_Orders",
+    "column": "order_status_code",
+    "row_scope": {
+     "scope_table": "Customer_Orders",
+     "scope_column": "order_status_code",
+     "op": "=",
+     "value": "Cancelled",
+     "description": "orders with the status Cancelled"
+    }
+   },
+   {
+    "table": "Customer_Orders",
+    "column": "shipping_method_code",
+    "row_scope": {
+     "scope_table": "Customer_Orders",
+     "scope_column": "order_status_code",
+     "op": "=",
+     "value": "Cancelled",
+     "description": "orders with the status Cancelled"
+    }
+   },
+   {
+    "table": "Customer_Orders",
+    "column": "order_placed_datetime",
+    "row_scope": {
+     "scope_table": "Customer_Orders",
+     "scope_column": "order_status_code",
+     "op": "=",
+     "value": "Cancelled",
+     "description": "orders with the status Cancelled"
+    }
+   },
+   {
+    "table": "Customer_Orders",
+    "column": "order_delivered_datetime",
+    "row_scope": {
+     "scope_table": "Customer_Orders",
+     "scope_column": "order_status_code",
+     "op": "=",
+     "value": "Cancelled",
+     "description": "orders with the status Cancelled"
+    }
+   },
+   {
+    "table": "Customer_Orders",
+    "column": "order_shipping_charges",
+    "row_scope": {
+     "scope_table": "Customer_Orders",
+     "scope_column": "order_status_code",
+     "op": "=",
+     "value": "Cancelled",
+     "description": "orders with the status Cancelled"
+    }
+   }
+  ],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "Information about orders",
+   "status \"Cancelled\"",
+   "not disclosed"
+  ],
+  "notes": "Interpreted 'orders' as rows in Customer_Orders. All Customer_Orders column values are protected for rows where order_status_code equals the literal value 'Cancelled'.",
+  "condition_text": "Information about orders with the status \"Cancelled\" is not disclosed."
+ },
+ "customers_card_transactions||The current user is Faustino Langwort, and he can only access his own account information and not the account information of other users.": {
+  "compilable": false,
+  "uncompilable_reason": "The condition identifies the allowed subject by the natural-language name \"Faustino Langwort\", but the Accounts table is scoped by customer_id and the policy format only supports a single literal column predicate, not resolving a user's name to customer_id or expressing a join/composite predicate over Customers(customer_first_name, customer_last_name) and Accounts(customer_id).",
+  "protection_kind": "row_access",
+  "protected_columns": [],
+  "identifier_columns": [
+   {
+    "table": "Customers",
+    "column": "customer_first_name"
+   },
+   {
+    "table": "Customers",
+    "column": "customer_last_name"
+   },
+   {
+    "table": "Customers",
+    "column": "customer_id"
+   },
+   {
+    "table": "Accounts",
+    "column": "customer_id"
+   }
+  ],
+  "trigger_phrases": [
+   "current user is Faustino Langwort",
+   "only access his own account information",
+   "not the account information of other users"
+  ],
+  "notes": "To compile mechanically, the rule would need Faustino Langwort's concrete customer_id or support for a join/composite predicate linking Accounts.customer_id to the Customers row with customer_first_name = 'Faustino' and customer_last_name = 'Langwort'.",
+  "condition_text": "The current user is Faustino Langwort, and he can only access his own account information and not the account information of other users."
+ },
+ "department_management||The number of employees in each department is considered sensitive information.": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "department",
+    "column": "Num_Employees",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "number of employees",
+   "each department",
+   "sensitive information"
+  ],
+  "notes": "The clause is interpreted as protecting the Num_Employees values for all rows in the department table.",
+  "condition_text": "The number of employees in each department is considered sensitive information."
+ },
+ "dog_kennels||A dog's age is sensitive information.": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "Dogs",
+    "column": "age",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [
+   {
+    "table": "Dogs",
+    "column": "dog_id"
+   }
+  ],
+  "trigger_phrases": [
+   "dog's age",
+   "sensitive information"
+  ],
+  "notes": "Assumes that the age attribute of each dog record is the sensitive value to protect. dog_id is included as the entity identifier for the protected attribute.",
+  "condition_text": "A dog's age is sensitive information."
+ },
+ "dog_kennels||A professional's street address is sensitive information and cannot be accessed by others.": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "Professionals",
+    "column": "street",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [
+   {
+    "table": "Professionals",
+    "column": "professional_id"
+   }
+  ],
+  "trigger_phrases": [
+   "professional's street address",
+   "sensitive information",
+   "cannot be accessed by others"
+  ],
+  "notes": "Assumes 'professional's street address' maps to Professionals.street and that protection applies to the address value itself for all Professionals rows.",
+  "condition_text": "A professional's street address is sensitive information and cannot be accessed by others."
+ },
+ "donor||The city where the donor is located is sensitive information": {
+  "compilable": true,
+  "uncompilable_reason": "",
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "donations",
+    "column": "donor_city",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "city",
+   "donor",
+   "located",
+   "sensitive information"
+  ],
+  "notes": "Assumed that the donor's location city corresponds to the donations.donor_city column and that the rule protects the city value itself from disclosure.",
+  "condition_text": "The city where the donor is located is sensitive information"
+ },
+ "donor||Each donor can only see their own zipcode and cannot see anyone else's": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "donations",
+    "column": "donor_zip",
+    "row_scope": {
+     "scope_table": "donations",
+     "scope_column": "donor_acctid",
+     "op": "=",
+     "value": "CURRENT_USER",
+     "description": "Only the current donor's own donation records may disclose donor_zip."
+    }
+   }
+  ],
+  "identifier_columns": [
+   {
+    "table": "donations",
+    "column": "donor_acctid"
+   }
+  ],
+  "trigger_phrases": [
+   "Each donor",
+   "only see their own zipcode",
+   "cannot see anyone else's"
+  ],
+  "notes": "Assumes CURRENT_USER resolves to the authenticated donor's donor_acctid. The rule protects disclosure of donor_zip values for rows belonging to other donors while allowing access to the current donor's own donor_zip.",
+  "condition_text": "Each donor can only see their own zipcode and cannot see anyone else's"
+ },
+ "e_learning||Each student's test result is sensitive information": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "Student_Tests_Taken",
+    "column": "test_result",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [
+   {
+    "table": "Student_Tests_Taken",
+    "column": "registration_id"
+   }
+  ],
+  "trigger_phrases": [
+   "student's test result",
+   "sensitive information"
+  ],
+  "notes": "Assumed that each test_result value in Student_Tests_Taken is sensitive regardless of the student or test instance.",
+  "condition_text": "Each student's test result is sensitive information"
+ },
+ "dog_kennels||Whether or not someone owns a dog is part of their personal privacy and should not be disclosed publicly.": {
+  "compilable": true,
+  "protection_kind": "attribution",
+  "protected_columns": [
+   {
+    "table": "Dogs",
+    "column": "owner_id",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [
+   {
+    "table": "Owners",
+    "column": "owner_id"
+   }
+  ],
+  "trigger_phrases": [
+   "owns a dog",
+   "personal privacy",
+   "should not be disclosed publicly"
+  ],
+  "notes": "Interpreted as preventing disclosure of the relationship that links an identified owner to a dog record. The protected attribution is the owner-to-dog association represented by Dogs.owner_id.",
+  "condition_text": "Whether or not someone owns a dog is part of their personal privacy and should not be disclosed publicly."
+ },
+ "donor||Each donor can only see their own messages, while others' messages are sensitive information": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "donations",
+    "column": "donation_message",
+    "row_scope": {
+     "scope_table": "donations",
+     "scope_column": "donor_acctid",
+     "op": "!=",
+     "value": "CURRENT_DONOR_ACCTID",
+     "description": "messages on donation rows not belonging to the current donor"
+    }
+   }
+  ],
+  "identifier_columns": [
+   {
+    "table": "donations",
+    "column": "donor_acctid"
+   }
+  ],
+  "trigger_phrases": [
+   "Each donor can only see their own messages",
+   "others' messages are sensitive information"
+  ],
+  "notes": "Assumes the current user's donor identity is represented by donations.donor_acctid and can be compared to CURRENT_DONOR_ACCTID.",
+  "condition_text": "Each donor can only see their own messages, while others' messages are sensitive information"
+ },
+ "e_learning||All passwords are sensitive information": {
+  "compilable": true,
+  "uncompilable_reason": "",
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "Course_Authors_and_Tutors",
+    "column": "password",
+    "row_scope": null
+   },
+   {
+    "table": "Students",
+    "column": "password",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "passwords",
+   "sensitive information"
+  ],
+  "notes": "Assumed that all columns named password in the database represent password values and must not be disclosed.",
+  "condition_text": "All passwords are sensitive information"
+ },
+ "employee_hire_evaluation||The current user is not authorized to view the number of products.": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "shop",
+    "column": "Number_products",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "not authorized to view",
+   "number of products"
+  ],
+  "notes": "The condition denies disclosure of the values in shop.Number_products for the current user. No row-specific scope is specified, so the restriction applies to all rows.",
+  "condition_text": "The current user is not authorized to view the number of products."
+ },
+ "entrepreneur||The amount of funding required by each entrepreneur is protected.": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "entrepreneur",
+    "column": "Money_Requested",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [
+   {
+    "table": "entrepreneur",
+    "column": "Entrepreneur_ID"
+   }
+  ],
+  "trigger_phrases": [
+   "amount of funding required",
+   "each entrepreneur",
+   "is protected"
+  ],
+  "notes": "Assumed that the amount of funding required corresponds to the Money_Requested column and that the entrepreneur entity is identified by Entrepreneur_ID.",
+  "condition_text": "The amount of funding required by each entrepreneur is protected."
+ },
+ "entrepreneur||The total investment amount of investors is not publicly disclosed.": {
+  "compilable": true,
+  "protection_kind": "aggregate",
+  "protected_columns": [
+   {
+    "table": "entrepreneur",
+    "column": "Money_Requested",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [
+   {
+    "table": "entrepreneur",
+    "column": "Investor"
+   }
+  ],
+  "trigger_phrases": [
+   "total investment amount",
+   "investors",
+   "not publicly disclosed"
+  ],
+  "notes": "Assumes that investment amount refers to the Money_Requested values in the entrepreneur table and that the protected disclosure is the aggregate total associated with each Investor.",
+  "condition_text": "The total investment amount of investors is not publicly disclosed."
+ },
+ "farm||The number of sheep is sensitive information.": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "farm",
+    "column": "Sheep_and_Goats",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "number of sheep",
+   "sheep",
+   "sensitive information"
+  ],
+  "notes": "Assumed that the sheep count refers to the farm.Sheep_and_Goats column because the schema does not contain a separate sheep-only column.",
+  "condition_text": "The number of sheep is sensitive information."
+ },
+ "e_learning||Login name is sensitive information": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "Course_Authors_and_Tutors",
+    "column": "login_name",
+    "row_scope": null
+   },
+   {
+    "table": "Students",
+    "column": "login_name",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "Login name",
+   "sensitive information"
+  ],
+  "notes": "The condition is interpreted as protecting the values of all login_name columns wherever they appear in the schema. No row-level scope or attribution requirement is specified.",
+  "condition_text": "Login name is sensitive information"
+ },
+ "employee_hire_evaluation||The annual prize amount is for privacy information.": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "evaluation",
+    "column": "Bonus",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "annual prize amount",
+   "privacy information"
+  ],
+  "notes": "Assumed that annual prize amount refers to the evaluation.Bonus column, which stores awarded bonus amounts.",
+  "condition_text": "The annual prize amount is for privacy information."
+ },
+ "financial||The card number is sensitive information.": {
+  "compilable": false,
+  "uncompilable_reason": "The condition refers to a 'card number', but the schema does not contain a card number column or any unambiguous column representing card numbers. It cannot be reduced to a mechanical column rule using only the provided schema.",
+  "protection_kind": "value",
+  "protected_columns": [],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "card number",
+   "sensitive information"
+  ],
+  "notes": "No matching schema column was found for the protected data element.",
+  "condition_text": "The card number is sensitive information."
+ },
+ "financial||A customer's date of birth is considered protected information.": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "client",
+    "column": "birth_date",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "customer's date of birth",
+   "protected information"
+  ],
+  "notes": "Interpreted 'customer' as records in the client table. The birth_date column is protected and its values must not be disclosed.",
+  "condition_text": "A customer's date of birth is considered protected information."
+ },
+ "flight_company||The distribution of equity in the company group is sensitive information.": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "operate_company",
+    "column": "Group_Equity_Shareholding",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "distribution of equity",
+   "company group",
+   "sensitive information"
+  ],
+  "notes": "Interpreted 'distribution of equity in the company group' as the values stored in operate_company.Group_Equity_Shareholding. No row-level restriction or attribution requirement is specified.",
+  "condition_text": "The distribution of equity in the company group is sensitive information."
+ },
+ "flight_1||The query results must not contain any flight information prior to April 13, 2005, in any form.": {
+  "compilable": false,
+  "uncompilable_reason": "The condition requires filtering flight records based on a temporal comparison ('prior to April 13, 2005') and applies broadly to any form of flight information. The provided rule structure only supports equality-based row scopes and cannot mechanically express a date range predicate such as departure_date < 2005-04-13 or arrival_date < 2005-04-13.",
+  "protection_kind": "other",
+  "protected_columns": [],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "query results must not contain",
+   "flight information",
+   "prior to April 13, 2005",
+   "in any form"
+  ],
+  "notes": "No mechanically valid policy was generated because the available schema for row/value protection cannot represent the required date-based exclusion.",
+  "condition_text": "The query results must not contain any flight information prior to April 13, 2005, in any form."
+ },
+ "financial||The loan amount, transaction amount, and order amount of an account are sensitive information and should be protected.": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "loan",
+    "column": "amount",
+    "row_scope": null
+   },
+   {
+    "table": "trans",
+    "column": "amount",
+    "row_scope": null
+   },
+   {
+    "table": "order",
+    "column": "amount",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [
+   {
+    "table": "account",
+    "column": "account_id"
+   },
+   {
+    "table": "loan",
+    "column": "account_id"
+   },
+   {
+    "table": "trans",
+    "column": "account_id"
+   },
+   {
+    "table": "order",
+    "column": "account_id"
+   }
+  ],
+  "trigger_phrases": [
+   "loan amount",
+   "transaction amount",
+   "order amount",
+   "of an account",
+   "sensitive information",
+   "should be protected"
+  ],
+  "notes": "Interpreted as protecting the raw values of the amount columns associated with accounts across loan, trans, and order tables. No row restriction is specified, so protection applies to all rows in those columns.",
+  "condition_text": "The loan amount, transaction amount, and order amount of an account are sensitive information and should be protected."
+ },
+ "flight_company||Unable to query flight altitude.": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "flight",
+    "column": "Altitude",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "Unable to query",
+   "flight altitude"
+  ],
+  "notes": "Interpreted as a prohibition on disclosing the values of the flight.Altitude column for all rows.",
+  "condition_text": "Unable to query flight altitude."
+ },
+ "financial||The frequency of account transactions is considered sensitive information.": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "account",
+    "column": "frequency",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [
+   {
+    "table": "account",
+    "column": "account_id"
+   }
+  ],
+  "trigger_phrases": [
+   "frequency",
+   "account transactions",
+   "sensitive information"
+  ],
+  "notes": "Interprets the condition as protecting the existing schema column account.frequency. If the intent was instead a computed transaction rate/count from rows in trans, the condition would need a precise aggregation definition and time window.",
+  "condition_text": "The frequency of account transactions is considered sensitive information."
+ },
+ "flight_company||The pilot information corresponding to each aircraft is protected.": {
+  "compilable": true,
+  "protection_kind": "attribution",
+  "protected_columns": [
+   {
+    "table": "flight",
+    "column": "Pilot",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [
+   {
+    "table": "flight",
+    "column": "Vehicle_Flight_number"
+   }
+  ],
+  "trigger_phrases": [
+   "pilot information",
+   "corresponding to each aircraft",
+   "protected"
+  ],
+  "notes": "Interprets aircraft as represented by flight.Vehicle_Flight_number, since no separate aircraft table or aircraft identifier column exists in the schema. The policy protects disclosure of the association between flight.Pilot and the aircraft/flight identifier.",
+  "condition_text": "The pilot information corresponding to each aircraft is protected."
+ },
+ "formula_1||Driver ID is sensitive information": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "drivers",
+    "column": "driverId",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "Driver ID",
+   "sensitive information"
+  ],
+  "notes": "Interpreted 'Driver ID' as the drivers.driverId column in the schema. The rule protects the values of this column from disclosure.",
+  "condition_text": "Driver ID is sensitive information"
+ },
+ "hospital_1||Everyone's SSN is sensitive information": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "Physician",
+    "column": "SSN",
+    "row_scope": null
+   },
+   {
+    "table": "Patient",
+    "column": "SSN",
+    "row_scope": null
+   },
+   {
+    "table": "Nurse",
+    "column": "SSN",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "Everyone's",
+   "SSN",
+   "sensitive information"
+  ],
+  "notes": "Interpreted 'Everyone's SSN' as all schema columns named SSN across all entity tables. The rule protects the SSN values themselves from disclosure.",
+  "condition_text": "Everyone's SSN is sensitive information"
+ },
+ "hospital_1||The patient's hospitalization room is sensitive information": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "Stay",
+    "column": "Room",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "patient's",
+   "hospitalization room",
+   "sensitive information"
+  ],
+  "notes": "Assumed that a patient's hospitalization room is represented by the Room column in the Stay table, which links a patient hospitalization stay to a room number.",
+  "condition_text": "The patient's hospitalization room is sensitive information"
+ },
+ "hospital_1||The patient's address is sensitive information": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "Patient",
+    "column": "Address",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [
+   {
+    "table": "Patient",
+    "column": "SSN"
+   }
+  ],
+  "trigger_phrases": [
+   "patient's address",
+   "sensitive information"
+  ],
+  "notes": "Interpreted as protecting all values in Patient.Address for all patient rows. Patient.SSN is listed as the patient identifier column.",
+  "condition_text": "The patient's address is sensitive information"
+ },
+ "hospital_1||The patient's phone number is sensitive information": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "Patient",
+    "column": "Phone",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "patient's phone number",
+   "sensitive information"
+  ],
+  "notes": "Interpreted as protecting the Patient.Phone column values from disclosure for all patient records.",
+  "condition_text": "The patient's phone number is sensitive information"
+ },
+ "formula_1||For a driver, they can only check their own car number and not the car numbers of other drivers": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "drivers",
+    "column": "number",
+    "row_scope": {
+     "scope_table": "drivers",
+     "scope_column": "driverId",
+     "op": "=",
+     "value": "<non_current_driver_id>",
+     "description": "driver rows where driverId is not the authenticated driver's own driverId"
+    }
+   }
+  ],
+  "identifier_columns": [
+   {
+    "table": "drivers",
+    "column": "driverId"
+   }
+  ],
+  "trigger_phrases": [
+   "For a driver",
+   "their own car number",
+   "not the car numbers of other drivers"
+  ],
+  "notes": "Assumes each authenticated user is mapped to exactly one drivers.driverId. The protected car number is interpreted as drivers.number. The policy permits disclosure of drivers.number only for the row belonging to the current authenticated driver and denies disclosure for other drivers' rows.",
+  "condition_text": "For a driver, they can only check their own car number and not the car numbers of other drivers"
+ },
+ "hr_1||The employee's work address is considered private.": {
+  "compilable": false,
+  "uncompilable_reason": "The condition refers to an employee's work address, but the schema does not contain a direct employee work address column. The address information is stored in locations and linked indirectly through departments and employees, requiring multi-table relationship logic that cannot be represented by the available column/row rule format.",
+  "protection_kind": "other",
+  "protected_columns": [],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "employee's work address",
+   "private"
+  ],
+  "notes": "The rule would require a join-based policy connecting employees.DEPARTMENT_ID to departments.LOCATION_ID and then to locations address columns, which is not expressible using the provided mechanical rule structure.",
+  "condition_text": "The employee's work address is considered private."
+ },
+ "hr_1||The upper and lower limits of salary for a job are privacy concerns.": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "jobs",
+    "column": "MIN_SALARY",
+    "row_scope": null
+   },
+   {
+    "table": "jobs",
+    "column": "MAX_SALARY",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "upper and lower limits of salary",
+   "salary for a job",
+   "privacy concerns"
+  ],
+  "notes": "Interpreted the upper and lower salary limits for a job as the MIN_SALARY and MAX_SALARY columns in the jobs table. The rule protects disclosure of those column values for all rows.",
+  "condition_text": "The upper and lower limits of salary for a job are privacy concerns."
+ },
+ "formula_1||Lewis chose to hide his date of birth, so his date of birth cannot be found by others": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "drivers",
+    "column": "dob",
+    "row_scope": {
+     "scope_table": "drivers",
+     "scope_column": "forename",
+     "op": "=",
+     "value": "Lewis",
+     "description": "The driver row for the person named Lewis"
+    }
+   }
+  ],
+  "identifier_columns": [
+   {
+    "table": "drivers",
+    "column": "forename"
+   },
+   {
+    "table": "drivers",
+    "column": "surname"
+   }
+  ],
+  "trigger_phrases": [
+   "hide his date of birth",
+   "date of birth cannot be found by others"
+  ],
+  "notes": "Assumes that 'Lewis' uniquely identifies the relevant driver using the drivers.forename column.",
+  "condition_text": "Lewis chose to hide his date of birth, so his date of birth cannot be found by others"
+ },
+ "insurance_fnol||The insurance type selected by the user belongs to the user's privacy and cannot be made public.": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "Available_Policies",
+    "column": "policy_type_code",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [
+   {
+    "table": "Available_Policies",
+    "column": "Customer_Phone"
+   },
+   {
+    "table": "Customers_Policies",
+    "column": "Customer_ID"
+   },
+   {
+    "table": "Customers_Policies",
+    "column": "Policy_ID"
+   }
+  ],
+  "trigger_phrases": [
+   "insurance type selected by the user",
+   "user's privacy",
+   "cannot be made public"
+  ],
+  "notes": "Assumes that Available_Policies.policy_type_code represents the insurance type selected by a user and that this value itself is the protected private attribute.",
+  "condition_text": "The insurance type selected by the user belongs to the user's privacy and cannot be made public."
+ },
+ "insurance_fnol||The claim amount of insurance is sensitive information.": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "Settlements",
+    "column": "Settlement_Amount",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "claim amount of insurance",
+   "sensitive information"
+  ],
+  "notes": "Interpreted 'claim amount of insurance' as the monetary amount paid or recorded for a claim, represented by Settlements.Settlement_Amount in the provided schema.",
+  "condition_text": "The claim amount of insurance is sensitive information."
+ },
+ "journal_committee||The editor's age and the journal's sales figures are considered sensitive information.": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "editor",
+    "column": "Age",
+    "row_scope": null
+   },
+   {
+    "table": "journal",
+    "column": "Sales",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "editor's age",
+   "journal's sales figures",
+   "sensitive information"
+  ],
+  "notes": "The condition is interpreted as a column-level value disclosure restriction on editor.Age and journal.Sales for all rows.",
+  "condition_text": "The editor's age and the journal's sales figures are considered sensitive information."
+ },
+ "insurance_fnol||The validity period of insurance belongs to privacy.": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "Customers_Policies",
+    "column": "Date_Opened",
+    "row_scope": null
+   },
+   {
+    "table": "Customers_Policies",
+    "column": "Date_Closed",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [
+   {
+    "table": "Customers_Policies",
+    "column": "Customer_ID"
+   },
+   {
+    "table": "Customers_Policies",
+    "column": "Policy_ID"
+   }
+  ],
+  "trigger_phrases": [
+   "validity period",
+   "insurance",
+   "privacy"
+  ],
+  "notes": "Assumed that the insurance validity period is represented by the Date_Opened and Date_Closed columns of Customers_Policies. These date values are treated as private information associated with a customer policy.",
+  "condition_text": "The validity period of insurance belongs to privacy."
+ },
+ "loan_1||The current user is the manager of Downtown Bank, and he can access all data related to Downtown Bank. Data from other banks is protected.": {
+  "compilable": true,
+  "protection_kind": "row_access",
+  "protected_columns": [
+   {
+    "table": "bank",
+    "column": "branch_ID",
+    "row_scope": {
+     "scope_table": "bank",
+     "scope_column": "bname",
+     "op": "=",
+     "value": "Downtown Bank",
+     "description": "Only rows for Downtown Bank are accessible"
+    }
+   },
+   {
+    "table": "bank",
+    "column": "bname",
+    "row_scope": {
+     "scope_table": "bank",
+     "scope_column": "bname",
+     "op": "=",
+     "value": "Downtown Bank",
+     "description": "Only rows for Downtown Bank are accessible"
+    }
+   },
+   {
+    "table": "bank",
+    "column": "no_of_customers",
+    "row_scope": {
+     "scope_table": "bank",
+     "scope_column": "bname",
+     "op": "=",
+     "value": "Downtown Bank",
+     "description": "Only rows for Downtown Bank are accessible"
+    }
+   },
+   {
+    "table": "bank",
+    "column": "city",
+    "row_scope": {
+     "scope_table": "bank",
+     "scope_column": "bname",
+     "op": "=",
+     "value": "Downtown Bank",
+     "description": "Only rows for Downtown Bank are accessible"
+    }
+   },
+   {
+    "table": "bank",
+    "column": "state",
+    "row_scope": {
+     "scope_table": "bank",
+     "scope_column": "bname",
+     "op": "=",
+     "value": "Downtown Bank",
+     "description": "Only rows for Downtown Bank are accessible"
+    }
+   },
+   {
+    "table": "customer",
+    "column": "cust_ID",
+    "row_scope": {
+     "scope_table": "bank",
+     "scope_column": "bname",
+     "op": "=",
+     "value": "Downtown Bank",
+     "description": "Only customer rows related to Downtown Bank are accessible via branch_ID relationship"
+    }
+   },
+   {
+    "table": "customer",
+    "column": "cust_name",
+    "row_scope": {
+     "scope_table": "bank",
+     "scope_column": "bname",
+     "op": "=",
+     "value": "Downtown Bank",
+     "description": "Only customer rows related to Downtown Bank are accessible via branch_ID relationship"
+    }
+   },
+   {
+    "table": "customer",
+    "column": "acc_type",
+    "row_scope": {
+     "scope_table": "bank",
+     "scope_column": "bname",
+     "op": "=",
+     "value": "Downtown Bank",
+     "description": "Only customer rows related to Downtown Bank are accessible via branch_ID relationship"
+    }
+   },
+   {
+    "table": "customer",
+    "column": "acc_bal",
+    "row_scope": {
+     "scope_table": "bank",
+     "scope_column": "bname",
+     "op": "=",
+     "value": "Downtown Bank",
+     "description": "Only customer rows related to Downtown Bank are accessible via branch_ID relationship"
+    }
+   },
+   {
+    "table": "customer",
+    "column": "no_of_loans",
+    "row_scope": {
+     "scope_table": "bank",
+     "scope_column": "bname",
+     "op": "=",
+     "value": "Downtown Bank",
+     "description": "Only customer rows related to Downtown Bank are accessible via branch_ID relationship"
+    }
+   },
+   {
+    "table": "customer",
+    "column": "credit_score",
+    "row_scope": {
+     "scope_table": "bank",
+     "scope_column": "bname",
+     "op": "=",
+     "value": "Downtown Bank",
+     "description": "Only customer rows related to Downtown Bank are accessible via branch_ID relationship"
+    }
+   },
+   {
+    "table": "customer",
+    "column": "branch_ID",
+    "row_scope": {
+     "scope_table": "bank",
+     "scope_column": "bname",
+     "op": "=",
+     "value": "Downtown Bank",
+     "description": "Only customer rows related to Downtown Bank are accessible via branch_ID relationship"
+    }
+   },
+   {
+    "table": "customer",
+    "column": "state",
+    "row_scope": {
+     "scope_table": "bank",
+     "scope_column": "bname",
+     "op": "=",
+     "value": "Downtown Bank",
+     "description": "Only customer rows related to Downtown Bank are accessible via branch_ID relationship"
+    }
+   },
+   {
+    "table": "loan",
+    "column": "loan_ID",
+    "row_scope": {
+     "scope_table": "bank",
+     "scope_column": "bname",
+     "op": "=",
+     "value": "Downtown Bank",
+     "description": "Only loan rows related to Downtown Bank are accessible via branch_ID relationship"
+    }
+   },
+   {
+    "table": "loan",
+    "column": "loan_type",
+    "row_scope": {
+     "scope_table": "bank",
+     "scope_column": "bname",
+     "op": "=",
+     "value": "Downtown Bank",
+     "description": "Only loan rows related to Downtown Bank are accessible via branch_ID relationship"
+    }
+   },
+   {
+    "table": "loan",
+    "column": "cust_ID",
+    "row_scope": {
+     "scope_table": "bank",
+     "scope_column": "bname",
+     "op": "=",
+     "value": "Downtown Bank",
+     "description": "Only loan rows related to Downtown Bank are accessible via branch_ID relationship"
+    }
+   },
+   {
+    "table": "loan",
+    "column": "branch_ID",
+    "row_scope": {
+     "scope_table": "bank",
+     "scope_column": "bname",
+     "op": "=",
+     "value": "Downtown Bank",
+     "description": "Only loan rows related to Downtown Bank are accessible via branch_ID relationship"
+    }
+   },
+   {
+    "table": "loan",
+    "column": "amount",
+    "row_scope": {
+     "scope_table": "bank",
+     "scope_column": "bname",
+     "op": "=",
+     "value": "Downtown Bank",
+     "description": "Only loan rows related to Downtown Bank are accessible via branch_ID relationship"
+    }
+   }
+  ],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "manager of Downtown Bank",
+   "access all data related to Downtown Bank",
+   "Data from other banks is protected"
+  ],
+  "notes": "Assumes 'related to Downtown Bank' is determined through the branch_ID relationship to the bank row whose bname is 'Downtown Bank'. User role ('current user is the manager') is treated as an already-satisfied authorization context and is not encoded as a schema rule.",
+  "condition_text": "The current user is the manager of Downtown Bank, and he can access all data related to Downtown Bank. Data from other banks is protected."
+ },
+ "loan_1||The current user is a front desk clerk at Downtown Bank. He can view Downtown Bank's data, as well as the credit ratings and loan statuses of Downtown Bank's customers, but he cannot view customers' personal information.": {
+  "compilable": false,
+  "uncompilable_reason": "The condition contains concepts that cannot be reduced mechanically to the given schema without extra assumptions: 'Downtown Bank's customers' requires resolving bank.bname='Downtown Bank' to branch_ID and applying that to customer/loan rows, which is a join-based scope not expressible by the provided literal row_scope form; 'loan statuses' has no matching column in the schema; and 'customers' personal information' is not explicitly defined as a fixed set of columns.",
+  "protection_kind": "other",
+  "protected_columns": [],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "front desk clerk at Downtown Bank",
+   "can view Downtown Bank's data",
+   "credit ratings and loan statuses",
+   "cannot view customers' personal information"
+  ],
+  "notes": "A compilable policy would require defining the Downtown Bank branch_ID, mapping 'credit ratings' to customer.credit_score, defining what column(s) represent 'loan statuses', and enumerating which customer columns count as personal information.",
+  "condition_text": "The current user is a front desk clerk at Downtown Bank. He can view Downtown Bank's data, as well as the credit ratings and loan statuses of Downtown Bank's customers, but he cannot view customers' personal information."
+ },
+ "loan_1||The current user is the head of the audit office. He can view all banking data except for users' personal privacy information.": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "customer",
+    "column": "cust_ID",
+    "row_scope": null
+   },
+   {
+    "table": "customer",
+    "column": "cust_name",
+    "row_scope": null
+   },
+   {
+    "table": "customer",
+    "column": "acc_type",
+    "row_scope": null
+   },
+   {
+    "table": "customer",
+    "column": "acc_bal",
+    "row_scope": null
+   },
+   {
+    "table": "customer",
+    "column": "no_of_loans",
+    "row_scope": null
+   },
+   {
+    "table": "customer",
+    "column": "credit_score",
+    "row_scope": null
+   },
+   {
+    "table": "customer",
+    "column": "state",
+    "row_scope": null
+   },
+   {
+    "table": "loan",
+    "column": "cust_ID",
+    "row_scope": null
+   },
+   {
+    "table": "loan",
+    "column": "loan_type",
+    "row_scope": null
+   },
+   {
+    "table": "loan",
+    "column": "amount",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [
+   {
+    "table": "customer",
+    "column": "cust_ID"
+   },
+   {
+    "table": "customer",
+    "column": "cust_name"
+   },
+   {
+    "table": "loan",
+    "column": "cust_ID"
+   }
+  ],
+  "trigger_phrases": [
+   "head of the audit office",
+   "view all banking data",
+   "except for users' personal privacy information"
+  ],
+  "notes": "Interprets 'users' as customers and 'personal privacy information' as customer-identifying, account, credit, and customer-specific loan details. Bank branch attributes are treated as non-personal banking data and are not protected.",
+  "condition_text": "The current user is the head of the audit office. He can view all banking data except for users' personal privacy information."
+ },
+ "music_platform_2||The total number of reviews added to the database each year is sensitive information.": {
+  "compilable": false,
+  "uncompilable_reason": "The condition refers to the total number of reviews added to the database each year, but the schema does not contain a column that records annual review additions. Although reviews.created_at records review creation time and runs.reviews_added records additions per run, there is no mechanical column or row rule that directly represents or uniquely anchors the yearly aggregate 'reviews added to the database each year'. Protecting this would require recognizing and suppressing a derived aggregate across time rather than restricting specific column values or rows.",
+  "protection_kind": "aggregate",
+  "protected_columns": [],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "total number of reviews added",
+   "each year",
+   "sensitive information"
+  ],
+  "notes": "The protected information is a derived yearly aggregate (e.g. COUNT of reviews by year or SUM of runs.reviews_added by year), not a directly stored value. Enforcing this requires query-level aggregate detection rather than column- or row-based disclosure rules.",
+  "condition_text": "The total number of reviews added to the database each year is sensitive information."
+ },
+ "loan_1||The current user is a bank customer named Mary, and she can only access data related to herself.": {
+  "compilable": true,
+  "protection_kind": "row_access",
+  "protected_columns": [
+   {
+    "table": "customer",
+    "column": "cust_ID",
+    "row_scope": {
+     "scope_table": "customer",
+     "scope_column": "cust_name",
+     "op": "=",
+     "value": "Mary",
+     "description": "Allow only the customer row for the current user, identified as customer named Mary."
+    }
+   },
+   {
+    "table": "customer",
+    "column": "cust_name",
+    "row_scope": {
+     "scope_table": "customer",
+     "scope_column": "cust_name",
+     "op": "=",
+     "value": "Mary",
+     "description": "Allow only the customer row for the current user, identified as customer named Mary."
+    }
+   },
+   {
+    "table": "customer",
+    "column": "acc_type",
+    "row_scope": {
+     "scope_table": "customer",
+     "scope_column": "cust_name",
+     "op": "=",
+     "value": "Mary",
+     "description": "Allow only the customer row for the current user, identified as customer named Mary."
+    }
+   },
+   {
+    "table": "customer",
+    "column": "acc_bal",
+    "row_scope": {
+     "scope_table": "customer",
+     "scope_column": "cust_name",
+     "op": "=",
+     "value": "Mary",
+     "description": "Allow only the customer row for the current user, identified as customer named Mary."
+    }
+   },
+   {
+    "table": "customer",
+    "column": "no_of_loans",
+    "row_scope": {
+     "scope_table": "customer",
+     "scope_column": "cust_name",
+     "op": "=",
+     "value": "Mary",
+     "description": "Allow only the customer row for the current user, identified as customer named Mary."
+    }
+   },
+   {
+    "table": "customer",
+    "column": "credit_score",
+    "row_scope": {
+     "scope_table": "customer",
+     "scope_column": "cust_name",
+     "op": "=",
+     "value": "Mary",
+     "description": "Allow only the customer row for the current user, identified as customer named Mary."
+    }
+   },
+   {
+    "table": "customer",
+    "column": "branch_ID",
+    "row_scope": {
+     "scope_table": "customer",
+     "scope_column": "cust_name",
+     "op": "=",
+     "value": "Mary",
+     "description": "Allow only the customer row for the current user, identified as customer named Mary."
+    }
+   },
+   {
+    "table": "customer",
+    "column": "state",
+    "row_scope": {
+     "scope_table": "customer",
+     "scope_column": "cust_name",
+     "op": "=",
+     "value": "Mary",
+     "description": "Allow only the customer row for the current user, identified as customer named Mary."
+    }
+   },
+   {
+    "table": "loan",
+    "column": "loan_ID",
+    "row_scope": {
+     "scope_table": "customer",
+     "scope_column": "cust_name",
+     "op": "=",
+     "value": "Mary",
+     "description": "Allow only loan rows whose loan.cust_ID matches the cust_ID of the customer named Mary."
+    }
+   },
+   {
+    "table": "loan",
+    "column": "loan_type",
+    "row_scope": {
+     "scope_table": "customer",
+     "scope_column": "cust_name",
+     "op": "=",
+     "value": "Mary",
+     "description": "Allow only loan rows whose loan.cust_ID matches the cust_ID of the customer named Mary."
+    }
+   },
+   {
+    "table": "loan",
+    "column": "cust_ID",
+    "row_scope": {
+     "scope_table": "customer",
+     "scope_column": "cust_name",
+     "op": "=",
+     "value": "Mary",
+     "description": "Allow only loan rows whose loan.cust_ID matches the cust_ID of the customer named Mary."
+    }
+   },
+   {
+    "table": "loan",
+    "column": "branch_ID",
+    "row_scope": {
+     "scope_table": "customer",
+     "scope_column": "cust_name",
+     "op": "=",
+     "value": "Mary",
+     "description": "Allow only loan rows whose loan.cust_ID matches the cust_ID of the customer named Mary."
+    }
+   },
+   {
+    "table": "loan",
+    "column": "amount",
+    "row_scope": {
+     "scope_table": "customer",
+     "scope_column": "cust_name",
+     "op": "=",
+     "value": "Mary",
+     "description": "Allow only loan rows whose loan.cust_ID matches the cust_ID of the customer named Mary."
+    }
+   }
+  ],
+  "identifier_columns": [
+   {
+    "table": "customer",
+    "column": "cust_name"
+   },
+   {
+    "table": "customer",
+    "column": "cust_ID"
+   },
+   {
+    "table": "loan",
+    "column": "cust_ID"
+   }
+  ],
+  "trigger_phrases": [
+   "current user is a bank customer named Mary",
+   "only access data related to herself"
+  ],
+  "notes": "Assumes customer.cust_name identifies the current user Mary, and loan rows are related to Mary through loan.cust_ID = customer.cust_ID. Bank rows are not included because the condition says data related to herself, not general branch data.",
+  "condition_text": "The current user is a bank customer named Mary, and she can only access data related to herself."
+ },
+ "local_govt_mdm||Only tax-related data can be accessed.": {
+  "compilable": false,
+  "uncompilable_reason": "The phrase \"tax-related data\" is a semantic category that is not mechanically defined by the schema. Although some table names suggest possible tax relevance, the condition does not specify which tables, columns, or row values count as tax-related, so it cannot be reduced to unambiguous column or row access rules.",
+  "protection_kind": "other",
+  "protected_columns": [],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "Only tax-related data can be accessed"
+  ],
+  "notes": "A compilable policy would need an explicit whitelist or classification, such as naming Council_Tax and/or Business_Rates as allowed tables, or defining row-level criteria for tax-related records.",
+  "condition_text": "Only tax-related data can be accessed."
+ },
+ "music_platform_2||The titles of blogs in the \"society culture\" category are sensitive information.": {
+  "compilable": false,
+  "uncompilable_reason": "The condition refers to \"blogs\", but the schema has no blogs table or column and no mechanical way to determine which rows are blogs. Although title and category columns exist for podcasts, mapping blogs to podcasts would require an unsupported assumption.",
+  "protection_kind": "other",
+  "protected_columns": [],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "titles of blogs",
+   "society culture category"
+  ],
+  "notes": "No rule compiled because the protected entity type cannot be anchored to the provided schema.",
+  "condition_text": "The titles of blogs in the \"society culture\" category are sensitive information."
+ },
+ "music_platform_2||The total number of reviews by a user is sensitive information.": {
+  "compilable": true,
+  "protection_kind": "aggregate",
+  "protected_columns": [
+   {
+    "table": "reviews",
+    "column": "author_id",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [
+   {
+    "table": "reviews",
+    "column": "author_id"
+   }
+  ],
+  "trigger_phrases": [
+   "total number of reviews",
+   "by a user",
+   "sensitive information"
+  ],
+  "notes": "Protects entity-specific aggregate counts of rows in reviews grouped by reviews.author_id, i.e. COUNT(*) / total reviews for a given user. The schema has no users table, so reviews.author_id is treated as the user identifier.",
+  "condition_text": "The total number of reviews by a user is sensitive information."
+ },
+ "orchestra||The number of attendees at a performance is sensitive information.": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "show",
+    "column": "Attendance",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "number of attendees",
+   "at a performance",
+   "sensitive information"
+  ],
+  "notes": "Interpreted 'number of attendees' as the show.Attendance column, which records attendance for a show linked to a performance via Performance_ID. The policy protects all Attendance values.",
+  "condition_text": "The number of attendees at a performance is sensitive information."
+ },
+ "formula_1||The driver's date of birth is private information": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "drivers",
+    "column": "dob",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [
+   {
+    "table": "drivers",
+    "column": "driverId"
+   }
+  ],
+  "trigger_phrases": [
+   "driver's date of birth",
+   "private information"
+  ],
+  "notes": "The condition is interpreted as prohibiting disclosure of values in the drivers.dob column for all driver records. Driver identity is represented by the primary key driverId.",
+  "condition_text": "The driver's date of birth is private information"
+ },
+ "perpetrator||Personal information, excluding names, is considered sensitive data.": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "people",
+    "column": "Height",
+    "row_scope": null
+   },
+   {
+    "table": "people",
+    "column": "Weight",
+    "row_scope": null
+   },
+   {
+    "table": "people",
+    "column": "Home Town",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "Personal information",
+   "excluding names",
+   "sensitive data"
+  ],
+  "notes": "Assumes that the personal information columns present in the schema are Height, Weight, and Home Town, and that Name is explicitly excluded from protection. No row-level scope or attribution restriction is specified.",
+  "condition_text": "Personal information, excluding names, is considered sensitive data."
+ },
+ "orchestra||The number of times a conductor has conducted cannot be disclosed.": {
+  "compilable": true,
+  "protection_kind": "aggregate",
+  "protected_columns": [
+   {
+    "table": "performance",
+    "column": "Performance_ID",
+    "row_scope": null
+   },
+   {
+    "table": "orchestra",
+    "column": "Conductor_ID",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [
+   {
+    "table": "conductor",
+    "column": "Conductor_ID"
+   },
+   {
+    "table": "conductor",
+    "column": "Name"
+   },
+   {
+    "table": "orchestra",
+    "column": "Conductor_ID"
+   }
+  ],
+  "trigger_phrases": [
+   "number of times",
+   "a conductor",
+   "has conducted"
+  ],
+  "notes": "Interpreted as protecting entity-specific counts of performances conducted by each conductor, mechanically derived by joining conductor.Conductor_ID to orchestra.Conductor_ID and counting associated performance.Performance_ID rows. The schema has no explicit 'conducted count' column.",
+  "condition_text": "The number of times a conductor has conducted cannot be disclosed."
+ },
+ "perpetrator||Specific details of criminal records in Asian countries are not disclosed.": {
+  "compilable": false,
+  "uncompilable_reason": "The clause refers to 'Asian countries' and 'specific details of criminal records' but the schema does not provide a mechanical definition of Asian countries or a column-level classification of which fields constitute specific criminal record details. It therefore cannot be reduced to exact column or row rules using only the available schema.",
+  "protection_kind": "other",
+  "protected_columns": [],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "Specific details",
+   "criminal records",
+   "Asian countries",
+   "are not disclosed"
+  ],
+  "notes": "No policy rule was generated because the condition requires external geographic classification and semantic interpretation of 'specific details'.",
+  "condition_text": "Specific details of criminal records in Asian countries are not disclosed."
+ },
+ "products_for_hire||The current user is a customer service representative who can only access information related to customers.": {
+  "compilable": false,
+  "uncompilable_reason": "The condition is role-based and refers to the current user's job function and a broad concept of information 'related to customers', but the schema does not define a user/role model or a mechanical rule that identifies which rows or columns the current user may access. It cannot be reduced to specific column protections or row scopes using only the provided tables and columns.",
+  "protection_kind": "other",
+  "protected_columns": [],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "current user",
+   "customer service representative",
+   "only access information related to customers"
+  ],
+  "notes": "No customer-service role mapping or definition of customer-related accessible data was provided.",
+  "condition_text": "The current user is a customer service representative who can only access information related to customers."
+ },
+ "products_for_hire||The current user is a finance personnel, and information related to funds and payments is openly accessible to them.": {
+  "compilable": true,
+  "protection_kind": "other",
+  "protected_columns": [],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "finance personnel",
+   "funds",
+   "payments",
+   "openly accessible"
+  ],
+  "notes": "This is an access-grant condition rather than a restriction. It is mechanically interpreted as allowing users identified as finance personnel to access financial and payment-related information. No protected columns are defined because the condition does not specify any disclosure prohibition.",
+  "condition_text": "The current user is a finance personnel, and information related to funds and payments is openly accessible to them."
+ },
+ "products_for_hire||The current user is an inventory manager who can only access information related to product inventory.": {
+  "compilable": false,
+  "uncompilable_reason": "The condition defines an authorization role and a semantic category of information ('inventory manager' and 'product inventory') but does not identify any schema column, row predicate, or literal value that can mechanically determine which rows or columns are disclosable.",
+  "protection_kind": "other",
+  "protected_columns": [],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "current user",
+   "inventory manager",
+   "only access information related to product inventory"
+  ],
+  "notes": "The schema does not contain a user role column or metadata that maps users to inventory-related tables, so the restriction cannot be reduced to machine-checkable column or row rules from the provided schema alone.",
+  "condition_text": "The current user is an inventory manager who can only access information related to product inventory."
+ },
+ "public_review_platform||The IDs of merchants without Wi-Fi are sensitive information.": {
+  "compilable": false,
+  "uncompilable_reason": "The condition requires identifying merchants whose Wi-Fi attribute is absent or set to a non-Wi-Fi value, which depends on a relationship between Business_Attributes and Attributes rather than a single table column or mechanically expressible row scope using the provided rule structure.",
+  "protection_kind": "other",
+  "protected_columns": [],
+  "identifier_columns": [
+   {
+    "table": "Business",
+    "column": "business_id"
+   }
+  ],
+  "trigger_phrases": [
+   "IDs of merchants",
+   "without Wi-Fi",
+   "sensitive information"
+  ],
+  "notes": "The schema represents Wi-Fi as an attribute relationship, but the required policy format cannot encode the necessary join-based condition.",
+  "condition_text": "The IDs of merchants without Wi-Fi are sensitive information."
+ },
+ "products_for_hire||The current user is a system maintenance personnel, and customer's personal information should be hidden from them.": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "Customers",
+    "column": "first_name",
+    "row_scope": null
+   },
+   {
+    "table": "Customers",
+    "column": "last_name",
+    "row_scope": null
+   },
+   {
+    "table": "Customers",
+    "column": "gender_mf",
+    "row_scope": null
+   },
+   {
+    "table": "Customers",
+    "column": "date_became_customer",
+    "row_scope": null
+   },
+   {
+    "table": "Customers",
+    "column": "date_last_hire",
+    "row_scope": null
+   },
+   {
+    "table": "Customers",
+    "column": "good_or_bad_customer",
+    "row_scope": null
+   },
+   {
+    "table": "Customers",
+    "column": "coupon_id",
+    "row_scope": null
+   },
+   {
+    "table": "Customers",
+    "column": "customer_id",
+    "row_scope": null
+   },
+   {
+    "table": "Bookings",
+    "column": "customer_id",
+    "row_scope": null
+   },
+   {
+    "table": "Payments",
+    "column": "customer_id",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [
+   {
+    "table": "Customers",
+    "column": "customer_id"
+   },
+   {
+    "table": "Bookings",
+    "column": "customer_id"
+   },
+   {
+    "table": "Payments",
+    "column": "customer_id"
+   }
+  ],
+  "trigger_phrases": [
+   "current user is a system maintenance personnel",
+   "customer's personal information should be hidden"
+  ],
+  "notes": "Applies only when the current user's role is system maintenance personnel, assumed to be supplied by the access-control context outside this schema. Interprets customer's personal information as direct customer identifiers and customer-specific attributes in Customers, plus customer_id references in related tables that can identify or link records to a customer.",
+  "condition_text": "The current user is a system maintenance personnel, and customer's personal information should be hidden from them."
+ },
+ "public_review_platform||The number of years a user has been an elite member is sensitive information.": {
+  "compilable": true,
+  "uncompilable_reason": "",
+  "protection_kind": "aggregate",
+  "protected_columns": [
+   {
+    "table": "Elite",
+    "column": "year_id",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [
+   {
+    "table": "Elite",
+    "column": "user_id"
+   }
+  ],
+  "trigger_phrases": [
+   "number of years",
+   "user",
+   "elite member",
+   "sensitive information"
+  ],
+  "notes": "The protected information is interpreted as a per-user count of elite membership years, mechanically derived from Elite rows (using user_id and year_id). The underlying Elite membership year records are protected because they enable disclosure of this aggregate.",
+  "condition_text": "The number of years a user has been an elite member is sensitive information."
+ },
+ "public_review_platform||The IDs of users who have posted long tips are sensitive information.": {
+  "compilable": false,
+  "uncompilable_reason": "The condition refers to users who have posted \"long tips\", which can be anchored to Tips.tip_length but does not define a mechanical threshold or literal value for what counts as long. Without that threshold, the protected row scope cannot be determined.",
+  "protection_kind": "other",
+  "protected_columns": [],
+  "identifier_columns": [
+   {
+    "table": "Tips",
+    "column": "user_id"
+   }
+  ],
+  "trigger_phrases": [
+   "IDs of users",
+   "posted long tips",
+   "sensitive information"
+  ],
+  "notes": "Assumes user IDs correspond to Tips.user_id; a numeric definition of \"long\" is required to compile this into a row-scoped value or attribution rule.",
+  "condition_text": "The IDs of users who have posted long tips are sensitive information."
+ },
+ "public_review_platform||The total number of comments per user is sensitive information.": {
+  "compilable": true,
+  "protection_kind": "aggregate",
+  "protected_columns": [
+   {
+    "table": "Reviews",
+    "column": "user_id",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [
+   {
+    "table": "Reviews",
+    "column": "user_id"
+   }
+  ],
+  "trigger_phrases": [
+   "total number of comments",
+   "per user",
+   "sensitive information"
+  ],
+  "notes": "Interpreted 'comments' as review records in the Reviews table. The protected item is the user-specific aggregate COUNT of Reviews rows grouped by Reviews.user_id; no explicit stored count column exists in the schema.",
+  "condition_text": "The total number of comments per user is sensitive information."
+ },
+ "real_estate_properties||The transaction price of each property is sensitive information.": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "Properties",
+    "column": "agreed_selling_price",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "transaction price",
+   "each property",
+   "sensitive information"
+  ],
+  "notes": "Assumes 'transaction price' corresponds to the final agreed sale price stored in Properties.agreed_selling_price.",
+  "condition_text": "The transaction price of each property is sensitive information."
+ },
+ "real_estate_properties||The number of rooms in the property is invisible.": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "Properties",
+    "column": "room_count",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "number of rooms",
+   "property",
+   "invisible"
+  ],
+  "notes": "Interpreted 'number of rooms in the property' as the Properties.room_count column. The condition applies to all rows because no specific property or row filter is given.",
+  "condition_text": "The number of rooms in the property is invisible."
+ },
+ "retail_complains||The current user is a customer service representative and does not have access to product reviews.": {
+  "compilable": true,
+  "protection_kind": "other",
+  "protected_columns": [
+   {
+    "table": "reviews",
+    "column": "Date",
+    "row_scope": null
+   },
+   {
+    "table": "reviews",
+    "column": "Stars",
+    "row_scope": null
+   },
+   {
+    "table": "reviews",
+    "column": "Reviews",
+    "row_scope": null
+   },
+   {
+    "table": "reviews",
+    "column": "Product",
+    "row_scope": null
+   },
+   {
+    "table": "reviews",
+    "column": "district_id",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "customer service representative",
+   "does not have access to product reviews"
+  ],
+  "notes": "Assumed that 'product reviews' refers to the entire reviews table and that the current user's role is a customer service representative. This is compiled as a table-level disclosure restriction because no review rows or columns are accessible.",
+  "condition_text": "The current user is a customer service representative and does not have access to product reviews."
+ },
+ "retail_complains||The detailed data of each complaint in the central log is inaccessible.": {
+  "compilable": false,
+  "uncompilable_reason": "The clause refers to 'the central log' and 'detailed data of each complaint' without identifying a specific table or columns. Although the schema contains complaint-related tables, the condition does not mechanically specify whether it applies to callcenterlogs, events, or particular complaint detail columns.",
+  "protection_kind": "other",
+  "protected_columns": [],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "detailed data",
+   "each complaint",
+   "central log",
+   "inaccessible"
+  ],
+  "notes": "The rule requires clarification of which table represents the central log and which columns constitute detailed complaint data before it can be reduced to column or row-level disclosure rules.",
+  "condition_text": "The detailed data of each complaint in the central log is inaccessible."
+ },
+ "retail_world||The quantity of products and their prices are inaccessible to the user.": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "OrderDetails",
+    "column": "Quantity",
+    "row_scope": null
+   },
+   {
+    "table": "Products",
+    "column": "Price",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "quantity of products",
+   "prices",
+   "inaccessible to the user"
+  ],
+  "notes": "Interpreted 'quantity of products' as the Quantity column in OrderDetails and 'prices' as the Price column in Products. All values in these columns are protected regardless of row.",
+  "condition_text": "The quantity of products and their prices are inaccessible to the user."
+ },
+ "public_review_platform||The number of check-ins by merchants every Friday is sensitive information.": {
+  "compilable": true,
+  "protection_kind": "aggregate",
+  "protected_columns": [
+   {
+    "table": "Checkins",
+    "column": "label_time_0",
+    "row_scope": {
+     "scope_table": "Days",
+     "scope_column": "day_of_week",
+     "op": "=",
+     "value": "Friday",
+     "description": "check-in counts for Friday"
+    }
+   },
+   {
+    "table": "Checkins",
+    "column": "label_time_1",
+    "row_scope": {
+     "scope_table": "Days",
+     "scope_column": "day_of_week",
+     "op": "=",
+     "value": "Friday",
+     "description": "check-in counts for Friday"
+    }
+   },
+   {
+    "table": "Checkins",
+    "column": "label_time_2",
+    "row_scope": {
+     "scope_table": "Days",
+     "scope_column": "day_of_week",
+     "op": "=",
+     "value": "Friday",
+     "description": "check-in counts for Friday"
+    }
+   },
+   {
+    "table": "Checkins",
+    "column": "label_time_3",
+    "row_scope": {
+     "scope_table": "Days",
+     "scope_column": "day_of_week",
+     "op": "=",
+     "value": "Friday",
+     "description": "check-in counts for Friday"
+    }
+   },
+   {
+    "table": "Checkins",
+    "column": "label_time_4",
+    "row_scope": {
+     "scope_table": "Days",
+     "scope_column": "day_of_week",
+     "op": "=",
+     "value": "Friday",
+     "description": "check-in counts for Friday"
+    }
+   },
+   {
+    "table": "Checkins",
+    "column": "label_time_5",
+    "row_scope": {
+     "scope_table": "Days",
+     "scope_column": "day_of_week",
+     "op": "=",
+     "value": "Friday",
+     "description": "check-in counts for Friday"
+    }
+   },
+   {
+    "table": "Checkins",
+    "column": "label_time_6",
+    "row_scope": {
+     "scope_table": "Days",
+     "scope_column": "day_of_week",
+     "op": "=",
+     "value": "Friday",
+     "description": "check-in counts for Friday"
+    }
+   },
+   {
+    "table": "Checkins",
+    "column": "label_time_7",
+    "row_scope": {
+     "scope_table": "Days",
+     "scope_column": "day_of_week",
+     "op": "=",
+     "value": "Friday",
+     "description": "check-in counts for Friday"
+    }
+   },
+   {
+    "table": "Checkins",
+    "column": "label_time_8",
+    "row_scope": {
+     "scope_table": "Days",
+     "scope_column": "day_of_week",
+     "op": "=",
+     "value": "Friday",
+     "description": "check-in counts for Friday"
+    }
+   },
+   {
+    "table": "Checkins",
+    "column": "label_time_9",
+    "row_scope": {
+     "scope_table": "Days",
+     "scope_column": "day_of_week",
+     "op": "=",
+     "value": "Friday",
+     "description": "check-in counts for Friday"
+    }
+   },
+   {
+    "table": "Checkins",
+    "column": "label_time_10",
+    "row_scope": {
+     "scope_table": "Days",
+     "scope_column": "day_of_week",
+     "op": "=",
+     "value": "Friday",
+     "description": "check-in counts for Friday"
+    }
+   },
+   {
+    "table": "Checkins",
+    "column": "label_time_11",
+    "row_scope": {
+     "scope_table": "Days",
+     "scope_column": "day_of_week",
+     "op": "=",
+     "value": "Friday",
+     "description": "check-in counts for Friday"
+    }
+   },
+   {
+    "table": "Checkins",
+    "column": "label_time_12",
+    "row_scope": {
+     "scope_table": "Days",
+     "scope_column": "day_of_week",
+     "op": "=",
+     "value": "Friday",
+     "description": "check-in counts for Friday"
+    }
+   },
+   {
+    "table": "Checkins",
+    "column": "label_time_13",
+    "row_scope": {
+     "scope_table": "Days",
+     "scope_column": "day_of_week",
+     "op": "=",
+     "value": "Friday",
+     "description": "check-in counts for Friday"
+    }
+   },
+   {
+    "table": "Checkins",
+    "column": "label_time_14",
+    "row_scope": {
+     "scope_table": "Days",
+     "scope_column": "day_of_week",
+     "op": "=",
+     "value": "Friday",
+     "description": "check-in counts for Friday"
+    }
+   },
+   {
+    "table": "Checkins",
+    "column": "label_time_15",
+    "row_scope": {
+     "scope_table": "Days",
+     "scope_column": "day_of_week",
+     "op": "=",
+     "value": "Friday",
+     "description": "check-in counts for Friday"
+    }
+   },
+   {
+    "table": "Checkins",
+    "column": "label_time_16",
+    "row_scope": {
+     "scope_table": "Days",
+     "scope_column": "day_of_week",
+     "op": "=",
+     "value": "Friday",
+     "description": "check-in counts for Friday"
+    }
+   },
+   {
+    "table": "Checkins",
+    "column": "label_time_17",
+    "row_scope": {
+     "scope_table": "Days",
+     "scope_column": "day_of_week",
+     "op": "=",
+     "value": "Friday",
+     "description": "check-in counts for Friday"
+    }
+   },
+   {
+    "table": "Checkins",
+    "column": "label_time_18",
+    "row_scope": {
+     "scope_table": "Days",
+     "scope_column": "day_of_week",
+     "op": "=",
+     "value": "Friday",
+     "description": "check-in counts for Friday"
+    }
+   },
+   {
+    "table": "Checkins",
+    "column": "label_time_19",
+    "row_scope": {
+     "scope_table": "Days",
+     "scope_column": "day_of_week",
+     "op": "=",
+     "value": "Friday",
+     "description": "check-in counts for Friday"
+    }
+   },
+   {
+    "table": "Checkins",
+    "column": "label_time_20",
+    "row_scope": {
+     "scope_table": "Days",
+     "scope_column": "day_of_week",
+     "op": "=",
+     "value": "Friday",
+     "description": "check-in counts for Friday"
+    }
+   },
+   {
+    "table": "Checkins",
+    "column": "label_time_21",
+    "row_scope": {
+     "scope_table": "Days",
+     "scope_column": "day_of_week",
+     "op": "=",
+     "value": "Friday",
+     "description": "check-in counts for Friday"
+    }
+   },
+   {
+    "table": "Checkins",
+    "column": "label_time_22",
+    "row_scope": {
+     "scope_table": "Days",
+     "scope_column": "day_of_week",
+     "op": "=",
+     "value": "Friday",
+     "description": "check-in counts for Friday"
+    }
+   },
+   {
+    "table": "Checkins",
+    "column": "label_time_23",
+    "row_scope": {
+     "scope_table": "Days",
+     "scope_column": "day_of_week",
+     "op": "=",
+     "value": "Friday",
+     "description": "check-in counts for Friday"
+    }
+   }
+  ],
+  "identifier_columns": [
+   {
+    "table": "Checkins",
+    "column": "business_id"
+   },
+   {
+    "table": "Business",
+    "column": "business_id"
+   }
+  ],
+  "trigger_phrases": [
+   "number of check-ins",
+   "merchants",
+   "every Friday"
+  ],
+  "notes": "Assumes merchants correspond to businesses identified by business_id. Friday is represented by joining Checkins.day_id to Days.day_id and applying Days.day_of_week = 'Friday'. The protected aggregate is the business-specific Friday check-in count, including totals derived from the hourly label_time_0 through label_time_23 columns.",
+  "condition_text": "The number of check-ins by merchants every Friday is sensitive information."
+ },
+ "school_bus||Except for their names, all other personal information about drivers should be hidden from users.": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "driver",
+    "column": "Driver_ID",
+    "row_scope": null
+   },
+   {
+    "table": "driver",
+    "column": "Party",
+    "row_scope": null
+   },
+   {
+    "table": "driver",
+    "column": "Home_city",
+    "row_scope": null
+   },
+   {
+    "table": "driver",
+    "column": "Age",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [
+   {
+    "table": "driver",
+    "column": "Name"
+   }
+  ],
+  "trigger_phrases": [
+   "Except for their names",
+   "all other personal information about drivers",
+   "should be hidden"
+  ],
+  "notes": "Interpreted 'drivers' as the driver table and 'Except for their names' as allowing disclosure of driver.Name while hiding all other columns in driver. Did not include school_bus columns because the clause says personal information and the direct driver personal attributes are in the driver table.",
+  "condition_text": "Except for their names, all other personal information about drivers should be hidden from users."
+ },
+ "soccer_2016||The player's date of birth is sensitive information": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "Player",
+    "column": "DOB",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [
+   {
+    "table": "Player",
+    "column": "Player_Id"
+   }
+  ],
+  "trigger_phrases": [
+   "player's date of birth",
+   "date of birth",
+   "sensitive information"
+  ],
+  "notes": "The condition is interpreted as protecting the Player.DOB column for all player records.",
+  "condition_text": "The player's date of birth is sensitive information"
+ },
+ "soccer_2016||Player ID is sensitive information": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "Player",
+    "column": "Player_Id",
+    "row_scope": null
+   },
+   {
+    "table": "Player_Match",
+    "column": "Player_Id",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "Player ID",
+   "sensitive information"
+  ],
+  "notes": "Interpreted the condition as protecting columns explicitly named Player_Id. Other player-reference columns such as Striker, Non_Striker, Bowler, Player_Out, Man_of_the_Match, Man_of_the_Series, Orange_Cap, and Purple_Cap may contain player identifiers semantically, but they are not mechanically named Player_Id in the provided schema.",
+  "condition_text": "Player ID is sensitive information"
+ },
+ "store_1||Employees' ages cannot be obtained.": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "employees",
+    "column": "birth_date",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "Employees' ages",
+   "ages cannot be obtained"
+  ],
+  "notes": "Employee age is mechanically derivable from employees.birth_date, so the birth_date values for employees are protected to prevent obtaining ages.",
+  "condition_text": "Employees' ages cannot be obtained."
+ },
+ "store_1||The personal information of user Lucas Mancini cannot be disclosed, while information of other users can be accessed.": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "customers",
+    "column": "first_name",
+    "row_scope": {
+     "scope_table": "customers",
+     "scope_column": "first_name",
+     "op": "=",
+     "value": "Lucas",
+     "description": "Rows belonging to the user Lucas Mancini"
+    }
+   },
+   {
+    "table": "customers",
+    "column": "last_name",
+    "row_scope": {
+     "scope_table": "customers",
+     "scope_column": "first_name",
+     "op": "=",
+     "value": "Lucas",
+     "description": "Rows belonging to the user Lucas Mancini"
+    }
+   },
+   {
+    "table": "customers",
+    "column": "company",
+    "row_scope": {
+     "scope_table": "customers",
+     "scope_column": "first_name",
+     "op": "=",
+     "value": "Lucas",
+     "description": "Rows belonging to the user Lucas Mancini"
+    }
+   },
+   {
+    "table": "customers",
+    "column": "address",
+    "row_scope": {
+     "scope_table": "customers",
+     "scope_column": "first_name",
+     "op": "=",
+     "value": "Lucas",
+     "description": "Rows belonging to the user Lucas Mancini"
+    }
+   },
+   {
+    "table": "customers",
+    "column": "city",
+    "row_scope": {
+     "scope_table": "customers",
+     "scope_column": "first_name",
+     "op": "=",
+     "value": "Lucas",
+     "description": "Rows belonging to the user Lucas Mancini"
+    }
+   },
+   {
+    "table": "customers",
+    "column": "state",
+    "row_scope": {
+     "scope_table": "customers",
+     "scope_column": "first_name",
+     "op": "=",
+     "value": "Lucas",
+     "description": "Rows belonging to the user Lucas Mancini"
+    }
+   },
+   {
+    "table": "customers",
+    "column": "country",
+    "row_scope": {
+     "scope_table": "customers",
+     "scope_column": "first_name",
+     "op": "=",
+     "value": "Lucas",
+     "description": "Rows belonging to the user Lucas Mancini"
+    }
+   },
+   {
+    "table": "customers",
+    "column": "postal_code",
+    "row_scope": {
+     "scope_table": "customers",
+     "scope_column": "first_name",
+     "op": "=",
+     "value": "Lucas",
+     "description": "Rows belonging to the user Lucas Mancini"
+    }
+   },
+   {
+    "table": "customers",
+    "column": "phone",
+    "row_scope": {
+     "scope_table": "customers",
+     "scope_column": "first_name",
+     "op": "=",
+     "value": "Lucas",
+     "description": "Rows belonging to the user Lucas Mancini"
+    }
+   },
+   {
+    "table": "customers",
+    "column": "fax",
+    "row_scope": {
+     "scope_table": "customers",
+     "scope_column": "first_name",
+     "op": "=",
+     "value": "Lucas",
+     "description": "Rows belonging to the user Lucas Mancini"
+    }
+   },
+   {
+    "table": "customers",
+    "column": "email",
+    "row_scope": {
+     "scope_table": "customers",
+     "scope_column": "first_name",
+     "op": "=",
+     "value": "Lucas",
+     "description": "Rows belonging to the user Lucas Mancini"
+    }
+   }
+  ],
+  "identifier_columns": [
+   {
+    "table": "customers",
+    "column": "first_name"
+   },
+   {
+    "table": "customers",
+    "column": "last_name"
+   }
+  ],
+  "trigger_phrases": [
+   "personal information",
+   "user Lucas Mancini",
+   "cannot be disclosed",
+   "other users can be accessed"
+  ],
+  "notes": "Assumes Lucas Mancini corresponds to a row in customers identified by first_name='Lucas' and last_name='Mancini'. The available row_scope structure only supports one equality predicate, so first_name is used as the mechanical row anchor and last_name is retained as an identifier column.",
+  "condition_text": "The personal information of user Lucas Mancini cannot be disclosed, while information of other users can be accessed."
+ },
+ "social_media||The current user is tw-66780587, who can only see their own tweets.": {
+  "compilable": true,
+  "uncompilable_reason": "",
+  "protection_kind": "row_access",
+  "protected_columns": [
+   {
+    "table": "twitter",
+    "column": "TweetID",
+    "row_scope": {
+     "scope_table": "twitter",
+     "scope_column": "UserID",
+     "op": "=",
+     "value": "tw-66780587",
+     "description": "Only tweets belonging to the current user's UserID may be returned."
+    }
+   },
+   {
+    "table": "twitter",
+    "column": "Weekday",
+    "row_scope": {
+     "scope_table": "twitter",
+     "scope_column": "UserID",
+     "op": "=",
+     "value": "tw-66780587",
+     "description": "Only tweets belonging to the current user's UserID may be returned."
+    }
+   },
+   {
+    "table": "twitter",
+    "column": "Hour",
+    "row_scope": {
+     "scope_table": "twitter",
+     "scope_column": "UserID",
+     "op": "=",
+     "value": "tw-66780587",
+     "description": "Only tweets belonging to the current user's UserID may be returned."
+    }
+   },
+   {
+    "table": "twitter",
+    "column": "Day",
+    "row_scope": {
+     "scope_table": "twitter",
+     "scope_column": "UserID",
+     "op": "=",
+     "value": "tw-66780587",
+     "description": "Only tweets belonging to the current user's UserID may be returned."
+    }
+   },
+   {
+    "table": "twitter",
+    "column": "Lang",
+    "row_scope": {
+     "scope_table": "twitter",
+     "scope_column": "UserID",
+     "op": "=",
+     "value": "tw-66780587",
+     "description": "Only tweets belonging to the current user's UserID may be returned."
+    }
+   },
+   {
+    "table": "twitter",
+    "column": "IsReshare",
+    "row_scope": {
+     "scope_table": "twitter",
+     "scope_column": "UserID",
+     "op": "=",
+     "value": "tw-66780587",
+     "description": "Only tweets belonging to the current user's UserID may be returned."
+    }
+   },
+   {
+    "table": "twitter",
+    "column": "Reach",
+    "row_scope": {
+     "scope_table": "twitter",
+     "scope_column": "UserID",
+     "op": "=",
+     "value": "tw-66780587",
+     "description": "Only tweets belonging to the current user's UserID may be returned."
+    }
+   },
+   {
+    "table": "twitter",
+    "column": "RetweetCount",
+    "row_scope": {
+     "scope_table": "twitter",
+     "scope_column": "UserID",
+     "op": "=",
+     "value": "tw-66780587",
+     "description": "Only tweets belonging to the current user's UserID may be returned."
+    }
+   },
+   {
+    "table": "twitter",
+    "column": "Likes",
+    "row_scope": {
+     "scope_table": "twitter",
+     "scope_column": "UserID",
+     "op": "=",
+     "value": "tw-66780587",
+     "description": "Only tweets belonging to the current user's UserID may be returned."
+    }
+   },
+   {
+    "table": "twitter",
+    "column": "Klout",
+    "row_scope": {
+     "scope_table": "twitter",
+     "scope_column": "UserID",
+     "op": "=",
+     "value": "tw-66780587",
+     "description": "Only tweets belonging to the current user's UserID may be returned."
+    }
+   },
+   {
+    "table": "twitter",
+    "column": "Sentiment",
+    "row_scope": {
+     "scope_table": "twitter",
+     "scope_column": "UserID",
+     "op": "=",
+     "value": "tw-66780587",
+     "description": "Only tweets belonging to the current user's UserID may be returned."
+    }
+   },
+   {
+    "table": "twitter",
+    "column": "text",
+    "row_scope": {
+     "scope_table": "twitter",
+     "scope_column": "UserID",
+     "op": "=",
+     "value": "tw-66780587",
+     "description": "Only tweets belonging to the current user's UserID may be returned."
+    }
+   },
+   {
+    "table": "twitter",
+    "column": "LocationID",
+    "row_scope": {
+     "scope_table": "twitter",
+     "scope_column": "UserID",
+     "op": "=",
+     "value": "tw-66780587",
+     "description": "Only tweets belonging to the current user's UserID may be returned."
+    }
+   },
+   {
+    "table": "twitter",
+    "column": "UserID",
+    "row_scope": {
+     "scope_table": "twitter",
+     "scope_column": "UserID",
+     "op": "=",
+     "value": "tw-66780587",
+     "description": "Only tweets belonging to the current user's UserID may be returned."
+    }
+   }
+  ],
+  "identifier_columns": [
+   {
+    "table": "twitter",
+    "column": "UserID"
+   }
+  ],
+  "trigger_phrases": [
+   "current user",
+   "tw-66780587",
+   "only see",
+   "own tweets"
+  ],
+  "notes": "Assumes the current user's identifier maps directly to the twitter.UserID column.",
+  "condition_text": "The current user is tw-66780587, who can only see their own tweets."
+ },
+ "store_1||The specific amount of an invoice for a certain client is sensitive information.": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "invoices",
+    "column": "total",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "specific amount",
+   "invoice",
+   "certain client",
+   "sensitive information"
+  ],
+  "notes": "Interpreted 'amount of an invoice' as the invoices.total column. The condition does not identify a particular client value, so no row scope can be mechanically specified.",
+  "condition_text": "The specific amount of an invoice for a certain client is sensitive information."
+ },
+ "store_1||Users' personal information cannot be disclosed.": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "employees",
+    "column": "last_name",
+    "row_scope": null
+   },
+   {
+    "table": "employees",
+    "column": "first_name",
+    "row_scope": null
+   },
+   {
+    "table": "employees",
+    "column": "birth_date",
+    "row_scope": null
+   },
+   {
+    "table": "employees",
+    "column": "hire_date",
+    "row_scope": null
+   },
+   {
+    "table": "employees",
+    "column": "address",
+    "row_scope": null
+   },
+   {
+    "table": "employees",
+    "column": "city",
+    "row_scope": null
+   },
+   {
+    "table": "employees",
+    "column": "state",
+    "row_scope": null
+   },
+   {
+    "table": "employees",
+    "column": "country",
+    "row_scope": null
+   },
+   {
+    "table": "employees",
+    "column": "postal_code",
+    "row_scope": null
+   },
+   {
+    "table": "employees",
+    "column": "phone",
+    "row_scope": null
+   },
+   {
+    "table": "employees",
+    "column": "fax",
+    "row_scope": null
+   },
+   {
+    "table": "employees",
+    "column": "email",
+    "row_scope": null
+   },
+   {
+    "table": "customers",
+    "column": "first_name",
+    "row_scope": null
+   },
+   {
+    "table": "customers",
+    "column": "last_name",
+    "row_scope": null
+   },
+   {
+    "table": "customers",
+    "column": "company",
+    "row_scope": null
+   },
+   {
+    "table": "customers",
+    "column": "address",
+    "row_scope": null
+   },
+   {
+    "table": "customers",
+    "column": "city",
+    "row_scope": null
+   },
+   {
+    "table": "customers",
+    "column": "state",
+    "row_scope": null
+   },
+   {
+    "table": "customers",
+    "column": "country",
+    "row_scope": null
+   },
+   {
+    "table": "customers",
+    "column": "postal_code",
+    "row_scope": null
+   },
+   {
+    "table": "customers",
+    "column": "phone",
+    "row_scope": null
+   },
+   {
+    "table": "customers",
+    "column": "fax",
+    "row_scope": null
+   },
+   {
+    "table": "customers",
+    "column": "email",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [
+   {
+    "table": "employees",
+    "column": "id"
+   },
+   {
+    "table": "customers",
+    "column": "id"
+   }
+  ],
+  "trigger_phrases": [
+   "Users'",
+   "personal information",
+   "cannot be disclosed"
+  ],
+  "notes": "Assumes that user personal information corresponds to employee and customer personally identifiable information columns available in the schema. The rule protects the values themselves rather than restricting rows or preventing attribution.",
+  "condition_text": "Users' personal information cannot be disclosed."
+ },
+ "student_club||The member's phone number is sensitive information": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "member",
+    "column": "phone",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "member's phone number",
+   "sensitive information"
+  ],
+  "notes": "The condition designates the values in member.phone as sensitive. The phone column should not be disclosed.",
+  "condition_text": "The member's phone number is sensitive information"
+ },
+ "student_club||The size of a member's T-shirt is sensitive information": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "member",
+    "column": "t_shirt_size",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [
+   {
+    "table": "member",
+    "column": "member_id"
+   }
+  ],
+  "trigger_phrases": [
+   "size of a member's T-shirt",
+   "sensitive information"
+  ],
+  "notes": "Interpreted as protecting direct disclosure of all values in member.t_shirt_size for any member row.",
+  "condition_text": "The size of a member's T-shirt is sensitive information"
+ },
+ "student_loan||The names of disabled students are sensitive information": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "disabled",
+    "column": "name",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [
+   {
+    "table": "disabled",
+    "column": "name"
+   }
+  ],
+  "trigger_phrases": [
+   "names of disabled students",
+   "sensitive information"
+  ],
+  "notes": "Interpreted 'disabled students' as the entities represented in the disabled table; the sensitive value is the name column for those rows.",
+  "condition_text": "The names of disabled students are sensitive information"
+ },
+ "student_club||The member's zipcode and address are sensitive information": {
+  "compilable": false,
+  "uncompilable_reason": "The condition refers to the member's address, but no address column appears in the provided schema. The member's zipcode can be mechanically mapped to member.zip, but the full clause cannot be reduced to column-level rules without an address column.",
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "member",
+    "column": "zip",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "member's zipcode",
+   "address",
+   "sensitive information"
+  ],
+  "notes": "Assumes 'zipcode' refers to member.zip. No schema column exists for a member address.",
+  "condition_text": "The member's zipcode and address are sensitive information"
+ },
+ "student_loan||The names of students who have served in the military and those who have taken leave are sensitive information.": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "enlist",
+    "column": "name",
+    "row_scope": null
+   },
+   {
+    "table": "longest_absense_from_school",
+    "column": "name",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [
+   {
+    "table": "enlist",
+    "column": "name"
+   },
+   {
+    "table": "longest_absense_from_school",
+    "column": "name"
+   }
+  ],
+  "trigger_phrases": [
+   "served in the military",
+   "taken leave",
+   "names of students"
+  ],
+  "notes": "Assumes 'served in the military' corresponds to records in enlist(name, organ), and 'taken leave' corresponds to records in longest_absense_from_school(name, month). The policy protects disclosure of the names appearing in those tables.",
+  "condition_text": "The names of students who have served in the military and those who have taken leave are sensitive information."
+ },
+ "student_transcripts_tracking||The student's email address is sensitive information": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "Students",
+    "column": "email_address",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "student's email address",
+   "sensitive information"
+  ],
+  "notes": "The phrase \"student's email address\" maps directly to Students.email_address. The rule protects the values of this column for all student rows.",
+  "condition_text": "The student's email address is sensitive information"
+ },
+ "customers_campaigns_ecommerce||The client's login information is confidential.": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "Customers",
+    "column": "customer_login",
+    "row_scope": null
+   },
+   {
+    "table": "Customers",
+    "column": "customer_password",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [
+   {
+    "table": "Customers",
+    "column": "customer_id"
+   }
+  ],
+  "trigger_phrases": [
+   "client's login information",
+   "confidential"
+  ],
+  "notes": "Interpreted 'client' as a customer in the Customers table. 'Login information' is mapped mechanically to customer_login and customer_password; their values must not be disclosed for any customer.",
+  "condition_text": "The client's login information is confidential."
+ },
+ "student_transcripts_tracking||The student's mobile phone number is sensitive information": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "Students",
+    "column": "cell_mobile_number",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "student's mobile phone number",
+   "sensitive information"
+  ],
+  "notes": "Interpreted the student's mobile phone number as the Students.cell_mobile_number column. The rule protects the column value for all student rows.",
+  "condition_text": "The student's mobile phone number is sensitive information"
+ },
+ "student_transcripts_tracking||The student's transcript ID is sensitive information": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "Transcripts",
+    "column": "transcript_id",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "student's transcript ID",
+   "sensitive information"
+  ],
+  "notes": "The condition explicitly identifies the transcript_id value as sensitive. This is compiled as a value-level protection rule for the Transcripts.transcript_id column. No additional row scope or entity-linking rule is stated.",
+  "condition_text": "The student's transcript ID is sensitive information"
+ },
+ "orchestra||The market share of a band's performances is sensitive information.": {
+  "compilable": true,
+  "protection_kind": "attribution",
+  "protected_columns": [
+   {
+    "table": "performance",
+    "column": "Share",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [
+   {
+    "table": "orchestra",
+    "column": "Orchestra"
+   },
+   {
+    "table": "performance",
+    "column": "Orchestra_ID"
+   }
+  ],
+  "trigger_phrases": [
+   "market share",
+   "band's performances",
+   "sensitive information"
+  ],
+  "notes": "Interpreted 'band' as the orchestra entity in the schema. The Share column represents the market share of performances. The rule protects associating Share values with a specific orchestra.",
+  "condition_text": "The market share of a band's performances is sensitive information."
+ },
+ "department_management||\"temporary_acting\" is sensitive information.": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "management",
+    "column": "temporary_acting",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "temporary_acting",
+   "sensitive information"
+  ],
+  "notes": "The condition is interpreted as protecting all values in the management.temporary_acting column from disclosure.",
+  "condition_text": "\"temporary_acting\" is sensitive information."
+ },
+ "superstore||The sales figures are sensitive information.": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "central_superstore",
+    "column": "Sales",
+    "row_scope": null
+   },
+   {
+    "table": "east_superstore",
+    "column": "Sales",
+    "row_scope": null
+   },
+   {
+    "table": "south_superstore",
+    "column": "Sales",
+    "row_scope": null
+   },
+   {
+    "table": "west_superstore",
+    "column": "Sales",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "sales figures",
+   "sensitive information"
+  ],
+  "notes": "Interprets \"sales figures\" as the values in the Sales columns of all regional superstore fact tables.",
+  "condition_text": "The sales figures are sensitive information."
+ },
+ "synthea||The patient's date of birth is sensitive data": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "patients",
+    "column": "birthdate",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "patient's",
+   "date of birth",
+   "sensitive data"
+  ],
+  "notes": "Mapped 'date of birth' to the patients.birthdate column. The rule protects the birthdate values from disclosure.",
+  "condition_text": "The patient's date of birth is sensitive data"
+ },
+ "superstore||The profit from a particular order or the profit obtained from a specific customer is sensitive information.": {
+  "compilable": true,
+  "protection_kind": "aggregate",
+  "protected_columns": [
+   {
+    "table": "central_superstore",
+    "column": "Profit",
+    "row_scope": null
+   },
+   {
+    "table": "east_superstore",
+    "column": "Profit",
+    "row_scope": null
+   },
+   {
+    "table": "south_superstore",
+    "column": "Profit",
+    "row_scope": null
+   },
+   {
+    "table": "west_superstore",
+    "column": "Profit",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [
+   {
+    "table": "central_superstore",
+    "column": "Order ID"
+   },
+   {
+    "table": "central_superstore",
+    "column": "Customer ID"
+   },
+   {
+    "table": "east_superstore",
+    "column": "Order ID"
+   },
+   {
+    "table": "east_superstore",
+    "column": "Customer ID"
+   },
+   {
+    "table": "south_superstore",
+    "column": "Order ID"
+   },
+   {
+    "table": "south_superstore",
+    "column": "Customer ID"
+   },
+   {
+    "table": "west_superstore",
+    "column": "Order ID"
+   },
+   {
+    "table": "west_superstore",
+    "column": "Customer ID"
+   },
+   {
+    "table": "people",
+    "column": "Customer ID"
+   },
+   {
+    "table": "people",
+    "column": "Customer Name"
+   }
+  ],
+  "trigger_phrases": [
+   "profit from a particular order",
+   "profit obtained from a specific customer",
+   "sensitive information"
+  ],
+  "notes": "Protects disclosure of Profit values or aggregates of Profit when attributable to a specific Order ID or specific customer. Customer identity may be expressed through Customer ID or Customer Name via the people table.",
+  "condition_text": "The profit from a particular order or the profit obtained from a specific customer is sensitive information."
+ },
+ "synthea||The medication used by the patient is sensitive data": {
+  "compilable": true,
+  "protection_kind": "attribution",
+  "protected_columns": [
+   {
+    "table": "medications",
+    "column": "CODE",
+    "row_scope": null
+   },
+   {
+    "table": "medications",
+    "column": "DESCRIPTION",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [
+   {
+    "table": "medications",
+    "column": "PATIENT"
+   },
+   {
+    "table": "patients",
+    "column": "patient"
+   }
+  ],
+  "trigger_phrases": [
+   "medication used",
+   "by the patient",
+   "sensitive data"
+  ],
+  "notes": "Interpreted 'medication used by the patient' as medication identity values in medications.CODE and medications.DESCRIPTION being sensitive when attributable to a patient. The rule protects disclosure of those medication values linked to patient identifiers.",
+  "condition_text": "The medication used by the patient is sensitive data"
+ },
+ "synthea||The patient's description is sensitive data": {
+  "compilable": false,
+  "uncompilable_reason": "The clause refers to a patient's description, but there is no patient description column in the schema and it cannot be deterministically mapped to one of the available columns.",
+  "protection_kind": "other",
+  "protected_columns": [],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "patient's description",
+   "sensitive data"
+  ],
+  "notes": "The condition requires clarification of which schema column represents the patient's description.",
+  "condition_text": "The patient's description is sensitive data"
+ },
+ "talkingdata||The detailed information about the app in the device cannot be counted.": {
+  "compilable": false,
+  "uncompilable_reason": "The clause 'The detailed information about the app in the device cannot be counted' is ambiguous and cannot be reduced to a mechanical rule. It does not specify whether 'detailed information' refers to app identifiers, installation status, activity status, event records, or another attribute, nor does it define what 'cannot be counted' means operationally (e.g., prohibiting COUNT aggregations, per-device app counts, or any aggregate over app data).",
+  "protection_kind": "aggregate",
+  "protected_columns": [],
+  "identifier_columns": [
+   {
+    "table": "app_events",
+    "column": "device_id"
+   },
+   {
+    "table": "app_events_relevant",
+    "column": "device_id"
+   }
+  ],
+  "trigger_phrases": [
+   "detailed information about the app in the device",
+   "cannot be counted"
+  ],
+  "notes": "The schema does not contain device_id in app_events or app_events_relevant, making app-to-device attribution indirect via events/event_id. Because the policy lacks a precise mapping to specific columns and aggregation semantics, it is not mechanically compilable.",
+  "condition_text": "The detailed information about the app in the device cannot be counted."
+ },
+ "tracking_grants_for_research||Only information about leaders is accessible; information about others is not accessible.": {
+  "compilable": false,
+  "uncompilable_reason": "The clause depends on identifying which staff are 'leaders', but the schema does not provide a mechanical literal value for leader status. Leader status appears only inferable through Project_Staff.role_code joined to Staff_Roles.role_description, and the required role_code value is not specified. Therefore it cannot be reduced to simple column/row rules using only known schema columns and literal equality scopes.",
+  "protection_kind": "row_access",
+  "protected_columns": [],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "Only information about leaders",
+   "information about others is not accessible"
+  ],
+  "notes": "Assumes 'leaders' refers to staff roles, but the database schema does not specify the role_code literal corresponding to leaders.",
+  "condition_text": "Only information about leaders is accessible; information about others is not accessible."
+ },
+ "tracking_grants_for_research||Only the number of papers in project outcomes is disclosed; information related to the number of patents is not displayed.": {
+  "compilable": true,
+  "protection_kind": "aggregate",
+  "protected_columns": [
+   {
+    "table": "Project_Outcomes",
+    "column": "outcome_code",
+    "row_scope": {
+     "scope_table": "Research_Outcomes",
+     "scope_column": "outcome_description",
+     "op": "=",
+     "value": "patents",
+     "description": "project outcomes whose research outcome type is patents"
+    }
+   }
+  ],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "Only the number of papers in project outcomes is disclosed",
+   "number of patents is not displayed"
+  ],
+  "notes": "Interpreted as permitting disclosure of aggregate counts for project outcomes categorized as papers, while suppressing aggregate counts for project outcomes categorized as patents. Assumes Research_Outcomes.outcome_description contains literal outcome categories such as papers and patents, joined to Project_Outcomes by outcome_code.",
+  "condition_text": "Only the number of papers in project outcomes is disclosed; information related to the number of patents is not displayed."
+ },
+ "tracking_grants_for_research||The flow of funds not related to research is confidential.": {
+  "compilable": false,
+  "uncompilable_reason": "The condition refers to a category of fund flows ('not related to research') that is not represented by any specific table or column in the schema. There is no column identifying whether a fund flow is related or unrelated to research, and no mechanically determinable rows or values corresponding to this concept.",
+  "protection_kind": "other",
+  "protected_columns": [],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "flow of funds",
+   "not related to research",
+   "confidential"
+  ],
+  "notes": "No schema mapping exists for non-research-related fund flows.",
+  "condition_text": "The flow of funds not related to research is confidential."
+ },
+ "student_transcripts_tracking||Student course ID is sensitive information": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "Student_Enrolment_Courses",
+    "column": "student_course_id",
+    "row_scope": null
+   },
+   {
+    "table": "Transcript_Contents",
+    "column": "student_course_id",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "Student course ID",
+   "sensitive information"
+  ],
+  "notes": "Interpreted \"Student course ID\" as the schema column named student_course_id wherever it appears. The values of this column are protected from disclosure in all rows.",
+  "condition_text": "Student course ID is sensitive information"
+ },
+ "tracking_software_problems||The name of the problematic product cannot be made public.": {
+  "compilable": false,
+  "uncompilable_reason": "The clause identifies a subset of products as 'problematic', which requires a relational condition based on whether a Product row is referenced by a row in Problems. The available policy schema only supports column protection with optional equality row scopes and cannot express this required join/existence-based row condition.",
+  "protection_kind": "value",
+  "protected_columns": [],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "name",
+   "problematic product",
+   "cannot be made public"
+  ],
+  "notes": "The protected value would be Product.product_name for products associated with problems, but the required row scope cannot be represented using the allowed mechanical rules.",
+  "condition_text": "The name of the problematic product cannot be made public."
+ },
+ "tracking_grants_for_research||Personal information about employees and the number of employees involved in projects are kept confidential.": {
+  "compilable": true,
+  "protection_kind": "other",
+  "protected_columns": [
+   {
+    "table": "Research_Staff",
+    "column": "staff_details",
+    "row_scope": null
+   },
+   {
+    "table": "Project_Staff",
+    "column": "staff_id",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [
+   {
+    "table": "Research_Staff",
+    "column": "staff_id"
+   },
+   {
+    "table": "Project_Staff",
+    "column": "project_id"
+   }
+  ],
+  "trigger_phrases": [
+   "Personal information about employees",
+   "number of employees involved in projects",
+   "kept confidential"
+  ],
+  "notes": "Assumes employees correspond to Research_Staff records, personal information is stored in Research_Staff.staff_details, and the number of employees involved in projects is mechanically derived by counting Project_Staff.staff_id values grouped by Project_Staff.project_id. This combines value protection for staff_details with aggregate protection for per-project staff counts.",
+  "condition_text": "Personal information about employees and the number of employees involved in projects are kept confidential."
+ },
+ "tracking_software_problems||The names of employees reporting issues are protected.": {
+  "compilable": false,
+  "uncompilable_reason": "The condition refers specifically to employees who are reporting issues, which requires a join between Problems.reported_by_staff_id and Staff.staff_id. The required row restriction cannot be expressed as a mechanical single-table column/row rule using the provided row_scope format.",
+  "protection_kind": "other",
+  "protected_columns": [
+   {
+    "table": "Staff",
+    "column": "staff_first_name",
+    "row_scope": null
+   },
+   {
+    "table": "Staff",
+    "column": "staff_last_name",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [
+   {
+    "table": "Staff",
+    "column": "staff_id"
+   }
+  ],
+  "trigger_phrases": [
+   "names of employees",
+   "reporting issues",
+   "protected"
+  ],
+  "notes": "Assumes 'employees' correspond to rows in Staff and 'reporting issues' refers to Staff members referenced by Problems.reported_by_staff_id. The schema supports identifying reporters only via a join, which cannot be encoded in the permitted row_scope representation.",
+  "condition_text": "The names of employees reporting issues are protected."
+ },
+ "tracking_software_problems||The time for problem reporting is protected.": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "Problems",
+    "column": "date_problem_reported",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "time for problem reporting",
+   "problem reporting",
+   "protected"
+  ],
+  "notes": "Assumed that 'time for problem reporting' refers to the date_problem_reported column in the Problems table.",
+  "condition_text": "The time for problem reporting is protected."
+ },
+ "hr_1||Employee salaries are considered private.": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "employees",
+    "column": "SALARY",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "Employee salaries",
+   "private"
+  ],
+  "notes": "Interpreted as protecting the values in employees.SALARY for all employee rows.",
+  "condition_text": "Employee salaries are considered private."
+ },
+ "voter_1||All information is public except for the personal details of the voters.": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "VOTES",
+    "column": "phone_number",
+    "row_scope": null
+   },
+   {
+    "table": "VOTES",
+    "column": "state",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [
+   {
+    "table": "VOTES",
+    "column": "phone_number"
+   }
+  ],
+  "trigger_phrases": [
+   "personal details of the voters"
+  ],
+  "notes": "Interprets voter personal details as voter-specific contact/location fields present in the VOTES table. Contestant information, area-code mappings, vote identifiers, contestant numbers, and timestamps are treated as public because the condition says all other information is public.",
+  "condition_text": "All information is public except for the personal details of the voters."
+ },
+ "tvshow||Today is January 8th, 2009, and the broadcast schedule for one week later cannot be disclosed.": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "TV_series",
+    "column": "Episode",
+    "row_scope": {
+     "scope_table": "TV_series",
+     "scope_column": "Air_Date",
+     "op": "=",
+     "value": "2009-01-15",
+     "description": "TV series episodes airing one week after January 8, 2009"
+    }
+   },
+   {
+    "table": "TV_series",
+    "column": "Air_Date",
+    "row_scope": {
+     "scope_table": "TV_series",
+     "scope_column": "Air_Date",
+     "op": "=",
+     "value": "2009-01-15",
+     "description": "TV series episodes airing one week after January 8, 2009"
+    }
+   },
+   {
+    "table": "TV_series",
+    "column": "Channel",
+    "row_scope": {
+     "scope_table": "TV_series",
+     "scope_column": "Air_Date",
+     "op": "=",
+     "value": "2009-01-15",
+     "description": "TV series episodes airing one week after January 8, 2009"
+    }
+   },
+   {
+    "table": "Cartoon",
+    "column": "Title",
+    "row_scope": {
+     "scope_table": "Cartoon",
+     "scope_column": "Original_air_date",
+     "op": "=",
+     "value": "2009-01-15",
+     "description": "cartoons airing one week after January 8, 2009"
+    }
+   },
+   {
+    "table": "Cartoon",
+    "column": "Original_air_date",
+    "row_scope": {
+     "scope_table": "Cartoon",
+     "scope_column": "Original_air_date",
+     "op": "=",
+     "value": "2009-01-15",
+     "description": "cartoons airing one week after January 8, 2009"
+    }
+   },
+   {
+    "table": "Cartoon",
+    "column": "Channel",
+    "row_scope": {
+     "scope_table": "Cartoon",
+     "scope_column": "Original_air_date",
+     "op": "=",
+     "value": "2009-01-15",
+     "description": "cartoons airing one week after January 8, 2009"
+    }
+   }
+  ],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "Today is January 8th, 2009",
+   "one week later",
+   "broadcast schedule",
+   "cannot be disclosed"
+  ],
+  "notes": "Interprets 'one week later' as 2009-01-15. Interprets 'broadcast schedule' as the program identity, air date, and channel fields in tables with air-date columns: TV_series.Air_Date and Cartoon.Original_air_date. TV_Channel has no date/schedule column, so no mechanical row scope is applied there.",
+  "condition_text": "Today is January 8th, 2009, and the broadcast schedule for one week later cannot be disclosed."
+ },
+ "voter_1||Only Kelly Clauss' ballot situation is public.": {
+  "compilable": false,
+  "uncompilable_reason": "The phrase \"ballot situation\" does not correspond directly to any table or column in the schema, and Kelly Clauss can only be mechanically anchored to CONTESTANTS.contestant_name; applying the rule to VOTES would require an unstated join/lookup from contestant_name to contestant_number and an interpretation of what ballot situation means.",
+  "protection_kind": "other",
+  "protected_columns": [],
+  "identifier_columns": [
+   {
+    "table": "CONTESTANTS",
+    "column": "contestant_name"
+   }
+  ],
+  "trigger_phrases": [
+   "Only Kelly Clauss' ballot situation is public"
+  ],
+  "notes": "Assumes Kelly Clauss is a contestant name, but the protected information cannot be reduced to a direct column/row rule using only the provided schema and literal row scopes.",
+  "condition_text": "Only Kelly Clauss' ballot situation is public."
+ },
+ "voter_1||Only the ballot situation in California is public.": {
+  "compilable": true,
+  "protection_kind": "row_access",
+  "protected_columns": [
+   {
+    "table": "VOTES",
+    "column": "vote_id",
+    "row_scope": {
+     "scope_table": "VOTES",
+     "scope_column": "state",
+     "op": "=",
+     "value": "California",
+     "description": "Rows representing votes/ballot activity in California are public; rows for other states are protected."
+    }
+   },
+   {
+    "table": "VOTES",
+    "column": "phone_number",
+    "row_scope": {
+     "scope_table": "VOTES",
+     "scope_column": "state",
+     "op": "=",
+     "value": "California",
+     "description": "Rows representing votes/ballot activity in California are public; rows for other states are protected."
+    }
+   },
+   {
+    "table": "VOTES",
+    "column": "state",
+    "row_scope": {
+     "scope_table": "VOTES",
+     "scope_column": "state",
+     "op": "=",
+     "value": "California",
+     "description": "Rows representing votes/ballot activity in California are public; rows for other states are protected."
+    }
+   },
+   {
+    "table": "VOTES",
+    "column": "contestant_number",
+    "row_scope": {
+     "scope_table": "VOTES",
+     "scope_column": "state",
+     "op": "=",
+     "value": "California",
+     "description": "Rows representing votes/ballot activity in California are public; rows for other states are protected."
+    }
+   },
+   {
+    "table": "VOTES",
+    "column": "created",
+    "row_scope": {
+     "scope_table": "VOTES",
+     "scope_column": "state",
+     "op": "=",
+     "value": "California",
+     "description": "Rows representing votes/ballot activity in California are public; rows for other states are protected."
+    }
+   }
+  ],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "Only",
+   "ballot situation",
+   "California",
+   "public"
+  ],
+  "notes": "Interpreted 'ballot situation' as vote/ballot records in the VOTES table. The policy permits row access only for VOTES rows where state = 'California'; VOTES rows for all other states are protected. Contestant metadata and area-code mappings are not treated as ballot situation rows.",
+  "condition_text": "Only the ballot situation in California is public."
+ },
+ "wedding||A person's age is sensitive information.": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "people",
+    "column": "Age",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [
+   {
+    "table": "people",
+    "column": "People_ID"
+   },
+   {
+    "table": "people",
+    "column": "Name"
+   }
+  ],
+  "trigger_phrases": [
+   "person's age",
+   "sensitive information"
+  ],
+  "notes": "Interpreted 'person' as rows in the people table and 'age' as people.Age. The policy protects age values for all people.",
+  "condition_text": "A person's age is sensitive information."
+ },
+ "wedding||Marital information is part of personal privacy and should not be disclosed publicly.": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "wedding",
+    "column": "Church_ID",
+    "row_scope": null
+   },
+   {
+    "table": "wedding",
+    "column": "Male_ID",
+    "row_scope": null
+   },
+   {
+    "table": "wedding",
+    "column": "Female_ID",
+    "row_scope": null
+   },
+   {
+    "table": "wedding",
+    "column": "Year",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [
+   {
+    "table": "people",
+    "column": "People_ID"
+   }
+  ],
+  "trigger_phrases": [
+   "Marital information",
+   "personal privacy",
+   "should not be disclosed publicly"
+  ],
+  "notes": "Assumes that marital information is represented by records in the wedding table, including the identities of the married individuals and related wedding details.",
+  "condition_text": "Marital information is part of personal privacy and should not be disclosed publicly."
+ },
+ "workshop_paper||Only specific scores are not disclosed; all other information is made public.": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "submission",
+    "column": "Scores",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "Only specific scores are not disclosed",
+   "all other information is made public"
+  ],
+  "notes": "Interpreted as protecting all values in submission.Scores. The condition does not specify any subset of scores, so the entire Scores column is treated as non-disclosable while all other columns are public.",
+  "condition_text": "Only specific scores are not disclosed; all other information is made public."
+ },
+ "yelp||Comments need to be anonymous, meaning that specific comments cannot be attributed to individual users.": {
+  "compilable": true,
+  "protection_kind": "attribution",
+  "protected_columns": [
+   {
+    "table": "review",
+    "column": "text",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [
+   {
+    "table": "review",
+    "column": "user_id"
+   }
+  ],
+  "trigger_phrases": [
+   "Comments",
+   "anonymous",
+   "specific comments",
+   "attributed to individual users"
+  ],
+  "notes": "Assumed that comments refer to review text in the Yelp schema. Review text may be disclosed only when it cannot be linked to the user who authored it; review.user_id is treated as the linking identifier.",
+  "condition_text": "Comments need to be anonymous, meaning that specific comments cannot be attributed to individual users."
+ },
+ "yelp||The content of tips provided to merchants is sensitive information.": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "tip",
+    "column": "text",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [
+   {
+    "table": "tip",
+    "column": "business_id"
+   }
+  ],
+  "trigger_phrases": [
+   "content of tips",
+   "provided to merchants",
+   "sensitive information"
+  ],
+  "notes": "Assumes that tip content corresponds to the tip.text column and that merchants are represented by businesses linked through tip.business_id.",
+  "condition_text": "The content of tips provided to merchants is sensitive information."
+ },
+ "wedding||Women over the age of 30 prefer their age not to be disclosed.": {
+  "compilable": false,
+  "uncompilable_reason": "The condition anchors to people.Age and people.Is_Male, but the protected row scope requires a compound/inequality predicate: women and Age > 30. The provided policy shape only supports a single equality row_scope, so it cannot mechanically encode the exact scope.",
+  "protection_kind": "value",
+  "protected_columns": [],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "Women",
+   "over the age of 30",
+   "age not to be disclosed"
+  ],
+  "notes": "Women is assumed to correspond to people.Is_Male = false, and age corresponds to people.Age.",
+  "condition_text": "Women over the age of 30 prefer their age not to be disclosed."
+ },
+ "yelp||The specific visit count of a particular merchant is sensitive information.": {
+  "compilable": true,
+  "protection_kind": "aggregate",
+  "protected_columns": [
+   {
+    "table": "checkin",
+    "column": "count",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [
+   {
+    "table": "business",
+    "column": "business_id"
+   },
+   {
+    "table": "business",
+    "column": "bid"
+   },
+   {
+    "table": "checkin",
+    "column": "business_id"
+   }
+  ],
+  "trigger_phrases": [
+   "specific visit count",
+   "particular merchant"
+  ],
+  "notes": "Interpreted 'visit count' as the checkin.count associated with a merchant (business). Entity-specific visit-count values for an identified business should not be disclosed.",
+  "condition_text": "The specific visit count of a particular merchant is sensitive information."
+ },
+ "yelp||neighbourhood is sensitive information.": {
+  "compilable": true,
+  "uncompilable_reason": "",
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "neighbourhood",
+    "column": "neighbourhood_name",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "neighbourhood",
+   "sensitive information"
+  ],
+  "notes": "Assumes the sensitive information refers to the neighbourhood_name values stored in the neighbourhood table; those values must not be disclosed.",
+  "condition_text": "neighbourhood is sensitive information."
+ },
+ "yelp||The user's ID is sensitive information.": {
+  "compilable": true,
+  "uncompilable_reason": "",
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "user",
+    "column": "user_id",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "user's ID",
+   "sensitive information"
+  ],
+  "notes": "Assumes that 'user's ID' refers to the user table's user_id column. The rule is modeled as a value protection rule preventing disclosure of user_id values.",
+  "condition_text": "The user's ID is sensitive information."
+ },
+ "social_media||The current user is a marketing professional. They can view tweets and their corresponding locations but cannot see the corresponding users.": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "user",
+    "column": "UserID",
+    "row_scope": null
+   },
+   {
+    "table": "user",
+    "column": "Gender",
+    "row_scope": null
+   },
+   {
+    "table": "twitter",
+    "column": "UserID",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [
+   {
+    "table": "user",
+    "column": "UserID"
+   },
+   {
+    "table": "twitter",
+    "column": "UserID"
+   }
+  ],
+  "trigger_phrases": [
+   "cannot see the corresponding users",
+   "can view tweets and their corresponding locations"
+  ],
+  "notes": "Interpreted as denying access to all user information and the foreign-key linkage from tweets to users, while allowing access to tweet content and location data.",
+  "condition_text": "The current user is a marketing professional. They can view tweets and their corresponding locations but cannot see the corresponding users."
+ },
+ "student_loan||The organ information of students who have served in the military is sensitive": {
+  "compilable": true,
+  "protection_kind": "value",
+  "protected_columns": [
+   {
+    "table": "enlist",
+    "column": "organ",
+    "row_scope": null
+   }
+  ],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "organ information",
+   "students who have served in the military",
+   "served in the military"
+  ],
+  "notes": "Assumption: rows in the enlist table represent students who have served in the military, so the organ column in that table is the sensitive information to protect.",
+  "condition_text": "The organ information of students who have served in the military is sensitive"
+ },
+ "synthea||The current user is Lino Lebsack, who can only query his own patient data and cannot query the patient data of others": {
+  "compilable": false,
+  "uncompilable_reason": "The rule depends on identifying which database rows correspond to the current user Lino Lebsack. The schema has name columns in patients, but the policy format only supports a single literal equality row_scope and the patient's unique identifier value is not provided. Related clinical tables reference patients through PATIENT, so a mechanical row-access rule would require the resolved patients.patient value for Lino Lebsack or support for a join/conjunction over patients.first and patients.last.",
+  "protection_kind": "row_access",
+  "protected_columns": [],
+  "identifier_columns": [
+   {
+    "table": "patients",
+    "column": "patient"
+   },
+   {
+    "table": "patients",
+    "column": "first"
+   },
+   {
+    "table": "patients",
+    "column": "last"
+   }
+  ],
+  "trigger_phrases": [
+   "current user is Lino Lebsack",
+   "only query his own patient data",
+   "cannot query the patient data of others"
+  ],
+  "notes": "To compile this mechanically, provide Lino Lebsack's patients.patient identifier, or allow row scopes that join clinical tables to patients and require patients.first = 'Lino' AND patients.last = 'Lebsack'.",
+  "condition_text": "The current user is Lino Lebsack, who can only query his own patient data and cannot query the patient data of others"
+ },
+ "twitter_1||The identities of users who are followed by others, except for Mary, are considered sensitive information.": {
+  "compilable": false,
+  "uncompilable_reason": "The condition requires protecting the identities of users appearing as followers' targets in follows.f2 while excluding the specific user Mary. This requires a cross-table relationship condition (users whose uid appears in follows.f2) combined with a negated exception based on user_profiles.name, which cannot be represented using the provided mechanical row_scope structure that only supports single-column equality predicates.",
+  "protection_kind": "other",
+  "protected_columns": [],
+  "identifier_columns": [],
+  "trigger_phrases": [
+   "identities of users",
+   "followed by others",
+   "except for Mary",
+   "sensitive information"
+  ],
+  "notes": "No exact mechanical rule can be produced from the available schema and row-scope operators without introducing unsupported join or inequality logic.",
+  "condition_text": "The identities of users who are followed by others, except for Mary, are considered sensitive information."
+ }
+}

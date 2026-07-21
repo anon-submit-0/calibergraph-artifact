@@ -1,0 +1,9 @@
+P1 exit=0 rows=20
+P2 exit=0 rows=20
+P3 exit=0 rows=20
+P4 exit=1 rows=0
+P5 exit=1 rows=0
+P6 exit=1 rows=0
+P7a exit=0 rows=8
+P7b exit=0 rows=4
+P9 exit=0 rows=0

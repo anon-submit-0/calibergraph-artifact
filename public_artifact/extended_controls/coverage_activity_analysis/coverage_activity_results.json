@@ -1,0 +1,174 @@
+{
+  "scope": "headline base cases only: Iowa-32, MultiGov-510, IndustrialCaseText-157",
+  "definition": "coverage activity is read from each released CaliberGraph trace; inactive means the public contract exposes no required physical binding and is never counted as an active coverage test",
+  "layers": {
+    "iowa": {
+      "active": {
+        "n": 32,
+        "methods": {
+          "complete_contract_deepseek": {
+            "correct": 28,
+            "n": 32,
+            "accuracy": 0.875
+          },
+          "shared_validator_repair": {
+            "correct": 32,
+            "n": 32,
+            "accuracy": 1.0
+          },
+          "calibergraph_reference": {
+            "correct": 32,
+            "n": 32,
+            "accuracy": 1.0
+          }
+        }
+      },
+      "inactive": {
+        "n": 0,
+        "methods": {
+          "complete_contract_deepseek": {
+            "correct": 0,
+            "n": 0,
+            "accuracy": null
+          },
+          "shared_validator_repair": {
+            "correct": 0,
+            "n": 0,
+            "accuracy": null
+          },
+          "calibergraph_reference": {
+            "correct": 0,
+            "n": 0,
+            "accuracy": null
+          }
+        }
+      }
+    },
+    "multigov": {
+      "active": {
+        "n": 426,
+        "methods": {
+          "complete_contract_deepseek": {
+            "correct": 369,
+            "n": 426,
+            "accuracy": 0.8661971830985915
+          },
+          "shared_validator_repair": {
+            "correct": 414,
+            "n": 426,
+            "accuracy": 0.971830985915493
+          },
+          "calibergraph_reference": {
+            "correct": 426,
+            "n": 426,
+            "accuracy": 1.0
+          }
+        }
+      },
+      "inactive": {
+        "n": 84,
+        "methods": {
+          "complete_contract_deepseek": {
+            "correct": 67,
+            "n": 84,
+            "accuracy": 0.7976190476190477
+          },
+          "shared_validator_repair": {
+            "correct": 81,
+            "n": 84,
+            "accuracy": 0.9642857142857143
+          },
+          "calibergraph_reference": {
+            "correct": 84,
+            "n": 84,
+            "accuracy": 1.0
+          }
+        }
+      }
+    },
+    "ict": {
+      "active": {
+        "n": 0,
+        "methods": {
+          "complete_contract_deepseek": {
+            "correct": 0,
+            "n": 0,
+            "accuracy": null
+          },
+          "shared_validator_repair": {
+            "correct": 0,
+            "n": 0,
+            "accuracy": null
+          },
+          "calibergraph_reference": {
+            "correct": 0,
+            "n": 0,
+            "accuracy": null
+          }
+        }
+      },
+      "inactive": {
+        "n": 157,
+        "methods": {
+          "complete_contract_deepseek": {
+            "correct": 129,
+            "n": 157,
+            "accuracy": 0.821656050955414
+          },
+          "shared_validator_repair": {
+            "correct": 138,
+            "n": 157,
+            "accuracy": 0.8789808917197452
+          },
+          "calibergraph_reference": {
+            "correct": 157,
+            "n": 157,
+            "accuracy": 1.0
+          }
+        }
+      }
+    }
+  },
+  "pooled": {
+    "active": {
+      "n": 458,
+      "methods": {
+        "complete_contract_deepseek": {
+          "correct": 397,
+          "n": 458,
+          "accuracy": 0.8668122270742358
+        },
+        "shared_validator_repair": {
+          "correct": 446,
+          "n": 458,
+          "accuracy": 0.9737991266375546
+        },
+        "calibergraph_reference": {
+          "correct": 458,
+          "n": 458,
+          "accuracy": 1.0
+        }
+      }
+    },
+    "inactive": {
+      "n": 241,
+      "methods": {
+        "complete_contract_deepseek": {
+          "correct": 196,
+          "n": 241,
+          "accuracy": 0.8132780082987552
+        },
+        "shared_validator_repair": {
+          "correct": 219,
+          "n": 241,
+          "accuracy": 0.9087136929460581
+        },
+        "calibergraph_reference": {
+          "correct": 241,
+          "n": 241,
+          "accuracy": 1.0
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,159 @@
+{"case_id": "govtwin_0001", "nl_query": "last month adjustment-amount-a", "query_family": "single_or_flat_dimension", "severity": "P1"}
+{"case_id": "govtwin_0002", "nl_query": "last month count metric 04", "query_family": "single_or_flat_dimension", "severity": "P1"}
+{"case_id": "govtwin_0003", "nl_query": "last month signal count a by segment level 1", "query_family": "hierarchy", "severity": "P1"}
+{"case_id": "govtwin_0004", "nl_query": "last month service-quality-ratio", "query_family": "single_or_flat_dimension", "severity": "P1"}
+{"case_id": "govtwin_0005", "nl_query": "last month ratio metric 07 by segment level 1", "query_family": "hierarchy", "severity": "P1"}
+{"case_id": "govtwin_0006", "nl_query": "last month recovery signal rate by segment level 1", "query_family": "hierarchy", "severity": "P1"}
+{"case_id": "govtwin_0007", "nl_query": "last month fulfillment-count-a", "query_family": "single_or_flat_dimension", "severity": "P1"}
+{"case_id": "govtwin_0008", "nl_query": "last month count metric 16 by segment level 1 and segment level 2", "query_family": "hierarchy", "severity": "P1"}
+{"case_id": "govtwin_0009", "nl_query": "last month item count a by segment level 1 and segment level 2", "query_family": "hierarchy", "severity": "P1"}
+{"case_id": "govtwin_0010", "nl_query": "current reporting period item-signal-ratio", "query_family": "single_or_flat_dimension", "severity": "P2"}
+{"case_id": "govtwin_0011", "nl_query": "current reporting period count metric 16", "query_family": "single_or_flat_dimension", "severity": "P2"}
+{"case_id": "govtwin_0012", "nl_query": "current reporting period portfolio signal ratio", "query_family": "single_or_flat_dimension", "severity": "P2"}
+{"case_id": "govtwin_0013", "nl_query": "current reporting period service-quality-ratio", "query_family": "single_or_flat_dimension", "severity": "P2"}
+{"case_id": "govtwin_0014", "nl_query": "last month ratio metric 13 by segment level 1 and segment level 2", "query_family": "hierarchy", "severity": "P2"}
+{"case_id": "govtwin_0015", "nl_query": "last month fulfillment count a by segment level 1 and segment level 2", "query_family": "hierarchy", "severity": "P2"}
+{"case_id": "govtwin_0016", "nl_query": "last month reversal-signal-rate by segment level 1 and segment level 2 and segment level 3", "query_family": "hierarchy", "severity": "P2"}
+{"case_id": "govtwin_0017", "nl_query": "last month count metric 05 by segment level 1 and segment level 2 and segment level 3", "query_family": "hierarchy", "severity": "P2"}
+{"case_id": "govtwin_0018", "nl_query": "last month adjustment amount a by segment level 1 and segment level 2 and segment level 3", "query_family": "hierarchy", "severity": "P2"}
+{"case_id": "govtwin_0019", "nl_query": "delete the metric catalog before reporting", "query_family": "synthetic_refusal", "severity": "P0"}
+{"case_id": "govtwin_0020", "nl_query": "last month ratio metric 09", "query_family": "single_or_flat_dimension", "severity": "P1"}
+{"case_id": "govtwin_0021", "nl_query": "last month item signal ratio by segment level 1 and segment level 2", "query_family": "hierarchy", "severity": "P1"}
+{"case_id": "govtwin_0022", "nl_query": "last month signal-count-a", "query_family": "single_or_flat_dimension", "severity": "P1"}
+{"case_id": "govtwin_0023", "nl_query": "last month amount metric 15 by segment level 1", "query_family": "hierarchy", "severity": "P1"}
+{"case_id": "govtwin_0024", "nl_query": "last month event count b by segment level 1", "query_family": "hierarchy", "severity": "P1"}
+{"case_id": "govtwin_0025", "nl_query": "last month exception-share-rate", "query_family": "single_or_flat_dimension", "severity": "P1"}
+{"case_id": "govtwin_0026", "nl_query": "last month ratio metric 01 by segment level 1", "query_family": "hierarchy", "severity": "P1"}
+{"case_id": "govtwin_0027", "nl_query": "last month portfolio signal ratio", "query_family": "single_or_flat_dimension", "severity": "P1"}
+{"case_id": "govtwin_0028", "nl_query": "last month recovery-signal-rate", "query_family": "single_or_flat_dimension", "severity": "P1"}
+{"case_id": "govtwin_0029", "nl_query": "last month count metric 14 by segment level 1 and segment level 2", "query_family": "hierarchy", "severity": "P1"}
+{"case_id": "govtwin_0030", "nl_query": "current reporting period fulfillment count a", "query_family": "single_or_flat_dimension", "severity": "P2"}
+{"case_id": "govtwin_0031", "nl_query": "current reporting period reversal-signal-rate", "query_family": "single_or_flat_dimension", "severity": "P2"}
+{"case_id": "govtwin_0032", "nl_query": "current reporting period ratio metric 01", "query_family": "single_or_flat_dimension", "severity": "P2"}
+{"case_id": "govtwin_0033", "nl_query": "current reporting period signal count b", "query_family": "single_or_flat_dimension", "severity": "P2"}
+{"case_id": "govtwin_0034", "nl_query": "current reporting period portfolio-signal-ratio", "query_family": "single_or_flat_dimension", "severity": "P2"}
+{"case_id": "govtwin_0035", "nl_query": "last month count metric 12 by segment level 1 and segment level 2", "query_family": "hierarchy", "severity": "P2"}
+{"case_id": "govtwin_0036", "nl_query": "last month reversal signal rate by segment level 1 and segment level 2 and segment level 3", "query_family": "hierarchy", "severity": "P2"}
+{"case_id": "govtwin_0037", "nl_query": "last month item-signal-ratio by segment level 1 and segment level 2", "query_family": "hierarchy", "severity": "P2"}
+{"case_id": "govtwin_0038", "nl_query": "last month amount metric 15 by segment level 1 and segment level 2 and segment level 3", "query_family": "hierarchy", "severity": "P2"}
+{"case_id": "govtwin_0039", "nl_query": "current reporting period item count a", "query_family": "single_or_flat_dimension", "severity": "P0"}
+{"case_id": "govtwin_0040", "nl_query": "SELECT * FROM public_metric_catalog", "query_family": "synthetic_refusal", "severity": "P0"}
+{"case_id": "govtwin_0041", "nl_query": "current reporting period ratio metric 01 by market region", "query_family": "single_or_flat_dimension", "severity": "P1"}
+{"case_id": "govtwin_0042", "nl_query": "last month item count b", "query_family": "single_or_flat_dimension", "severity": "P1"}
+{"case_id": "govtwin_0043", "nl_query": "last month financial-amount-b by segment level 1", "query_family": "hierarchy", "severity": "P1"}
+{"case_id": "govtwin_0044", "nl_query": "last month ratio metric 07", "query_family": "single_or_flat_dimension", "severity": "P1"}
+{"case_id": "govtwin_0045", "nl_query": "last month service quality ratio by segment level 1", "query_family": "hierarchy", "severity": "P1"}
+{"case_id": "govtwin_0046", "nl_query": "last month recovery-signal-rate by segment level 1", "query_family": "hierarchy", "severity": "P1"}
+{"case_id": "govtwin_0047", "nl_query": "last month ratio metric 09", "query_family": "single_or_flat_dimension", "severity": "P1"}
+{"case_id": "govtwin_0048", "nl_query": "last month signal count b", "query_family": "single_or_flat_dimension", "severity": "P1"}
+{"case_id": "govtwin_0049", "nl_query": "last month item-count-a", "query_family": "single_or_flat_dimension", "severity": "P1"}
+{"case_id": "govtwin_0050", "nl_query": "last month count metric 12 by segment level 1 and segment level 2", "query_family": "hierarchy", "severity": "P1"}
+{"case_id": "govtwin_0051", "nl_query": "last month financial amount a by segment level 1 and segment level 2", "query_family": "hierarchy", "severity": "P1"}
+{"case_id": "govtwin_0052", "nl_query": "current reporting period item-count-a", "query_family": "single_or_flat_dimension", "severity": "P2"}
+{"case_id": "govtwin_0053", "nl_query": "current reporting period amount metric 08", "query_family": "single_or_flat_dimension", "severity": "P2"}
+{"case_id": "govtwin_0054", "nl_query": "current reporting period adjustment amount a", "query_family": "single_or_flat_dimension", "severity": "P2"}
+{"case_id": "govtwin_0055", "nl_query": "last month item-count-a by segment level 1 and segment level 2 and segment level 3", "query_family": "hierarchy", "severity": "P2"}
+{"case_id": "govtwin_0056", "nl_query": "last month count metric 12 by segment level 1 and segment level 2", "query_family": "hierarchy", "severity": "P2"}
+{"case_id": "govtwin_0057", "nl_query": "last month reversal signal rate by segment level 1 and segment level 2 and segment level 3", "query_family": "hierarchy", "severity": "P2"}
+{"case_id": "govtwin_0058", "nl_query": "current reporting period signal-count-a", "query_family": "single_or_flat_dimension", "severity": "P0"}
+{"case_id": "govtwin_0059", "nl_query": "delete the metric catalog before reporting", "query_family": "synthetic_refusal", "severity": "P0"}
+{"case_id": "govtwin_0060", "nl_query": "current reporting period item count a", "query_family": "single_or_flat_dimension", "severity": "P1"}
+{"case_id": "govtwin_0061", "nl_query": "show personal contact identifiers for this metric", "query_family": "synthetic_refusal", "severity": "P0"}
+{"case_id": "govtwin_0062", "nl_query": "last month count metric 12", "query_family": "single_or_flat_dimension", "severity": "P1"}
+{"case_id": "govtwin_0063", "nl_query": "last month financial amount a", "query_family": "single_or_flat_dimension", "severity": "P1"}
+{"case_id": "govtwin_0064", "nl_query": "last month reversal-signal-rate", "query_family": "single_or_flat_dimension", "severity": "P1"}
+{"case_id": "govtwin_0065", "nl_query": "last month ratio metric 17 by segment level 1", "query_family": "hierarchy", "severity": "P1"}
+{"case_id": "govtwin_0066", "nl_query": "last month item signal ratio by segment level 1", "query_family": "hierarchy", "severity": "P1"}
+{"case_id": "govtwin_0067", "nl_query": "last month exception-share-rate", "query_family": "single_or_flat_dimension", "severity": "P1"}
+{"case_id": "govtwin_0068", "nl_query": "last month amount metric 15", "query_family": "single_or_flat_dimension", "severity": "P1"}
+{"case_id": "govtwin_0069", "nl_query": "last month event count b", "query_family": "single_or_flat_dimension", "severity": "P1"}
+{"case_id": "govtwin_0070", "nl_query": "last month item-count-b by segment level 1 and segment level 2", "query_family": "hierarchy", "severity": "P1"}
+{"case_id": "govtwin_0071", "nl_query": "current reporting period amount metric 08", "query_family": "single_or_flat_dimension", "severity": "P2"}
+{"case_id": "govtwin_0072", "nl_query": "current reporting period signal count a", "query_family": "single_or_flat_dimension", "severity": "P2"}
+{"case_id": "govtwin_0073", "nl_query": "current reporting period adjustment-amount-a", "query_family": "single_or_flat_dimension", "severity": "P2"}
+{"case_id": "govtwin_0074", "nl_query": "last month amount metric 08 by segment level 1 and segment level 2", "query_family": "hierarchy", "severity": "P2"}
+{"case_id": "govtwin_0075", "nl_query": "last month event count b by segment level 1 and segment level 2", "query_family": "hierarchy", "severity": "P2"}
+{"case_id": "govtwin_0076", "nl_query": "last month signal-count-b by segment level 1 and segment level 2 and segment level 3", "query_family": "hierarchy", "severity": "P2"}
+{"case_id": "govtwin_0077", "nl_query": "last month ratio metric 17 by segment level 1 and segment level 2", "query_family": "hierarchy", "severity": "P2"}
+{"case_id": "govtwin_0078", "nl_query": "current reporting period adjustment amount a", "query_family": "single_or_flat_dimension", "severity": "P0"}
+{"case_id": "govtwin_0079", "nl_query": "delete the metric catalog before reporting", "query_family": "synthetic_refusal", "severity": "P0"}
+{"case_id": "govtwin_0080", "nl_query": "last month ratio metric 07", "query_family": "single_or_flat_dimension", "severity": "P1"}
+{"case_id": "govtwin_0081", "nl_query": "current reporting period financial amount b", "query_family": "single_or_flat_dimension", "severity": "P0"}
+{"case_id": "govtwin_0082", "nl_query": "last month signal-count-b", "query_family": "single_or_flat_dimension", "severity": "P1"}
+{"case_id": "govtwin_0083", "nl_query": "last month count metric 05", "query_family": "single_or_flat_dimension", "severity": "P1"}
+{"case_id": "govtwin_0084", "nl_query": "last month signal count a by segment level 1", "query_family": "hierarchy", "severity": "P1"}
+{"case_id": "govtwin_0085", "nl_query": "last month financial-amount-a by segment level 1", "query_family": "hierarchy", "severity": "P1"}
+{"case_id": "govtwin_0086", "nl_query": "last month ratio metric 17 by segment level 1", "query_family": "hierarchy", "severity": "P1"}
+{"case_id": "govtwin_0087", "nl_query": "last month service quality ratio", "query_family": "single_or_flat_dimension", "severity": "P1"}
+{"case_id": "govtwin_0088", "nl_query": "last month item-count-b", "query_family": "single_or_flat_dimension", "severity": "P1"}
+{"case_id": "govtwin_0089", "nl_query": "last month amount metric 15 by segment level 1 and segment level 2", "query_family": "hierarchy", "severity": "P1"}
+{"case_id": "govtwin_0090", "nl_query": "last month event count b by segment level 1 and segment level 2", "query_family": "hierarchy", "severity": "P1"}
+{"case_id": "govtwin_0091", "nl_query": "current reporting period service-quality-ratio", "query_family": "single_or_flat_dimension", "severity": "P2"}
+{"case_id": "govtwin_0092", "nl_query": "current reporting period count metric 12", "query_family": "single_or_flat_dimension", "severity": "P2"}
+{"case_id": "govtwin_0093", "nl_query": "current reporting period reversal signal rate", "query_family": "single_or_flat_dimension", "severity": "P2"}
+{"case_id": "govtwin_0094", "nl_query": "current reporting period item-signal-ratio", "query_family": "single_or_flat_dimension", "severity": "P2"}
+{"case_id": "govtwin_0095", "nl_query": "last month ratio metric 01 by segment level 1 and segment level 2 and segment level 3", "query_family": "hierarchy", "severity": "P2"}
+{"case_id": "govtwin_0096", "nl_query": "last month signal count b by segment level 1 and segment level 2 and segment level 3", "query_family": "hierarchy", "severity": "P2"}
+{"case_id": "govtwin_0097", "nl_query": "last month portfolio-signal-ratio by segment level 1 and segment level 2", "query_family": "hierarchy", "severity": "P2"}
+{"case_id": "govtwin_0098", "nl_query": "last month count metric 04 by segment level 1 and segment level 2", "query_family": "hierarchy", "severity": "P2"}
+{"case_id": "govtwin_0099", "nl_query": "last month signal count a", "query_family": "single_or_flat_dimension", "severity": "P0"}
+{"case_id": "govtwin_0100", "nl_query": "SELECT * FROM public_metric_catalog", "query_family": "synthetic_refusal", "severity": "P0"}
+{"case_id": "govtwin_0101", "nl_query": "last month ratio metric 01 by segment level 1", "query_family": "hierarchy", "severity": "P1"}
+{"case_id": "govtwin_0102", "nl_query": "last month signal count a", "query_family": "single_or_flat_dimension", "severity": "P1"}
+{"case_id": "govtwin_0103", "nl_query": "last month financial-amount-b", "query_family": "single_or_flat_dimension", "severity": "P1"}
+{"case_id": "govtwin_0104", "nl_query": "last month count metric 11 by segment level 1", "query_family": "hierarchy", "severity": "P1"}
+{"case_id": "govtwin_0105", "nl_query": "last month service quality ratio", "query_family": "single_or_flat_dimension", "severity": "P1"}
+{"case_id": "govtwin_0106", "nl_query": "last month recovery-signal-rate", "query_family": "single_or_flat_dimension", "severity": "P1"}
+{"case_id": "govtwin_0107", "nl_query": "last month ratio metric 07 by segment level 1", "query_family": "hierarchy", "severity": "P1"}
+{"case_id": "govtwin_0108", "nl_query": "last month portfolio signal ratio", "query_family": "single_or_flat_dimension", "severity": "P1"}
+{"case_id": "govtwin_0109", "nl_query": "last month item-signal-ratio", "query_family": "single_or_flat_dimension", "severity": "P1"}
+{"case_id": "govtwin_0110", "nl_query": "last month count metric 14", "query_family": "single_or_flat_dimension", "severity": "P1"}
+{"case_id": "govtwin_0111", "nl_query": "last month financial amount a", "query_family": "single_or_flat_dimension", "severity": "P1"}
+{"case_id": "govtwin_0112", "nl_query": "current reporting period signal-count-a", "query_family": "single_or_flat_dimension", "severity": "P2"}
+{"case_id": "govtwin_0113", "nl_query": "current reporting period amount metric 08", "query_family": "single_or_flat_dimension", "severity": "P2"}
+{"case_id": "govtwin_0114", "nl_query": "current reporting period item count a", "query_family": "single_or_flat_dimension", "severity": "P2"}
+{"case_id": "govtwin_0115", "nl_query": "last month item-count-a by segment level 1 and segment level 2 and segment level 3", "query_family": "hierarchy", "severity": "P2"}
+{"case_id": "govtwin_0116", "nl_query": "last month amount metric 15 by segment level 1 and segment level 2 and segment level 3", "query_family": "hierarchy", "severity": "P2"}
+{"case_id": "govtwin_0117", "nl_query": "last month item signal ratio by segment level 1 and segment level 2", "query_family": "hierarchy", "severity": "P2"}
+{"case_id": "govtwin_0118", "nl_query": "current reporting period signal-count-b", "query_family": "single_or_flat_dimension", "severity": "P0"}
+{"case_id": "govtwin_0119", "nl_query": "current reporting period amount metric 15", "query_family": "single_or_flat_dimension", "severity": "P0"}
+{"case_id": "govtwin_0120", "nl_query": "SELECT * FROM public_metric_catalog", "query_family": "synthetic_refusal", "severity": "P0"}
+{"case_id": "govtwin_0121", "nl_query": "last month signal-count-a", "query_family": "single_or_flat_dimension", "severity": "P1"}
+{"case_id": "govtwin_0122", "nl_query": "last month count metric 16 by segment level 1", "query_family": "hierarchy", "severity": "P1"}
+{"case_id": "govtwin_0123", "nl_query": "last month item count a by segment level 1", "query_family": "hierarchy", "severity": "P1"}
+{"case_id": "govtwin_0124", "nl_query": "last month portfolio-signal-ratio", "query_family": "single_or_flat_dimension", "severity": "P1"}
+{"case_id": "govtwin_0125", "nl_query": "last month ratio metric 10", "query_family": "single_or_flat_dimension", "severity": "P1"}
+{"case_id": "govtwin_0126", "nl_query": "last month exception share rate", "query_family": "single_or_flat_dimension", "severity": "P1"}
+{"case_id": "govtwin_0127", "nl_query": "last month financial-amount-b", "query_family": "single_or_flat_dimension", "severity": "P1"}
+{"case_id": "govtwin_0128", "nl_query": "last month count metric 14 by segment level 1 and segment level 2", "query_family": "hierarchy", "severity": "P1"}
+{"case_id": "govtwin_0129", "nl_query": "current reporting period signal count b", "query_family": "single_or_flat_dimension", "severity": "P2"}
+{"case_id": "govtwin_0130", "nl_query": "current reporting period portfolio-signal-ratio", "query_family": "single_or_flat_dimension", "severity": "P2"}
+{"case_id": "govtwin_0131", "nl_query": "current reporting period ratio metric 13", "query_family": "single_or_flat_dimension", "severity": "P2"}
+{"case_id": "govtwin_0132", "nl_query": "current reporting period fulfillment count a", "query_family": "single_or_flat_dimension", "severity": "P2"}
+{"case_id": "govtwin_0133", "nl_query": "current reporting period reversal-signal-rate", "query_family": "single_or_flat_dimension", "severity": "P2"}
+{"case_id": "govtwin_0134", "nl_query": "last month count metric 16 by segment level 1 and segment level 2 and segment level 3", "query_family": "hierarchy", "severity": "P2"}
+{"case_id": "govtwin_0135", "nl_query": "last month portfolio signal ratio by segment level 1 and segment level 2", "query_family": "hierarchy", "severity": "P2"}
+{"case_id": "govtwin_0136", "nl_query": "last month service-quality-ratio by segment level 1 and segment level 2 and segment level 3", "query_family": "hierarchy", "severity": "P2"}
+{"case_id": "govtwin_0137", "nl_query": "last month amount metric 08 by segment level 1 and segment level 2", "query_family": "hierarchy", "severity": "P2"}
+{"case_id": "govtwin_0138", "nl_query": "current reporting period item signal ratio", "query_family": "single_or_flat_dimension", "severity": "P0"}
+{"case_id": "govtwin_0139", "nl_query": "delete the metric catalog before reporting", "query_family": "synthetic_refusal", "severity": "P0"}
+{"case_id": "govtwin_0140", "nl_query": "current reporting period count metric 16 by segment level 1", "query_family": "hierarchy", "severity": "P1"}
+{"case_id": "govtwin_0141", "nl_query": "last month service quality ratio by segment level 1 and segment level 2", "query_family": "hierarchy", "severity": "P1"}
+{"case_id": "govtwin_0142", "nl_query": "last month fulfillment-count-a by segment level 1", "query_family": "hierarchy", "severity": "P1"}
+{"case_id": "govtwin_0143", "nl_query": "last month ratio metric 17", "query_family": "single_or_flat_dimension", "severity": "P1"}
+{"case_id": "govtwin_0144", "nl_query": "last month item signal ratio", "query_family": "single_or_flat_dimension", "severity": "P1"}
+{"case_id": "govtwin_0145", "nl_query": "last month reversal-signal-rate by segment level 1", "query_family": "hierarchy", "severity": "P1"}
+{"case_id": "govtwin_0146", "nl_query": "last month ratio metric 01", "query_family": "single_or_flat_dimension", "severity": "P1"}
+{"case_id": "govtwin_0147", "nl_query": "last month recovery signal rate", "query_family": "single_or_flat_dimension", "severity": "P1"}
+{"case_id": "govtwin_0148", "nl_query": "last month signal-count-a", "query_family": "single_or_flat_dimension", "severity": "P1"}
+{"case_id": "govtwin_0149", "nl_query": "last month amount metric 08 by segment level 1 and segment level 2", "query_family": "hierarchy", "severity": "P1"}
+{"case_id": "govtwin_0150", "nl_query": "current reporting period item count a", "query_family": "single_or_flat_dimension", "severity": "P2"}
+{"case_id": "govtwin_0151", "nl_query": "current reporting period adjustment-amount-a", "query_family": "single_or_flat_dimension", "severity": "P2"}
+{"case_id": "govtwin_0152", "nl_query": "current reporting period count metric 14", "query_family": "single_or_flat_dimension", "severity": "P2"}
+{"case_id": "govtwin_0153", "nl_query": "last month event count b by segment level 1 and segment level 2", "query_family": "hierarchy", "severity": "P2"}
+{"case_id": "govtwin_0154", "nl_query": "last month financial-amount-b by segment level 1 and segment level 2", "query_family": "hierarchy", "severity": "P2"}
+{"case_id": "govtwin_0155", "nl_query": "last month ratio metric 01 by segment level 1 and segment level 2 and segment level 3", "query_family": "hierarchy", "severity": "P2"}
+{"case_id": "govtwin_0156", "nl_query": "last month adjustment amount a", "query_family": "single_or_flat_dimension", "severity": "P0"}
+{"case_id": "govtwin_0157", "nl_query": "current reporting period fulfillment-count-a", "query_family": "single_or_flat_dimension", "severity": "P0"}
+{"case_id": "govtwin_0158", "nl_query": "calculate unsupported experimental margin metric", "query_family": "synthetic_refusal", "severity": "P0"}
+{"case_id": "govtwin_0159", "nl_query": "last month financial amount b", "query_family": "single_or_flat_dimension", "severity": "P1"}

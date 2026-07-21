@@ -1,0 +1,24 @@
+{
+  "case_conflict_audit": {
+    "conflict_examples": [],
+    "conflicting_duplicate_groups": 0,
+    "duplicate_query_groups": 0,
+    "normalized_query_groups": 510
+  },
+  "counts": {
+    "dimensions": 48,
+    "domains": 12,
+    "governance_edges": 1035,
+    "metric_coverage_bindings": 178,
+    "metrics": 170,
+    "metrics_with_coverage_bindings": 142,
+    "physical_coverage": 189,
+    "policies": 26,
+    "source_provenance": 170,
+    "test_cases": 510
+  },
+  "leakage_scan": {
+    "passed": true,
+    "private_term_hits": []
+  }
+}

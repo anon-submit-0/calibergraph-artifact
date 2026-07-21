@@ -1,0 +1,166 @@
+{
+  "examples": [
+    {
+      "case_id": "govtwin_0003",
+      "decision": {
+        "action": "answer",
+        "dimensions": [
+          "segment_l1"
+        ],
+        "metric_id": "signal_count_a"
+      },
+      "gold": {
+        "action": "answer",
+        "dimensions": [
+          "segment_l1"
+        ],
+        "metric_id": "signal_count_a"
+      },
+      "nl_query": "last month signal count a by segment level 1",
+      "query_family": "hierarchy",
+      "trace": {
+        "candidate_metrics": [
+          "signal_count_a",
+          "signal_count_b",
+          "event_count_a"
+        ],
+        "certificate": null,
+        "checks": {
+          "caliber": {
+            "active": true,
+            "denominator": [],
+            "numerator": [],
+            "passed": true,
+            "ratio_like": false,
+            "route_source": "not_required"
+          },
+          "coverage": {
+            "active": false,
+            "missing": [],
+            "mode": "not_available_in_released_contract",
+            "passed": true,
+            "required": [
+              "event_id"
+            ]
+          },
+          "field": {
+            "active": true,
+            "metric_id": "signal_count_a",
+            "passed": true,
+            "unknown_dimensions": []
+          },
+          "grain": {
+            "active": true,
+            "disallowed": [],
+            "passed": true,
+            "removed_ancestors": [],
+            "requested": [
+              "segment_l1"
+            ],
+            "resolved_finest": [
+              "segment_l1"
+            ]
+          },
+          "policy": {
+            "active": true,
+            "hits": [],
+            "passed": true
+          },
+          "time": {
+            "active": false,
+            "available": [],
+            "detected": "last_month",
+            "passed": true,
+            "required": false
+          }
+        },
+        "used_gold_label": false
+      }
+    },
+    {
+      "case_id": "govtwin_0019",
+      "decision": {
+        "action": "refuse",
+        "dimensions": [],
+        "metric_id": ""
+      },
+      "gold": {
+        "action": "refuse",
+        "dimensions": [],
+        "metric_id": ""
+      },
+      "nl_query": "delete the metric catalog before reporting",
+      "query_family": "synthetic_refusal",
+      "trace": {
+        "candidate_metrics": [
+          "governed_metric_01",
+          "portfolio_signal_ratio",
+          "item_signal_ratio"
+        ],
+        "certificate": {
+          "failed_constraints": [
+            "policy"
+          ],
+          "primary_failure": "policy",
+          "repairable": false
+        },
+        "checks": {
+          "caliber": {
+            "active": true,
+            "denominator": [],
+            "numerator": [],
+            "passed": true,
+            "ratio_like": false,
+            "route_source": "not_required"
+          },
+          "coverage": {
+            "active": false,
+            "missing": [],
+            "mode": "not_available_in_released_contract",
+            "passed": true,
+            "required": [
+              "aggregate",
+              "governed_value"
+            ]
+          },
+          "field": {
+            "active": true,
+            "metric_id": "governed_metric_01",
+            "passed": true,
+            "unknown_dimensions": []
+          },
+          "grain": {
+            "active": true,
+            "disallowed": [],
+            "passed": true,
+            "removed_ancestors": [],
+            "requested": [],
+            "resolved_finest": []
+          },
+          "policy": {
+            "active": true,
+            "hits": [
+              {
+                "policy_id": "policy_refuse_sql_ddl",
+                "trigger": "delete "
+              },
+              {
+                "policy_id": "policy_refuse_sql_ddl",
+                "trigger": "contains"
+              }
+            ],
+            "passed": false
+          },
+          "time": {
+            "active": false,
+            "available": [],
+            "detected": "",
+            "passed": true,
+            "required": false
+          }
+        },
+        "used_gold_label": false
+      }
+    }
+  ]
+}

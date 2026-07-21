@@ -1,0 +1,23 @@
+{
+  "llm_direct": {
+    "n": 20,
+    "model": "deepseek-3.2",
+    "metric_accuracy": 1.0,
+    "dimension_exact_accuracy": 0.95,
+    "joint_accuracy": 0.95
+  },
+  "llm_graph_rag": {
+    "n": 20,
+    "model": "deepseek-3.2",
+    "metric_accuracy": 1.0,
+    "dimension_exact_accuracy": 0.95,
+    "joint_accuracy": 0.95
+  },
+  "llm_schema_rag": {
+    "n": 20,
+    "model": "deepseek-3.2",
+    "metric_accuracy": 1.0,
+    "dimension_exact_accuracy": 1.0,
+    "joint_accuracy": 1.0
+  }
+}

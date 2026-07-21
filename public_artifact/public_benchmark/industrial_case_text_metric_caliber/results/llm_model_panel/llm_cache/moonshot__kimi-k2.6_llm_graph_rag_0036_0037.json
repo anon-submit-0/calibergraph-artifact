@@ -1,0 +1,6 @@
+{
+  "channel": "moonshot",
+  "model": "kimi-k2.6",
+  "mode": "llm_graph_rag",
+  "stdout": "[\n  {\n    \"case_id\": \"ict_case_0030\",\n    \"action\": \"answer\",\n    \"metric_id\": \"ict_metric_010\",\n    \"dimensions\": [],\n    \"reason\": \"Matched Return Quantity metric; no dimensions requested.\"\n  },\n  {\n    \"case_id\": \"ict_case_0031\",\n    \"action\": \"answer\",\n    \"metric_id\": \"ict_metric_007\",\n    \"dimensions\": [],\n    \"reason\": \"Matched Refund Rate metric; no dimensions requested.\"\n  }\n]"
+}

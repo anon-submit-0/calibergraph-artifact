@@ -1,0 +1,6 @@
+{
+  "channel": "moonshot",
+  "model": "kimi-k2.6",
+  "mode": "llm_graph_rag",
+  "stdout": "```json\n[\n  {\"case_id\":\"ict_case_0047\",\"action\":\"answer\",\"metric_id\":\"ict_metric_007\",\"dimensions\":[],\"reason\":\"Flat metric query mapping 退款率 to Refund Rate; no grouping dimensions requested.\"},\n  {\"case_id\":\"ict_case_0048\",\"action\":\"answer\",\"metric_id\":\"ict_metric_014\",\"dimensions\":[],\"reason\":\"Flat metric query mapping 销量 to Sales Quantity; no grouping dimensions requested.\"}\n]\n```"
+}

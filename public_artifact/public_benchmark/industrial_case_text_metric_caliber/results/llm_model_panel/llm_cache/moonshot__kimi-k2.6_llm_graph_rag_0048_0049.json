@@ -1,0 +1,6 @@
+{
+  "channel": "moonshot",
+  "model": "kimi-k2.6",
+  "mode": "llm_graph_rag",
+  "stdout": "```json\n[\n  {\"case_id\":\"ict_case_0043\", \"action\":\"answer\", \"metric_id\":\"ict_metric_006\", \"dimensions\":[\"segment_l1\"], \"reason\":\"Metric and dimension matched\"},\n  {\"case_id\":\"ict_case_0044\", \"action\":\"answer\", \"metric_id\":\"ict_metric_005\", \"dimensions\":[], \"reason\":\"Metric matched with no dimensions requested\"}\n]\n```"
+}

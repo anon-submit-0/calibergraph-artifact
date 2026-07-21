@@ -1,0 +1,43 @@
+{
+  "counts": {
+    "candidate_cases": 159,
+    "dimensions": 4,
+    "metrics": 15,
+    "refusal_cases": 8,
+    "released_cases": 157,
+    "source_cases": 159,
+    "withheld_label_conflict_cases": 2
+  },
+  "label_conflict_audit": {
+    "candidate_conflicting_duplicate_groups_before_withholding": 1,
+    "conflict_examples": [],
+    "conflicting_duplicate_groups": 0,
+    "duplicate_query_groups": 23,
+    "normalized_query_groups": 114,
+    "withheld_conflict_groups": [
+      {
+        "case_ids": [
+          "ict_case_0079",
+          "ict_case_0081"
+        ],
+        "normalized_query": "退款金额",
+        "reason": "duplicate public query has incompatible action/metric/dimension/time/caliber labels"
+      }
+    ]
+  },
+  "privacy_audit": {
+    "passed": true,
+    "private_term_hits": [],
+    "withheld": [
+      "raw rows",
+      "private table names",
+      "private column names",
+      "private metric ids",
+      "private domain ids",
+      "private-to-public mappings",
+      "case source ids",
+      "private provenance digests, stored only in internal author trace"
+    ]
+  },
+  "source_mode": "public_desensitized_candidate_source"
+}

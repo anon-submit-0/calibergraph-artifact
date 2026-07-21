@@ -1,0 +1,49 @@
+{
+  "all_passed": true,
+  "case_count": 5,
+  "fixture_domain_id": "mg_domain_01",
+  "fixture_metric_id": "mg_metric_0011",
+  "passed_count": 5,
+  "results": [
+    {
+      "action": "answer",
+      "expected_primary_failure": null,
+      "mutation": "valid_metric_specific_witness",
+      "observed_primary_failure": null,
+      "passed": true
+    },
+    {
+      "action": "refuse",
+      "expected_primary_failure": "caliber",
+      "mutation": "remove_current_numerator_edge",
+      "observed_primary_failure": "caliber",
+      "passed": true
+    },
+    {
+      "action": "refuse",
+      "expected_primary_failure": "caliber",
+      "mutation": "remove_current_denominator_edge",
+      "observed_primary_failure": "caliber",
+      "passed": true
+    },
+    {
+      "action": "refuse",
+      "expected_primary_failure": "coverage",
+      "mutation": "remove_current_numerator_coverage_binding",
+      "observed_primary_failure": "coverage",
+      "passed": true
+    },
+    {
+      "action": "refuse",
+      "expected_primary_failure": "coverage",
+      "mutation": "remove_current_denominator_coverage_binding",
+      "observed_primary_failure": "coverage",
+      "passed": true
+    }
+  ],
+  "same_domain_other_metric_evidence_retained": {
+    "coverage_bindings": 11,
+    "denominator_edges": 1,
+    "numerator_edges": 4
+  }
+}

@@ -1,0 +1,335 @@
+[
+  {
+    "case_id": "iowa_001",
+    "dataset": "iowa",
+    "gold": {
+      "action": "answer",
+      "dimensions": [],
+      "metric_id": "sales_dollars"
+    },
+    "query": "What were total liquor sales dollars?"
+  },
+  {
+    "case_id": "iowa_002",
+    "dataset": "iowa",
+    "gold": {
+      "action": "answer",
+      "dimensions": [
+        "county_name"
+      ],
+      "metric_id": "sales_dollars"
+    },
+    "query": "Sales dollars by county"
+  },
+  {
+    "case_id": "iowa_003",
+    "dataset": "iowa",
+    "gold": {
+      "action": "answer",
+      "dimensions": [
+        "store_city"
+      ],
+      "metric_id": "sales_dollars"
+    },
+    "query": "Sales by county and city"
+  },
+  {
+    "case_id": "iowa_004",
+    "dataset": "iowa",
+    "gold": {
+      "action": "answer",
+      "dimensions": [
+        "item_desc"
+      ],
+      "metric_id": "sales_dollars"
+    },
+    "query": "Sales by category and item"
+  },
+  {
+    "case_id": "iowa_005",
+    "dataset": "iowa",
+    "gold": {
+      "action": "answer",
+      "dimensions": [
+        "ordered_month"
+      ],
+      "metric_id": "sales_dollars"
+    },
+    "query": "Monthly liquor sales"
+  },
+  {
+    "case_id": "iowa_006",
+    "dataset": "iowa",
+    "gold": {
+      "action": "answer",
+      "dimensions": [
+        "ordered_quarter",
+        "county_name"
+      ],
+      "metric_id": "sales_dollars"
+    },
+    "query": "Quarterly sales dollars by county"
+  },
+  {
+    "case_id": "iowa_007",
+    "dataset": "iowa",
+    "gold": {
+      "action": "answer",
+      "dimensions": [],
+      "metric_id": "bottles_sold"
+    },
+    "query": "How many bottles were sold?"
+  },
+  {
+    "case_id": "iowa_008",
+    "dataset": "iowa",
+    "gold": {
+      "action": "answer",
+      "dimensions": [
+        "vendor_name"
+      ],
+      "metric_id": "bottles_sold"
+    },
+    "query": "Bottles sold by vendor"
+  },
+  {
+    "case_id": "iowa_009",
+    "dataset": "iowa",
+    "gold": {
+      "action": "answer",
+      "dimensions": [
+        "item_desc"
+      ],
+      "metric_id": "bottles_sold"
+    },
+    "query": "Bottles by category and item"
+  },
+  {
+    "case_id": "iowa_010",
+    "dataset": "iowa",
+    "gold": {
+      "action": "answer",
+      "dimensions": [
+        "county_name"
+      ],
+      "metric_id": "liters_sold"
+    },
+    "query": "Liters sold by county"
+  },
+  {
+    "case_id": "iowa_011",
+    "dataset": "iowa",
+    "gold": {
+      "action": "answer",
+      "dimensions": [
+        "store_city"
+      ],
+      "metric_id": "liters_sold"
+    },
+    "query": "Volume in liters by county and city"
+  },
+  {
+    "case_id": "iowa_012",
+    "dataset": "iowa",
+    "gold": {
+      "action": "answer",
+      "dimensions": [],
+      "metric_id": "invoice_count"
+    },
+    "query": "How many invoices are in the public liquor data?"
+  },
+  {
+    "case_id": "iowa_013",
+    "dataset": "iowa",
+    "gold": {
+      "action": "answer",
+      "dimensions": [
+        "ordered_month"
+      ],
+      "metric_id": "invoice_count"
+    },
+    "query": "Invoice count by month"
+  },
+  {
+    "case_id": "iowa_014",
+    "dataset": "iowa",
+    "gold": {
+      "action": "answer",
+      "dimensions": [
+        "store_city"
+      ],
+      "metric_id": "invoice_count"
+    },
+    "query": "Order count by county and city"
+  },
+  {
+    "case_id": "iowa_015",
+    "dataset": "iowa",
+    "gold": {
+      "action": "answer",
+      "dimensions": [],
+      "metric_id": "store_count"
+    },
+    "query": "How many stores sold liquor?"
+  },
+  {
+    "case_id": "iowa_016",
+    "dataset": "iowa",
+    "gold": {
+      "action": "answer",
+      "dimensions": [
+        "county_name"
+      ],
+      "metric_id": "store_count"
+    },
+    "query": "Store count by county"
+  },
+  {
+    "case_id": "ict_case_0001",
+    "dataset": "ict",
+    "gold": {
+      "action": "answer",
+      "dimensions": [],
+      "metric_id": "ict_metric_013"
+    },
+    "query": "上个月销售额"
+  },
+  {
+    "case_id": "ict_case_0002",
+    "dataset": "ict",
+    "gold": {
+      "action": "answer",
+      "dimensions": [],
+      "metric_id": "ict_metric_002"
+    },
+    "query": "上个月问题次数"
+  },
+  {
+    "case_id": "ict_case_0008",
+    "dataset": "ict",
+    "gold": {
+      "action": "answer",
+      "dimensions": [
+        "segment_l2"
+      ],
+      "metric_id": "ict_metric_014"
+    },
+    "query": "上个月按一级品类、二级品类的销量"
+  },
+  {
+    "case_id": "ict_case_0012",
+    "dataset": "ict",
+    "gold": {
+      "action": "answer",
+      "dimensions": [],
+      "metric_id": "ict_metric_015"
+    },
+    "query": "今天的商品客诉率"
+  },
+  {
+    "case_id": "ict_case_0020",
+    "dataset": "ict",
+    "gold": {
+      "action": "answer",
+      "dimensions": [],
+      "metric_id": "ict_metric_007"
+    },
+    "query": "last month Product Family D refund rate"
+  },
+  {
+    "case_id": "ict_case_0030",
+    "dataset": "ict",
+    "gold": {
+      "action": "answer",
+      "dimensions": [],
+      "metric_id": "ict_metric_010"
+    },
+    "query": "近30天的退货量"
+  },
+  {
+    "case_id": "ict_case_0040",
+    "dataset": "ict",
+    "gold": {
+      "action": "refuse",
+      "dimensions": [],
+      "metric_id": ""
+    },
+    "query": "天气预报"
+  },
+  {
+    "case_id": "ict_case_0050",
+    "dataset": "ict",
+    "gold": {
+      "action": "answer",
+      "dimensions": [
+        "segment_l2"
+      ],
+      "metric_id": "ict_metric_010"
+    },
+    "query": "上个月按一级品类、二级品类的退货量"
+  },
+  {
+    "case_id": "ict_case_0060",
+    "dataset": "ict",
+    "gold": {
+      "action": "answer",
+      "dimensions": [],
+      "metric_id": "ict_metric_003"
+    },
+    "query": "上季度问题品数量"
+  },
+  {
+    "case_id": "ict_case_0070",
+    "dataset": "ict",
+    "gold": {
+      "action": "answer",
+      "dimensions": [
+        "segment_l2"
+      ],
+      "metric_id": "ict_metric_009"
+    },
+    "query": "上个月按一级品类、二级品类的补发量"
+  },
+  {
+    "case_id": "ict_case_0080",
+    "dataset": "ict",
+    "gold": {
+      "action": "answer",
+      "dimensions": [],
+      "metric_id": "ict_metric_005"
+    },
+    "query": "上个月Quality issue问题占比"
+  },
+  {
+    "case_id": "ict_case_0090",
+    "dataset": "ict",
+    "gold": {
+      "action": "answer",
+      "dimensions": [
+        "segment_l2"
+      ],
+      "metric_id": "ict_metric_002"
+    },
+    "query": "上个月按一级品类、二级品类的问题次数"
+  },
+  {
+    "case_id": "ict_case_0100",
+    "dataset": "ict",
+    "gold": {
+      "action": "refuse",
+      "dimensions": [],
+      "metric_id": ""
+    },
+    "query": "客诉率"
+  },
+  {
+    "case_id": "ict_case_0110",
+    "dataset": "ict",
+    "gold": {
+      "action": "answer",
+      "dimensions": [],
+      "metric_id": "ict_metric_012"
+    },
+    "query": "上个月 Product Family C 的客诉数"
+  }
+]

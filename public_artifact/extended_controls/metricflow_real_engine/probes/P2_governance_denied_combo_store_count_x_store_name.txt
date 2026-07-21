@@ -1,0 +1,18 @@
+COMMAND: mf query --metrics store_count --limit 20 --csv <TEMP_CSV> --group-by sale_line__store_name
+EXIT_CODE: 0
+WALL_SECONDS: 2.68
+DATA_ROWS: 20
+GOVERNANCE_SAYS: DENIED (no measures_of edge store_count->store_name)
+PRE_REGISTERED_PREDICTION: engine compiles and runs
+----- STDOUT -----
+
+
+⠋ Initiating query…
+
+⠙ Initiating query…
+✔ Success 🦄 - query completed after 0.03 seconds
+🖨 Wrote query output to <TEMP_CSV>
+
+
+----- STDERR -----
+

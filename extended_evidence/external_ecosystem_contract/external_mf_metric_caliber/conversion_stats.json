@@ -1,0 +1,21 @@
+{
+  "by_metric_type": {
+    "conversion|answerable=False": 7,
+    "cumulative|answerable=False": 10,
+    "derived|answerable=False": 7,
+    "derived|answerable=True": 40,
+    "ratio|answerable=True": 9,
+    "simple|answerable=True": 40,
+    "undefined_stub|answerable=False": 6
+  },
+  "coverage_bindings": 110,
+  "dimensions": 16,
+  "edges": 1054,
+  "measures": 31,
+  "metrics_answerable": 89,
+  "metrics_total": 119,
+  "metrics_unanswerable_manifest": 24,
+  "physical_tables": 12,
+  "protocol_added_refusal_stubs": 6,
+  "semantic_models": 12
+}

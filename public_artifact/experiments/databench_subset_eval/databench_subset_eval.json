@@ -1,0 +1,10 @@
+{
+  "claim_boundary": "This is a fixed DataBench row-level QA subset audit. It adds real public table QA evidence, but DataBench does not include a governed metric-caliber graph, refusal policy, or business witness labels.",
+  "datasets": 7,
+  "date": "2026-07-08",
+  "license": "MIT",
+  "source": "https://huggingface.co/datasets/cardiffnlp/databench",
+  "total_qa_cases": 145,
+  "total_table_rows": 265464,
+  "version": "release"
+}

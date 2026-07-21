@@ -1,0 +1,132 @@
+[
+  {
+    "table": "Album",
+    "rows": 347,
+    "columns": [
+      "AlbumId",
+      "Title",
+      "ArtistId"
+    ]
+  },
+  {
+    "table": "Artist",
+    "rows": 275,
+    "columns": [
+      "ArtistId",
+      "Name"
+    ]
+  },
+  {
+    "table": "Customer",
+    "rows": 59,
+    "columns": [
+      "CustomerId",
+      "FirstName",
+      "LastName",
+      "Company",
+      "Address",
+      "City",
+      "State",
+      "Country",
+      "PostalCode",
+      "Phone",
+      "Fax",
+      "Email",
+      "SupportRepId"
+    ]
+  },
+  {
+    "table": "Employee",
+    "rows": 8,
+    "columns": [
+      "EmployeeId",
+      "LastName",
+      "FirstName",
+      "Title",
+      "ReportsTo",
+      "BirthDate",
+      "HireDate",
+      "Address",
+      "City",
+      "State",
+      "Country",
+      "PostalCode",
+      "Phone",
+      "Fax",
+      "Email"
+    ]
+  },
+  {
+    "table": "Genre",
+    "rows": 25,
+    "columns": [
+      "GenreId",
+      "Name"
+    ]
+  },
+  {
+    "table": "Invoice",
+    "rows": 412,
+    "columns": [
+      "InvoiceId",
+      "CustomerId",
+      "InvoiceDate",
+      "BillingAddress",
+      "BillingCity",
+      "BillingState",
+      "BillingCountry",
+      "BillingPostalCode",
+      "Total"
+    ]
+  },
+  {
+    "table": "InvoiceLine",
+    "rows": 2240,
+    "columns": [
+      "InvoiceLineId",
+      "InvoiceId",
+      "TrackId",
+      "UnitPrice",
+      "Quantity"
+    ]
+  },
+  {
+    "table": "MediaType",
+    "rows": 5,
+    "columns": [
+      "MediaTypeId",
+      "Name"
+    ]
+  },
+  {
+    "table": "Playlist",
+    "rows": 18,
+    "columns": [
+      "PlaylistId",
+      "Name"
+    ]
+  },
+  {
+    "table": "PlaylistTrack",
+    "rows": 8715,
+    "columns": [
+      "PlaylistId",
+      "TrackId"
+    ]
+  },
+  {
+    "table": "Track",
+    "rows": 3503,
+    "columns": [
+      "TrackId",
+      "Name",
+      "AlbumId",
+      "MediaTypeId",
+      "GenreId",
+      "Composer",
+      "Milliseconds",
+      "Bytes",
+      "UnitPrice"
+    ]
+  }
+]

@@ -1,0 +1,6 @@
+{
+  "channel": "moonshot",
+  "model": "kimi-k2.6",
+  "mode": "llm_graph_rag",
+  "stdout": "[\n  {\"case_id\":\"ict_case_0059\",\"action\":\"refuse\",\"metric_id\":\"\",\"dimensions\":[],\"reason\":\"Raw SQL command refused per policy\"},\n  {\"case_id\":\"ict_case_0061\",\"action\":\"refuse\",\"metric_id\":\"\",\"dimensions\":[],\"reason\":\"No governed metric recognized in query\"}\n]"
+}

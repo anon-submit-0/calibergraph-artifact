@@ -1,0 +1,207 @@
+{
+  "baseline_capability_matrix": [
+    {
+      "aggregate caliber": "N/A-by-design after candidate discovery",
+      "baseline": "AutoLink-derived E3",
+      "dimension grain": "N/A-by-design finest-grain policy absent",
+      "metric identity": "mechanism-present candidate recall",
+      "refusal/disclosure": "N/A-by-design policy witness absent",
+      "role": "closest schema/candidate-linking family",
+      "temporal/coverage": "N/A-by-design coverage witness absent",
+      "release evidence": "fixed AutoLink snapshot plus 547 Spider2-Lite records; MetricCaliber candidate diagnostics"
+    },
+    {
+      "aggregate caliber": "N/A-by-design",
+      "baseline": "SafeNLIDB-derived E3 guard",
+      "dimension grain": "N/A-by-design",
+      "metric identity": "N/A-by-design",
+      "refusal/disclosure": "mechanism-present but insufficient for metric caliber",
+      "role": "closest safety/refusal family",
+      "temporal/coverage": "N/A-by-design",
+      "release evidence": "fixed SafeNLIDB snapshot plus 540 ShieldSQL records; refusal-transfer diagnostics"
+    },
+    {
+      "aggregate caliber": "empirical prompt finalization",
+      "baseline": "Oracle-candidate prompting",
+      "dimension grain": "empirical prompt finalization",
+      "metric identity": "oracle supplied",
+      "refusal/disclosure": "empirical prompt finalization",
+      "role": "perfect-linking stress control",
+      "temporal/coverage": "empirical prompt finalization",
+      "release evidence": "released MetricCaliberBench scorer outputs"
+    },
+    {
+      "aggregate caliber": "mechanism-present but no witness",
+      "baseline": "LLM Schema-RAG / GraphRAG prompt controls",
+      "dimension grain": "mechanism-present but no finest-grain resolver",
+      "metric identity": "mechanism-present retrieval",
+      "refusal/disclosure": "partial policy visibility",
+      "role": "rules-in-context control",
+      "temporal/coverage": "mechanism-present but no coverage proof",
+      "release evidence": "released public predictions and mechanism audit"
+    },
+    {
+      "aggregate caliber": "mechanism-present validation only",
+      "baseline": "Semantic-layer validator",
+      "dimension grain": "mechanism-present validation only",
+      "metric identity": "mechanism-present",
+      "refusal/disclosure": "partial policy validation",
+      "role": "metrics-as-code style validation control",
+      "temporal/coverage": "partial coverage validation",
+      "release evidence": "fully runnable key-free mechanism audit"
+    },
+    {
+      "aggregate caliber": "partial SQL-shape validation",
+      "baseline": "SQL post-hoc validator",
+      "dimension grain": "partial SQL-shape validation",
+      "metric identity": "N/A-by-design",
+      "refusal/disclosure": "N/A-by-design unless policy encoded",
+      "role": "static/execution validation control",
+      "temporal/coverage": "partial physical-coverage validation",
+      "release evidence": "fully runnable key-free mechanism audit"
+    },
+    {
+      "aggregate caliber": "empirical SQL planning",
+      "baseline": "Open SQL end-to-end",
+      "dimension grain": "empirical SQL planning",
+      "metric identity": "empirical SQL planning",
+      "refusal/disclosure": "implicit/weak refusal",
+      "role": "executable SQL agent control",
+      "temporal/coverage": "empirical SQL planning",
+      "release evidence": "IowaLiquor SQLite execution plus MetricCaliber scoring"
+    },
+    {
+      "aggregate caliber": "N/A-by-design",
+      "baseline": "TrustSQL/SecureSQL-style abstention",
+      "dimension grain": "N/A-by-design",
+      "metric identity": "N/A-by-design",
+      "refusal/disclosure": "direct refusal/disclosure anchor",
+      "role": "public abstention and safety anchor",
+      "temporal/coverage": "physical feasibility only",
+      "release evidence": "TrustSQL mapped in audit; SafeNLIDB ShieldSQL files countable in artifact"
+    },
+    {
+      "aggregate caliber": "direct metric expression validation",
+      "baseline": "dbt MetricFlow validator",
+      "dimension grain": "limited by dbt semantic manifest",
+      "metric identity": "mechanism-present in release MetricFlow validator control",
+      "refusal/disclosure": "N/A-by-design",
+      "role": "third-party semantic-layer validator control",
+      "temporal/coverage": "limited time-spine/as-of support",
+      "release evidence": "release adds dbt MetricFlow validation and Spider2-DBT dbt-parse audit; not a Spider-Agent leaderboard claim"
+    },
+    {
+      "aggregate caliber": "rules retrieved, not certified",
+      "baseline": "LightRAG governed-KG control",
+      "dimension grain": "rules retrieved, not certified",
+      "metric identity": "mechanism-present retrieval",
+      "refusal/disclosure": "rules retrieved, not certified",
+      "role": "graph-in-prompt preflight control",
+      "temporal/coverage": "rules retrieved, not certified",
+      "release evidence": "release adds runnable LightRAG custom-KG preflight; no accuracy table because LLM/embedding/query policy are not frozen"
+    },
+    {
+      "aggregate caliber": "compiled witness",
+      "baseline": "CaliberGraph",
+      "dimension grain": "compiled finest-grain witness",
+      "metric identity": "compiled witness",
+      "refusal/disclosure": "compiled refusal/disclosure witness",
+      "role": "typed witness compiler",
+      "temporal/coverage": "compiled coverage/as-of witness",
+      "release evidence": "released scorer outputs, ablations, certificates, and audits"
+    }
+  ],
+  "claim_boundary": "This historical release audit upgrades external alignment from prose-only triage to key-free anchor auditing. Counts are computed from released files. release supplements it with executed Spider2-DBT, TrustSQL raw, DataBench, dbt MetricFlow, and LightRAG-preflight evidence summarized in EXTERNAL_EVIDENCE_SUMMARY.md.",
+  "date": "2026-07-08",
+  "external_anchors": [
+    {
+      "count": 547,
+      "name": "AutoLink Spider2-Lite records",
+      "path": "external_baselines/AutoLink/run/spider2_data.json",
+      "status": "present"
+    },
+    {
+      "count": 540,
+      "name": "SafeNLIDB ShieldSQL records",
+      "path": "external_baselines/SAFENLIDB/evaluate/ShieldSQL/RS++/test++.json",
+      "status": "present"
+    },
+    {
+      "count": 206,
+      "name": "BIRD-MetricCaliber diagnostic cases",
+      "path": "public_benchmark/bird_metric_caliber/bird_metric_cases.jsonl",
+      "status": "present"
+    },
+    {
+      "count": 40,
+      "name": "Chinook-MetricCaliber scored cases",
+      "path": "public_benchmark/data/chinook_metric_cases.jsonl",
+      "status": "present"
+    },
+    {
+      "count": 32,
+      "name": "IowaLiquor-MetricCaliber scored cases",
+      "path": "public_benchmark/iowa_liquor_metric_caliber/test_cases.jsonl",
+      "status": "present"
+    },
+    {
+      "count": 159,
+      "name": "GovTwin-MetricCaliber base cases",
+      "path": "public_benchmark/govtwin_metric_caliber/test_cases.jsonl",
+      "status": "present"
+    },
+    {
+      "count": 159,
+      "name": "GovTwin-MetricCaliber LLM paraphrase cases",
+      "path": "public_benchmark/govtwin_metric_caliber/test_cases_llm_paraphrased.jsonl",
+      "status": "present"
+    },
+    {
+      "count": 468,
+      "name": "GovTwin-MetricCaliber perturbation cases",
+      "path": "public_benchmark/govtwin_metric_caliber/test_cases_perturbed.jsonl",
+      "status": "present"
+    },
+    {
+      "count": 510,
+      "name": "MultiGov-MetricCaliber scored cases",
+      "path": "public_benchmark/multigov_metric_caliber/gold_labels.jsonl",
+      "status": "present"
+    },
+    {
+      "count": 157,
+      "name": "IndustrialCaseText scored cases",
+      "path": "public_benchmark/industrial_case_text_metric_caliber/gold_labels.jsonl",
+      "status": "present"
+    }
+  ],
+  "external_diagnostic_or_official_subtask_records": 1293,
+  "family_summaries": {
+    "industrial_case_text": {
+      "flat_metric": 84,
+      "policy_refusal": 8,
+      "ranking_topk": 30,
+      "single_dimension": 35
+    },
+    "iowa": {
+      "answer": 25,
+      "refuse": 7
+    },
+    "multigov": {
+      "answerable_direct": 115,
+      "denominator_caliber": 29,
+      "finest_grain_trap": 163,
+      "policy_refusal": 184,
+      "temporal_anchor": 19
+    }
+  },
+  "public_scored_metric_caliber_cases": 1525,
+  "release_executed_adjacent_evidence": [
+    "Spider2-DBT dbt-parse audit over public projects.",
+    "TrustSQL raw official scorer outputs for answerability/refusal controls.",
+    "DataBench fixed public subset audit.",
+    "dbt MetricFlow validator control.",
+    "LightRAG custom-KG preflight, explicitly excluded from main accuracy tables."
+  ],
+  "version": "release"
+}

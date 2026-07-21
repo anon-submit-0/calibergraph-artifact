@@ -1,0 +1,6 @@
+{
+  "channel": "moonshot",
+  "model": "kimi-k2.6",
+  "mode": "llm_graph_rag",
+  "stdout": "```json\n[\n  {\"case_id\":\"ict_case_0034\", \"action\":\"answer\", \"metric_id\":\"ict_metric_015\", \"dimensions\":[], \"reason\":\"商品客诉率 matches alias for Item Complaint Rate; no dimensions requested.\"},\n  {\"case_id\":\"ict_case_0035\", \"action\":\"answer\", \"metric_id\":\"ict_metric_010\", \"dimensions\":[\"segment_l2\"], \"reason\":\"退货量 matches Return Quantity alias; 二级品类 requests segment_l2 grain.\"}\n]\n```"
+}

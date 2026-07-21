@@ -1,0 +1,4 @@
+{"action": "refuse", "policy_id": "policy_refuse_sql_ddl", "trigger": "SQL or DDL request"}
+{"action": "refuse", "policy_id": "policy_refuse_sensitive_identifier", "trigger": "request for personal or customer identifier"}
+{"action": "refuse", "policy_id": "policy_refuse_off_domain", "trigger": "off-domain request"}
+{"action": "keep finest requested grain", "policy_id": "policy_finest_grain", "trigger": "multiple hierarchy levels requested"}

@@ -1,0 +1,6 @@
+{
+  "channel": "moonshot",
+  "model": "kimi-k2.6",
+  "mode": "llm_graph_rag",
+  "stdout": "[\n  {\"case_id\":\"ict_case_0032\", \"action\":\"answer\", \"metric_id\":\"ict_metric_001\", \"dimensions\":[], \"reason\":\"Exact alias match for 客诉率; no dimensions requested.\"},\n  {\"case_id\":\"ict_case_0033\", \"action\":\"answer\", \"metric_id\":\"ict_metric_014\", \"dimensions\":[], \"reason\":\"Exact alias match for 销量; no dimensions requested.\"}\n]"
+}

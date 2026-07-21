@@ -1,0 +1,6 @@
+{
+  "channel": "moonshot",
+  "model": "kimi-k2.6",
+  "mode": "llm_graph_rag",
+  "stdout": "[\n  {\"case_id\":\"ict_case_0013\", \"action\":\"answer\", \"metric_id\":\"ict_metric_001\", \"dimensions\":[], \"reason\":\"Exact alias match for 客诉率 with no dimensions requested.\"},\n  {\"case_id\":\"ict_case_0014\", \"action\":\"answer\", \"metric_id\":\"ict_metric_011\", \"dimensions\":[\"segment_l2\"], \"reason\":\"Exact alias match for 退货率; explicit hierarchy grain segment_l2 (二级品类) requested.\"}\n]"
+}

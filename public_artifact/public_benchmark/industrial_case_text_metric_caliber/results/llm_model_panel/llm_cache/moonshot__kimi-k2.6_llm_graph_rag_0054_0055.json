@@ -1,0 +1,6 @@
+{
+  "channel": "moonshot",
+  "model": "kimi-k2.6",
+  "mode": "llm_graph_rag",
+  "stdout": "[\n  {\"case_id\":\"ict_case_0049\", \"action\":\"answer\", \"metric_id\":\"ict_metric_003\", \"dimensions\":[], \"reason\":\"Matched alias 问题品 to Defective Item Quantity; flat metric query requires no dimensions.\"},\n  {\"case_id\":\"ict_case_0050\", \"action\":\"answer\", \"metric_id\":\"ict_metric_010\", \"dimensions\":[\"segment_l2\"], \"reason\":\"Return Quantity matched; multiple segment levels requested, emitting finest grain segment_l2 per hierarchy policy.\"}\n]"
+}

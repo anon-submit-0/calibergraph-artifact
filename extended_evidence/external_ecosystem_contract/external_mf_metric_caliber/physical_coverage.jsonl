@@ -1,0 +1,12 @@
+{"coverage_id": "mf_cov_001", "domain_id": "mf_simple_manifest", "layer": "SOURCE", "schema_name": "$source_schema", "semantic_model": "accounts_source", "semantic_node_id": "fct_accounts"}
+{"coverage_id": "mf_cov_002", "domain_id": "mf_simple_manifest", "layer": "SOURCE", "schema_name": "$source_schema", "semantic_model": "bookings_source", "semantic_node_id": "fct_bookings"}
+{"coverage_id": "mf_cov_003", "domain_id": "mf_simple_manifest", "layer": "SOURCE", "schema_name": "$source_schema", "semantic_model": "buys_source", "semantic_node_id": "fct_buys"}
+{"coverage_id": "mf_cov_004", "domain_id": "mf_simple_manifest", "layer": "SOURCE", "schema_name": "$source_schema", "semantic_model": "companies", "semantic_node_id": "dim_companies"}
+{"coverage_id": "mf_cov_005", "domain_id": "mf_simple_manifest", "layer": "SOURCE", "schema_name": "$source_schema", "semantic_model": "id_verifications", "semantic_node_id": "fct_id_verifications"}
+{"coverage_id": "mf_cov_006", "domain_id": "mf_simple_manifest", "layer": "SOURCE", "schema_name": "$source_schema", "semantic_model": "listings_latest", "semantic_node_id": "dim_listings_latest"}
+{"coverage_id": "mf_cov_007", "domain_id": "mf_simple_manifest", "layer": "SOURCE", "schema_name": "$source_schema", "semantic_model": "lux_listing_mapping", "semantic_node_id": "dim_lux_listing_id_mapping"}
+{"coverage_id": "mf_cov_008", "domain_id": "mf_simple_manifest", "layer": "SOURCE", "schema_name": "$source_schema", "semantic_model": "revenue", "semantic_node_id": "fct_revenue"}
+{"coverage_id": "mf_cov_009", "domain_id": "mf_simple_manifest", "layer": "SOURCE", "schema_name": "$source_schema", "semantic_model": "users_ds_source", "semantic_node_id": "dim_users"}
+{"coverage_id": "mf_cov_010", "domain_id": "mf_simple_manifest", "layer": "SOURCE", "schema_name": "$source_schema", "semantic_model": "users_latest", "semantic_node_id": "dim_users_latest"}
+{"coverage_id": "mf_cov_011", "domain_id": "mf_simple_manifest", "layer": "SOURCE", "schema_name": "$source_schema", "semantic_model": "views_source", "semantic_node_id": "fct_views"}
+{"coverage_id": "mf_cov_012", "domain_id": "mf_simple_manifest", "layer": "SOURCE", "schema_name": "$source_schema", "semantic_model": "visits_source", "semantic_node_id": "fct_visits"}

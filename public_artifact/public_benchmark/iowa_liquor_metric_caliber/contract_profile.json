@@ -1,0 +1,43 @@
+{
+  "available_time_anchors": [
+    "2024"
+  ],
+  "dataset_id": "iowa_liquor_metric_caliber",
+  "default_time_anchor": "2024",
+  "policy_rules": [
+    {
+      "contains": [
+        "select ",
+        "drop ",
+        "delete ",
+        "insert ",
+        "update ",
+        "truncate "
+      ],
+      "policy_id": "sql_or_ddl"
+    },
+    {
+      "contains": [
+        "invoice id",
+        "raw invoice",
+        "store address",
+        "phone",
+        "customer"
+      ],
+      "policy_id": "aggregate_only"
+    },
+    {
+      "contains": [
+        "weather",
+        "tomorrow"
+      ],
+      "policy_id": "off_domain"
+    }
+  ],
+  "time_aliases": {
+    "2024": [
+      "2024",
+      "current public snapshot"
+    ]
+  }
+}
